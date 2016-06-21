@@ -2,6 +2,8 @@
   "name": "bymattlee-web-starter-files",
   "version": "1.0.0",
   "description": "ByMattLee Web Starter Files",
+  "homepage" : "http://bymattlee.com",
+  "author" : "Matt Lee <matt@bymattlee.com>",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -12,8 +14,14 @@
     "Starter",
     "Files"
   ],
-  "author": "ByMattLee",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bymattlee/bymattlee-web-starter-files.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bymattlee/bymattlee-web-starter-files/issues"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
