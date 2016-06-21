@@ -12,21 +12,21 @@ var src = 'src',
 // Contains all main configurations for Gulp
 module.exports = {
 	fileHeader: [
-				'/*',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**              {{ @bymattlee }}',
-				'**              {{ bymattlee.com }}',
-				'**              {{ front_end_thuggin }}',
-				'**',
-				'**',
-				'**',
-				'**',
-				'**',
-				'*/\n'
+		'/*',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**              {{ @bymattlee }}',
+		'**              {{ bymattlee.com }}',
+		'**              {{ front_end_thuggin }}',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'*/\n'
 	],
 	developmentUrl: {
 		home_url: 'http://localhost:3000'
@@ -79,12 +79,6 @@ module.exports = {
 	},
 	browserSync: {
 		server: './' + dest
-	},
-	sizereport: {
-		dest: [
-			destAssets + '/css/*',
-			destAssets + '/js/*'
-		]
 	},
 	sitemap: {
 		src: dest + '/**/*.html',
