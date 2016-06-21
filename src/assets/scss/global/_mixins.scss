@@ -1,0 +1,117 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Global/Mixins
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Type
+** ***** ----------------------------------------------- ***** */
+
+// Font face
+@mixin font-face($name, $file, $weight) {
+	@font-face {
+		font-family: $name;
+		font-style: normal;
+		font-weight: $weight;
+		src: url("../fonts/#{$file}.eot");
+		src:
+			url("../fonts/#{$file}.woff") format("woff"),
+			url("../fonts/#{$file}.ttf") format("truetype"),
+			url("../fonts/#{$file}.svg") format("svg");
+	}
+}
+
+// Text Ellipsis
+@mixin text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Placeholder text
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+}
+
+
+/* ***** Layout
+** ***** ----------------------------------------------- ***** */
+
+// Media query
+@mixin mq($breakpoint) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+// Clearfix
+@mixin clearfix {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin horizontal-center {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin absolute-center {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin full-cover {
+	bottom: 0;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+
+/* ***** Background
+** ***** ----------------------------------------------- ***** */
+
+@mixin background-cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@mixin background-contain {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}

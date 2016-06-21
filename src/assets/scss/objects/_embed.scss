@@ -1,0 +1,22 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Objects/Embed Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.o-embed {
+	height: 0;
+	padding-bottom: 56.25%; /* 16:9 */
+	position: relative;
+
+	iframe,
+	object,
+	embed,
+	video,
+	img {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}

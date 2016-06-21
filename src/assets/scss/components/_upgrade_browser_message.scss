@@ -1,0 +1,25 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Components/Upgrade Browser Message Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.c-upgrade_browser_message {
+	background: $black;
+	background: rgba(0, 0, 0, 0.75);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: $z-index-9;
+
+	&-link {
+		color: $white;
+		display: block;
+		padding: 1.5rem;
+
+		&:hover {
+			color: $grey-light--c;
+		}
+	}
+}

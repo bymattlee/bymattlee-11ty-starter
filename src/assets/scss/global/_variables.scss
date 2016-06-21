@@ -1,0 +1,160 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Global/Variables
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Colors
+** ***** ----------------------------------------------- ***** */
+
+$white: #fff;
+$black: #000;
+$grey-dark--6: #666;
+$grey-light--a: #aaa;
+$grey-light--c: #ccc;
+
+// Text
+$body-font-color: $grey-light--c;
+$link-font-color: $grey-light--a;
+$link-hover-font-color: $grey-dark--6;
+
+
+/* ***** Typography
+** ***** ----------------------------------------------- ***** */
+
+// Font Families
+$font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
+
+// Font Sizes
+$font-size-base: 62.5%;
+
+$font-size-smaller: 0.9rem;
+$font-size-small: 1.1rem;
+$font-size-normal: 1.3rem;
+$font-size-large: 1.5rem;
+$font-size-larger: 1.7rem;
+
+$font-size-h1: 3.2rem;
+$font-size-h2: 2.4rem;
+$font-size-h3: 2rem;
+$font-size-h4: 1.6rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.2rem;
+
+// Font Weights
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+// Letter Spacing
+$letter-spacing-tight: -0.1rem;
+$letter-spacing-normal: normal;
+$letter-spacing-loose: 0.1rem;
+
+// Line Height
+$line-height-tight: 1;
+$line-height-normal: 1.4;
+$line-height-loose: 1.75;
+
+
+/* ***** Transition
+** ***** ----------------------------------------------- ***** */
+
+// Speed
+$transition-speed-slower: 600ms;
+$transition-speed-slow: 400ms;
+$transition-speed-normal: 250ms;
+$transition-speed-fast: 100ms;
+$transition-speed-faster: 50ms;
+
+// All
+$transition-all-slower: all $transition-speed-slower;
+$transition-all-slow: all $transition-speed-slow;
+$transition-all-normal: all $transition-speed-normal;
+$transition-all-fast: all $transition-speed-fast;
+$transition-all-faster: all $transition-speed-faster;
+
+// Color
+$transition-color-slower: color $transition-speed-slower;
+$transition-color-slow: color $transition-speed-slow;
+$transition-color-normal: color $transition-speed-normal;
+$transition-color-fast: color $transition-speed-fast;
+$transition-color-faster: color $transition-speed-faster;
+
+// Background Color
+$transition-background-color-slower: background-color $transition-speed-slower;
+$transition-background-color-slow: background-color $transition-speed-slow;
+$transition-background-color-normal: background-color $transition-speed-normal;
+$transition-background-color-fast: background-color $transition-speed-fast;
+$transition-background-color-faster: background-color $transition-speed-faster;
+
+// Opacity
+$transition-opacity-slower: opacity $transition-speed-slower;
+$transition-opacity-slow: opacity $transition-speed-slow;
+$transition-opacity-normal: opacity $transition-speed-normal;
+$transition-opacity-fast: opacity $transition-speed-fast;
+$transition-opacity-faster: opacity $transition-speed-faster;
+
+// Transform
+$transition-transform-slower: transform $transition-speed-slower;
+$transition-transform-slow: transform $transition-speed-slow;
+$transition-transform-normal: transform $transition-speed-normal;
+$transition-transform-fast: transform $transition-speed-fast;
+$transition-transform-faster: transform $transition-speed-faster;
+
+
+/* ***** Easing
+** ***** ----------------------------------------------- ***** */
+
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+$ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+$ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+$ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+$ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+
+/* ***** Media Queries
+** ***** ----------------------------------------------- ***** */
+
+$mq-xsmall: px-to-em(480);
+$mq-small: px-to-em(768);
+$mq-medium: px-to-em(900);
+$mq-large: px-to-em(1100);
+$mq-xlarge: px-to-em(1240);
+
+
+/* ***** Z-Index
+** ***** ----------------------------------------------- ***** */
+
+$z-index-below: -1;
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;

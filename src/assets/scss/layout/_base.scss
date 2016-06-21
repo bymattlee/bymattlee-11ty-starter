@@ -1,0 +1,20 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Layout/Base Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.l-container {
+	margin: 0 auto;
+	padding: 0 5%;
+	position: relative;
+	width: 100%;
+
+	@include mq($mq-xlarge) {
+		padding: 0 20px;
+		width: 124rem;
+	}
+}
+
+.l-row {
+	width: 100%;
+}
