@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bymattlee/bymattlee-web-starter-files.git"
+    "url": "git://github.com/bymattlee/bymattlee-web-starter-files.git"
   },
   "bugs": {
     "url": "https://github.com/bymattlee/bymattlee-web-starter-files/issues"
