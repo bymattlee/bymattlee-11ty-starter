@@ -11,6 +11,7 @@ var config = require('../config'),
 	rename = require('gulp-rename'),
 	runSequence = require('run-sequence'),
 	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
 	siteUrl;
 
 // Create favicons and associated files
@@ -18,6 +19,8 @@ gulp.task('favicons:create', function() {
 
 	if (isProduction) {
 		siteUrl = config.productionUrl.home_url;
+	} else if (isStaging) {
+		siteUrl = config.stagingUrl.home_url;
 	} else {
 		siteUrl = config.developmentUrl.home_url;
 	}

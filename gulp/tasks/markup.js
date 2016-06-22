@@ -15,11 +15,13 @@ var browserSync = require('browser-sync'),
 	prettyUrl = require('gulp-pretty-url'),
 	size = require('gulp-size'),
 	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
+	isDevelopment = !isProduction && !isStaging,
 	siteUrl;
 
 /*
 ** -- Render site files based on nunjucks templates and site data
-** -- Set {{ home_url }} variable based on environment (development/production)
+** -- Set {{ home_url }} variable based on environment (development/staging/production)
 **    This is used for setting the absolute URL for all assets in the html files
 ** -- If in production mode:
 **    -- Minify all html files
@@ -31,6 +33,8 @@ gulp.task('markup', function() {
 
 	if (isProduction) {
 		siteUrl = config.productionUrl;
+	} else if (isStaging) {
+		siteUrl = config.stagingUrl;
 	} else {
 		siteUrl = config.developmentUrl;
 	}
@@ -46,7 +50,7 @@ gulp.task('markup', function() {
     	.pipe(nunjucksRender({
 			path: config.markup.path
 		}))
-    	.pipe(gif(isProduction, htmlmin({
+    	.pipe(gif(!isDevelopment, htmlmin({
     		collapseBooleanAttributes: true,
     		collapseInlineTagWhitespace: true,
     		collapseWhitespace: true,

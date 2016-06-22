@@ -20,11 +20,13 @@ var autoprefixer = require('gulp-autoprefixer'),
 	size = require('gulp-size'),
 	sourcemaps = require('gulp-sourcemaps'),
 	stylelint = require('stylelint'),
-	isProduction = !!gutil.env.production;
+	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
+	isDevelopment = !isProduction && !isStaging;
 
 /*
 ** -- Lint scss files with Stylelint
-** -- Create sourcemaps if in development mode (use gulp --production to disable soucemaps)
+** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
 ** -- Compile scss files
 ** -- Autoprefix necessary properties
 ** -- Minify
@@ -46,7 +48,7 @@ gulp.task('styles', function () {
 				syntax: scss 
 			})
 		)
-		.pipe(gif(!isProduction, sourcemaps.init()))
+		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(autoprefixer({
 	            browsers: ['last 2 versions'],
@@ -61,7 +63,7 @@ gulp.task('styles', function () {
 				title: 'Compressed File Size:',
 				showFiles: true
 			}))
-		.pipe(gif(!isProduction, sourcemaps.write('./')))
+		.pipe(gif(isDevelopment, sourcemaps.write('./')))
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(browserSync.stream({
 			match: '**/*.css'

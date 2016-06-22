@@ -31,6 +31,9 @@ module.exports = {
 	developmentUrl: {
 		home_url: 'http://localhost:3000'
 	},
+	stagingUrl: {
+		home_url: 'http://mynameismattlee.com'
+	},
 	productionUrl: {
 		home_url: 'http://bymattlee.com'
 	},

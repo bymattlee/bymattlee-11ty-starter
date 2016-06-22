@@ -8,6 +8,7 @@ var config = require('../config'),
 	gutil = require('gulp-util'),
 	robots = require('gulp-robots'),
 	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
 	siteUrl;
 
 // Create robots.txt file and place in dist
@@ -15,6 +16,8 @@ gulp.task('robots', function() {
 
 	if (isProduction) {
 		siteUrl = config.productionUrl.home_url;
+	} else if (isStaging) {
+		siteUrl = config.stagingUrl.home_url;
 	} else {
 		siteUrl = config.developmentUrl.home_url;
 	}

@@ -2,8 +2,8 @@
   "name": "bymattlee-web-starter-files",
   "version": "1.0.0",
   "description": "ByMattLee Web Starter Files",
-  "homepage" : "http://bymattlee.com",
-  "author" : "Matt Lee <matt@bymattlee.com>",
+  "homepage": "http://bymattlee.com",
+  "author": "Matt Lee <matt@bymattlee.com>",
   "main": "gulpfile.js",
   "scripts": {
     "test": "gulp"
@@ -39,6 +39,7 @@
     "gulp-htmlmin": "^2.0.0",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^2.4.0",
+    "gulp-notify": "^2.2.0",
     "gulp-nunjucks-render": "^2.0.0",
     "gulp-order": "^1.1.1",
     "gulp-plumber": "^1.0.1",

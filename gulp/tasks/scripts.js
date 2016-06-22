@@ -18,11 +18,13 @@ var browserSync = require('browser-sync'),
 	size = require('gulp-size'),
 	sourcemaps = require('gulp-sourcemaps'),
 	uglify = require('gulp-uglify'),
-	isProduction = !!gutil.env.production;
+	isProduction = !!gutil.env.production,
+	isStaging = !!gutil.env.staging,
+	isDevelopment = !isProduction && !isStaging;
 
 /*
 ** -- Lint only module files with ESLint
-** -- Create sourcemaps if in development mode (use gulp --production to disable soucemaps)
+** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
 ** -- Order files by vendors and then modules
 ** -- Minify all files
 ** -- Bundle all files
@@ -45,7 +47,7 @@ gulp.task('scripts', function() {
 		}))
 		.pipe(eslint.format())
 		.pipe(filterPipe.restore)
-		.pipe(gif(!isProduction, sourcemaps.init()))
+		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(order(config.scripts.order, { base: './' }))
 			.pipe(uglify())
         	.pipe(concat('main.js'))
@@ -57,7 +59,7 @@ gulp.task('scripts', function() {
 				title: 'Compressed File Size:',
 				showFiles: true
 			}))
-		.pipe(gif(!isProduction, sourcemaps.write('./')))
+		.pipe(gif(isDevelopment, sourcemaps.write('./')))
         .pipe(gulp.dest(config.scripts.dest))
 		.pipe(browserSync.stream());
 
