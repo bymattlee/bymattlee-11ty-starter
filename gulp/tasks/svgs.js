@@ -7,6 +7,7 @@ var browserSync = require('browser-sync'),
 	config = require('../config'),
 	gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
+	size = require('gulp-size'),
 	svgSprite = require('gulp-svg-sprite');
 
 /*
@@ -24,6 +25,10 @@ gulp.task('svgs', function() {
 					sprite: config.svgs.sprite
 				}
 			}
+		}))
+		.pipe(size({
+			title: 'Optimized File Size:',
+			showFiles: true
 		}))
 		.pipe(gulp.dest(config.svgs.dest));
 
