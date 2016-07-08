@@ -36,31 +36,31 @@ gulp.task('scripts', function() {
 
 	var filterPipe = filter(config.scripts.filter, { restore: true });
 
-    return gulp.src(config.scripts.src)
+	return gulp.src(config.scripts.src)
 		.pipe(plumber())
 		.pipe(filterPipe)
 		.pipe(eslint({
 			'extends': 'eslint:recommended',
 			'env': {
-        		'browser': true,
-    		},
+				'browser': true,
+			},
 		}))
 		.pipe(eslint.format())
 		.pipe(filterPipe.restore)
 		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(order(config.scripts.order, { base: './' }))
 			.pipe(uglify())
-        	.pipe(concat('main.js'))
-        	.pipe(rename({
+			.pipe(concat('main.js'))
+			.pipe(rename({
 				suffix: '.min'
 			}))
-        	.pipe(header(config.fileHeader.join('\n')))
-        	.pipe(size({
+			.pipe(header(config.fileHeader.join('\n')))
+			.pipe(size({
 				title: 'Compressed File Size:',
 				showFiles: true
 			}))
 		.pipe(gif(isDevelopment, sourcemaps.write('./')))
-        .pipe(gulp.dest(config.scripts.dest))
+		.pipe(gulp.dest(config.scripts.dest))
 		.pipe(browserSync.stream());
 
 });

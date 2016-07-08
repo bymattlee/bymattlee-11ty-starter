@@ -39,35 +39,35 @@ gulp.task('markup', function() {
 		siteUrl = config.developmentUrl;
 	}
 
-    return gulp.src(config.markup.src)
+	return gulp.src(config.markup.src)
 		.pipe(plumber())
 		.pipe(data(function() {
-    		return siteUrl;
-    	}))
-    	.pipe(data(function() {
-    		return require(config.markup.data);
-    	}))
-    	.pipe(nunjucksRender({
+			return siteUrl;
+		}))
+		.pipe(data(function() {
+			return require(config.markup.data);
+		}))
+		.pipe(nunjucksRender({
 			path: config.markup.path
 		}))
-    	.pipe(gif(!isDevelopment, htmlmin({
-    		collapseBooleanAttributes: true,
-    		collapseInlineTagWhitespace: true,
-    		collapseWhitespace: true,
-    		minifyCSS: true,
-    		minifyJS: true,
-    		removeComments: true,
-    		removeEmptyAttributes: true,
-    		removeRedundantAttributes: true,
-    		removeScriptTypeAttributes: true,
-    		removeStyleLinkTypeAttributes: true
-    	})))
-    	.pipe(gif(isProduction, size({
+		.pipe(gif(!isDevelopment, htmlmin({
+			collapseBooleanAttributes: true,
+			collapseInlineTagWhitespace: true,
+			collapseWhitespace: true,
+			minifyCSS: true,
+			minifyJS: true,
+			removeComments: true,
+			removeEmptyAttributes: true,
+			removeRedundantAttributes: true,
+			removeScriptTypeAttributes: true,
+			removeStyleLinkTypeAttributes: true
+		})))
+		.pipe(gif(isProduction, size({
 			title: 'Compressed File Size:',
 			showFiles: true
 		})))
 		.pipe(prettyUrl())
-        .pipe(gulp.dest(config.markup.dest))
-        .pipe(browserSync.stream());
+		.pipe(gulp.dest(config.markup.dest))
+		.pipe(browserSync.stream());
 
 });

@@ -29,7 +29,7 @@ try {
 	}
 
 } catch (e) {
-    hostSettingsNotFound = true;
+	hostSettingsNotFound = true;
 }
 
 /*
