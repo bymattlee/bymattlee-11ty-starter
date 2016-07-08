@@ -3,7 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var browserSync = require('browser-sync'),
+var addSrc = require('gulp-add-src'),
+	browserSync = require('browser-sync'),
 	concat = require('gulp-concat'),
 	config = require('../config'),
 	eslint = require('gulp-eslint'),
@@ -12,7 +13,7 @@ var browserSync = require('browser-sync'),
 	gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	header = require('gulp-header'),
-	order = require('gulp-order'),
+	modernizr = require('gulp-modernizr'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	size = require('gulp-size'),
@@ -23,9 +24,10 @@ var browserSync = require('browser-sync'),
 	isDevelopment = !isProduction && !isStaging;
 
 /*
+** -- Create a custom Modernizr build by crawling the .scss and .js files
+** -- Add main and module files to the build
 ** -- Lint only module files with ESLint
 ** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
-** -- Order files by vendors and then modules
 ** -- Minify all files
 ** -- Bundle all files
 ** -- Add ByMattLee header to bundled file
@@ -36,8 +38,10 @@ gulp.task('scripts', function() {
 
 	var filterPipe = filter(config.scripts.filter, { restore: true });
 
-	return gulp.src(config.scripts.src)
+	return gulp.src(config.scripts.modernizr.src)
 		.pipe(plumber())
+		.pipe(modernizr(config.scripts.modernizr.options))
+		.pipe(addSrc.append(config.scripts.src))
 		.pipe(filterPipe)
 		.pipe(eslint({
 			'extends': 'eslint:recommended',
@@ -48,7 +52,6 @@ gulp.task('scripts', function() {
 		.pipe(eslint.format())
 		.pipe(filterPipe.restore)
 		.pipe(gif(isDevelopment, sourcemaps.init()))
-			.pipe(order(config.scripts.order, { base: './' }))
 			.pipe(uglify())
 			.pipe(concat('main.js'))
 			.pipe(rename({

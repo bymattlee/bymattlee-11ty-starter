@@ -52,17 +52,27 @@ module.exports = {
 		dest: destAssets + '/css'
 	},
 	scripts: {
-		src: srcAssets + '/js/**/*.js',
-		dest:  destAssets + '/js',
-		order: [
+		src: [
 			srcAssets + '/js/vendors/**/*.js',
 			srcAssets + '/js/main.js',
 			srcAssets + '/js/modules/**/*.js'
 		],
+		dest:  destAssets + '/js',
 		filter: [
 			srcAssets + '/js/main.js',
 			srcAssets + '/js/modules/**/*.js'
-		]
+		],
+		modernizr: {
+			src: [
+				srcAssets + '/scss/**/*',
+				srcAssets + '/js/**/*',
+			],
+			options: {
+				'options' : [
+					'setClasses'
+				]
+			}
+		}
 	},
 	images: {
 		src: srcAssets + '/images/**/*',

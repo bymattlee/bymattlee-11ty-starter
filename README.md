@@ -80,7 +80,7 @@ gulp gzip
 * `.stylelintrc` contains the settings for Stylelint
 
 ##### Scripts
-* Includes linting (ESLint), concatenation, minification and sourcemap creation
+* Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
 * JS files are located in the `src/assets/js` directory will be bundled into `dist/assets/js/main.min.js` when built
 * `main.js` in `src/assets/js` serves as the main JS file that runs all modules
 * All vendor libraries should be placed in `src/assets/js/vendors` so they can be bundled in `main.min.js`
