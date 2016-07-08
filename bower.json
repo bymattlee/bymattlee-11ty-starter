@@ -1,0 +1,30 @@
+{
+  "name": "bymattlee-web-starter-files",
+  "description": "ByMattLee Web Starter Files",
+  "main": "gulpfile.js",
+  "authors": [
+    "Matt Lee <matt@bymattlee.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "ByMattLee",
+    "Web",
+    "Starter",
+    "Files"
+  ],
+  "homepage": "https://github.com/bymattlee/bymattlee-web-starter-files",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/vendors",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.0",
+    "svgxuse": "^1.1.18",
+    "sanitize-css": "^4.1.0"
+  }
+}
