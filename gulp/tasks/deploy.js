@@ -55,6 +55,7 @@ gulp.task('deploy', function() {
 			username: hostSettings ? hostSettings.username : '',
 			destination: hostSettings ? hostSettings.destination : '',
 			root: config.deploy.root,
+			archive: true,
 			recursive: true
 		})));
 
