@@ -75,7 +75,7 @@ module.exports = {
 	},
 	copy: {
 		src: [
-			srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|m4a|webm)',
+			srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
 			'!' + srcAssets + '/svgs/*.svg'
 		],
 		dest:  destAssets
