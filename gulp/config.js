@@ -59,7 +59,10 @@ module.exports = {
 			srcAssets + '/js/main.js',
 			srcAssets + '/js/modules/**/*.js'
 		],
-		filter: '!' + srcAssets + '/js/vendors/**/*'
+		filter: [
+			srcAssets + '/js/main.js',
+			srcAssets + '/js/modules/**/*.js'
+		]
 	},
 	images: {
 		src: srcAssets + '/images/**/*',
