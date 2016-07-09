@@ -67,41 +67,6 @@ $transition-speed-normal: 250ms;
 $transition-speed-fast: 100ms;
 $transition-speed-faster: 50ms;
 
-// All
-$transition-all-slower: all $transition-speed-slower;
-$transition-all-slow: all $transition-speed-slow;
-$transition-all-normal: all $transition-speed-normal;
-$transition-all-fast: all $transition-speed-fast;
-$transition-all-faster: all $transition-speed-faster;
-
-// Color
-$transition-color-slower: color $transition-speed-slower;
-$transition-color-slow: color $transition-speed-slow;
-$transition-color-normal: color $transition-speed-normal;
-$transition-color-fast: color $transition-speed-fast;
-$transition-color-faster: color $transition-speed-faster;
-
-// Background Color
-$transition-background-color-slower: background-color $transition-speed-slower;
-$transition-background-color-slow: background-color $transition-speed-slow;
-$transition-background-color-normal: background-color $transition-speed-normal;
-$transition-background-color-fast: background-color $transition-speed-fast;
-$transition-background-color-faster: background-color $transition-speed-faster;
-
-// Opacity
-$transition-opacity-slower: opacity $transition-speed-slower;
-$transition-opacity-slow: opacity $transition-speed-slow;
-$transition-opacity-normal: opacity $transition-speed-normal;
-$transition-opacity-fast: opacity $transition-speed-fast;
-$transition-opacity-faster: opacity $transition-speed-faster;
-
-// Transform
-$transition-transform-slower: transform $transition-speed-slower;
-$transition-transform-slow: transform $transition-speed-slow;
-$transition-transform-normal: transform $transition-speed-normal;
-$transition-transform-fast: transform $transition-speed-fast;
-$transition-transform-faster: transform $transition-speed-faster;
-
 
 /* ***** Easing
 ** ***** ----------------------------------------------- ***** */

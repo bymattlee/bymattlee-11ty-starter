@@ -39,7 +39,8 @@ ol {
 a {
 	color: $link-font-color;
 	text-decoration: none;
-	transition: $transition-color-normal;
+
+	@include transition-color-normal;
 
 	&:hover,
 	&:active {
