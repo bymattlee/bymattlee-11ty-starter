@@ -16,13 +16,13 @@ var browserSync = require('browser-sync'),
 */
 gulp.task('images', function() {
 
-  	return gulp.src(config.images.src)
+	return gulp.src(config.images.src)
 		.pipe(changed(config.images.dest))
-    	.pipe(imagemin())
+		.pipe(imagemin())
 		.pipe(size({
 			title: 'Optimized File Size:',
 			showFiles: true
 		}))
-    	.pipe(gulp.dest(config.images.dest));
+		.pipe(gulp.dest(config.images.dest));
 
 });
