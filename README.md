@@ -1,3 +1,5 @@
+[![ByMattLee](http://hosted.bymattlee.com/github/bymattlee-logo.png)](http://bymattlee.com)
+
 # ByMattLee Web Starter Files
 * Serves as a base starting point for static websites
 * Uses Gulp as the build tool and Bower to manage front-end packages
