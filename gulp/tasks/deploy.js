@@ -9,6 +9,7 @@ var config = require('../config'),
 	gutil = require('gulp-util'),
 	notify = require('gulp-notify'),
 	rsync = require('gulp-rsync'),
+	isClean = !!gutil.env.clean,
 	isProduction = !!gutil.env.production,
 	isStaging = !!gutil.env.staging,
 	isDevelopment = !isProduction && !isStaging,
@@ -56,7 +57,8 @@ gulp.task('deploy', function() {
 			destination: hostSettings ? hostSettings.destination : '',
 			root: config.deploy.root,
 			archive: true,
-			recursive: true
+			recursive: true,
+			clean: isClean ? true : false
 		})));
 
 });

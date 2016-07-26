@@ -124,7 +124,7 @@ module.exports = {
 		htmlRenameDest: src + '/html/components'
 	},
 	deploy: {
-		src: dest + '/**/*',
+		src: dest + '/',
 		root: dest
 	},
 	gzip: {
