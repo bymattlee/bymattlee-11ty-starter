@@ -7,7 +7,6 @@ var Main = {
 	modules: {}
 };
 
-/* global jQuery */
 (function($){
 	'use strict';
 

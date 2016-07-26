@@ -2,7 +2,7 @@
 ** ***** Global Scripts JS
 ** ***** ----------------------------------------------- ***** */
 
-/* global jQuery, Main, Modernizr */
+/* global Main, Modernizr */
 (function($){
 	'use strict';
 

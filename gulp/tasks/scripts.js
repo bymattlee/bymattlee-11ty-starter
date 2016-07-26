@@ -56,6 +56,7 @@ gulp.task('scripts', function() {
 			'extends': 'eslint:recommended',
 			'env': {
 				'browser': true,
+				'jquery': true
 			}
 		}))
 		.pipe(eslint.format())
