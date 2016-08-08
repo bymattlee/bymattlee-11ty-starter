@@ -15,10 +15,10 @@ gulp.task('gzip', function() {
 	return gulp.src(config.gzip.src)
 		.pipe(tar(config.gzip.filename))
 		.pipe(gzip())
+		.pipe(gulp.dest(config.gzip.dest))
 		.pipe(size({
 			title: 'Project Archive File Size:',
 			showFiles: true
-		}))
-		.pipe(gulp.dest(config.gzip.dest));
+		}));
 
 });
