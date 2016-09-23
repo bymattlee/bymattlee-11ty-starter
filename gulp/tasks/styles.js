@@ -61,10 +61,7 @@ gulp.task('styles', function () {
 		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(addSrc.prepend(bowerFiles))
 			.pipe(sass().on('error', sass.logError))
-			.pipe(autoprefixer({
-				browsers: ['last 2 versions'],
-				cascade: false
-			}))
+			.pipe(autoprefixer())
 			.pipe(cleanCSS())
 			.pipe(concat('main.css'))
 			.pipe(rename({
