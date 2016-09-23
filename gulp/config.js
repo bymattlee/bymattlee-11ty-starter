@@ -44,7 +44,8 @@ module.exports = {
 		path: src + '/html',
 		watchSrc: [
 			src + '/html/**/*.njk',
-			src + '/html/pages/**/*.html'
+			src + '/html/pages/**/*.html',
+			src + '/html/site_data.json'
 		]
 	},
 	styles: {

@@ -39,6 +39,9 @@ gulp.task('markup', function() {
 		siteUrl = config.developmentUrl;
 	}
 
+	// Delete cache of data file for watch task
+	delete require.cache[require.resolve(config.markup.data)];
+
 	return gulp.src(config.markup.src)
 		.pipe(plumber())
 		.pipe(data(function() {
