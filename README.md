@@ -116,7 +116,7 @@ $ gulp gzip
 
 ##### Deploy
 * Deploys the `dist` directory via SSH
-* Use `--clean` flag to delete all files and directories that are not in the source path
+* Use `--clean` flag to delete all files and directories that are not in the destination path
 
 ##### Gzip
 * Creates a tarball of the `dist` directory and then runs through gzip
