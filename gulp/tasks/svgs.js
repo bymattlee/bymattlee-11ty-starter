@@ -3,8 +3,7 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var browserSync = require('browser-sync'),
-	config = require('../config'),
+var config = require('../config'),
 	gulp = require('gulp'),
 	imagemin = require('gulp-imagemin'),
 	size = require('gulp-size'),
