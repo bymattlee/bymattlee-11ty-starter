@@ -14,9 +14,10 @@
 		font-weight: $weight;
 		src: url("../fonts/#{$file}.eot");
 		src:
+			url("../fonts/#{$file}.woff2") format("woff2"),
 			url("../fonts/#{$file}.woff") format("woff"),
 			url("../fonts/#{$file}.ttf") format("truetype"),
-			url("../fonts/#{$file}.svg") format("svg");
+			url("../fonts/#{$file}.svg##{$file}") format("svg");
 	}
 }
 
@@ -229,4 +230,17 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+
+// Ensure video covers the entire container
+@mixin video-background-cover {
+	height: 100%;
+	left: 50%;
+	min-height: 57.14285vw; /* 100 * 4 / 7 */
+	min-width: 100%;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 175vh; /* 100 * 7 / 4 */
 }

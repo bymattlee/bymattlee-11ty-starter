@@ -94,7 +94,7 @@ ul {
 	margin: 0 0 0 3rem;
 	padding: 0;
 
-	&.unstyled {
+	&.u-unstyled {
 		list-style: none;
 		margin-left: 0;
 	}
@@ -146,6 +146,7 @@ button {
 
 input {
 	border: 0.1rem solid $white;
+	border-radius: 0;
 	outline: none;
 	padding: 0.5rem 1rem;
 }

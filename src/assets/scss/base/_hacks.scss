@@ -6,18 +6,13 @@
 /* ***** IE Hacks
 ** ***** ----------------------------------------------- ***** */
 
-// Edge 13 and 12
-@supports (-ms-accelerator:true) {
-
-}
-
-// Edge 12 Only
-@supports (-ms-accelerator:true) and (not (color:unset)) {
+// Edge 12+
+@supports (-webkit-appearance:none) {
 
 }
 
 // IE 10 and 11
-@media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
 }
 

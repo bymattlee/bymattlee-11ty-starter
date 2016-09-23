@@ -5,12 +5,12 @@
 
 .l-container {
 	margin: 0 auto;
-	padding: 0 5%;
+	padding: 0 2rem;
 	position: relative;
 	width: 100%;
 
 	@include mq($mq-xlarge) {
-		padding: 0 20px;
+		padding: 0;
 		width: 124rem;
 	}
 }

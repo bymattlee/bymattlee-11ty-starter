@@ -253,3 +253,15 @@
 .u-text--ellipsis {
 	@include text-ellipsis;
 }
+
+
+/* ***** Overflow
+** ***** ----------------------------------------------- ***** */
+
+.u-overflow--hidden {
+	overflow: hidden;
+}
+
+.u-overflow--auto {
+	overflow: auto;
+}
