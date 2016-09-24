@@ -52,13 +52,7 @@ gulp.task('scripts', function() {
 		.pipe(addSrc.append(bowerFiles))
 		.pipe(addSrc.append(config.scripts.src))
 		.pipe(filterPipe)
-		.pipe(eslint({
-			'extends': 'eslint:recommended',
-			'env': {
-				'browser': true,
-				'jquery': true
-			}
-		}))
+		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(filterPipe.restore)
 		.pipe(gif(isDevelopment, sourcemaps.init()))

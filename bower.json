@@ -23,8 +23,8 @@
     "tests"
   ],
   "devDependencies": {
-    "jquery": "^3.1.0",
-    "svgxuse": "^1.1.18",
+    "jquery": "^3.1.1",
+    "svgxuse": "^1.1.21",
     "sanitize-css": "^4.1.0"
   }
 }
