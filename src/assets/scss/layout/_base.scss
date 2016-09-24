@@ -11,10 +11,14 @@
 
 	@include mq($mq-xlarge) {
 		padding: 0;
-		width: 124rem;
+		width: 120rem;
 	}
 }
 
 .l-row {
 	width: 100%;
+}
+
+.l-main {
+
 }
