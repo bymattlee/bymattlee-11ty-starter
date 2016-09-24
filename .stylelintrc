@@ -1,12 +1,19 @@
 {
-	"extends": "stylelint-config-standard",
-	"rules": {
-		"indentation": "tab",
-		"max-empty-lines": 2,
-		"block-no-empty": ,
-		"selector-type-no-unknown": ,
-		"selector-pseudo-element-no-unknown": ,
-		"rule-nested-empty-line-before": ,
-		"block-closing-brace-empty-line-before":
-	}
+    "extends": "stylelint-config-standard",
+    "rules": {
+        "indentation": "tab",
+        "max-empty-lines": 2,
+        "block-no-empty": ,
+        "selector-type-no-unknown": ,
+        "selector-pseudo-element-no-unknown": ,
+        "rule-nested-empty-line-before": ,
+        "block-closing-brace-empty-line-before": ,
+        "font-family-name-quotes": "always-where-recommended",
+        "function-url-quotes": "always",
+        "selector-attribute-quotes": "always",
+        "string-quotes": "double",
+        "declaration-block-properties-order": "alphabetical",
+        "color-named": "never",
+        "font-weight-notation": "numeric"
+    }
 }
