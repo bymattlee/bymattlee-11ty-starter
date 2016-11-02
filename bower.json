@@ -24,7 +24,7 @@
   ],
   "devDependencies": {
     "jquery": "^3.1.1",
-    "svgxuse": "^1.1.21",
+    "svgxuse": "^1.1.22",
     "sanitize-css": "^4.1.0"
   }
 }
