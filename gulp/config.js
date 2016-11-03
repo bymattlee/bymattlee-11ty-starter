@@ -115,7 +115,7 @@ module.exports = {
 		appDescription: 'ByMattLee Web Starter Files',
 		developerName: 'Matt Lee',
 		developerURL: 'http://bymattlee.com',
-		background: '#dddddd',
+		background: '#212121',
 		path: '/assets/favicons',
 		display: 'browser',
 		orientation: 'portrait',
