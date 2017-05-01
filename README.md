@@ -96,10 +96,11 @@ $ gulp gzip
 * Site preview image (`share.jpg`) is included
 
 ##### Favicons
-* Creates favicons and associated files and generates relevant markup that is included in the head
+* Creates favicons, touch icons, associated files and generates relevant markup that is included in the head
 * Place source favicon in `src/assets/favicons` as `favicon.png`
-* Favicons and associated files are generated to the `dist/assets/favicons` directory
-* Favicon markup is generated to `src/html/components/favicons.njk`
+* Place source touch icon in `src/assets/favicons` as `touch-icon.png`
+* Favicons, touch icons and associated files are generated to the `dist/assets/favicons` directory
+* Markup is generated to `src/html/components/favicons.njk`
 
 ##### SVGS
 * Place all SVG files in the `src/assets/svg` directory

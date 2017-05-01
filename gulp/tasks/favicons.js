@@ -3,7 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var config = require('../config'),
+var concat = require('gulp-concat'),
+	config = require('../config'),
 	del = require('del'),
 	favicons = require('gulp-favicons'),
 	gulp = require('gulp'),
@@ -14,18 +15,19 @@ var config = require('../config'),
 	isStaging = !!gutil.env.staging,
 	siteUrl;
 
-// Create favicons and associated files
-gulp.task('favicons:create', function() {
+// Set site URL based on environment
+if (isProduction) {
+	siteUrl = config.productionUrl.home_url;
+} else if (isStaging) {
+	siteUrl = config.stagingUrl.home_url;
+} else {
+	siteUrl = config.developmentUrl.home_url;
+}
 
-	if (isProduction) {
-		siteUrl = config.productionUrl.home_url;
-	} else if (isStaging) {
-		siteUrl = config.stagingUrl.home_url;
-	} else {
-		siteUrl = config.developmentUrl.home_url;
-	}
+// Create favicons
+gulp.task('favicons:create-favicon', function() {
 
-	return gulp.src(config.favicons.src)
+	return gulp.src(config.favicons.faviconSrc)
 		.pipe(favicons({
 			appName: config.favicons.appName,
 			appDescription: config.favicons.appDescription,
@@ -39,12 +41,17 @@ gulp.task('favicons:create', function() {
 			version: config.favicons.version,
 			logging: true,
 			online: false,
-			html: config.favicons.html,
+			html: config.favicons.faviconHtmlPath,
 			pipeHTML: true,
 			replace: true,
 			icons: {
+				android: false,
+				appleIcon: false,
+				appleStartup: false,
+				coast: false,
 				opengraph: false,
-				twitter: false,
+				firefox: false,
+				windows: false,
 				yandex: false
 			}
 		}))
@@ -53,25 +60,53 @@ gulp.task('favicons:create', function() {
 
 });
 
-// Rename favicons.html to favicons.njk (nunjucks template)
-gulp.task('favicons:rename-html', function() {
+// Create touch icons and associated files
+gulp.task('favicons:create-touch-icon', function() {
 
-	return gulp.src(config.favicons.htmlRenameSrc)
-		.pipe(rename({
-			extname: '.njk'
+	return gulp.src(config.favicons.touchIconSrc)
+		.pipe(favicons({
+			appName: config.favicons.appName,
+			appDescription: config.favicons.appDescription,
+			developerName: config.favicons.developerName,
+			developerURL: config.favicons.developerURL,
+			background: config.favicons.background,
+			path: config.favicons.path,
+			url: siteUrl,
+			display: config.favicons.display,
+			orientation: config.favicons.orientation,
+			version: config.favicons.version,
+			logging: true,
+			online: false,
+			html: config.favicons.touchIconHtmlPath,
+			pipeHTML: true,
+			replace: true,
+			icons: {
+				favicons: false,
+				yandex: false
+			}
 		}))
-		.pipe(gulp.dest(config.favicons.htmlRenameDest));
+		.on('error', gutil.log)
+		.pipe(gulp.dest(config.favicons.dest));
+
+});
+
+// Concat favicons.html with touch-icons.html
+gulp.task('favicons:concat-html', function() {
+
+	return gulp.src(config.favicons.concatHtmlSrc)
+		.pipe(concat('favicons.njk'))
+		.pipe(gulp.dest(config.favicons.concatHtmlDest));
 
 });
 
 // Remove favicons.html
 gulp.task('favicons:remove-html', function() {
 
-	return del(config.favicons.htmlRenameSrc);
+	return del(config.favicons.concatHtmlSrc);
 
 });
 
 // Favicons sequence of tasks
 gulp.task('favicons', function() {
-	runSequence('favicons:create', 'favicons:rename-html', 'favicons:remove-html');
+	runSequence('favicons:create-favicon', 'favicons:create-touch-icon', 'favicons:concat-html', 'favicons:remove-html');
 });

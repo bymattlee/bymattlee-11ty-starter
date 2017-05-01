@@ -110,7 +110,8 @@ module.exports = {
 		disallow: ''
 	},
 	favicons: {
-		src: srcAssets + '/favicons/favicon.png',
+		faviconSrc: srcAssets + '/favicons/favicon.png',
+		touchIconSrc: srcAssets + '/favicons/touch-icon.png',
 		dest: destAssets + '/favicons',
 		appName: 'ByMattLee',
 		appDescription: 'ByMattLee Web Starter Files',
@@ -121,9 +122,13 @@ module.exports = {
 		display: 'browser',
 		orientation: 'portrait',
 		version: '1.0',
-		html: '../../../src/html/components/favicons.html',
-		htmlRenameSrc: src + '/html/components/favicons.html',
-		htmlRenameDest: src + '/html/components'
+		faviconHtmlPath: '../../../src/html/components/favicons.html',
+		touchIconHtmlPath: '../../../src/html/components/touch-icons.html',
+		concatHtmlSrc: [
+			src + '/html/components/favicons.html',
+			src + '/html/components/touch-icons.html'
+		],
+		concatHtmlDest: src + '/html/components'
 	},
 	deploy: {
 		src: dest + '/',

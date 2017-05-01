@@ -14,8 +14,10 @@ var config = require('../config'),
 gulp.task('default', function() {
 	runSequence(
 		'clean',
-		'favicons:create',
-		['favicons:rename-html', 'favicons:remove-html'],
+		'favicons:create-favicon',
+		'favicons:create-touch-icon',
+		'favicons:concat-html',
+		'favicons:remove-html',
 		['markup', 'styles', 'scripts', 'images', 'svgs', 'copy'],
 		['sitemap', 'robots']
 	);
