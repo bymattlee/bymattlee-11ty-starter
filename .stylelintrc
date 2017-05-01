@@ -1,5 +1,8 @@
 {
     "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-order"
+    ],
     "rules": {
         "indentation": "tab",
         "max-empty-lines": 2,
@@ -12,8 +15,8 @@
         "function-url-quotes": "always",
         "selector-attribute-quotes": "always",
         "string-quotes": "double",
-        "declaration-block-properties-order": "alphabetical",
         "color-named": "never",
-        "font-weight-notation": "numeric"
+        "font-weight-notation": "numeric",
+        "order/properties-alphabetical-order": true
     }
 }

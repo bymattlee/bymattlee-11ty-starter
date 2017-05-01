@@ -87,7 +87,7 @@ module.exports = {
 		src: [
 			srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
 			'!' + srcAssets + '/svgs/*.svg',
-			'!' + srcAssets + '/vendors'
+			'!' + srcAssets + '/vendors/**/*'
 		],
 		dest:  destAssets
 	},
