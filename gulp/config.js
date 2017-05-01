@@ -86,10 +86,11 @@ module.exports = {
 	copy: {
 		src: [
 			srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
+			src + '/.htaccess',
 			'!' + srcAssets + '/svgs/*.svg',
 			'!' + srcAssets + '/vendors/**/*'
 		],
-		dest:  destAssets
+		dest:  dest
 	},
 	clean: {
 		dest:  dest
