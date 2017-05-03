@@ -58,10 +58,6 @@ module.exports = {
 			srcAssets + '/js/modules/**/*.js'
 		],
 		dest:  destAssets + '/js',
-		filter: [
-			srcAssets + '/js/main.js',
-			srcAssets + '/js/modules/**/*.js'
-		],
 		modernizr: {
 			src: [
 				srcAssets + '/scss/**/*',

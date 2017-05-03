@@ -8,7 +8,6 @@ var addSrc = require('gulp-add-src'),
 	concat = require('gulp-concat'),
 	config = require('../config'),
 	eslint = require('gulp-eslint'),
-	filter = require('gulp-filter'),
 	gif = require('gulp-if'),
 	gulp = require('gulp'),
 	gutil = require('gulp-util'),
@@ -26,17 +25,14 @@ var addSrc = require('gulp-add-src'),
 
 /*
 ** -- Create a custom Modernizr build by crawling the .scss and .js files
-** -- Add main and module files to the build
 ** -- Add Bower files to the build
-** -- Lint only module files with ESLint
-** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
 ** -- Minify all files
 ** -- Bundle all files
 ** -- Add ByMattLee header to bundled file
 ** -- Print bundled file size
 ** -- Reload browser
 */
-gulp.task('scripts', function() {
+gulp.task('scripts:vendors', function() {
 
 	var bowerFiles = mainBowerFiles({
 		filter: '**/*.js',
@@ -44,17 +40,40 @@ gulp.task('scripts', function() {
 	});
 	console.log('Bower Files: ', bowerFiles);
 
-	var filterPipe = filter(config.scripts.filter, { restore: true });
-
 	return gulp.src(config.scripts.modernizr.src)
 		.pipe(plumber())
 		.pipe(modernizr(config.scripts.modernizr.options))
 		.pipe(addSrc.append(bowerFiles))
-		.pipe(addSrc.append(config.scripts.src))
-		.pipe(filterPipe)
+		.pipe(uglify())
+		.pipe(concat('vendors.js'))
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(header(config.fileHeader.join('\n')))
+		.pipe(size({
+			title: 'Compressed File Size:',
+			showFiles: true
+		}))
+		.pipe(gulp.dest(config.scripts.dest));
+
+});
+
+/*
+** -- Add main and module files to the build
+** -- Lint files with ESLint
+** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
+** -- Minify all files
+** -- Bundle all files
+** -- Add ByMattLee header to bundled file
+** -- Print bundled file size
+** -- Reload browser
+*/
+gulp.task('scripts:main', function() {
+
+	return gulp.src(config.scripts.src)
+		.pipe(plumber())
 		.pipe(eslint())
 		.pipe(eslint.format())
-		.pipe(filterPipe.restore)
 		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(uglify())
 			.pipe(concat('main.js'))
@@ -71,3 +90,6 @@ gulp.task('scripts', function() {
 		.pipe(browserSync.stream());
 
 });
+
+// Scripts sequence of tasks
+gulp.task('scripts', ['scripts:vendors', 'scripts:main']);
