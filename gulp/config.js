@@ -80,13 +80,14 @@ module.exports = {
 		sprite: 'sprite.svg'
 	},
 	copy: {
-		src: [
+		assetsSrc: [
 			srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
-			src + '/.htaccess',
 			'!' + srcAssets + '/svgs/*.svg',
 			'!' + srcAssets + '/vendors/**/*'
 		],
-		dest:  dest
+		assetsDest: destAssets,
+		htaccessSrc: src + '/.htaccess',
+		htaccessDest: dest
 	},
 	clean: {
 		dest:  dest

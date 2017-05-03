@@ -21,6 +21,6 @@ gulp.task('watch', ['browserSync'], function() {
 	gulp.watch(config.scripts.src, ['scripts:main']);
 	gulp.watch(config.images.src, ['images']).on('change', reload);
 	gulp.watch(config.svgs.src, ['svgs']).on('change', reload);
-	gulp.watch(config.copy.src, ['copy']).on('change', reload);
+	gulp.watch(config.copy.assetsSrc, ['copy:assets']).on('change', reload);
 
 });
