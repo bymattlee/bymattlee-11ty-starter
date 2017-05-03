@@ -114,6 +114,9 @@ figure {
 }
 
 textarea {
+	border: 0.1rem solid $white;
+	border-radius: 0;
+	font-family: $font-family-primary;
 	resize: none;
 }
 
@@ -139,6 +142,7 @@ button {
 	background: transparent;
 	border: 0;
 	cursor: pointer;
+	font-family: $font-family-primary;
 	line-height: normal;
 	outline: 0;
 	padding: 0;
@@ -147,16 +151,17 @@ button {
 input {
 	border: 0.1rem solid $white;
 	border-radius: 0;
+	font-family: $font-family-primary;
 	outline: none;
 	padding: 0.5rem 1rem;
 }
 
 table {
-	border-width: 0.2rem;
+	border-width: 0.1rem;
 
 	th,
 	td {
-		border: 0.2rem solid $grey-light--c;
+		border: 0.1rem solid $grey-light--c;
 		padding: 0.5rem;
 	}
 }

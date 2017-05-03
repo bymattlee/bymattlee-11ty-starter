@@ -3,7 +3,7 @@
 /* ***** ----------------------------------------------- ***** */
 
 /*
-** All CSS classes use namespaces to further improve organization. Explanation below:
+** All CSS classes use namespaces to further improve organization.
 **
 ** -- (u-) Utility classes have a very specific role and usually contain one declaration.
 **	  - Example: A class that hides the element on mobile, a class that bolds the text, etc.
@@ -23,6 +23,12 @@
 ** -- (js-) JavaScript classes do not have any styling attached to them. They are used to
 **	  signify that there is some behavior attached to it.
 **	  - Example: A button that toggles the menu, a social icon that opens a popup window, etc.
+**
+** -- (t-) Theme classes modify the color palette of the site. Usually used on the body element.
+**	  - Example: A dark theme that utilizes a lighter type color on a dark background.
+**
+** -- (s-) State classes signify the current state of an element.
+**	  - Example: A mobile menu that is open when the menu button is clicked.
 */
 
 /* ***** Global
@@ -30,7 +36,25 @@
 
 @import "global/functions";
 @import "global/variables";
-@import "global/mixins";
+
+
+/* ***** Mixins
+** ***** ----------------------------------------------- ***** */
+
+@import "mixins/background";
+@import "mixins/layout";
+@import "mixins/text";
+@import "mixins/transition";
+
+
+/* ***** Utilities
+** ***** ----------------------------------------------- ***** */
+
+@import "utilities/layout";
+@import "utilities/show";
+@import "utilities/hide";
+@import "utilities/text";
+@import "utilities/overflow";
 
 
 /* ***** Base
@@ -38,7 +62,6 @@
 
 @import "base/typography";
 @import "base/base";
-@import "base/utilities";
 
 
 /* ***** Vendors
@@ -51,6 +74,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 @import "layout/base";
+@import "layout/grid";
 
 
 /* ***** Objects

@@ -1,0 +1,80 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Layout/Grid Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.l-grid {
+	@include clearfix;
+
+	margin: -1.5rem -1.5rem 0;
+
+	&-item {
+		float: left;
+		padding: 1.5rem;
+		width: 100%;
+
+		&--one_half {
+			&:nth-child(odd) {
+				@include mq($mq-xsmall) {
+					clear: both;
+				}
+			}
+
+			@include mq($mq-xsmall) {
+				width: 50%;
+			}
+		}
+
+		&--one_third {
+			&:nth-child(odd) {
+				@include mq($mq-xsmall) {
+					clear: both;
+				}
+
+				@include mq($mq-medium) {
+					clear: none;
+				}
+			}
+
+			&:nth-child(3n+1) {
+				@include mq($mq-medium) {
+					clear: both;
+				}
+			}
+
+			@include mq($mq-xsmall) {
+				width: 50%;
+			}
+
+			@include mq($mq-medium) {
+				width: 33.3333%;
+			}
+		}
+
+		&--one_fourth {
+			&:nth-child(odd) {
+				@include mq($mq-xsmall) {
+					clear: both;
+				}
+
+				@include mq($mq-medium) {
+					clear: none;
+				}
+			}
+
+			&:nth-child(4n+1) {
+				@include mq($mq-medium) {
+					clear: both;
+				}
+			}
+
+			@include mq($mq-xsmall) {
+				width: 50%;
+			}
+
+			@include mq($mq-medium) {
+				width: 25%;
+			}
+		}
+	}
+}

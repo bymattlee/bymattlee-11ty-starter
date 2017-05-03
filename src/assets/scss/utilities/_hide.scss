@@ -1,0 +1,159 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Hide
+** ***** ----------------------------------------------- ***** */
+
+
+.u-visually_hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.u-invisible {
+	visibility: hidden;
+}
+
+.u-hide {
+	display: none;
+}
+
+.u-hide--xsmall {
+	display: none;
+
+	@include mq($mq-xsmall) {
+		display: block;
+	}
+}
+
+.u-hide--xsmall_small {
+	display: none;
+
+	@include mq($mq-small) {
+		display: block;
+	}
+}
+
+.u-hide--xsmall_medium {
+	display: none;
+
+	@include mq($mq-medium) {
+		display: block;
+	}
+}
+
+.u-hide--xsmall_large {
+	display: none;
+
+	@include mq($mq-large) {
+		display: block;
+	}
+}
+
+.u-hide--xsmall_xlarge {
+	display: none;
+
+	@include mq($mq-xlarge) {
+		display: block;
+	}
+}
+
+.u-hide--small {
+	@include mq($mq-xsmall) {
+		display: none;
+	}
+
+	@include mq($mq-small) {
+		display: block;
+	}
+}
+
+.u-hide--small_medium {
+	@include mq($mq-xsmall) {
+		display: none;
+	}
+
+	@include mq($mq-medium) {
+		display: block;
+	}
+}
+
+.u-hide--small_large {
+	@include mq($mq-xsmall) {
+		display: none;
+	}
+
+	@include mq($mq-large) {
+		display: block;
+	}
+}
+
+.u-hide--small_xlarge {
+	@include mq($mq-xsmall) {
+		display: none;
+	}
+
+	@include mq($mq-xlarge) {
+		display: block;
+	}
+}
+
+.u-hide--medium {
+	@include mq($mq-small) {
+		display: none;
+	}
+
+	@include mq($mq-medium) {
+		display: block;
+	}
+}
+
+.u-hide--medium_large {
+	@include mq($mq-small) {
+		display: none;
+	}
+
+	@include mq($mq-large) {
+		display: block;
+	}
+}
+
+.u-hide--medium_xlarge {
+	@include mq($mq-small) {
+		display: none;
+	}
+
+	@include mq($mq-xlarge) {
+		display: block;
+	}
+}
+
+.u-hide--large {
+	@include mq($mq-medium) {
+		display: none;
+	}
+
+	@include mq($mq-large) {
+		display: block;
+	}
+}
+
+.u-hide--large_xlarge {
+	@include mq($mq-medium) {
+		display: none;
+	}
+
+	@include mq($mq-xlarge) {
+		display: block;
+	}
+}
+
+.u-hide--xlarge {
+	@include mq($mq-large) {
+		display: none;
+	}
+}

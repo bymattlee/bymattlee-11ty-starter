@@ -1,0 +1,31 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Mixins/Background
+** ***** ----------------------------------------------- ***** */
+
+
+// Ensure background image covers the entire container
+@mixin background-cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// Ensure the background image fits in container
+@mixin background-contain {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+// Ensure video covers the entire container
+@mixin video-background-cover {
+	height: 100%;
+	left: 50%;
+	min-height: 57.14285vw; /* 100 * 4 / 7 */
+	min-width: 100%;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 175vh; /* 100 * 7 / 4 */
+}

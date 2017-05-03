@@ -1,0 +1,58 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Mixins/Layout
+** ***** ----------------------------------------------- ***** */
+
+
+// Media query
+@mixin mq($breakpoint) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+// Clearfix
+@mixin clearfix {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+// Center horizontally
+@mixin horizontal-center {
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+// Center vertically
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Center horizontally and vertically
+@mixin absolute-center {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+// Cover the entire element
+@mixin full-cover {
+	bottom: 0;
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}

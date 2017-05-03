@@ -58,8 +58,8 @@ gulp.task('styles', function () {
 				syntax: scss 
 			})
 		)
+		.pipe(addSrc.prepend(bowerFiles))
 		.pipe(gif(isDevelopment, sourcemaps.init()))
-			.pipe(addSrc.prepend(bowerFiles))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(autoprefixer())
 			.pipe(cleanCSS())

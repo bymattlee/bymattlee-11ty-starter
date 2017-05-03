@@ -1,0 +1,97 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Text
+** ***** ----------------------------------------------- ***** */
+
+
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+.u-h5,
+.u-h6 {
+	text-rendering: optimizeLegibility;
+}
+
+.u-h1 {
+	font-size: $font-size-h1;
+}
+
+.u-h2 {
+	font-size: $font-size-h2;
+}
+
+.u-h3 {
+	font-size: $font-size-h3;
+}
+
+.u-h4 {
+	font-size: $font-size-h4;
+}
+
+.u-h5 {
+	font-size: $font-size-h5;
+}
+
+.u-h6 {
+	font-size: $font-size-h6;
+}
+
+.u-text--bold {
+	font-weight: $font-weight-bold;
+}
+
+.u-text--normal {
+	font-weight: $font-weight-normal;
+}
+
+.u-text--italic {
+	font-style: italic;
+}
+
+.u-text--right {
+	text-align: right;
+}
+
+.u-text--left {
+	text-align: left;
+}
+
+.u-text--center {
+	text-align: center;
+}
+
+.u-text--justify {
+	text-align: justify;
+}
+
+.u-text--nowrap {
+	white-space: nowrap;
+}
+
+.u-text--lowercase {
+	text-transform: lowercase;
+}
+
+.u-text--uppercase {
+	text-transform: uppercase;
+}
+
+.u-text--capitalize {
+	text-transform: capitalize;
+}
+
+.u-text--underline {
+	text-decoration: underline;
+}
+
+.u-text--overline {
+	text-decoration: overline;
+}
+
+.u-text--line_through {
+	text-decoration: line-through;
+}
+
+.u-text--ellipsis {
+	@include truncate-text;
+}

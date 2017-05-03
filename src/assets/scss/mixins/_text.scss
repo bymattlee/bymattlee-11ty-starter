@@ -1,0 +1,63 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Mixins/Text
+** ***** ----------------------------------------------- ***** */
+
+
+// Font face
+@mixin font-face($name, $file, $weight) {
+	@font-face {
+		font-display: swap;
+		font-family: $name;
+		font-style: normal;
+		font-weight: $weight;
+		src:
+			url("../fonts/#{$file}.woff2") format("woff2"),
+			url("../fonts/#{$file}.woff") format("woff");
+	}
+}
+
+// Truncate text
+@mixin truncate-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Placeholder text
+@mixin placeholder($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+}
+
+// Input autofill
+@mixin autofill($border-color, $font-color, $background-color) {
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus {
+		border: 0.1rem solid $border-color;
+		-webkit-box-shadow: 0 0 0 100rem $background-color inset;
+		-webkit-text-fill-color: $font-color;
+		transition: background-color 5000s ease-in-out 0s;
+	}
+}
+
+// Text Underline
+@mixin text-underline($color) {
+	background: linear-gradient($color, $color);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 0.1rem 0.1rem;
+}
