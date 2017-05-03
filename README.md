@@ -87,7 +87,7 @@ $ gulp gzip
 * JS files located in the `src/assets/js` directory will be bundled into `dist/assets/js/main.min.js`
 * `main.js` in `src/assets/js` serves as the main JS file that runs all modules
 * All modules should be placed in `src/assets/js/modules` so they can be bundled in `main.min.js`
-* All vendor JS are managed by Bower in `src/assets/vendors` and are bundled in `main.min.js`
+* All vendor JS are managed by Bower in `src/assets/vendors` and are bundled in `vendors.min.js`
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
