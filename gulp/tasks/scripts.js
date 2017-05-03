@@ -91,5 +91,5 @@ gulp.task('scripts:main', function() {
 
 });
 
-// Scripts sequence of tasks
+// Scripts task
 gulp.task('scripts', ['scripts:vendors', 'scripts:main']);
