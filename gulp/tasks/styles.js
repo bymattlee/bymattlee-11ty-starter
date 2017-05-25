@@ -62,7 +62,9 @@ gulp.task('styles', function () {
 		.pipe(gif(isDevelopment, sourcemaps.init()))
 			.pipe(sass().on('error', sass.logError))
 			.pipe(autoprefixer())
-			.pipe(cleanCSS())
+			.pipe(cleanCSS({
+				inline: ['all']
+			}))
 			.pipe(concat('main.css'))
 			.pipe(rename({
 				suffix: '.min'
