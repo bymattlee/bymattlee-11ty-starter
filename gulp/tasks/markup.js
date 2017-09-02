@@ -31,6 +31,8 @@ var browserSync = require('browser-sync'),
 */
 gulp.task('markup', function() {
 
+	var timestamp = Math.floor(Date.now() / 1000);
+
 	if (isProduction) {
 		siteUrl = config.productionUrl;
 	} else if (isStaging) {
@@ -46,6 +48,9 @@ gulp.task('markup', function() {
 		.pipe(plumber())
 		.pipe(data(function() {
 			return siteUrl;
+		}))
+		.pipe(data(function() {
+			return { timestamp: timestamp };
 		}))
 		.pipe(data(function() {
 			return require(config.markup.data);

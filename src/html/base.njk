@@ -41,7 +41,7 @@
 
 <title>{{ page_title }}</title>
 
-<link rel="stylesheet" href="{{ home_url }}/assets/css/main.min.css">
+<link rel="stylesheet" href="{{ home_url }}/assets/css/main.min.css?{{ timestamp }}">
 
 {% if google_analytics_id %}
 <script>
@@ -64,8 +64,8 @@
 
 {% include "components/footer.njk" %}
 
-<script src="{{ home_url }}/assets/js/vendors.min.js"></script>
-<script src="{{ home_url }}/assets/js/main.min.js"></script>
+<script src="{{ home_url }}/assets/js/vendors.min.js?{{ timestamp }}"></script>
+<script src="{{ home_url }}/assets/js/main.min.js?{{ timestamp }}"></script>
 
 </body>
 </html>
