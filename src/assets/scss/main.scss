@@ -29,6 +29,9 @@
 **
 ** -- (s-) State classes signify the current state of an element.
 **	  - Example: A mobile menu that is open when the menu button is clicked.
+**
+** -- (p-) Page classes identifies the current page.
+**	  - Example: The home page will use the class '.p-home'.
 */
 
 /* ***** Global
@@ -55,6 +58,7 @@
 @import "utilities/hide";
 @import "utilities/text";
 @import "utilities/overflow";
+@import "utilities/opacity";
 
 
 /* ***** Base

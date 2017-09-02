@@ -7,3 +7,8 @@
 @function px-to-em($px) {
 	@return ($px / 16) * 1em;
 }
+
+// Responsive value
+@function responsive-value($low-size, $high-size, $low-breakpoint, $high-breakpoint) {
+	@return calc(#{$low-size}rem + (#{$high-size} - #{$low-size}) * (100vw - #{$low-breakpoint}rem) / (#{$high-breakpoint} - #{$low-breakpoint}));
+}

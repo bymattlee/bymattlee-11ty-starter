@@ -66,6 +66,27 @@
 	transition: background-color $transition-speed-faster;
 }
 
+// Border Color
+@mixin transition-border-color-slower {
+	transition: border-color $transition-speed-slower;
+}
+
+@mixin transition-border-color-slow {
+	transition: border-color $transition-speed-slow;
+}
+
+@mixin transition-border-color-normal {
+	transition: border-color $transition-speed-normal;
+}
+
+@mixin transition-border-color-fast {
+	transition: border-color $transition-speed-fast;
+}
+
+@mixin transition-border-color-faster {
+	transition: border-color $transition-speed-faster;
+}
+
 // Opacity
 @mixin transition-opacity-slower {
 	transition: opacity $transition-speed-slower;

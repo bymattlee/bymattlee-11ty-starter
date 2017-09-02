@@ -27,11 +27,11 @@ $font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
 // Font Sizes
 $font-size-base: 62.5%;
 
-$font-size-smaller: 0.9rem;
-$font-size-small: 1.1rem;
-$font-size-normal: 1.3rem;
-$font-size-large: 1.5rem;
-$font-size-larger: 1.7rem;
+$font-size-smaller: 1.2rem;
+$font-size-small: 1.4rem;
+$font-size-normal: 1.6rem;
+$font-size-large: 1.8rem;
+$font-size-larger: 2rem;
 
 $font-size-h1: 3.2rem;
 $font-size-h2: 2.4rem;
@@ -99,14 +99,14 @@ $ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 $ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 
-/* ***** Media Queries
+/* ***** Breakpoints
 ** ***** ----------------------------------------------- ***** */
 
-$mq-xsmall: px-to-em(480);
-$mq-small: px-to-em(768);
-$mq-medium: px-to-em(900);
-$mq-large: px-to-em(1100);
-$mq-xlarge: px-to-em(1240);
+$bp-xsmall: px-to-em(480);
+$bp-small: px-to-em(768);
+$bp-medium: px-to-em(900);
+$bp-large: px-to-em(1100);
+$bp-xlarge: px-to-em(1300);
 
 
 /* ***** Z-Index
