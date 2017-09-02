@@ -11,7 +11,8 @@
         "selector-pseudo-element-no-unknown": ,
         "rule-empty-line-before": [
             "always-multi-line", {
-                "except": [ "first-nested"]
+                "except": ["first-nested"],
+                "ignore": ["after-comment"]
             }
         ],
         "block-closing-brace-empty-line-before": ,
