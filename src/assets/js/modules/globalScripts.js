@@ -9,7 +9,7 @@
 	Main.modules.globalScripts = function() {
 
 		var $body = $('.js-body'),
-			upgradeMessage = '<div class="c-upgrade_browser_message"><a href="http://outdatedbrowser.com/" class="c-upgrade_browser_message-link" target="_blank">For a better browsing experience, please upgrade your browser to the latest version. Click here upgrade.</a></div>',
+			upgradeMessage = '<div class="c-upgrade_browser_message"><a href="http://outdatedbrowser.com/" class="c-upgrade_browser_message-link" target="_blank">For a better browsing experience, please upgrade your browser to the latest version. Click here to upgrade.</a></div>',
 			utilities = Main.modules.utilities(),
 			isDevice = utilities.isDevice(),
 
