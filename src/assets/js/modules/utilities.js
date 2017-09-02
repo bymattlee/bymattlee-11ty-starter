@@ -41,6 +41,10 @@
 				return navigator.userAgent.match(/Firefox/i);
 			},
 
+			isEdge = function() {
+				return navigator.userAgent.match(/Edge/i);
+			},
+
 			isDeviceAndroid = function() {
 				return navigator.userAgent.match(/Android/i);
 			},
@@ -74,6 +78,7 @@
 			isChrome: isChrome,
 			isSafari: isSafari,
 			isFirefox: isFirefox,
+			isEdge: isEdge,
 			isDevice: isDevice
 		}
 		
