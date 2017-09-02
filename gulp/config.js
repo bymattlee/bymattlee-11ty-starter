@@ -38,13 +38,12 @@ module.exports = {
 		home_url: 'http://bymattlee.com'
 	},
 	markup: {
-		src: src + '/html/pages/**/*.html',
+		src: src + '/html/pages/**/*.njk',
 		dest: dest,
 		data: '../../' + src + '/html/site_data.json',
 		path: src + '/html',
 		watchSrc: [
 			src + '/html/**/*.njk',
-			src + '/html/pages/**/*.html',
 			src + '/html/site_data.json'
 		]
 	},
@@ -119,13 +118,13 @@ module.exports = {
 		display: 'browser',
 		orientation: 'portrait',
 		version: '1.0',
-		faviconHtmlPath: '../../../src/html/components/favicons.html',
-		touchIconHtmlPath: '../../../src/html/components/touch-icons.html',
+		faviconHtmlPath: '../../../src/html/partials/global/favicons.html',
+		touchIconHtmlPath: '../../../src/html/partials/global/touch-icons.html',
 		concatHtmlSrc: [
-			src + '/html/components/favicons.html',
-			src + '/html/components/touch-icons.html'
+			src + '/html/partials/global/favicons.html',
+			src + '/html/partials/global/touch-icons.html'
 		],
-		concatHtmlDest: src + '/html/components'
+		concatHtmlDest: src + '/html/partials/global'
 	},
 	deploy: {
 		src: dest + '/',
@@ -136,4 +135,4 @@ module.exports = {
 		dest: './',
 		filename: 'Project.Archive.' + timestamp + '.tar'
 	}
-}
+};

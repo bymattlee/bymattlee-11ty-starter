@@ -15,7 +15,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="{{ site_name }}">
 
-{% include "components/favicons.njk" %}
+{% include "partials/global/favicons.njk" %}
 
 <meta property="og:title" content="{{ page_title }}">
 <meta property="og:site_name" content="{{ site_name }}">
@@ -58,11 +58,11 @@
 
 <body class="js-body {{ page_body_class }}">
 
-{% include "components/header.njk" %}
+{% include "partials/global/header.njk" %}
 
 {% block main %}{% endblock %}
 
-{% include "components/footer.njk" %}
+{% include "partials/global/footer.njk" %}
 
 <script src="{{ home_url }}/assets/js/vendors.min.js?{{ timestamp }}"></script>
 <script src="{{ home_url }}/assets/js/main.min.js?{{ timestamp }}"></script>
