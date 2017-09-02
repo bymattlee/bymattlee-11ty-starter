@@ -21,6 +21,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 // Example
+/* stylelint-disable */
 _::-webkit-full-page-media,
 _:future,
 :root .selector {
@@ -35,3 +36,4 @@ _::-moz-range-track,
 body:last-child .selector {
 
 }
+/* stylelint-enable */

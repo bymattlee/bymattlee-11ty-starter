@@ -27,6 +27,6 @@
     "svgxuse": "^1.2.4",
     "sanitize-css": "^5.0.0",
     "fastclick": "^1.0.6",
-    "gsap": "^1.19.1"
+    "gsap": "^1.20.2"
   }
 }

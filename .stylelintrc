@@ -9,7 +9,11 @@
         "block-no-empty": ,
         "selector-type-no-unknown": ,
         "selector-pseudo-element-no-unknown": ,
-        "rule-nested-empty-line-before": ,
+        "rule-empty-line-before": [
+            "always-multi-line", {
+                "except": [ "first-nested"]
+            }
+        ],
         "block-closing-brace-empty-line-before": ,
         "font-family-name-quotes": "always-where-recommended",
         "function-url-quotes": "always",
@@ -17,6 +21,7 @@
         "string-quotes": "double",
         "color-named": "never",
         "font-weight-notation": "numeric",
-        "order/properties-alphabetical-order": true
+        "order/properties-alphabetical-order": true,
+        "at-rule-no-unknown":
     }
 }
