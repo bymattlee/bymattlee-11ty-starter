@@ -18,14 +18,14 @@
 }
 
 // Ensure video covers the entire container
+// https://codepen.io/shshaw/pen/OVGWLG
 @mixin video-background-cover {
-	height: 100%;
+	height: auto;
 	left: 50%;
-	min-height: 57.14285vw; /* 100 * 4 / 7 */
+	min-height: 100%;
 	min-width: 100%;
-	pointer-events: none;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 175vh; /* 100 * 7 / 4 */
+	width: auto;
 }

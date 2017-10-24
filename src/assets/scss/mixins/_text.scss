@@ -4,11 +4,11 @@
 
 
 // Font face
-@mixin font-face($name, $file, $weight) {
+@mixin font-face($name, $file, $weight, $style) {
 	@font-face {
 		font-display: swap;
 		font-family: $name;
-		font-style: normal;
+		font-style: $style;
 		font-weight: $weight;
 		src:
 			url("../fonts/#{$file}.woff2") format("woff2"),
