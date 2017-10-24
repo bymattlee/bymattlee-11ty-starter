@@ -62,6 +62,7 @@ gulp.task('markup', function() {
 			collapseBooleanAttributes: true,
 			collapseInlineTagWhitespace: true,
 			collapseWhitespace: true,
+			conservativeCollapse: true,
 			minifyCSS: true,
 			minifyJS: true,
 			removeComments: true,
