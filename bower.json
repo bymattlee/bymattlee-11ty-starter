@@ -24,9 +24,9 @@
   ],
   "devDependencies": {
     "jquery": "^3.2.1",
-    "svgxuse": "^1.2.4",
+    "svgxuse": "^1.2.6",
     "sanitize-css": "^5.0.0",
     "fastclick": "^1.0.6",
-    "gsap": "^1.20.2"
+    "gsap": "^1.20.3"
   }
 }
