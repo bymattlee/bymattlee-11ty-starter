@@ -72,7 +72,7 @@ $ gulp gzip
 * General site data can be set in `src/html/site_data.json`
 * Pages under `src/html/pages` will be compiled to `dist`
 * `src/html/base.njk` serves as the base template for the site
-* `src/html/components` contains site components that are reused across the site (modular HTML)
+* `src/html/partials` contains site partials and components that are reused across the site (modular HTML)
 
 ##### Styles
 * Includes linter (Stylelint), autoprefixer, minification and sourcemap creation
@@ -88,6 +88,7 @@ $ gulp gzip
 * `main.js` in `src/assets/js` serves as the main JS file that runs all modules
 * All modules should be placed in `src/assets/js/modules` so they can be bundled in `main.min.js`
 * All vendor JS are managed by Bower in `src/assets/vendors` and are bundled in `vendors.min.js`
+* When adding new devDependencies to Bower, rebuild scripts to ensure they are compiled into `vendors.min.js`
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
@@ -100,7 +101,7 @@ $ gulp gzip
 * Place source favicon in `src/assets/favicons` as `favicon.png`
 * Place source touch icon in `src/assets/favicons` as `touch-icon.png`
 * Favicons, touch icons and associated files are generated to the `dist/assets/favicons` directory
-* Markup is generated to `src/html/components/favicons.njk`
+* Markup is generated to `src/html/partials/global/favicons.njk`
 
 ##### SVGS
 * Place all SVG files in the `src/assets/svg` directory
@@ -114,7 +115,7 @@ $ gulp gzip
 
 ##### Robots.txt
 * Generates robots.txt file
-* Configuration can be found in `gulp/config.js` in `lines 93-99`
+* Configuration can be found in `gulp/config.js` in `lines 101-107`
 
 ##### Deploy
 * Deploys the `dist` directory via SSH
