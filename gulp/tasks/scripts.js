@@ -25,7 +25,7 @@ var addSrc = require('gulp-add-src'),
 
 /*
 ** -- Create a custom Modernizr build by crawling the .scss and .js files
-** -- Add Bower files to the build
+** -- Add Bower and vendor files to the build
 ** -- Minify all files
 ** -- Bundle all files
 ** -- Add ByMattLee header to bundled file
@@ -44,6 +44,7 @@ gulp.task('scripts:vendors', function() {
 		.pipe(plumber())
 		.pipe(modernizr(config.scripts.modernizr.options))
 		.pipe(addSrc.append(bowerFiles))
+		.pipe(addSrc.append(config.scripts.srcVendors))
 		.pipe(uglify())
 		.pipe(concat('vendors.js'))
 		.pipe(rename({

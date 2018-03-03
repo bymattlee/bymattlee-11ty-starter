@@ -1,19 +1,18 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Global Scripts JS
+** ***** Global JS
 ** ***** ----------------------------------------------- ***** */
 
 /* global Main, Modernizr */
 (function($){
 	'use strict';
 
-	Main.modules.globalScripts = function() {
+	Main.modules.global = function() {
 
 		var $body = $('.js-body'),
-			upgradeMessage = '<div class="c-upgrade_browser_message"><a href="http://outdatedbrowser.com/" class="c-upgrade_browser_message-link" target="_blank">For a better browsing experience, please upgrade your browser to the latest version. Click here to upgrade.</a></div>',
-			utilities = Main.modules.utilities(),
-			isDevice = utilities.isDevice(),
-
+			
 			modernizrCheck = function() {
+
+				var upgradeMessage = '<div class="c-upgrade_browser_message"><a href="http://outdatedbrowser.com/" class="c-upgrade_browser_message-link" target="_blank">For a better browsing experience, please upgrade your browser to the latest version. Click here to upgrade.</a></div>';
 
 				// Display message for user to upgrade if browser does not support flexbox
 				if (Modernizr['flexbox'] == false
@@ -24,6 +23,9 @@
 			},
 
 			addNotDeviceClassToBody = function() {
+
+				var utilities = Main.modules.utilities(),
+					isDevice = utilities.isDevice();
 
 				if (!isDevice) {
 					$body.addClass('l-not_device');

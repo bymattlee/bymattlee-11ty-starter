@@ -56,6 +56,7 @@ module.exports = {
 			srcAssets + '/js/main.js',
 			srcAssets + '/js/modules/**/*.js'
 		],
+		srcVendors: srcAssets + '/js/vendors/*.js',
 		dest:  destAssets + '/js',
 		modernizr: {
 			src: [
