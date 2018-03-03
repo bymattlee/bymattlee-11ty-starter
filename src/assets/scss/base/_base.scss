@@ -4,13 +4,13 @@
 
 
 :root {
-	background-color: $black;
+	background-color: $root-background-color;
 	font-size: $font-size-base;
 }
 
 *::selection {
-	background: $grey-light--a;
-	color: $white;
+	background-color: $selection-background-color;
+	color: $selection-font-color;
 }
 
 html {
