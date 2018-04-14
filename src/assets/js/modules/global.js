@@ -6,7 +6,7 @@
 (function($){
 	'use strict';
 
-	Main.modules.global = function() {
+	Main.global = function() {
 
 		var $body = $('.js-body'),
 			
@@ -15,8 +15,8 @@
 				var upgradeMessage = '<div class="c-upgrade_browser_message"><a href="http://outdatedbrowser.com/" class="c-upgrade_browser_message-link" target="_blank">For a better browsing experience, please upgrade your browser to the latest version. Click here to upgrade.</a></div>';
 
 				// Display message for user to upgrade if browser does not support flexbox
-				if (Modernizr['flexbox'] == false
-					|| Modernizr['svg'] == false) {
+				if (Modernizr['flexbox'] === false ||
+					Modernizr['svg'] === false) {
 					$body.append(upgradeMessage);
 				}
 
@@ -24,7 +24,7 @@
 
 			addNotDeviceClassToBody = function() {
 
-				var utilities = Main.modules.utilities(),
+				var utilities = Main.utilities(),
 					isDevice = utilities.isDevice();
 
 				if (!isDevice) {
@@ -38,7 +38,7 @@
 				modernizrCheck();
 				addNotDeviceClassToBody();
 			}
-		}
+		};
 		
 	};
 

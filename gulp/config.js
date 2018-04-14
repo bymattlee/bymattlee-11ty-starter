@@ -53,8 +53,9 @@ module.exports = {
 	},
 	scripts: {
 		src: [
-			srcAssets + '/js/main.js',
-			srcAssets + '/js/modules/**/*.js'
+			srcAssets + '/js/define.js',
+			srcAssets + '/js/modules/**/*.js',
+			srcAssets + '/js/main.js'
 		],
 		srcVendors: srcAssets + '/js/vendors/*.js',
 		dest:  destAssets + '/js',

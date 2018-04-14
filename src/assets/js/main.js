@@ -2,28 +2,11 @@
 ** ***** Main JS
 ** ***** ----------------------------------------------- ***** */
 
-
-var Main = Main || {};
-
-Main = {
-	modules: {}
-};
-
+/* global Main */
 (function($){
 	'use strict';
 
-	Main.init = function() {
-
-		// For each module in Main, call the init function
-		$.each(Main.modules, function(moduleName, moduleFunction) {
-			if ($.isFunction(moduleFunction().init())) {
-				moduleFunction().init();
-			}
-		});
-
-	};
-
-	/* INIT */
+	/* Init */
 
 	$(function(){
 

@@ -6,27 +6,33 @@
 (function($){
 	'use strict';
 
-	Main.modules.utilities = function() {
+	Main.utilities = function() {
 
 		var windowWidth = $(window).width(),
-			tabletWidth = 768,
+			xSmallWidth = 480,
+			smallWidth = 768,
 			mediumWidth = 900,
-			desktopWidth = 1100,
+			largeWidth = 1100,
+			xLargeWidth = 1300,
 
-			isMobileWidth = function() {
-				return (windowWidth < tabletWidth ? true : false);
+			isXSmallWidth = function() {
+				return (windowWidth <= xSmallWidth ? true : false);
 			},
 
-			isTabletWidth = function() {
-				return (windowWidth >= tabletWidth && windowWidth < desktopWidth ? true : false);
+			isSmallWidth = function() {
+				return (windowWidth <= smallWidth ? true : false);
 			},
 
 			isMediumWidth = function() {
-				return (windowWidth >= tabletWidth && windowWidth < mediumWidth ? true : false);
+				return (windowWidth <= mediumWidth ? true : false);
 			},
 
-			isDesktopWidth = function() {
-				return (windowWidth >= desktopWidth ? true : false);
+			isLargeWidth = function() {
+				return (windowWidth <= largeWidth ? true : false);
+			},
+
+			isXLargeWidth = function() {
+				return (windowWidth >= xLargeWidth ? true : false);
 			},
 
 			isChrome = function() {
@@ -71,16 +77,17 @@
 
 		return {
 			init: function() {},
-			isMobileWidth: isMobileWidth,
-			isTabletWidth: isTabletWidth,
+			isXSmallWidth: isXSmallWidth,
+			isSmallWidth: isSmallWidth,
 			isMediumWidth: isMediumWidth,
-			isDesktopWidth: isDesktopWidth,
+			isLargeWidth: isLargeWidth,
+			isXLargeWidth: isXLargeWidth,
 			isChrome: isChrome,
 			isSafari: isSafari,
 			isFirefox: isFirefox,
 			isEdge: isEdge,
 			isDevice: isDevice
-		}
+		};
 		
 	};
 
