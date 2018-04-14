@@ -13,27 +13,27 @@
 }
 
 .u-h1 {
-	font-size: $font-size-h1;
+	@extend h1;
 }
 
 .u-h2 {
-	font-size: $font-size-h2;
+	@extend h2;
 }
 
 .u-h3 {
-	font-size: $font-size-h3;
+	@extend h3;
 }
 
 .u-h4 {
-	font-size: $font-size-h4;
+	@extend h4;
 }
 
 .u-h5 {
-	font-size: $font-size-h5;
+	@extend h5;
 }
 
 .u-h6 {
-	font-size: $font-size-h6;
+	@extend h6;
 }
 
 .u-text--bold {
@@ -92,6 +92,6 @@
 	text-decoration: line-through;
 }
 
-.u-text--ellipsis {
+.u-text--truncate {
 	@include truncate-text;
 }

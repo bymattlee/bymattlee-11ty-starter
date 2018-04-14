@@ -23,6 +23,7 @@
         "color-named": "never",
         "font-weight-notation": "numeric",
         "order/properties-alphabetical-order": true,
-        "at-rule-no-unknown":
+        "at-rule-no-unknown": ,
+        "no-descending-specificity":
     }
 }

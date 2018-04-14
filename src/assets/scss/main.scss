@@ -53,12 +53,17 @@
 /* ***** Utilities
 ** ***** ----------------------------------------------- ***** */
 
-@import "utilities/layout";
+@import "utilities/display";
 @import "utilities/show";
 @import "utilities/hide";
+@import "utilities/margin";
+@import "utilities/padding";
+@import "utilities/float";
 @import "utilities/text";
 @import "utilities/overflow";
 @import "utilities/opacity";
+@import "utilities/position";
+@import "utilities/clearfix";
 
 
 /* ***** Base

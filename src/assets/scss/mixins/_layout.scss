@@ -49,8 +49,28 @@
 @mixin full-cover {
 	bottom: 0;
 	display: block;
+	height: 100%;
 	left: 0;
 	position: absolute;
 	right: 0;
 	top: 0;
+	width: 100%;
+}
+
+// Create proportional element
+@mixin proportional-element($ratio) {
+	&::after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+
+	&::before {
+		content: "";
+		float: left;
+		height: 0;
+		margin-left: -0.1rem;
+		padding-top: ($ratio) * 100%;
+		width: -0.1rem;
+	}
 }

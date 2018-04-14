@@ -13,16 +13,17 @@ $grey-light--a: #aaa;
 $grey-light--c: #ccc;
 
 // Text
-$body-font-color: $grey-light--c;
-$link-font-color: $grey-light--a;
-$link-hover-font-color: $grey-dark--6;
+$body-text-color: $grey-light--c;
+$link-text-color: $grey-light--a;
+$link-hover-text-color: $grey-dark--6;
+$link-active-text-color: $grey-light--a;
 
 // Background
 $root-background-color: $black;
 
 // Selection
 $selection-background-color: $grey-light--a;
-$selection-font-color: $white;
+$selection-text-color: $white;
 
 
 /* ***** Typography
@@ -34,18 +35,31 @@ $font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
 // Font Sizes
 $font-size-base: 62.5%;
 
-$font-size-smaller: 1.2rem;
-$font-size-small: 1.4rem;
-$font-size-normal: 1.6rem;
-$font-size-large: 1.8rem;
+$font-size-smaller: 1rem;
+$font-size-small: 1.2rem;
+$font-size-normal: 1.4rem;
+$font-size-large: 1.6rem;
 $font-size-larger: 2rem;
 
-$font-size-h1: 3.2rem;
-$font-size-h2: 2.4rem;
-$font-size-h3: 2rem;
-$font-size-h4: 1.6rem;
-$font-size-h5: 1.4rem;
-$font-size-h6: 1.2rem;
+$font-size-smaller-small: 1.2rem;
+$font-size-small-small: 1.4rem;
+$font-size-normal-small: 1.6rem;
+$font-size-large-small: 1.8rem;
+$font-size-larger-small: 2.2rem;
+
+$font-size-h1: 2.6rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.4rem;
+$font-size-h5: 1.2rem;
+$font-size-h6: 1rem;
+
+$font-size-h1-small: 3.2rem;
+$font-size-h2-small: 2.4rem;
+$font-size-h3-small: 2rem;
+$font-size-h4-small: 1.6rem;
+$font-size-h5-small: 1.4rem;
+$font-size-h6-small: 1.2rem;
 
 // Font Weights
 $font-weight-light: 200;

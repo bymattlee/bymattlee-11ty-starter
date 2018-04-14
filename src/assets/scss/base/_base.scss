@@ -10,7 +10,7 @@
 
 *::selection {
 	background-color: $selection-background-color;
-	color: $selection-font-color;
+	color: $selection-text-color;
 }
 
 html {
@@ -18,12 +18,16 @@ html {
 }
 
 body {
-	color: $body-font-color;
+	color: $body-text-color;
 	font-family: $font-family-primary;
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	line-height: $line-height-normal;
+
+	@include mq($bp-small) {
+		font-size: $font-size-normal-small;
+	}
 }
 
 p {
@@ -37,14 +41,17 @@ ol {
 }
 
 a {
-	color: $link-font-color;
-	text-decoration: none;
-
 	@include transition-color-normal;
 
-	&:hover,
+	color: $link-text-color;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-hover-text-color;
+	}
+
 	&:active {
-		color: $link-hover-font-color;
+		color: $link-active-text-color;
 	}
 }
 
@@ -61,26 +68,50 @@ h6 {
 
 h1 {
 	font-size: $font-size-h1;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h1-small;
+	}
 }
 
 h2 {
 	font-size: $font-size-h2;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h2-small;
+	}
 }
 
 h3 {
 	font-size: $font-size-h3;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h3-small;
+	}
 }
 
 h4 {
 	font-size: $font-size-h4;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h4-small;
+	}
 }
 
 h5 {
 	font-size: $font-size-h5;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h5-small;
+	}
 }
 
 h6 {
 	font-size: $font-size-h6;
+
+	@include mq($bp-small) {
+		font-size: $font-size-h6-small;
+	}
 }
 
 ul,
