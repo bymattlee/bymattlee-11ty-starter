@@ -6,7 +6,7 @@
 (function($){
 	'use strict';
 
-	Main.utilities = function() {
+	Main.modules.utilities = function() {
 
 		var windowWidth = $(window).width(),
 			xSmallWidth = 480,
@@ -73,6 +73,17 @@
 
 			isDevice = function() {
 				return (isDeviceAndroid() || isDeviceBlackBerry() || isDeviceiOS() || isDeviceOpera() || isDeviceWindows());
+			},
+
+			getUrlParameter = function(name) {
+
+				name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]'); // eslint-disable-line no-useless-escape
+
+				var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+				var results = regex.exec(location.search);
+
+				return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+
 			};
 
 		return {
@@ -86,7 +97,8 @@
 			isSafari: isSafari,
 			isFirefox: isFirefox,
 			isEdge: isEdge,
-			isDevice: isDevice
+			isDevice: isDevice,
+			getUrlParameter: getUrlParameter
 		};
 		
 	};

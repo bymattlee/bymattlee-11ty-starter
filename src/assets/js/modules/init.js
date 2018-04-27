@@ -10,7 +10,7 @@
 
 		// For each module in Main, call the init function
 
-		$.each(Main, function(moduleName, moduleFunction) {
+		$.each(Main.modules, function(moduleName, moduleFunction) {
 			if (moduleName != 'init' && $.isFunction(moduleFunction().init)) {
 				moduleFunction().init();
 			}

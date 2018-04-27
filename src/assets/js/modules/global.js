@@ -6,7 +6,7 @@
 (function($){
 	'use strict';
 
-	Main.global = function() {
+	Main.modules.global = function() {
 
 		var $body = $('.js-body'),
 			
@@ -24,7 +24,7 @@
 
 			addNotDeviceClassToBody = function() {
 
-				var utilities = Main.utilities(),
+				var utilities = Main.modules.utilities(),
 					isDevice = utilities.isDevice();
 
 				if (!isDevice) {
