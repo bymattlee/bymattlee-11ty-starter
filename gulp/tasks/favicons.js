@@ -17,11 +17,11 @@ var concat = require('gulp-concat'),
 
 // Set site URL based on environment
 if (isProduction) {
-	siteUrl = config.productionUrl.home_url;
+	siteUrl = config.productionUrl.homeUrl;
 } else if (isStaging) {
-	siteUrl = config.stagingUrl.home_url;
+	siteUrl = config.stagingUrl.homeUrl;
 } else {
-	siteUrl = config.developmentUrl.home_url;
+	siteUrl = config.developmentUrl.homeUrl;
 }
 
 // Create favicons

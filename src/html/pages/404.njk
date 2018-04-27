@@ -1,16 +1,16 @@
 {% extends "base.njk" %}
 
-{% set page_title = "Page Not Found | ByMattLee" %}
-{% set page_share_title = "Page Not Found" %}
-{% set page_slug = "404" %}
-{% set page_body_class = "p-404" %}
-{% set page_description = "Page Not Found" %}
+{% set pageTitle = "Page Not Found | ByMattLee" %}
+{% set pageShareTitle = "Page Not Found" %}
+{% set pageSlug = "404" %}
+{% set pageBodyClass = "p-404" %}
+{% set pageDescription = "Page Not Found" %}
 
 {% block main %}
-<main class="l-main" role="main">
-	<div class="l-container">
-		<h1>Page Not Found</h1>
-		<p>Click <a href="{{ home_url }}">here</a> to go back home.</p>
-	</div>
-</main>
+	<main class="l-main" role="main">
+		<div class="l-container">
+			<h1>Page Not Found</h1>
+			<p>Click <a href="{{ homeUrl }}">here</a> to go back home.</p>
+		</div>
+	</main>
 {% endblock %}

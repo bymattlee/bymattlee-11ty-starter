@@ -5,57 +5,61 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="description" content="{{ page_description }}">
+<meta name="description" content="{{ pageDescription }}">
 
 <meta name="msapplication-tap-highlight" content="no">
 
-<meta name="application-name" content="{{ site_name }}">
+<meta name="application-name" content="{{ siteName }}">
 
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="{{ site_name }}">
+<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
 
 {% include "partials/global/favicons.njk" %}
 
-<meta property="og:title" content="{{ page_share_title }}">
-<meta property="og:site_name" content="{{ site_name }}">
+<meta property="og:title" content="{{ pageShareTitle }}">
+<meta property="og:site_name" content="{{ siteName }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ home_url }}/{{ page_slug }}">
-<meta property="og:image" content="{{ home_url }}/assets/images/share.jpg">
-<meta property="og:description" content="{{ page_description }}">
+<meta property="og:url" content="{{ homeUrl }}/{{ pageSlug }}">
+<meta property="og:image" content="{{ homeUrl }}/assets/images/share.jpg">
+<meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:locale" content="en_US">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page_share_title }}">
-<meta name="twitter:site" content="{{ twitter_handle }}">
-<meta name="twitter:url" content="{{ home_url }}/{{ page_slug }}">
-<meta name="twitter:description" content="{{ page_description }}">
-<meta name="twitter:image" content="{{ home_url }}/assets/images/share.jpg">
+{% if twitterHandle %}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ pageShareTitle }}">
+	<meta name="twitter:site" content="{{ twitterHandle }}">
+	<meta name="twitter:url" content="{{ homeUrl }}/{{ pageSlug }}">
+	<meta name="twitter:description" content="{{ pageDescription }}">
+	<meta name="twitter:image" content="{{ homeUrl }}/assets/images/share.jpg">
+{% endif %}
 
-<link href="https://plus.google.com/+{{ google_plus_url }}" rel="publisher">
-<meta itemprop="name" content="{{ page_share_title }}">
-<meta itemprop="description" content="{{ page_description }}">
-<meta itemprop="image" content="{{ home_url }}/assets/images/share.jpg">
+{% if googlePlusHandle %}
+	<link href="https://plus.google.com/+{{ googlePlusHandle }}" rel="publisher">
+	<meta itemprop="name" content="{{ pageShareTitle }}">
+	<meta itemprop="description" content="{{ pageDescription }}">
+	<meta itemprop="image" content="{{ homeUrl }}/assets/images/share.jpg">
+{% endif %}
 
-<link rel="canonical" href="{{ home_url }}/{{ page_slug }}">
+<link rel="canonical" href="{{ homeUrl }}/{{ pageSlug }}">
 
-<title>{{ page_title }}</title>
+<title>{{ pageTitle }}</title>
 
-<link rel="stylesheet" href="{{ home_url }}/assets/css/main.min.css?{{ timestamp }}">
+<link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
 
-{% if google_analytics_id and is_production %}
-	<script async src="//www.googletagmanager.com/gtag/js?id={{ google_analytics_id }}"></script>
+{% if googleAnalyticsId and isProduction %}
+	<script async src="//www.googletagmanager.com/gtag/js?id={{ googleAnalyticsId }}"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', '{{ google_analytics_id }}');
+	  gtag('config', '{{ googleAnalyticsId }}');
 	</script>
 {% endif %}
 
 </head>
 
-<body class="js-body {{ page_body_class }}">
+<body class="js-body {{ pageBodyClass }}">
 
 {% include "partials/global/header.njk" %}
 
@@ -63,8 +67,8 @@
 
 {% include "partials/global/footer.njk" %}
 
-<script src="{{ home_url }}/assets/js/vendors.min.js?{{ timestamp }}"></script>
-<script src="{{ home_url }}/assets/js/main.min.js?{{ timestamp }}"></script>
+<script src="{{ homeUrl }}/assets/js/vendors.min.js?{{ timestamp }}"></script>
+<script src="{{ homeUrl }}/assets/js/main.min.js?{{ timestamp }}"></script>
 
 </body>
 </html>

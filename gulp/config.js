@@ -49,13 +49,13 @@ module.exports = {
 		'-->\n'
 	],
 	developmentUrl: {
-		home_url: 'http://localhost:3000'
+		homeUrl: 'http://localhost:3000'
 	},
 	stagingUrl: {
-		home_url: 'http://mynameismattlee.com'
+		homeUrl: 'http://mynameismattlee.com'
 	},
 	productionUrl: {
-		home_url: 'http://bymattlee.com'
+		homeUrl: 'http://bymattlee.com'
 	},
 	markup: {
 		src: src + '/html/pages/**/*.njk',

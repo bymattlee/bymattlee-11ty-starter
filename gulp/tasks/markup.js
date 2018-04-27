@@ -53,7 +53,7 @@ gulp.task('markup', function() {
 		.pipe(data(function() {
 			return {
 				timestamp: timestamp,
-				is_production: isProduction
+				isProduction: isProduction
 			};
 		}))
 		.pipe(data(function() {

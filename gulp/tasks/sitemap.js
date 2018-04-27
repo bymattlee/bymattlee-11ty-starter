@@ -15,11 +15,11 @@ var config = require('../config'),
 gulp.task('sitemap', function() {
 
 	if (isProduction) {
-		siteUrl = config.productionUrl.home_url;
+		siteUrl = config.productionUrl.homeUrl;
 	} else if (isStaging) {
-		siteUrl = config.stagingUrl.home_url;
+		siteUrl = config.stagingUrl.homeUrl;
 	} else {
-		siteUrl = config.developmentUrl.home_url;
+		siteUrl = config.developmentUrl.homeUrl;
 	}
 
 	return gulp.src(config.sitemap.src, {
