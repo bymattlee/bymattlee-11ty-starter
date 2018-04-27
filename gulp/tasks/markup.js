@@ -9,6 +9,7 @@ var browserSync = require('browser-sync'),
 	gif = require('gulp-if'),
 	gulp = require('gulp'),
 	gutil = require('gulp-util'),
+	header = require('gulp-header'),
 	htmlmin = require('gulp-htmlmin'),
 	nunjucksRender = require('gulp-nunjucks-render'),
 	plumber = require('gulp-plumber'),
@@ -50,7 +51,10 @@ gulp.task('markup', function() {
 			return siteUrl;
 		}))
 		.pipe(data(function() {
-			return { timestamp: timestamp };
+			return {
+				timestamp: timestamp,
+				is_production: isProduction
+			};
 		}))
 		.pipe(data(function() {
 			return require(config.markup.data);
@@ -65,12 +69,14 @@ gulp.task('markup', function() {
 			conservativeCollapse: true,
 			minifyCSS: true,
 			minifyJS: true,
+			processScripts: ['application/ld+json'],
 			removeComments: true,
 			removeEmptyAttributes: true,
 			removeRedundantAttributes: true,
 			removeScriptTypeAttributes: true,
 			removeStyleLinkTypeAttributes: true
 		})))
+		.pipe(header(config.markupHeader.join('\n')))
 		.pipe(gif(isProduction, size({
 			title: 'Compressed File Size:',
 			showFiles: true

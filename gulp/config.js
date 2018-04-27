@@ -28,6 +28,26 @@ module.exports = {
 		'**',
 		'*/\n'
 	],
+	markupHeader: [
+		'<!DOCTYPE html>',
+		'<!--',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**              {{ @bymattlee }}',
+		'**              {{ bymattlee.com }}',
+		'**              {{ creative_developer }}',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'**',
+		'-->\n'
+	],
 	developmentUrl: {
 		home_url: 'http://localhost:3000'
 	},
