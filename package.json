@@ -24,7 +24,7 @@
     "url": "https://github.com/bymattlee/bymattlee-web-starter-files/issues"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.23.7",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-add-src": "^1.0.0",
