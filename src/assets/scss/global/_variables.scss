@@ -31,6 +31,11 @@ $selection-text-color: $white;
 
 // Font Families
 $font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
+$font-family-secondary: "Open Sans", Arial, Helvetica, Sans-Serif;
+
+// Font globals
+$font-body: $font-family-secondary;
+$font-headline: $font-family-primary;
 
 // Font Sizes
 $font-size-base: 62.5%;
@@ -64,6 +69,7 @@ $font-size-h6-small: 1.2rem;
 // Font Weights
 $font-weight-light: 200;
 $font-weight-normal: 400;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 $font-weight-black: 800;
 
@@ -74,8 +80,8 @@ $letter-spacing-loose: 0.1rem;
 
 // Line Height
 $line-height-tight: 1;
-$line-height-normal: 1.4;
-$line-height-loose: 1.75;
+$line-height-normal: 1.2;
+$line-height-loose: 1.5;
 
 
 /* ***** Transition

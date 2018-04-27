@@ -19,7 +19,7 @@ html {
 
 body {
 	color: $body-text-color;
-	font-family: $font-family-primary;
+	font-family: $font-body;
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -31,7 +31,7 @@ body {
 }
 
 p {
-	margin: 2rem 0;
+	margin: 1.5rem 0;
 }
 
 p,
@@ -47,11 +47,15 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		color: $link-hover-text-color;
+		.l-not_device & {
+			color: $link-hover-text-color;
+		}
 	}
 
 	&:active {
-		color: $link-active-text-color;
+		.l-not_device & {
+			color: $link-active-text-color;
+		}
 	}
 }
 
@@ -61,6 +65,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $font-headline;
 	margin: 0;
 	padding: 0;
 	text-rendering: optimizeLegibility;

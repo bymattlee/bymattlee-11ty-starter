@@ -3,15 +3,6 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-h1,
-.u-h2,
-.u-h3,
-.u-h4,
-.u-h5,
-.u-h6 {
-	text-rendering: optimizeLegibility;
-}
-
 .u-h1 {
 	@extend h1;
 }
