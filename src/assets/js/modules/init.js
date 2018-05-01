@@ -6,7 +6,7 @@
 (function($){
 	'use strict';
 
-	Main.init = function() {
+	Main.modules.init = function() {
 
 		// For each module in Main, call the init function
 

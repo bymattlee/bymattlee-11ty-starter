@@ -10,7 +10,7 @@
 
 	$(function(){
 
-		Main.init();
+		Main.modules.init();
 
 	});
 
