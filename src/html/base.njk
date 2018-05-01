@@ -7,12 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="{{ pageDescription }}">
 
-<meta name="msapplication-tap-highlight" content="no">
-
-<meta name="application-name" content="{{ siteName }}">
-
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="{{ siteName }}">
+<title>{{ pageTitle }}</title>
 
 {% include "partials/global/favicons.njk" %}
 
@@ -40,9 +35,29 @@
 	<meta itemprop="image" content="{{ homeUrl }}/assets/images/share.jpg">
 {% endif %}
 
-<link rel="canonical" href="{{ homeUrl }}/{{ pageSlug }}">
+{% if pageBodyClass == 'p-home' %}
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "Person",
+			"email": "hello@bymattlee.com",
+			"image": "{{ home_url }}/assets/images/headshot.jpg",
+			"jobTitle": "Freelance Creative Developer",
+			"name": "Matt Lee",
+			"gender": "male",
+			"url": "http://bymattlee.com",
+			"sameAs": [ 
+				"https://www.facebook.com/bymattlee",
+				"https://twitter.com/bymattlee",
+				"https://www.instagram.com/bymattlee",
+				"https://www.linkedin.com/in/bymattlee",
+				"https://github.com/bymattlee"
+			]
+		}
+	</script>
+{% endif %}
 
-<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ homeUrl }}/{{ pageSlug }}">
 
 <link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
 
