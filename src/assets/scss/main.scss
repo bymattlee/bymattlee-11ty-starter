@@ -50,22 +50,6 @@
 @import "mixins/transition";
 
 
-/* ***** Utilities
-** ***** ----------------------------------------------- ***** */
-
-@import "utilities/display";
-@import "utilities/show";
-@import "utilities/hide";
-@import "utilities/margin";
-@import "utilities/padding";
-@import "utilities/float";
-@import "utilities/text";
-@import "utilities/overflow";
-@import "utilities/opacity";
-@import "utilities/position";
-@import "utilities/clearfix";
-
-
 /* ***** Base
 ** ***** ----------------------------------------------- ***** */
 
@@ -99,6 +83,23 @@
 @import "components/header";
 @import "components/footer";
 @import "components/upgrade_browser_message";
+
+
+/* ***** Utilities
+** ***** ----------------------------------------------- ***** */
+
+@import "utilities/display";
+@import "utilities/flexbox";
+@import "utilities/show";
+@import "utilities/hide";
+@import "utilities/margin";
+@import "utilities/padding";
+@import "utilities/float";
+@import "utilities/text";
+@import "utilities/overflow";
+@import "utilities/opacity";
+@import "utilities/position";
+@import "utilities/clearfix";
 
 
 /* ***** Include At The End

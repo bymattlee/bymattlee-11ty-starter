@@ -4,11 +4,7 @@
 
 
 .o-button {
-	align-items: center;
 	background: $grey-light--c;
 	color: $black;
-	display: flex;
-	height: 5rem;
-	justify-content: center;
-	width: 10rem;
+	padding: 0.75rem 2rem;
 }

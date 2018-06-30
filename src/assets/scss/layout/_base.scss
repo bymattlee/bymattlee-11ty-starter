@@ -5,13 +5,17 @@
 
 .l-container {
 	margin: 0 auto;
-	max-width: 130rem;
+	max-width: 200rem;
 	padding: 0 2.5rem;
 	position: relative;
 	width: 100%;
 
 	@include mq($bp-small) {
 		padding: 0 5rem;
+	}
+
+	@include mq($bp-xxlarge) {
+		padding: 0 10rem;
 	}
 }
 

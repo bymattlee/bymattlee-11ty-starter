@@ -14,5 +14,7 @@
 	video,
 	img {
 		@include full-cover;
+
+		border: none;
 	}
 }

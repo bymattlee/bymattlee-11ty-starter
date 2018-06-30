@@ -1,0 +1,76 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Flexbox
+** ***** ----------------------------------------------- ***** */
+
+
+.u-flex_direction--row {
+	flex-direction: row;
+}
+
+.u-flex_direction--row_reverse {
+	flex-direction: row-reverse;
+}
+
+.u-flex_direction--column {
+	flex-direction: column;
+}
+
+.u-flex_direction--column_reverse {
+	flex-direction: column-reverse;
+}
+
+.u-flex_wrap--nowrap {
+	flex-wrap: nowrap;
+}
+
+.u-flex_wrap--wrap {
+	flex-wrap: wrap;
+}
+
+.u-flex_wrap--wrap_reverse {
+	flex-wrap: wrap-reverse;
+}
+
+.u-justify_content--flex_start {
+	justify-content: flex-start;
+}
+
+.u-justify_content--flex_end {
+	justify-content: flex-end;
+}
+
+.u-justify_content--center {
+	justify-content: center;
+}
+
+.u-justify_content--space_between {
+	justify-content: space-between;
+}
+
+.u-justify_content--space_around {
+	justify-content: space-around;
+}
+
+.u-justify_content--space_evenly {
+	justify-content: space-evenly;
+}
+
+.u-align_items--flex_start {
+	align-items: flex-start;
+}
+
+.u-align_items--flex_end {
+	align-items: flex-end;
+}
+
+.u-align_items--center {
+	align-items: center;
+}
+
+.u-align_items--baseline {
+	align-items: baseline;
+}
+
+.u-align_items--stretch {
+	align-items: stretch;
+}

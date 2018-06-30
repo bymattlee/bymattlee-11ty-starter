@@ -52,17 +52,17 @@ $font-size-normal-small: 1.6rem;
 $font-size-large-small: 1.8rem;
 $font-size-larger-small: 2.2rem;
 
-$font-size-h1: 2.6rem;
-$font-size-h2: 2rem;
+$font-size-h1: 3rem;
+$font-size-h2: 2.4rem;
 $font-size-h3: 1.8rem;
 $font-size-h4: 1.4rem;
 $font-size-h5: 1.2rem;
 $font-size-h6: 1rem;
 
-$font-size-h1-small: 3.2rem;
-$font-size-h2-small: 2.4rem;
-$font-size-h3-small: 2rem;
-$font-size-h4-small: 1.6rem;
+$font-size-h1-small: 3.6rem;
+$font-size-h2-small: 3rem;
+$font-size-h3-small: 2.4rem;
+$font-size-h4-small: 1.8rem;
 $font-size-h5-small: 1.4rem;
 $font-size-h6-small: 1.2rem;
 
@@ -80,8 +80,8 @@ $letter-spacing-loose: 0.1rem;
 
 // Line Height
 $line-height-tight: 1;
-$line-height-normal: 1.2;
-$line-height-loose: 1.5;
+$line-height-normal: 1.4;
+$line-height-loose: 1.8;
 
 
 /* ***** Transition
@@ -134,6 +134,7 @@ $bp-small: px-to-em(768);
 $bp-medium: px-to-em(900);
 $bp-large: px-to-em(1100);
 $bp-xlarge: px-to-em(1300);
+$bp-xxlarge: px-to-em(1600);
 
 
 /* ***** Z-Index
