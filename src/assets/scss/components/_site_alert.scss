@@ -1,11 +1,11 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Components/Upgrade Browser Message Styles
+** ***** Components/Site Alert Styles
 ** ***** ----------------------------------------------- ***** */
 
 
-.c-upgrade_browser_message {
+.c-site_alert {
 	background: $black;
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba($black, 0.75);
 	bottom: 0;
 	left: 0;
 	position: fixed;
@@ -13,13 +13,18 @@
 	width: 100%;
 	z-index: $z-index-9;
 
-	&-link {
+	&-link,
+	&-message {
 		color: $white;
 		display: block;
 		padding: 1.5rem;
+	}
 
+	&-link {
 		&:hover {
-			color: $grey-light--c;
+			.l-not_device & {
+				color: $grey-light--c;
+			}
 		}
 	}
 }

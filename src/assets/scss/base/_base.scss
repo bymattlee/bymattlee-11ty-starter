@@ -150,6 +150,8 @@ textarea {
 	border: 0.1rem solid $white;
 	border-radius: 0;
 	font-family: $font-family-primary;
+	outline: 0;
+	padding: 1rem;
 	resize: none;
 }
 
@@ -186,7 +188,7 @@ input {
 	border-radius: 0;
 	font-family: $font-family-primary;
 	outline: none;
-	padding: 0.5rem 1rem;
+	padding: 1rem;
 }
 
 table {
