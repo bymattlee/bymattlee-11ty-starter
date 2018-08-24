@@ -34,15 +34,15 @@ To enable deployment, create `hostSettings.json` and store in the `gulp` directo
 ```
 $ gulp watch
 ```
-##### Development Build - Build Project With Local URL
+##### Development Build - Build Project With Local URL ANd Sourcemaps
 ```
 $ gulp
 ```
-##### Staging Build - Build Project With Staging URL, Remove Sourcemaps And Minify HTML
+##### Staging Build - Build Project With Staging URL, Without Sourcemaps And Minify HTML
 ```
 $ gulp --staging
 ```
-##### Production Build - Build Project With Production URL, Remove Sourcemaps And Minify HTML
+##### Production Build - Build Project With Production URL, Without Sourcemaps And Minify HTML
 ```
 $ gulp --production
 ```
