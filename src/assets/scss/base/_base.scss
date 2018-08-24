@@ -19,11 +19,14 @@ html {
 
 body {
 	color: $body-text-color;
+	display: flex;
+	flex-direction: column;
 	font-family: $font-body;
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	line-height: $line-height-normal;
+	min-height: 100vh;
 
 	@include mq($bp-small) {
 		font-size: $font-size-normal-small;

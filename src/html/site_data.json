@@ -1,6 +1,23 @@
 {
-	"siteName": "ByMattLee",
-	"twitterHandle": "@ByMattLee",
-	"googlePlusHandle": "MattLeeBy",
-	"googleAnalyticsId": ""
+	"global": {
+		"siteName": "ByMattLee",
+		"twitterHandle": "@ByMattLee",
+		"googlePlusHandle": "MattLeeBy",
+		"googleAnalyticsId": ""
+	},
+	"header": {
+		"nav": [
+			{
+				"name": "About",
+				"slug": "about"
+			},
+			{
+				"name": "404",
+				"slug": "404"
+			}
+		]
+	},
+	"footer": {
+		"copyrightText": "&copy; 2018 ByMattLee. All Rights Reserved."
+	}
 }

@@ -1,3 +1,19 @@
 <header class="c-header" role="banner">
+	<div class="l-container">
+		<h1><a href="{{ homeUrl }}">ByMattLee Web Starter Files</a></h1>
 
+		{% if header.nav %}
+			<nav class="o-nav">
+				<ul class="u-unstyled">
+
+					{% for navItem in header.nav %}
+						<li class="o-nav-list_item">
+							<a href="{{ homeUrl }}/{{ navItem.slug }}/" class="o-nav-item{% if pageSlug == navItem.slug %} s-is_current{% endif %}">{{ navItem.name }}</a>
+						</li>
+					{% endfor %}
+
+				</ul>
+			</nav>
+		{% endif %}
+	</div>
 </header>

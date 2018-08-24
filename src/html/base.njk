@@ -12,30 +12,30 @@
 {% include "partials/global/favicons.njk" %}
 
 <meta property="og:title" content="{{ pageShareTitle }}">
-<meta property="og:site_name" content="{{ siteName }}">
+<meta property="og:site_name" content="{{ global.siteName }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ homeUrl }}/{{ pageSlug }}">
 <meta property="og:image" content="{{ homeUrl }}/assets/images/share.jpg">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:locale" content="en_US">
 
-{% if twitterHandle %}
+{% if global.twitterHandle %}
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ pageShareTitle }}">
-	<meta name="twitter:site" content="{{ twitterHandle }}">
+	<meta name="twitter:site" content="{{ global.twitterHandle }}">
 	<meta name="twitter:url" content="{{ homeUrl }}/{{ pageSlug }}">
 	<meta name="twitter:description" content="{{ pageDescription }}">
 	<meta name="twitter:image" content="{{ homeUrl }}/assets/images/share.jpg">
 {% endif %}
 
-{% if googlePlusHandle %}
-	<link href="https://plus.google.com/+{{ googlePlusHandle }}" rel="publisher">
+{% if global.googlePlusHandle %}
+	<link href="https://plus.google.com/+{{ global.googlePlusHandle }}" rel="publisher">
 	<meta itemprop="name" content="{{ pageShareTitle }}">
 	<meta itemprop="description" content="{{ pageDescription }}">
 	<meta itemprop="image" content="{{ homeUrl }}/assets/images/share.jpg">
 {% endif %}
 
-{% if pageBodyClass == 'p-home' %}
+{% if 'p-home' in pageBodyClasses %}
 	<script type="application/ld+json">
 		{
 			"@context": "http://schema.org",
@@ -61,7 +61,7 @@
 
 <link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
 
-{% if googleAnalyticsId and isProduction %}
+{% if global.googleAnalyticsId and isProduction %}
 	<script async src="//www.googletagmanager.com/gtag/js?id={{ googleAnalyticsId }}"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -74,7 +74,7 @@
 
 </head>
 
-<body class="js-body {{ pageBodyClass }}">
+<body class="js-body {{ pageBodyClasses }}">
 
 {% include "partials/global/header.njk" %}
 

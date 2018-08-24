@@ -1,0 +1,29 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Objects/Nav Styles
+** ***** ----------------------------------------------- ***** */
+
+
+.o-nav {
+	$this: &;
+
+	ul {
+		margin: 0;
+	}
+
+	&-list_item {
+		display: inline-block;
+		margin-left: 1rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&-item {
+		display: inline-block;
+
+		&.s-is_current {
+			color: $white;
+		}
+	}
+}
