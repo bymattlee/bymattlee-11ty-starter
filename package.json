@@ -30,7 +30,7 @@
     "gulp-add-src": "^1.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-changed": "^3.2.0",
-    "gulp-clean-css": "^3.9.4",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-data": "^1.3.1",
     "gulp-eslint": "^5.0.0",
@@ -44,7 +44,7 @@
     "gulp-notify": "^3.2.0",
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-pretty-url": "^0.1.1",
     "gulp-rename": "^1.4.0",
     "gulp-robots": "^2.0.4",
@@ -60,12 +60,12 @@
     "gulp-watch": "^5.0.1",
     "imagemin-jpeg-recompress": "^5.1.0",
     "main-bower-files": "^2.13.1",
-    "postcss-reporter": "^5.0.0",
+    "postcss-reporter": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "require-dir": "^1.0.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "^9.4.0",
+    "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^0.8.1"
+    "stylelint-order": "^1.0.0"
   }
 }

@@ -17,9 +17,9 @@
   "devDependencies": {
     "jquery": "^3.3.1",
     "svgxuse": "^1.2.6",
-    "sanitize-css": "^5.0.0",
+    "sanitize-css": "^7.0.0",
     "gsap": "^2.0.1",
-    "lazysizes": "^4.0.4"
+    "lazysizes": "^4.1.1"
   },
   "overrides": {
     "lazysizes": {
