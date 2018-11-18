@@ -5,7 +5,8 @@
 * Uses Gulp as the build tool and Bower to manage front-end packages
 
 ## Installation
-##### 1. Install Node: <https://nodejs.org/en/download/>
+##### 1. Install Node 7.10.1: <https://nodejs.org/en/blog/release/v7.10.1/>
+Only compatible with Node 7.10.1 and below. Upgrade TBD.
 ##### 2. Install all dependencies and build project
 ```
 $ npm install
