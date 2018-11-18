@@ -94,7 +94,7 @@ gulp.task('favicons:create-touch-icon', function() {
 gulp.task('favicons:concat-html', function() {
 
 	return gulp.src(config.favicons.concatHtmlSrc)
-		.pipe(concat('favicons.njk'))
+		.pipe(concat(config.favicons.concatHtmlFilename))
 		.pipe(gulp.dest(config.favicons.concatHtmlDest));
 
 });

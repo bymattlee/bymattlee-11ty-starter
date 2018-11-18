@@ -146,6 +146,7 @@ module.exports = {
 			src + '/html/partials/global/favicons.html',
 			src + '/html/partials/global/touch-icons.html'
 		],
+		concatHtmlFilename: 'favicons.njk',
 		concatHtmlDest: src + '/html/partials/global'
 	},
 	deploy: {
