@@ -150,8 +150,10 @@ figure {
 }
 
 textarea {
+	background-color: transparent;
 	border: 0.1rem solid $white;
 	border-radius: 0;
+	color: inherit;
 	font-family: $font-family-primary;
 	outline: 0;
 	padding: 1rem;
@@ -177,8 +179,9 @@ blockquote {
 button {
 	-moz-appearance: none;
 	-webkit-appearance: none;
-	background: transparent;
+	background-color: transparent;
 	border: 0;
+	color: inherit;
 	cursor: pointer;
 	font-family: $font-family-primary;
 	line-height: normal;
@@ -193,8 +196,10 @@ fieldset {
 }
 
 input {
+	background-color: transparent;
 	border: 0.1rem solid $white;
 	border-radius: 0;
+	color: inherit;
 	font-family: $font-family-primary;
 	outline: none;
 	padding: 1rem;

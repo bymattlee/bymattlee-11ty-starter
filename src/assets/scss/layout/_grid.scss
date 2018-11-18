@@ -4,76 +4,65 @@
 
 
 .l-grid {
-	@include clearfix;
-
+	display: flex;
+	flex-wrap: wrap;
 	margin: -1.5rem -1.5rem 0;
 
 	&-item {
-		float: left;
 		padding: 1.5rem;
 		width: 100%;
 
 		&--one_half {
-			&:nth-child(odd) {
-				@include mq($bp-xsmall) {
-					clear: both;
-				}
-			}
-
 			@include mq($bp-xsmall) {
-				width: 50%;
+				width: calc(100% / 2);
 			}
 		}
 
 		&--one_third {
-			&:nth-child(odd) {
-				@include mq($bp-xsmall) {
-					clear: both;
-				}
-
-				@include mq($bp-medium) {
-					clear: none;
-				}
-			}
-
-			&:nth-child(3n+1) {
-				@include mq($bp-medium) {
-					clear: both;
-				}
-			}
-
 			@include mq($bp-xsmall) {
-				width: 50%;
+				width: calc(100% / 2);
 			}
 
 			@include mq($bp-medium) {
-				width: 33.3333%;
+				width: calc(100% / 3);
 			}
 		}
 
 		&--one_fourth {
-			&:nth-child(odd) {
-				@include mq($bp-xsmall) {
-					clear: both;
-				}
-
-				@include mq($bp-medium) {
-					clear: none;
-				}
-			}
-
-			&:nth-child(4n+1) {
-				@include mq($bp-medium) {
-					clear: both;
-				}
-			}
-
 			@include mq($bp-xsmall) {
-				width: 50%;
+				width: calc(100% / 2);
 			}
 
 			@include mq($bp-medium) {
-				width: 25%;
+				width: calc(100% / 4);
+			}
+		}
+
+		&--one_fifth {
+			@include mq($bp-xsmall) {
+				width: calc(100% / 2);
+			}
+
+			@include mq($bp-medium) {
+				width: calc(100% / 4);
+			}
+
+			@include mq($bp-large) {
+				width: calc(100% / 5);
+			}
+		}
+
+		&--one_sixth {
+			@include mq($bp-xsmall) {
+				width: calc(100% / 2);
+			}
+
+			@include mq($bp-medium) {
+				width: calc(100% / 4);
+			}
+
+			@include mq($bp-xlarge) {
+				width: calc(100% / 6);
 			}
 		}
 	}
