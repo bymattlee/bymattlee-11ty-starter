@@ -11,14 +11,4 @@
 		Main.modules.init();
 	});
 
-	/* On Resize */
-	$(window).resize(function() {
-
-	});
-
-	/* On Scroll */
-	$(window).scroll(function() {
-
-	});
-
 })(jQuery);

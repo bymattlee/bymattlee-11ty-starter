@@ -29,9 +29,8 @@
 				var utilities = Main.modules.utilities(),
 					isDevice = utilities.isDevice();
 
-				if (!isDevice) {
-					$body.addClass('l-not_device');
-				}
+				// Add class to enable hover effects
+				if (!isDevice) $body.addClass('l-not_device');
 
 			},
 
