@@ -93,4 +93,4 @@ gulp.task('scripts:main', function() {
 });
 
 // Scripts task
-gulp.task('scripts', ['scripts:vendors', 'scripts:main']);
+gulp.task('scripts', gulp.series(gulp.parallel('scripts:vendors', 'scripts:main')));

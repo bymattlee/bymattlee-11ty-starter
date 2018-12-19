@@ -26,4 +26,4 @@ gulp.task('copy:htaccess', function() {
 });
 
 // Copy task
-gulp.task('copy', ['copy:assets', 'copy:htaccess']);
+gulp.task('copy', gulp.series(gulp.parallel('copy:assets', 'copy:htaccess')));

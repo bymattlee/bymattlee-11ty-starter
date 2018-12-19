@@ -10,7 +10,6 @@ var concat = require('gulp-concat'),
 	gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	rename = require('gulp-rename'),
-	runSequence = require('run-sequence'),
 	isProduction = !!gutil.env.production,
 	isStaging = !!gutil.env.staging,
 	siteUrl;
@@ -107,6 +106,4 @@ gulp.task('favicons:remove-html', function() {
 });
 
 // Favicons sequence of tasks
-gulp.task('favicons', function() {
-	runSequence('favicons:create-favicon', 'favicons:create-touch-icon', 'favicons:concat-html', 'favicons:remove-html');
-});
+gulp.task('favicons', gulp.series('favicons:create-favicon', 'favicons:create-touch-icon', 'favicons:concat-html', 'favicons:remove-html'));
