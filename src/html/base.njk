@@ -62,13 +62,13 @@
 <link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
 
 {% if global.googleAnalyticsId and isProduction %}
-	<script async src="//www.googletagmanager.com/gtag/js?id={{ googleAnalyticsId }}"></script>
+	<script async src="//www.googletagmanager.com/gtag/js?id={{ global.googleAnalyticsId }}"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', '{{ googleAnalyticsId }}');
+	  gtag('config', '{{ global.googleAnalyticsId }}');
 	</script>
 {% endif %}
 
