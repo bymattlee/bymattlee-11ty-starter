@@ -50,7 +50,7 @@
     "gulp-robots": "^2.0.4",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.2",
-    "gulp-sitemap": "^6.1.0",
+    "gulp-sitemap": "^6.2.0",
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.5.0",
@@ -63,7 +63,7 @@
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
     "require-dir": "^1.2.0",
-    "stylelint": "^9.9.0",
+    "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^2.0.0"
   }
