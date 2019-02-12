@@ -50,13 +50,13 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		.l-not_device & {
+		@media (hover: hover) {
 			color: $link-hover-text-color;
 		}
 	}
 
 	&:active {
-		.l-not_device & {
+		@media (hover: hover) {
 			color: $link-active-text-color;
 		}
 	}

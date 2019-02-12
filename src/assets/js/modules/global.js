@@ -24,20 +24,9 @@
 
 			},
 
-			addNotDeviceClassToBody = function() {
-
-				var utilities = Main.modules.utilities(),
-					isDevice = utilities.isDevice();
-
-				// Add class to enable hover effects
-				if (!isDevice) $body.addClass('l-not_device');
-
-			},
-
 			displaySiteAlert = function(message, link) {
 
-				var $body = $('.js-body'),
-					markup = '';
+				var markup = '';
 
 				markup += '<div class="c-site_alert">';
 
@@ -56,7 +45,6 @@
 		return {
 			init: function() {
 				modernizrCheck();
-				addNotDeviceClassToBody();
 			},
 			displaySiteAlert: displaySiteAlert
 		};
