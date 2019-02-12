@@ -14,17 +14,15 @@ var browserSync = require('browser-sync'),
 ** -- Initialize watch for styles, scripts, images, svgs and asset files
 ** -- Force browser reload when changes are made to images, svgs and asset files
 */
-gulp.task('watch', function() {
+gulp.task('watch', 
+	gulp.parallel(['browserSync', function() {
 
-	browserSync.init({
-        server: config.browserSync.server
-    });
+		gulp.watch(config.markup.watchSrc, gulp.series('markup'));
+		gulp.watch(config.styles.src, gulp.series('styles'));
+		gulp.watch(config.scripts.src, gulp.series('scripts:main'));
+		gulp.watch(config.images.src, gulp.series('images')).on('change', reload);
+		gulp.watch(config.svgs.src, gulp.series('svgs')).on('change', reload);
+		gulp.watch(config.copy.assetsSrc, gulp.series('copy:assets')).on('change', reload);
 
-	gulp.watch(config.markup.watchSrc, gulp.series('markup'));
-	gulp.watch(config.styles.src, gulp.series('styles'));
-	gulp.watch(config.scripts.src, gulp.series('scripts:main'));
-	gulp.watch(config.images.src, gulp.series('images')).on('change', reload);
-	gulp.watch(config.svgs.src, gulp.series('svgs')).on('change', reload);
-	gulp.watch(config.copy.assetsSrc, gulp.series('copy:assets')).on('change', reload);
-
-});
+	}]
+));

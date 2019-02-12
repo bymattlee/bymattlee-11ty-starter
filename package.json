@@ -58,6 +58,7 @@
     "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
+    "gulp4-run-sequence": "^0.3.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "main-bower-files": "^2.13.1",
     "postcss-reporter": "^6.0.1",
