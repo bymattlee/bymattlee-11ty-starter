@@ -24,8 +24,9 @@
     "url": "https://github.com/bymattlee/bymattlee-web-starter-files/issues"
   },
   "devDependencies": {
+    "acorn": "^6.1.1",
     "browser-sync": "^2.26.3",
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "gulp": "^4.0.0",
     "gulp-add-src": "^1.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -40,7 +41,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
-    "gulp-modernizr": "^3.1.0",
+    "gulp-modernizr": "^3.2.0",
     "gulp-notify": "^3.2.0",
     "gulp-nunjucks-render": "^2.2.2",
     "gulp-plumber": "^1.2.1",
@@ -52,13 +53,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-sitemap": "^6.2.0",
     "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-tar": "^2.1.0",
-    "gulp-uglify": "^3.0.1",
+    "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^5.0.1",
-    "gulp4-run-sequence": "^0.3.1",
+    "gulp4-run-sequence": "^0.3.2",
     "imagemin-jpeg-recompress": "^6.0.0",
     "main-bower-files": "^2.13.1",
     "postcss-reporter": "^6.0.1",
@@ -66,6 +67,6 @@
     "require-dir": "^1.2.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^2.0.0"
+    "stylelint-order": "^2.1.0"
   }
 }
