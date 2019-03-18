@@ -1,0 +1,65 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Settings/Typography
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Imports
+** ***** ----------------------------------------------- ***** */
+
+// Montserrat
+@include font-face("Montserrat", "montserrat-light-webfont", 200, "normal");
+@include font-face("Montserrat", "montserrat-regular-webfont", 400, "normal");
+@include font-face("Montserrat", "montserrat-bold-webfont", 700, "normal");
+@include font-face("Montserrat", "montserrat-black-webfont", 800, "normal");
+
+// Open Sans
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+
+
+/* ***** Settings
+** ***** ----------------------------------------------- ***** */
+
+// Font Families
+$font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
+$font-family-secondary: "Open Sans", Arial, Helvetica, Sans-Serif;
+
+// Font globals
+$font-family-body: $font-family-secondary;
+$font-family-headline: $font-family-primary;
+
+// Font Sizes
+$font-size-base: 62.5%;
+
+$font-size-normal: 1.4rem;
+$font-size-normal--small-up: 1.6rem;
+
+$font-size-h1: 3rem;
+$font-size-h2: 2.4rem;
+$font-size-h3: 1.8rem;
+$font-size-h4: 1.4rem;
+$font-size-h5: 1.2rem;
+$font-size-h6: 1rem;
+
+$font-size-h1--small-up: 3.6rem;
+$font-size-h2--small-up: 3rem;
+$font-size-h3--small-up: 2.4rem;
+$font-size-h4--small-up: 1.8rem;
+$font-size-h5--small-up: 1.4rem;
+$font-size-h6--small-up: 1.2rem;
+
+// Font Weights
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+// Letter Spacing
+$letter-spacing-tight: -0.1rem;
+$letter-spacing-normal: normal;
+$letter-spacing-loose: 0.1rem;
+
+// Line Height
+$line-height-tight: 1;
+$line-height-normal: 1.4;
+$line-height-loose: 1.8;

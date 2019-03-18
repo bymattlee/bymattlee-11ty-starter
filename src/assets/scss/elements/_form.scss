@@ -1,0 +1,42 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Elements/Form Styles
+** ***** ----------------------------------------------- ***** */
+
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	background-color: transparent;
+	border: 0.1rem solid $white;
+	border-radius: 0;
+	color: inherit;
+	font-family: $font-family-body;
+	outline: none;
+	padding: 1rem;
+}
+
+textarea {
+	background-color: transparent;
+	border: 0.1rem solid $white;
+	border-radius: 0;
+	color: inherit;
+	font-family: $font-family-body;
+	outline: 0;
+	padding: 1rem;
+	resize: none;
+}
+
+select {
+	background-color: transparent;
+	border: 0.1rem solid $white;
+	border-radius: 0;
+	color: inherit;
+	font-family: $font-family-body;
+	outline: 0;
+	padding: 1rem;
+	width: 100%;
+}

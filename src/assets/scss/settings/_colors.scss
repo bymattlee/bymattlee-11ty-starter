@@ -1,0 +1,34 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Settings/Colors
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Colors
+** ***** ----------------------------------------------- ***** */
+
+$white: #fff;
+$black: #000;
+$grey-dark--2: #222;
+$grey-dark--3: #333;
+$grey-dark--4: #444;
+$grey-dark--6: #666;
+$grey-light--a: #aaa;
+$grey-light--c: #ccc;
+
+
+/* ***** Settings
+** ***** ----------------------------------------------- ***** */
+
+// Background
+$root-background-color: $grey-dark--2;
+
+// Text
+$body-text-color: $grey-light--c;
+
+$link-text-color: $grey-light--a;
+$link-hover-text-color: $grey-dark--6;
+$link-active-text-color: $grey-light--a;
+
+// Selection
+$selection-background-color: $grey-light--a;
+$selection-text-color: $white;

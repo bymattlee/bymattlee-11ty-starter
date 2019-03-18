@@ -8,7 +8,7 @@
 	color: $black;
 	display: inline-block;
 	padding: 0.75rem 2rem;
-	transition: background-color $transition-speed-slow, color $transition-speed-slow;
+	transition: background-color $transition-slow, color $transition-slow;
 
 	&:hover {
 		@media (hover: hover) {

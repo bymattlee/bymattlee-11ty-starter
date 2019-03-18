@@ -1,0 +1,22 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Elements/Anchor Styles
+** ***** ----------------------------------------------- ***** */
+
+
+a {
+	color: $link-text-color;
+	text-decoration: none;
+	transition: color $transition-slow;
+
+	&:hover {
+		@media (hover: hover) {
+			color: $link-hover-text-color;
+		}
+	}
+
+	&:active {
+		@media (hover: hover) {
+			color: $link-active-text-color;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Elements/List Styles
+** ***** ----------------------------------------------- ***** */
+
+
+ul,
+ol {
+	line-height: $line-height-loose;
+	margin: 2rem 0 2rem 3rem;
+	padding: 0;
+
+	&.u-unstyled {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	li {
+		margin: 1rem 0;
+	}
+}
+
+nav {
+	ul,
+	ol {
+		margin-left: 0;
+	}
+}

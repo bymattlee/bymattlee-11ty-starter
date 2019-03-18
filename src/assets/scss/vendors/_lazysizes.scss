@@ -9,7 +9,6 @@
 }
 
 .lazyloaded {
-	@include transition-opacity-slow;
-
 	opacity: 1;
+	transition: opacity $transition-slow;
 }

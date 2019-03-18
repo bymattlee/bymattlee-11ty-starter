@@ -34,33 +34,46 @@
 **	  - Example: The home page will use the class '.p-home'.
 */
 
-/* ***** Global
+
+/* ***** Tools
 ** ***** ----------------------------------------------- ***** */
 
-@import "global/functions";
-@import "global/variables";
+@import "tools/functions";
+@import "tools/mixin-background";
+@import "tools/mixin-layout";
+@import "tools/mixin-text";
 
 
-/* ***** Mixins
+/* ***** Settings
 ** ***** ----------------------------------------------- ***** */
 
-@import "mixins/background";
-@import "mixins/layout";
-@import "mixins/text";
-@import "mixins/transition";
-
-
-/* ***** Base
-** ***** ----------------------------------------------- ***** */
-
-@import "base/typography";
-@import "base/base";
+@import "settings/colors";
+@import "settings/typography";
+@import "settings/breakpoints";
+@import "settings/transition";
+@import "settings/z-index";
 
 
 /* ***** Vendors
 ** ***** ----------------------------------------------- ***** */
 
 @import "vendors/lazysizes";
+
+
+/* ***** Elements
+** ***** ----------------------------------------------- ***** */
+
+@import "elements/base";
+@import "elements/headline";
+@import "elements/anchor";
+@import "elements/paragraph";
+@import "elements/list";
+@import "elements/button";
+@import "elements/media";
+@import "elements/form";
+@import "elements/blockquote";
+@import "elements/hr";
+@import "elements/table";
 
 
 /* ***** Layout
@@ -104,8 +117,8 @@
 @import "utilities/clearfix";
 
 
-/* ***** Include At The End
+/* ***** Misc
 ** ***** ----------------------------------------------- ***** */
 
-@import "base/hacks";
-@import "base/print";
+@import "misc/hacks";
+@import "misc/print";
