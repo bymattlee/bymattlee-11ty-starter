@@ -2,14 +2,15 @@
 ** ***** Layout/Grid Styles
 ** ***** ----------------------------------------------- ***** */
 
+$gutter: 4rem;
 
 .l-grid {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -1.5rem -1.5rem 0;
+	margin: -#{$gutter / 2} -#{$gutter / 2} 0;
 
 	&-item {
-		padding: 1.5rem;
+		padding: $gutter / 2;
 		width: 100%;
 
 		&--one_half {

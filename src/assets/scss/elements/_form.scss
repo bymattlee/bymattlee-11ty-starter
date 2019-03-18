@@ -10,10 +10,13 @@ fieldset {
 }
 
 input {
+	@include placeholder($body-text-color);
+	@include autofill(none, $body-text-color, transparent);
+
 	background-color: transparent;
 	border: 0.1rem solid $white;
 	border-radius: 0;
-	color: inherit;
+	color: $body-text-color;
 	font-family: $font-family-body;
 	outline: none;
 	padding: 1rem;
@@ -23,7 +26,7 @@ textarea {
 	background-color: transparent;
 	border: 0.1rem solid $white;
 	border-radius: 0;
-	color: inherit;
+	color: $body-text-color;
 	font-family: $font-family-body;
 	outline: 0;
 	padding: 1rem;
@@ -31,10 +34,11 @@ textarea {
 }
 
 select {
+	-webkit-appearance: none;
 	background-color: transparent;
 	border: 0.1rem solid $white;
 	border-radius: 0;
-	color: inherit;
+	color: $body-text-color;
 	font-family: $font-family-body;
 	outline: 0;
 	padding: 1rem;
