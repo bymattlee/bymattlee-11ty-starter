@@ -4,7 +4,23 @@
 
 
 .o-button {
-	background: $grey-light--c;
+	background-color: $grey-light--c;
 	color: $black;
+	display: inline-block;
 	padding: 0.75rem 2rem;
+	transition: background-color $transition-speed-slow, color $transition-speed-slow;
+
+	&:hover {
+		@media (hover: hover) {
+			background-color: $grey-dark--6;
+			color: $grey-light--c;
+		}
+	}
+
+	&:active {
+		@media (hover: hover) {
+			background-color: $grey-light--a;
+			color: $black;
+		}
+	}
 }

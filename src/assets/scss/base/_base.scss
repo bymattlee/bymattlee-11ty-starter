@@ -14,6 +14,7 @@
 }
 
 html {
+	min-height: 100vh;
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -21,7 +22,7 @@ body {
 	color: $body-text-color;
 	display: flex;
 	flex-direction: column;
-	font-family: $font-body;
+	font-family: $font-family-body;
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -29,12 +30,12 @@ body {
 	min-height: 100vh;
 
 	@include mq($bp-small) {
-		font-size: $font-size-normal-small;
+		font-size: $font-size-normal--small-up;
 	}
 }
 
 p {
-	margin: 1.5rem 0;
+	margin: 2rem 0;
 }
 
 p,
@@ -68,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-headline;
+	font-family: $font-family-headline;
 	margin: 0;
 	padding: 0;
 	text-rendering: optimizeLegibility;
@@ -78,7 +79,7 @@ h1 {
 	font-size: $font-size-h1;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h1-small;
+		font-size: $font-size-h1--small-up;
 	}
 }
 
@@ -86,7 +87,7 @@ h2 {
 	font-size: $font-size-h2;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h2-small;
+		font-size: $font-size-h2--small-up;
 	}
 }
 
@@ -94,7 +95,7 @@ h3 {
 	font-size: $font-size-h3;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h3-small;
+		font-size: $font-size-h3--small-up;
 	}
 }
 
@@ -102,7 +103,7 @@ h4 {
 	font-size: $font-size-h4;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h4-small;
+		font-size: $font-size-h4--small-up;
 	}
 }
 
@@ -110,7 +111,7 @@ h5 {
 	font-size: $font-size-h5;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h5-small;
+		font-size: $font-size-h5--small-up;
 	}
 }
 
@@ -118,7 +119,7 @@ h6 {
 	font-size: $font-size-h6;
 
 	@include mq($bp-small) {
-		font-size: $font-size-h6-small;
+		font-size: $font-size-h6--small-up;
 	}
 }
 
@@ -130,6 +131,10 @@ ol {
 	&.u-unstyled {
 		list-style: none;
 		margin-left: 0;
+	}
+
+	li {
+		margin: 1rem 0;
 	}
 }
 
@@ -154,7 +159,7 @@ textarea {
 	border: 0.1rem solid $white;
 	border-radius: 0;
 	color: inherit;
-	font-family: $font-family-primary;
+	font-family: $font-family-body;
 	outline: 0;
 	padding: 1rem;
 	resize: none;
@@ -165,7 +170,7 @@ select {
 	border: 0.1rem solid $white;
 	border-radius: 0;
 	color: inherit;
-	font-family: $font-family-primary;
+	font-family: $font-family-body;
 	outline: 0;
 	padding: 1rem;
 	width: 100%;
@@ -190,7 +195,7 @@ button {
 	border: 0;
 	color: inherit;
 	cursor: pointer;
-	font-family: $font-family-primary;
+	font-family: $font-family-body;
 	line-height: $line-height-normal;
 	outline: 0;
 	padding: 0;
@@ -207,7 +212,7 @@ input {
 	border: 0.1rem solid $white;
 	border-radius: 0;
 	color: inherit;
-	font-family: $font-family-primary;
+	font-family: $font-family-body;
 	outline: none;
 	padding: 1rem;
 }
