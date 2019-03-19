@@ -79,8 +79,8 @@
 
 		// Print grid item classes for each breakpoint
 		@each $key, $value in $breakpoints {
-			@include mq(map_get(map_get($breakpoints, $key), "size")) {
-				@include grid-items("-" + map_get(map_get($breakpoints, $key), "abbr"));
+			@include mq(map_get(map_get($breakpoints, $key), size)) {
+				@include grid-items("-" + map_get(map_get($breakpoints, $key), abbr));
 			}
 		}
 

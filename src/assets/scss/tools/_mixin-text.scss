@@ -4,7 +4,7 @@
 
 
 // Font face
-@mixin font-face($name, $file, $weight, $style) {
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
 	@font-face {
 		font-display: swap;
 		font-family: $name;

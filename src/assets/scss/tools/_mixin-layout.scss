@@ -6,7 +6,7 @@
 // Media query
 @mixin mq($size, $type: min, $orientation: width) {
 	@if map_has_key($breakpoints, $size) {
-		$size: map_get(map_get($breakpoints, $size), "size");
+		$size: map_get(map_get($breakpoints, $size), size);
 	}
 
 	@if $type == max {

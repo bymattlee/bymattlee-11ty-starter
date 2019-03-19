@@ -7,10 +7,10 @@
 ** ***** ----------------------------------------------- ***** */
 
 // Montserrat
-@include font-face("Montserrat", "montserrat-light-webfont", 200, "normal");
-@include font-face("Montserrat", "montserrat-regular-webfont", 400, "normal");
-@include font-face("Montserrat", "montserrat-bold-webfont", 700, "normal");
-@include font-face("Montserrat", "montserrat-black-webfont", 800, "normal");
+@include font-face("Montserrat", "montserrat-light-webfont", 200);
+@include font-face("Montserrat", "montserrat-regular-webfont");
+@include font-face("Montserrat", "montserrat-bold-webfont", 700);
+@include font-face("Montserrat", "montserrat-black-webfont", 800);
 
 // Open Sans
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
@@ -20,8 +20,9 @@
 ** ***** ----------------------------------------------- ***** */
 
 // Font Families
-$font-family-primary: "Montserrat", Arial, Helvetica, Sans-Serif;
-$font-family-secondary: "Open Sans", Arial, Helvetica, Sans-Serif;
+$font-family-fallback: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-primary: "Montserrat", $font-family-fallback;
+$font-family-secondary: "Open Sans", $font-family-fallback;
 
 // Font globals
 $font-family-body: $font-family-secondary;
