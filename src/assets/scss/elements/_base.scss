@@ -29,7 +29,7 @@ body {
 	line-height: $line-height-normal;
 	min-height: 100vh;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-normal--small-up;
 	}
 }

@@ -1,0 +1,49 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Settings/Layout
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Content
+** ***** ----------------------------------------------- ***** */
+
+$content-max-width: 200rem;
+$content-gutter: 2.5rem;
+$content-gutter--small-up: 5rem;
+
+
+/* ***** Grid
+** ***** ----------------------------------------------- ***** */
+
+$grid-gutter: 2rem;
+$grid-gutter--small-up: 4rem;
+
+
+/* ***** Breakpoints
+** ***** ----------------------------------------------- ***** */
+
+$breakpoints: (
+	xsmall: (
+		abbr: "xs",
+		size: 48rem
+	),
+	small: (
+		abbr: "sm",
+		size: 76.8rem
+	),
+	medium: (
+		abbr: "md",
+		size: 90rem
+	),
+	large: (
+		abbr: "lg",
+		size: 110rem
+	),
+	xlarge: (
+		abbr: "xl",
+		size: 130rem
+	),
+	xxlarge: (
+		abbr: "xxl",
+		size: 160rem
+	)
+);

@@ -27,18 +27,44 @@
 @mixin placeholder($color) {
 	&::-webkit-input-placeholder {
 		color: $color;
+		opacity: 1;
+		transition: opacity $transition-slow;
 	}
 
 	&::-moz-placeholder {
 		color: $color;
+		opacity: 1;
+		transition: opacity $transition-slow;
 	}
 
 	&:-ms-input-placeholder {
 		color: $color;
+		opacity: 1;
+		transition: opacity $transition-slow;
 	}
 
 	&:-moz-placeholder {
 		color: $color;
+		opacity: 1;
+		transition: opacity $transition-slow;
+	}
+
+	&:focus {
+		&::-webkit-input-placeholder {
+			opacity: 0.5;
+		}
+
+		&::-moz-placeholder {
+			opacity: 0.5;
+		}
+
+		&:-ms-input-placeholder {
+			opacity: 0.5;
+		}
+
+		&:-moz-placeholder {
+			opacity: 0.5;
+		}
 	}
 }
 

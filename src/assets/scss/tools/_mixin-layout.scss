@@ -4,9 +4,25 @@
 
 
 // Media query
-@mixin mq($breakpoint) {
-	@media (min-width: $breakpoint) {
-		@content;
+@mixin mq($size, $type: min, $orientation: width) {
+	@if map_has_key($breakpoints, $size) {
+		$size: map_get(map_get($breakpoints, $size), "size");
+	}
+
+	@if $type == max {
+		$size: $size - 0.1rem;
+	}
+
+	@if $orientation == width {
+		@media only screen and (#{$type}-width: rem-to-em($size)) {
+			@content;
+		}
+	}
+
+	@if $orientation == height {
+		@media only screen and (#{$type}-height: rem-to-em($size)) {
+			@content;
+		}
 	}
 }
 

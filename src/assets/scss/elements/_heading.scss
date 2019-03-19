@@ -18,7 +18,7 @@ h6 {
 h1 {
 	font-size: $font-size-h1;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h1--small-up;
 	}
 }
@@ -26,7 +26,7 @@ h1 {
 h2 {
 	font-size: $font-size-h2;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h2--small-up;
 	}
 }
@@ -34,7 +34,7 @@ h2 {
 h3 {
 	font-size: $font-size-h3;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h3--small-up;
 	}
 }
@@ -42,7 +42,7 @@ h3 {
 h4 {
 	font-size: $font-size-h4;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h4--small-up;
 	}
 }
@@ -50,7 +50,7 @@ h4 {
 h5 {
 	font-size: $font-size-h5;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h5--small-up;
 	}
 }
@@ -58,7 +58,7 @@ h5 {
 h6 {
 	font-size: $font-size-h6;
 
-	@include mq($bp-small) {
+	@include mq("small") {
 		font-size: $font-size-h6--small-up;
 	}
 }

@@ -49,7 +49,7 @@
 
 @import "settings/colors";
 @import "settings/typography";
-@import "settings/breakpoints";
+@import "settings/layout";
 @import "settings/transition";
 @import "settings/z-index";
 
@@ -102,19 +102,19 @@
 /* ***** Utilities
 ** ***** ----------------------------------------------- ***** */
 
-@import "utilities/animation";
-@import "utilities/display";
-@import "utilities/flexbox";
-@import "utilities/show";
-@import "utilities/hide";
-@import "utilities/margin";
-@import "utilities/padding";
-@import "utilities/float";
-@import "utilities/text";
-@import "utilities/overflow";
-@import "utilities/opacity";
-@import "utilities/position";
-@import "utilities/clearfix";
+// @import "utilities/animation";
+// @import "utilities/display";
+// @import "utilities/flexbox";
+// @import "utilities/show";
+// @import "utilities/hide";
+// @import "utilities/margin";
+// @import "utilities/padding";
+// @import "utilities/float";
+// @import "utilities/text";
+// @import "utilities/overflow";
+// @import "utilities/opacity";
+// @import "utilities/position";
+// @import "utilities/clearfix";
 
 
 /* ***** Misc

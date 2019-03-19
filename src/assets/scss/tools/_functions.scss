@@ -3,9 +3,9 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-// Convert from px to base 16 em
-@function px-to-em($px) {
-	@return ($px / 16) * 1em;
+// Convert from rem to base 16 em
+@function rem-to-em($rem) {
+	@return ($rem / 1.6rem) * 1em;
 }
 
 // Responsive value

@@ -9,9 +9,16 @@ figure {
 
 img {
 	height: auto;
-	max-width: 100%;
 }
 
 svg {
 	width: 100%;
+}
+
+iframe,
+object,
+embed,
+video,
+img {
+	max-width: 100%;
 }
