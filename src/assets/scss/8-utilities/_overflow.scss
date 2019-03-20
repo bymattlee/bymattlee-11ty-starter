@@ -3,18 +3,21 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-overflow--hidden {
-	overflow: hidden;
+@mixin overflow-items($breakpoint-suffix: "") {
+
+	.u-overflow_hidden#{$breakpoint-suffix} { overflow: hidden; }
+	.u-overflow_auto#{$breakpoint-suffix} { overflow: auto; }
+	.u-overflow_visible#{$breakpoint-suffix} { overflow: visible; }
+	.u-overflow_scroll#{$breakpoint-suffix} { overflow: scroll; }
+
 }
 
-.u-overflow--auto {
-	overflow: auto;
-}
+// Print initial overflow item classes
+@include overflow-items;
 
-.u-overflow--visible {
-	overflow: visible;
-}
-
-.u-overflow--scroll {
-	overflow: scroll;
+// Print overflow item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include overflow-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
 }

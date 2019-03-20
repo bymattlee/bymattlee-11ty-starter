@@ -3,6 +3,25 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+@mixin text-align-items($breakpoint-suffix: "") {
+
+	.u-right#{$breakpoint-suffix} { text-align: right; }
+	.u-left#{$breakpoint-suffix} { text-align: left; }
+	.u-center#{$breakpoint-suffix} { text-align: center; }
+	.u-justify#{$breakpoint-suffix} { text-align: justify; }
+
+}
+
+// Print initial text align item classes
+@include text-align-items;
+
+// Print text align item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include text-align-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
+}
+
 .u-h1 {
 	@extend h1;
 }
@@ -27,62 +46,54 @@
 	@extend h6;
 }
 
-.u-text--bold {
-	font-weight: $font-weight-bold;
+.u-light {
+	font-weight: $font-weight-light;
 }
 
-.u-text--normal {
+.u-normal {
 	font-weight: $font-weight-normal;
 }
 
-.u-text--italic {
+.u-bold {
+	font-weight: $font-weight-bold;
+}
+
+.u-black {
+	font-weight: $font-weight-black;
+}
+
+.u-italic {
 	font-style: italic;
 }
 
-.u-text--right {
-	text-align: right;
-}
-
-.u-text--left {
-	text-align: left;
-}
-
-.u-text--center {
-	text-align: center;
-}
-
-.u-text--justify {
-	text-align: justify;
-}
-
-.u-text--nowrap {
+.u-nowrap {
 	white-space: nowrap;
 }
 
-.u-text--lowercase {
+.u-lowercase {
 	text-transform: lowercase;
 }
 
-.u-text--uppercase {
+.u-uppercase {
 	text-transform: uppercase;
 }
 
-.u-text--capitalize {
+.u-capitalize {
 	text-transform: capitalize;
 }
 
-.u-text--underline {
+.u-underline {
 	text-decoration: underline;
 }
 
-.u-text--overline {
+.u-overline {
 	text-decoration: overline;
 }
 
-.u-text--line_through {
+.u-line_through {
 	text-decoration: line-through;
 }
 
-.u-text--truncate {
+.u-truncate {
 	@include truncate-text;
 }

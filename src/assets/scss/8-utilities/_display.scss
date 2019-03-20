@@ -3,22 +3,35 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-display--block {
-	display: block;
+@mixin display-items($breakpoint-suffix: "") {
+
+	.u-inline#{$breakpoint-suffix} { display: inline; }
+	.u-block#{$breakpoint-suffix} { display: block; }
+	.u-inline_block#{$breakpoint-suffix} { display: inline-block; }
+	.u-hide#{$breakpoint-suffix} { display: none; }
+	.u-table#{$breakpoint-suffix} { display: table; }
+	.u-table_cell#{$breakpoint-suffix} { display: table-cell; }
+	.u-visible#{$breakpoint-suffix} { visibility: visible; }
+	.u-invisible#{$breakpoint-suffix} { visibility: hidden; }
+
 }
 
-.u-display--inline_block {
-	display: inline-block;
+// Print initial display item classes
+@include display-items;
+
+// Print display item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include display-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
 }
 
-.u-display--none {
-	display: none;
-}
-
-.u-display--table {
-	display: table;
-}
-
-.u-display--flex {
-	display: flex;
+.u-hidden {
+	border: 0;
+	clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+	height: 0.1rem;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 0.1rem;
 }

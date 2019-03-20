@@ -102,19 +102,19 @@
 /* ***** Utilities
 ** ***** ----------------------------------------------- ***** */
 
-// @import "utilities/animation";
-// @import "utilities/display";
-// @import "utilities/flexbox";
-// @import "utilities/show";
-// @import "utilities/hide";
-// @import "utilities/margin";
-// @import "utilities/padding";
-// @import "utilities/float";
-// @import "utilities/text";
-// @import "utilities/overflow";
-// @import "utilities/opacity";
-// @import "utilities/position";
-// @import "utilities/clearfix";
+// Enable as needed
+
+@import "8-utilities/animate";
+@import "8-utilities/clearfix";
+@import "8-utilities/display";
+@import "8-utilities/flexbox";
+@import "8-utilities/float";
+@import "8-utilities/margin";
+@import "8-utilities/overflow";
+@import "8-utilities/padding";
+@import "8-utilities/position";
+@import "8-utilities/text";
+@import "8-utilities/zindex";
 
 
 /* ***** Misc

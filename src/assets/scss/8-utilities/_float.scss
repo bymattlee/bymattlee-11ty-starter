@@ -3,10 +3,20 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-float--right {
-	float: right;
+@mixin float-items($breakpoint-suffix: "") {
+
+	.u-float_right#{$breakpoint-suffix} { float: right; }
+	.u-float_left#{$breakpoint-suffix} { float: left; }
+	.u-float_none#{$breakpoint-suffix} { float: none; }
+
 }
 
-.u-float--left {
-	float: left;
+// Print initial float item classes
+@include float-items;
+
+// Print float item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include float-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
 }

@@ -3,18 +3,32 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-position--static {
-	position: static;
+@mixin position-items($breakpoint-suffix: "") {
+
+	.u-static#{$breakpoint-suffix} { position: static; }
+	.u-absolute#{$breakpoint-suffix} { position: absolute; }
+	.u-relative#{$breakpoint-suffix} { position: relative; }
+	.u-fixed#{$breakpoint-suffix} { position: fixed; }
+	.u-top_0#{$breakpoint-suffix} { top: 0; }
+	.u-right_0#{$breakpoint-suffix} { right: 0; }
+	.u-bottom_0#{$breakpoint-suffix} { bottom: 0; }
+	.u-left_0#{$breakpoint-suffix} { left: 0; }
+
+	.u-absolute_cover#{$breakpoint-suffix} {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+
 }
 
-.u-position--relative {
-	position: relative;
-}
+// Print initial position item classes
+@include position-items;
 
-.u-position--fixed {
-	position: fixed;
-}
-
-.u-position--absolute {
-	position: absolute;
+// Print position item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include position-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
 }

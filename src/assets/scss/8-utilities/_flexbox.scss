@@ -3,74 +3,51 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-flex_direction--row {
-	flex-direction: row;
+@mixin flexbox-items($breakpoint-suffix: "") {
+
+	.u-flex#{$breakpoint-suffix} { display: flex; }
+	.u-inline_flex#{$breakpoint-suffix} { display: inline-flex; }
+	.u-flex_column#{$breakpoint-suffix} { flex-direction: column; }
+	.u-flex_row#{$breakpoint-suffix} { flex-direction: row; }
+	.u-flex_wrap#{$breakpoint-suffix} { flex-wrap: wrap; }
+	.u-flex_nowrap#{$breakpoint-suffix} { flex-wrap: nowrap; }
+	.u-items_start#{$breakpoint-suffix} { align-items: flex-start; }
+	.u-items_end#{$breakpoint-suffix} { align-items: flex-end; }
+	.u-items_center#{$breakpoint-suffix} { align-items: center; }
+	.u-items_baseline#{$breakpoint-suffix} { align-items: baseline; }
+	.u-items_stretch#{$breakpoint-suffix} { align-items: stretch; }
+	.u-self_start#{$breakpoint-suffix} { align-self: flex-start; }
+	.u-self_end#{$breakpoint-suffix} { align-self: flex-end; }
+	.u-self_center#{$breakpoint-suffix} { align-self: center; }
+	.u-self_baseline#{$breakpoint-suffix} { align-self: baseline; }
+	.u-self_stretch#{$breakpoint-suffix} { align-self: stretch; }
+	.u-justify_start#{$breakpoint-suffix} { justify-content: flex-start; }
+	.u-justify_end#{$breakpoint-suffix} { justify-content: flex-end; }
+	.u-justify_center#{$breakpoint-suffix} { justify-content: center; }
+	.u-justify_between#{$breakpoint-suffix} { justify-content: space-between; }
+	.u-justify_around#{$breakpoint-suffix} { justify-content: space-around; }
+	.u-justify_evenly#{$breakpoint-suffix} { justify-content: space-evenly; }
+	.u-content_start#{$breakpoint-suffix} { align-content: flex-start; }
+	.u-content_end#{$breakpoint-suffix} { align-content: flex-end; }
+	.u-content_center#{$breakpoint-suffix} { align-content: center; }
+	.u-content_between#{$breakpoint-suffix} { align-content: space-between; }
+	.u-content_around#{$breakpoint-suffix} { align-content: space-around; }
+	.u-content_stretch#{$breakpoint-suffix} { align-content: stretch; }
+
+	.u-flex_auto#{$breakpoint-suffix} {
+		flex: 1 1 auto;
+		min-height: 0;
+		min-width: 0;
+	}
+
 }
 
-.u-flex_direction--row_reverse {
-	flex-direction: row-reverse;
-}
+// Print initial flexbox item classes
+@include flexbox-items;
 
-.u-flex_direction--column {
-	flex-direction: column;
-}
-
-.u-flex_direction--column_reverse {
-	flex-direction: column-reverse;
-}
-
-.u-flex_wrap--nowrap {
-	flex-wrap: nowrap;
-}
-
-.u-flex_wrap--wrap {
-	flex-wrap: wrap;
-}
-
-.u-flex_wrap--wrap_reverse {
-	flex-wrap: wrap-reverse;
-}
-
-.u-justify_content--flex_start {
-	justify-content: flex-start;
-}
-
-.u-justify_content--flex_end {
-	justify-content: flex-end;
-}
-
-.u-justify_content--center {
-	justify-content: center;
-}
-
-.u-justify_content--space_between {
-	justify-content: space-between;
-}
-
-.u-justify_content--space_around {
-	justify-content: space-around;
-}
-
-.u-justify_content--space_evenly {
-	justify-content: space-evenly;
-}
-
-.u-align_items--flex_start {
-	align-items: flex-start;
-}
-
-.u-align_items--flex_end {
-	align-items: flex-end;
-}
-
-.u-align_items--center {
-	align-items: center;
-}
-
-.u-align_items--baseline {
-	align-items: baseline;
-}
-
-.u-align_items--stretch {
-	align-items: stretch;
+// Print flexbox item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include flexbox-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
 }

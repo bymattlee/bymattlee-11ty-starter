@@ -1,8 +1,9 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Utilities/Opacity Styles
+** ***** Utilities/Animate Styles
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-opacity--0 {
+.u-animate {
 	opacity: 0;
+	transition: none;
 }
