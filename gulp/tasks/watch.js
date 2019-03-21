@@ -20,7 +20,7 @@ gulp.task('watch',
 		gulp.watch(config.markup.watchSrc, gulp.series('markup'));
 		gulp.watch(config.styles.src, gulp.series('styles'));
 		gulp.watch(config.scripts.src, gulp.series('scripts:main'));
-		gulp.watch(config.images.src, gulp.series('images')).on('change', reload);
+		gulp.watch(config.images.optimizeSrc, gulp.series('images')).on('change', reload);
 		gulp.watch(config.svgs.src, gulp.series('svgs')).on('change', reload);
 		gulp.watch(config.copy.assetsSrc, gulp.series('copy:assets')).on('change', reload);
 

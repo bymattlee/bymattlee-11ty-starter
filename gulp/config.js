@@ -92,7 +92,12 @@ module.exports = {
 		}
 	},
 	images: {
-		src: srcAssets + '/images/**/*',
+		optimizeSrc: srcAssets + '/images/**/*',
+		responsiveSrc: [
+			srcAssets + '/images/**/*',
+			'!' + srcAssets + '/images/**/*.svg',
+			'!' + srcAssets + '/images/share.jpg'
+		],
 		dest:  destAssets + '/images'
 	},
 	svgs: {

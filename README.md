@@ -95,6 +95,8 @@ $ gulp gzip
 ##### Images
 * Place all unoptimized images in the `src/assets/images` directory
 * They will then be optimized and placed in `dist/assets/images`
+* Responsive images will be generated at the following widths: 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
+* See `src/html/marcos/marco.njk` for usage information
 * Site preview image (`share.jpg`) is included
 
 ##### Favicons
