@@ -1,6 +1,13 @@
+{% import "macros/macros.njk" as macro %}
+
 <header class="c-header" role="banner">
 	<div class="l-container">
-		<h1><a href="{{ homeUrl }}">ByMattLee Web Starter Files</a></h1>
+		<h1>
+			<a href="{{ homeUrl }}">
+				{{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logo_svg', homeUrl) | trim }}
+				ByMattLee Web Starter Files
+			</a>
+		</h1>
 
 		{% if header.nav %}
 			<nav class="o-nav">
