@@ -17,7 +17,11 @@
 	&-message {
 		color: $white;
 		display: block;
-		padding: 1.5rem;
+		padding: to-vw(15, $mobile-ratio-width);
+
+		@include mq("medium") {
+			padding: to-vw(20, $desktop-ratio-width);
+		}
 	}
 
 	&-link {

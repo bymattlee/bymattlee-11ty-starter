@@ -12,7 +12,11 @@
 
 	&-list_item {
 		display: inline-block;
-		margin-left: 1rem;
+		margin-left: to-vw(10, $mobile-ratio-width);
+
+		@include mq("medium") {
+			margin-left: to-vw(15, $desktop-ratio-width);
+		}
 
 		&:first-child {
 			margin-left: 0;

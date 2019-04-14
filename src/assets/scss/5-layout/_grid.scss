@@ -56,16 +56,16 @@
 	flex-wrap: wrap;
 	margin: -#{$grid-gutter / 2} -#{$grid-gutter / 2} 0;
 
-	@include mq("small") {
-		margin: -#{$grid-gutter--small-up / 2} -#{$grid-gutter--small-up / 2} 0;
+	@include mq("medium") {
+		margin: -#{$grid-gutter--medium-up / 2} -#{$grid-gutter--medium-up / 2} 0;
 	}
 
 	&-item {
 		padding: $grid-gutter / 2;
 		width: 100%;
 
-		@include mq("small") {
-			padding: $grid-gutter--small-up / 2;
+		@include mq("medium") {
+			padding: $grid-gutter--medium-up / 2;
 		}
 
 		// Print default grid item classes

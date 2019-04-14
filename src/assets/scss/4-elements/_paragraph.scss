@@ -5,5 +5,9 @@
 
 p {
 	line-height: $line-height-loose;
-	margin: 2rem 0;
+	margin: to-vw(20, $mobile-ratio-width) 0;
+
+	@include mq("medium") {
+		margin: to-vw(25, $desktop-ratio-width) 0;
+	}
 }

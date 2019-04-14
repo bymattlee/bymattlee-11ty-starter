@@ -1,0 +1,22 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Height
+** ***** ----------------------------------------------- ***** */
+
+
+@mixin height-items($breakpoint-suffix: "") {
+
+	.u-height_0#{$breakpoint-suffix} { height: 0; }
+	.u-height_50#{$breakpoint-suffix} { height: 50%; }
+	.u-height_100#{$breakpoint-suffix} { height: 100%; }
+
+}
+
+// Print initial height item classes
+@include height-items;
+
+// Print height item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include height-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
+}

@@ -6,16 +6,18 @@
 /* ***** Content
 ** ***** ----------------------------------------------- ***** */
 
-$content-max-width: 200rem;
-$content-gutter: 2.5rem;
-$content-gutter--small-up: 5rem;
+$mobile-ratio-width: 414;
+$desktop-ratio-width: 1600;
+
+$content-gutter: to-vw(30, $mobile-ratio-width);
+$content-gutter--medium-up: to-vw(100, $desktop-ratio-width);
 
 
 /* ***** Grid
 ** ***** ----------------------------------------------- ***** */
 
-$grid-gutter: 2rem;
-$grid-gutter--small-up: 4rem;
+$grid-gutter: to-vw(20, $mobile-ratio-width);
+$grid-gutter--medium-up: to-vw(40, $desktop-ratio-width);
 
 
 /* ***** Breakpoints
@@ -44,6 +46,6 @@ $breakpoints: (
 	),
 	xxlarge: (
 		abbr: "xxl",
-		size: 160rem
+		size: 180rem
 	)
 );

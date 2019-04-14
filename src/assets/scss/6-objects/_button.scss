@@ -7,8 +7,12 @@
 	background-color: $grey-light--c;
 	color: $black;
 	display: inline-block;
-	padding: 0.75rem 2rem;
+	padding: to-vw(7.5, $mobile-ratio-width) to-vw(20, $mobile-ratio-width);
 	transition: background-color $transition-slow, color $transition-slow;
+
+	@include mq("medium") {
+		padding: to-vw(10, $desktop-ratio-width) to-vw(25, $desktop-ratio-width);
+	}
 
 	&:hover {
 		@media (hover: hover) {

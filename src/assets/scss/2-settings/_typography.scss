@@ -31,22 +31,22 @@ $font-family-heading: $font-family-primary;
 // Font Sizes
 $font-size-base: 62.5%;
 
-$font-size-normal: 1.4rem;
-$font-size-normal--small-up: 1.6rem;
+$font-size-normal: to-vw(14, $mobile-ratio-width);
+$font-size-normal--medium-up: to-vw(18, $desktop-ratio-width);
 
-$font-size-h1: 3.6rem;
-$font-size-h2: 3rem;
-$font-size-h3: 2.4rem;
-$font-size-h4: 1.8rem;
-$font-size-h5: 1.4rem;
-$font-size-h6: 1.2rem;
+$font-size-h1: to-vw(36, $mobile-ratio-width);
+$font-size-h2: to-vw(30, $mobile-ratio-width);
+$font-size-h3: to-vw(24, $mobile-ratio-width);
+$font-size-h4: to-vw(18, $mobile-ratio-width);
+$font-size-h5: to-vw(14, $mobile-ratio-width);
+$font-size-h6: to-vw(12, $mobile-ratio-width);
 
-$font-size-h1--small-up: 4.6rem;
-$font-size-h2--small-up: 3.6rem;
-$font-size-h3--small-up: 2.8rem;
-$font-size-h4--small-up: 2.2rem;
-$font-size-h5--small-up: 1.8rem;
-$font-size-h6--small-up: 1.4rem;
+$font-size-h1--medium-up: to-vw(46, $desktop-ratio-width);
+$font-size-h2--medium-up: to-vw(36, $desktop-ratio-width);
+$font-size-h3--medium-up: to-vw(28, $desktop-ratio-width);
+$font-size-h4--medium-up: to-vw(22, $desktop-ratio-width);
+$font-size-h5--medium-up: to-vw(18, $desktop-ratio-width);
+$font-size-h6--medium-up: to-vw(14, $desktop-ratio-width);
 
 // Font Weights
 $font-weight-light: 200;

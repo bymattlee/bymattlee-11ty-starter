@@ -8,6 +8,11 @@
 	@return ($rem / 1.6rem) * 1em;
 }
 
+// Convert to vw
+@function to-vw($current-value, $page-width) {
+	@return $current-value / $page-width * 100vw;
+}
+
 // Responsive value
 @function responsive-value($low-size, $high-size, $low-breakpoint, $high-breakpoint) {
 	@return calc(#{$low-size}rem + (#{$high-size} - #{$low-size}) * (100vw - #{$low-breakpoint}rem) / (#{$high-breakpoint} - #{$low-breakpoint}));

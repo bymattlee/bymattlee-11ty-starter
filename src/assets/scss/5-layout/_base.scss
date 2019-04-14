@@ -5,13 +5,12 @@
 
 .l-container {
 	margin: 0 auto;
-	max-width: $content-max-width;
 	padding: 0 $content-gutter;
 	position: relative;
 	width: 100%;
 
-	@include mq("small") {
-		padding: 0 $content-gutter--small-up;
+	@include mq("medium") {
+		padding: 0 $content-gutter--medium-up;
 	}
 }
 

@@ -1,0 +1,22 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Width
+** ***** ----------------------------------------------- ***** */
+
+
+@mixin width-items($breakpoint-suffix: "") {
+
+	.u-width_0#{$breakpoint-suffix} { width: 0; }
+	.u-width_50#{$breakpoint-suffix} { width: 50%; }
+	.u-width_100#{$breakpoint-suffix} { width: 100%; }
+
+}
+
+// Print initial width item classes
+@include width-items;
+
+// Print width item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include width-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
+}

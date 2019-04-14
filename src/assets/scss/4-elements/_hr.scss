@@ -5,6 +5,11 @@
 
 hr {
 	border: 0;
-	border-top: 0.1rem solid $grey-light--c;
-	margin: 2rem 0;
+	border-top: to-vw(1, $mobile-ratio-width) solid $grey-light--c;
+	margin: to-vw(30, $mobile-ratio-width) 0;
+
+	@include mq("medium") {
+		border-width: to-vw(2, $desktop-ratio-width);
+		margin: to-vw(35, $desktop-ratio-width) 0;
+	}
 }

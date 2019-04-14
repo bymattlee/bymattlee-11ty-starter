@@ -18,47 +18,47 @@ h6 {
 h1 {
 	font-size: $font-size-h1;
 
-	@include mq("small") {
-		font-size: $font-size-h1--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h1--medium-up;
 	}
 }
 
 h2 {
 	font-size: $font-size-h2;
 
-	@include mq("small") {
-		font-size: $font-size-h2--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h2--medium-up;
 	}
 }
 
 h3 {
 	font-size: $font-size-h3;
 
-	@include mq("small") {
-		font-size: $font-size-h3--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h3--medium-up;
 	}
 }
 
 h4 {
 	font-size: $font-size-h4;
 
-	@include mq("small") {
-		font-size: $font-size-h4--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h4--medium-up;
 	}
 }
 
 h5 {
 	font-size: $font-size-h5;
 
-	@include mq("small") {
-		font-size: $font-size-h5--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h5--medium-up;
 	}
 }
 
 h6 {
 	font-size: $font-size-h6;
 
-	@include mq("small") {
-		font-size: $font-size-h6--small-up;
+	@include mq("medium") {
+		font-size: $font-size-h6--medium-up;
 	}
 }

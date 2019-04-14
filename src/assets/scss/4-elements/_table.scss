@@ -4,12 +4,21 @@
 
 
 table {
-	border-width: 0.1rem;
+	border-width: to-vw(1, $mobile-ratio-width);
+
+	@include mq("medium") {
+		border-width: to-vw(2, $desktop-ratio-width);
+	}
 
 	th,
 	td {
-		border: 0.1rem solid $grey-light--c;
-		padding: 0.5rem 1rem;
+		border: to-vw(1, $mobile-ratio-width) solid $grey-light--c;
+		padding: to-vw(5, $mobile-ratio-width) to-vw(10, $mobile-ratio-width);
 		text-align: left;
+
+		@include mq("medium") {
+			border-width: to-vw(2, $desktop-ratio-width);
+			padding: to-vw(10, $desktop-ratio-width) to-vw(15, $desktop-ratio-width);
+		}
 	}
 }
