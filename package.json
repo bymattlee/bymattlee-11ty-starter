@@ -26,7 +26,7 @@
   "devDependencies": {
     "acorn": "^6.1.1",
     "browser-sync": "^2.26.3",
-    "del": "^4.0.0",
+    "del": "^4.1.0",
     "flat-map": "^1.0.0",
     "gulp": "^4.0.0",
     "gulp-add-src": "^1.0.0",
@@ -42,9 +42,9 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^5.0.3",
-    "gulp-modernizr": "^3.2.0",
+    "gulp-modernizr": "^3.2.1",
     "gulp-notify": "^3.2.0",
-    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-nunjucks-render": "^2.2.3",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-pretty-url": "^0.1.1",
@@ -68,9 +68,12 @@
     "postcss-reporter": "^6.0.1",
     "postcss-scss": "^2.0.0",
     "require-dir": "^1.2.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^2.1.0",
+    "stylelint": "^10.0.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^2.2.1",
     "through2": "^3.0.1"
+  },
+  "dependencies": {
+    "npm-check-updates": "^3.1.7"
   }
 }

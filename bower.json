@@ -15,11 +15,11 @@
   "homepage": "https://github.com/bymattlee/bymattlee-web-starter-files",
   "private": true,
   "devDependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "svgxuse": "^1.2.6",
     "sanitize-css": "^8.0.0",
     "gsap": "^2.1.2",
-    "lazysizes": "^4.1.6"
+    "lazysizes": "^4.1.7"
   },
   "overrides": {
     "lazysizes": {
