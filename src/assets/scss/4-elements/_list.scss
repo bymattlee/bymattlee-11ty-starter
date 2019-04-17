@@ -19,10 +19,10 @@ ol {
 	}
 
 	li {
-		margin: to-vw(5, $mobile-ratio-width) 0;
+		margin: to-vw(20, $mobile-ratio-width) 0;
 
 		@include mq("medium") {
-			margin: to-vw(10, $desktop-ratio-width) 0;
+			margin: to-vw(30, $desktop-ratio-width) 0;
 		}
 	}
 }
