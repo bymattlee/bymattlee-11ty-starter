@@ -25,6 +25,11 @@ ol {
 			margin: to-vw(30, $desktop-ratio-width) 0;
 		}
 	}
+
+	ul {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 }
 
 nav {
