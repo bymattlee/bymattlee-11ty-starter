@@ -5,6 +5,7 @@
 
 @mixin height-items($breakpoint-suffix: "") {
 
+	.u-height_auto#{$breakpoint-suffix} { height: auto; }
 	.u-height_0#{$breakpoint-suffix} { height: 0; }
 	.u-height_50#{$breakpoint-suffix} { height: 50%; }
 	.u-height_100#{$breakpoint-suffix} { height: 100%; }
