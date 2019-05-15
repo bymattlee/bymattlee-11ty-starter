@@ -33,6 +33,14 @@
 	.u-content_between#{$breakpoint-suffix} { align-content: space-between; }
 	.u-content_around#{$breakpoint-suffix} { align-content: space-around; }
 	.u-content_stretch#{$breakpoint-suffix} { align-content: stretch; }
+	.u-shrink_0#{$breakpoint-suffix} { flex-shrink: 0; }
+	.u-shrink_1#{$breakpoint-suffix} { flex-shrink: 1; }
+	.u-order_unset#{$breakpoint-suffix} { order: unset; }
+	.u-order_1#{$breakpoint-suffix} { order: 1; }
+	.u-order_2#{$breakpoint-suffix} { order: 2; }
+	.u-order_3#{$breakpoint-suffix} { order: 3; }
+	.u-order_4#{$breakpoint-suffix} { order: 4; }
+	.u-order_5#{$breakpoint-suffix} { order: 5; }
 
 	.u-flex_auto#{$breakpoint-suffix} {
 		flex: 1 1 auto;
