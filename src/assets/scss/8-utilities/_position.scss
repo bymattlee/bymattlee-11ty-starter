@@ -14,11 +14,27 @@
 	.u-bottom_0#{$breakpoint-suffix} { bottom: 0; }
 	.u-left_0#{$breakpoint-suffix} { left: 0; }
 
-	.u-absolute_cover#{$breakpoint-suffix} {
+	.u-full_cover#{$breakpoint-suffix} {
 		bottom: 0;
 		left: 0;
 		right: 0;
 		top: 0;
+	}
+
+	.u-absolute_center#{$breakpoint-suffix} {
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+
+	.u-horizontal_center#{$breakpoint-suffix} {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.u-vertical_center#{$breakpoint-suffix} {
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 }
