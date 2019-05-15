@@ -5,22 +5,93 @@
 
 @mixin margin-items-with-size($size, $breakpoint-suffix: "") {
 
-	$size-value: ($size / 10) * 1rem;
+	$size-value: "";
 
-	.u-mar_a_#{$size}#{$breakpoint-suffix} { margin: $size-value; }
-	.u-mar_t_#{$size}#{$breakpoint-suffix} { margin-top: $size-value; }
-	.u-mar_r_#{$size}#{$breakpoint-suffix} { margin-right: $size-value; }
-	.u-mar_b_#{$size}#{$breakpoint-suffix} { margin-bottom: $size-value; }
-	.u-mar_l_#{$size}#{$breakpoint-suffix} { margin-left: $size-value; }
+	@if $breakpoint-suffix == "" or $breakpoint-suffix == "-xs" or $breakpoint-suffix == "-sm" {
 
-	.u-mar_x_#{$size}#{$breakpoint-suffix} {
-		margin-bottom: $size-value;
-		margin-top: $size-value;
-	}
+		$size-value: to-vw($size, $mobile-ratio-width);
+		$size-value-medium-up: to-vw($size, $desktop-ratio-width);
 
-	.u-mar_y_#{$size}#{$breakpoint-suffix} {
-		margin-left: $size-value;
-		margin-right: $size-value;
+		.u-mar_a_#{$size}#{$breakpoint-suffix} {
+			margin: $size-value;
+
+			@include mq("medium") {
+				margin: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_t_#{$size}#{$breakpoint-suffix} {
+			margin-top: $size-value;
+
+			@include mq("medium") {
+				margin-top: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_r_#{$size}#{$breakpoint-suffix} {
+			margin-right: $size-value;
+
+			@include mq("medium") {
+				margin-right: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_b_#{$size}#{$breakpoint-suffix} {
+			margin-bottom: $size-value;
+
+			@include mq("medium") {
+				margin-bottom: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_l_#{$size}#{$breakpoint-suffix} {
+			margin-left: $size-value;
+
+			@include mq("medium") {
+				margin-left: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_x_#{$size}#{$breakpoint-suffix} {
+			margin-bottom: $size-value;
+			margin-top: $size-value;
+
+			@include mq("medium") {
+				margin-bottom: $size-value-medium-up;
+				margin-top: $size-value-medium-up;
+			}
+		}
+
+		.u-mar_y_#{$size}#{$breakpoint-suffix} {
+			margin-left: $size-value;
+			margin-right: $size-value;
+
+			@include mq("medium") {
+				margin-left: $size-value-medium-up;
+				margin-right: $size-value-medium-up;
+			}
+		}
+
+	} @else { /* stylelint-disable-line */
+
+		$size-value: to-vw($size, $desktop-ratio-width);
+
+		.u-mar_a_#{$size}#{$breakpoint-suffix} { margin: $size-value; }
+		.u-mar_t_#{$size}#{$breakpoint-suffix} { margin-top: $size-value; }
+		.u-mar_r_#{$size}#{$breakpoint-suffix} { margin-right: $size-value; }
+		.u-mar_b_#{$size}#{$breakpoint-suffix} { margin-bottom: $size-value; }
+		.u-mar_l_#{$size}#{$breakpoint-suffix} { margin-left: $size-value; }
+
+		.u-mar_x_#{$size}#{$breakpoint-suffix} {
+			margin-bottom: $size-value;
+			margin-top: $size-value;
+		}
+
+		.u-mar_y_#{$size}#{$breakpoint-suffix} {
+			margin-left: $size-value;
+			margin-right: $size-value;
+		}
+
 	}
 
 }

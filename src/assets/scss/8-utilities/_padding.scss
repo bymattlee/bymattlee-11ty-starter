@@ -5,22 +5,93 @@
 
 @mixin padding-items($size, $breakpoint-suffix: "") {
 
-	$size-value: ($size / 10) * 1rem;
+	$size-value: "";
 
-	.u-pad_a_#{$size}#{$breakpoint-suffix} { padding: $size-value; }
-	.u-pad_t_#{$size}#{$breakpoint-suffix} { padding-top: $size-value; }
-	.u-pad_r_#{$size}#{$breakpoint-suffix} { padding-right: $size-value; }
-	.u-pad_b_#{$size}#{$breakpoint-suffix} { padding-bottom: $size-value; }
-	.u-pad_l_#{$size}#{$breakpoint-suffix} { padding-left: $size-value; }
+	@if $breakpoint-suffix == "" or $breakpoint-suffix == "-xs" or $breakpoint-suffix == "-sm" {
 
-	.u-pad_x_#{$size}#{$breakpoint-suffix} {
-		padding-bottom: $size-value;
-		padding-top: $size-value;
-	}
+		$size-value: to-vw($size, $mobile-ratio-width);
+		$size-value-medium-up: to-vw($size, $desktop-ratio-width);
 
-	.u-pad_y_#{$size}#{$breakpoint-suffix} {
-		padding-left: $size-value;
-		padding-right: $size-value;
+		.u-pad_a_#{$size}#{$breakpoint-suffix} {
+			padding: $size-value;
+
+			@include mq("medium") {
+				padding: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_t_#{$size}#{$breakpoint-suffix} {
+			padding-top: $size-value;
+
+			@include mq("medium") {
+				padding-top: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_r_#{$size}#{$breakpoint-suffix} {
+			padding-right: $size-value;
+
+			@include mq("medium") {
+				padding-right: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_b_#{$size}#{$breakpoint-suffix} {
+			padding-bottom: $size-value;
+
+			@include mq("medium") {
+				padding-bottom: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_l_#{$size}#{$breakpoint-suffix} {
+			padding-left: $size-value;
+
+			@include mq("medium") {
+				padding-left: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_x_#{$size}#{$breakpoint-suffix} {
+			padding-bottom: $size-value;
+			padding-top: $size-value;
+
+			@include mq("medium") {
+				padding-bottom: $size-value-medium-up;
+				padding-top: $size-value-medium-up;
+			}
+		}
+
+		.u-pad_y_#{$size}#{$breakpoint-suffix} {
+			padding-left: $size-value;
+			padding-right: $size-value;
+
+			@include mq("medium") {
+				padding-left: $size-value-medium-up;
+				padding-right: $size-value-medium-up;
+			}
+		}
+
+	} @else { /* stylelint-disable-line */
+
+		$size-value: to-vw($size, $desktop-ratio-width);
+
+		.u-pad_a_#{$size}#{$breakpoint-suffix} { padding: $size-value; }
+		.u-pad_t_#{$size}#{$breakpoint-suffix} { padding-top: $size-value; }
+		.u-pad_r_#{$size}#{$breakpoint-suffix} { padding-right: $size-value; }
+		.u-pad_b_#{$size}#{$breakpoint-suffix} { padding-bottom: $size-value; }
+		.u-pad_l_#{$size}#{$breakpoint-suffix} { padding-left: $size-value; }
+
+		.u-pad_x_#{$size}#{$breakpoint-suffix} {
+			padding-bottom: $size-value;
+			padding-top: $size-value;
+		}
+
+		.u-pad_y_#{$size}#{$breakpoint-suffix} {
+			padding-left: $size-value;
+			padding-right: $size-value;
+		}
+
 	}
 
 }
