@@ -1,0 +1,42 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Background
+** ***** ----------------------------------------------- ***** */
+
+
+@mixin background-items($breakpoint-suffix: "") {
+
+	.u-bg_scroll#{$breakpoint-suffix} { background-attachment: scroll; }
+	.u-bg_fixed#{$breakpoint-suffix} { background-attachment: fixed; }
+
+	.u-bg_bottom#{$breakpoint-suffix} { background-position: bottom; }
+	.u-bg_center#{$breakpoint-suffix} { background-position: center; }
+	.u-bg_left#{$breakpoint-suffix} { background-position: left; }
+	.u-bg_left_bottom#{$breakpoint-suffix} { background-position: left bottom; }
+	.u-bg_left_top#{$breakpoint-suffix} { background-position: left top; }
+	.u-bg_right#{$breakpoint-suffix} { background-position: right; }
+	.u-bg_right_bottom#{$breakpoint-suffix} { background-position: right bottom; }
+	.u-bg_right_top#{$breakpoint-suffix} { background-position: right top; }
+	.u-bg_top#{$breakpoint-suffix} { background-position: top; }
+
+	.u-bg_repeat#{$breakpoint-suffix} { background-repeat: repeat; }
+	.u-bg_no_repeat#{$breakpoint-suffix} { background-repeat: no-repeat; }
+	.u-bg_repeat_x#{$breakpoint-suffix} { background-repeat: repeat-x; }
+	.u-bg_repeat_y#{$breakpoint-suffix} { background-repeat: repeat-y; }
+	.u-bg_repeat_round#{$breakpoint-suffix} { background-repeat: round; }
+	.u-bg_repeat_space#{$breakpoint-suffix} { background-repeat: space; }
+
+	.u-bg_auto#{$breakpoint-suffix} { background-size: auto; }
+	.u-bg_cover#{$breakpoint-suffix} { background-size: cover; }
+	.u-bg_contain#{$breakpoint-suffix} { background-size: contain; }
+
+}
+
+// Print initial background item classes
+@include background-items;
+
+// Print background item classes for each breakpoint
+@each $key, $value in $breakpoints {
+	@include mq(map_get(map_get($breakpoints, $key), size)) {
+		@include background-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	}
+}

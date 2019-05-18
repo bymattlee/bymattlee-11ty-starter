@@ -16,6 +16,16 @@
 	}
 }
 
+// Font family primary - add styles related to this font as well
+@mixin font-family-primary {
+	font-family: $font-family-primary;
+}
+
+// Font family secondary - add styles related to this font as well
+@mixin font-family-secondary {
+	font-family: $font-family-secondary;
+}
+
 // Truncate text
 @mixin truncate-text {
 	overflow: hidden;

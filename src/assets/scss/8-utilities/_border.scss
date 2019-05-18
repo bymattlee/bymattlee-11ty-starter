@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Border
+** ***** ----------------------------------------------- ***** */
+
+
+.u-border_none {
+	border-radius: 0;
+}
+
+.u-border_circle {
+	border-radius: 50%;
+}
+
+.u-border_rounded {
+	border-radius: 9999rem;
+}

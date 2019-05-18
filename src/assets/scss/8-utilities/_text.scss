@@ -22,6 +22,14 @@
 	}
 }
 
+.u-font_primary {
+	@include font-family-primary;
+}
+
+.u-font_secondary {
+	@include font-family-secondary;
+}
+
 .u-h1 {
 	@extend h1;
 }
