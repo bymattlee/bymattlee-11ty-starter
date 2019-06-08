@@ -4,8 +4,8 @@
 
 
 .o-button {
-	background-color: $grey-light--c;
-	color: $black;
+	background-color: map-deep-get($colors, grey-light--c, value);
+	color: map-deep-get($colors, black, value);
 	display: inline-block;
 	padding: to-vw(7.5, $mobile-ratio-width) to-vw(20, $mobile-ratio-width);
 	transition: background-color $transition-slow, color $transition-slow;
@@ -16,15 +16,15 @@
 
 	&:hover {
 		@media (hover: hover) {
-			background-color: $grey-dark--6;
-			color: $grey-light--c;
+			background-color: map-deep-get($colors, grey-dark--6, value);
+			color: map-deep-get($colors, grey-light--c, value);
 		}
 	}
 
 	&:active {
 		@media (hover: hover) {
-			background-color: $grey-light--a;
-			color: $black;
+			background-color: map-deep-get($colors, grey-light--a, value);
+			color: map-deep-get($colors, black, value);
 		}
 	}
 }

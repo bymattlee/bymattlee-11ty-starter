@@ -11,7 +11,7 @@ button {
 	color: inherit;
 	cursor: pointer;
 	font-family: $font-family-body;
-	line-height: $line-height-normal;
+	line-height: map-deep-get($line-height, normal, value);
 	outline: 0;
 	padding: 0;
 }

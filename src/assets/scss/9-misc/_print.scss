@@ -2,6 +2,7 @@
 ** ***** Base/Print (from HTML5 Boilerplate)
 ** ***** ----------------------------------------------- ***** */
 
+
 @media print {
 	*,
 	*::before,
@@ -10,7 +11,7 @@
 	*::first-line {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: #000 !important;
+		color: map-deep-get($colors, black, value) !important;
 		text-shadow: none !important;
 	}
 
@@ -34,7 +35,7 @@
 
 	pre,
 	blockquote {
-		border: 1px solid #999;
+		border: 1px solid map-deep-get($colors, grey-dark--6, value);
 		page-break-inside: avoid;
 	}
 

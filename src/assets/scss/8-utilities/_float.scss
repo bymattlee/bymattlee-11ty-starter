@@ -3,6 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+// Float classes
 @mixin float-items($breakpoint-suffix: "") {
 
 	.u-float_right#{$breakpoint-suffix} { float: right; }
@@ -14,9 +15,9 @@
 // Print initial float item classes
 @include float-items;
 
-// Print float item classes for each breakpoint
+// Print float item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include float-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include float-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }

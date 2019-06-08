@@ -12,7 +12,7 @@ table {
 
 	th,
 	td {
-		border: to-vw(1, $mobile-ratio-width) solid $grey-light--c;
+		border: to-vw(1, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
 		padding: to-vw(5, $mobile-ratio-width) to-vw(10, $mobile-ratio-width);
 		text-align: left;
 

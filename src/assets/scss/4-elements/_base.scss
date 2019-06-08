@@ -26,7 +26,7 @@ body {
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	line-height: $line-height-normal;
+	line-height: map-deep-get($line-height, normal, value);
 	min-height: 100vh;
 
 	@include mq("medium") {

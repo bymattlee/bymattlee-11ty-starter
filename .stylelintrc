@@ -20,7 +20,10 @@
         "function-url-quotes": "always",
         "selector-attribute-quotes": "always",
         "string-quotes": "double",
-        "color-named": "never",
+        "color-named": [
+            "never",
+            ignore: ["inside-function"]
+        ],
         "font-weight-notation": "numeric",
         "order/properties-alphabetical-order": true,
         "at-rule-no-unknown": ,

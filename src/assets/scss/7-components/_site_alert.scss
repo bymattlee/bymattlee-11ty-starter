@@ -4,18 +4,18 @@
 
 
 .c-site_alert {
-	background: $black;
-	background: rgba($black, 0.75);
+	background: map-deep-get($colors, black, value);
+	background: rgba(map-deep-get($colors, black, value), 0.75);
 	bottom: 0;
 	left: 0;
 	position: fixed;
 	text-align: center;
 	width: 100%;
-	z-index: $z-index-9;
+	z-index: map-deep-get($z-index, 9, value);
 
 	&-link,
 	&-message {
-		color: $white;
+		color: map-deep-get($colors, white, value);
 		display: block;
 		padding: to-vw(15, $mobile-ratio-width);
 
@@ -27,7 +27,7 @@
 	&-link {
 		&:hover {
 			@media (hover: hover) {
-				color: $grey-light--c;
+				color: map-deep-get($colors, grey-light--c, value);
 			}
 		}
 	}

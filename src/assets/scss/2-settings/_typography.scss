@@ -49,18 +49,57 @@ $font-size-h5--medium-up: to-vw(18, $desktop-ratio-width);
 $font-size-h6--medium-up: to-vw(14, $desktop-ratio-width);
 
 // Font Weights
-$font-weight-light: 200;
-$font-weight-normal: 400;
-$font-weight-semi-bold: 600;
-$font-weight-bold: 700;
-$font-weight-black: 800;
+$font-weight: (
+	light: (
+		class: "light",
+		value: 200
+	),
+	normal: (
+		class: "normal",
+		value: 400
+	),
+	semi-bold: (
+		class: "semi_bold",
+		value: 600
+	),
+	bold: (
+		class: "bold",
+		value: 600
+	),
+	black: (
+		class: "black",
+		value: 800
+	)
+);
 
 // Letter Spacing
-$letter-spacing-tight: -0.1rem;
-$letter-spacing-normal: normal;
-$letter-spacing-loose: 0.1rem;
+$letter-spacing: (
+	tight: (
+		class: "letter_tight",
+		value: -0.1rem
+	),
+	normal: (
+		class: "letter_normal",
+		value: normal
+	),
+	loose: (
+		class: "letter_loose",
+		value: 0.1rem
+	),
+);
 
 // Line Height
-$line-height-tight: 1;
-$line-height-normal: 1.4;
-$line-height-loose: 1.8;
+$line-height: (
+	tight: (
+		class: "line_tight",
+		value: 1
+	),
+	normal: (
+		class: "line_normal",
+		value: 1.4
+	),
+	loose: (
+		class: "line_loose",
+		value: 1.8
+	),
+);

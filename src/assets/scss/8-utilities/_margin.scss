@@ -3,6 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+// Margin classes
 @mixin margin-items-with-size($size, $breakpoint-suffix: "") {
 
 	$size-value: "";
@@ -122,22 +123,22 @@ $margin-steps: 10;
 // Print initial margin item classes
 @include margin-items();
 
-// Print margin item with size classes for each breakpoint
+// Print margin item with size classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
+	@include mq(map-deep-get($breakpoints, $key, size)) {
 		@for $margin-step from 0 through $margin-steps {
 
 			$size: $margin-step * 5;
 
-			@include margin-items-with-size($size, "-" + map_get(map_get($breakpoints, $key), abbr));
+			@include margin-items-with-size($size, "-" + map-deep-get($breakpoints, $key, abbr));
 
 		}
 	}
 }
 
-// Print margin item classes for each breakpoint
+// Print margin item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include margin-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include margin-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }

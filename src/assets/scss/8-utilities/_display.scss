@@ -3,6 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+// Display related classes
 @mixin display-items($breakpoint-suffix: "") {
 
 	.u-inline#{$breakpoint-suffix} { display: inline; }
@@ -19,10 +20,10 @@
 // Print initial display item classes
 @include display-items;
 
-// Print display item classes for each breakpoint
+// Print display item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include display-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include display-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }
 

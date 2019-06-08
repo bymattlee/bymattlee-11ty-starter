@@ -17,3 +17,12 @@
 @function responsive-value($low-size, $high-size, $low-breakpoint, $high-breakpoint) {
 	@return calc(#{$low-size}rem + (#{$high-size} - #{$low-size}) * (100vw - #{$low-breakpoint}rem) / (#{$high-breakpoint} - #{$low-breakpoint}));
 }
+
+// Get value in a nested map
+@function map-deep-get($map, $keys...) {
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+}

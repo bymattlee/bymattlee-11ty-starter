@@ -6,29 +6,59 @@
 /* ***** Colors
 ** ***** ----------------------------------------------- ***** */
 
-$white: #fff;
-$black: #000;
-$grey-dark--2: #222;
-$grey-dark--3: #333;
-$grey-dark--4: #444;
-$grey-dark--6: #666;
-$grey-light--a: #aaa;
-$grey-light--c: #ccc;
+$colors: (
+	white: (
+		class: "white",
+		value: #fff
+	),
+	black: (
+		class: "black",
+		value: #000
+	),
+	grey-dark--2: (
+		class: "grey_dark--2",
+		value: #222
+	),
+	grey-dark--3: (
+		class: "grey_dark--3",
+		value: #333
+	),
+	grey-dark--4: (
+		class: "grey_dark--4",
+		value: #444
+	),
+	grey-dark--5: (
+		class: "grey_dark--5",
+		value: #555
+	),
+	grey-dark--6: (
+		class: "grey_dark--6",
+		value: #666
+	),
+	grey-light--a: (
+		class: "grey_light--a",
+		value: #aaa
+	),
+	grey-light--c: (
+		class: "grey_light--c",
+		value: #ccc
+	)
+);
 
 
 /* ***** Settings
 ** ***** ----------------------------------------------- ***** */
 
 // Selection
-$selection-background-color: $grey-light--a;
-$selection-text-color: $white;
+$selection-background-color: map-deep-get($colors, grey-light--a, value);
+$selection-text-color: map-deep-get($colors, white, value);
 
 // Background
-$root-background-color: $grey-dark--2;
+$root-background-color: map-deep-get($colors, grey-dark--2, value);
 
 // Text
-$body-text-color: $grey-light--c;
+$body-text-color: map-deep-get($colors, grey-light--c, value);
 
-$link-text-color: $grey-light--a;
-$link-hover-text-color: $grey-dark--6;
-$link-active-text-color: $grey-light--a;
+$link-text-color: map-deep-get($colors, grey-light--a, value);
+$link-hover-text-color: map-deep-get($colors, grey-dark--6, value);
+$link-active-text-color: map-deep-get($colors, grey-light--a, value);

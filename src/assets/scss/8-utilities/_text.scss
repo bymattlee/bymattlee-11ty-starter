@@ -3,6 +3,22 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+/* ***** Class Generator
+** ***** ----------------------------------------------- ***** */
+
+// Text color class
+@mixin text-color-item($class, $value) {
+
+	.u-#{$class} { color: #{$value}; }
+
+}
+
+// Print each z-index property; refer to 2-settings/_colors.scss for the classes generated
+@each $key, $value in $colors {
+	@include text-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+}
+
+// Text alignment classes
 @mixin text-align-items($breakpoint-suffix: "") {
 
 	.u-right#{$breakpoint-suffix} { text-align: right; }
@@ -15,12 +31,52 @@
 // Print initial text align item classes
 @include text-align-items;
 
-// Print text align item classes for each breakpoint
+// Print text align item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include text-align-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include text-align-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }
+
+// Font weight classes
+@mixin font-weight-item($class, $value) {
+
+	.u-#{$class} { font-weight: #{$value}; }
+
+}
+
+// Print each font-weight property; refer to 2-settings/_typography.scss for the classes generated
+@each $key, $value in $font-weight {
+	@include font-weight-item(map-deep-get($font-weight, $key, class), map-deep-get($font-weight, $key, value));
+}
+
+// Letter spacing classes
+@mixin letter-spacing-item($class, $value) {
+
+	.u-#{$class} { letter-spacing: #{$value}; }
+
+}
+
+// Print each letter-spacing property; refer to 2-settings/_typography.scss for the classes generated
+@each $key, $value in $letter-spacing {
+	@include letter-spacing-item(map-deep-get($letter-spacing, $key, class), map-deep-get($letter-spacing, $key, value));
+}
+
+// Line height classes
+@mixin line-height-item($class, $value) {
+
+	.u-#{$class} { line-height: #{$value}; }
+
+}
+
+// Print each line-height property; refer to 2-settings/_typography.scss for the classes generated
+@each $key, $value in $line-height {
+	@include line-height-item(map-deep-get($line-height, $key, class), map-deep-get($line-height, $key, value));
+}
+
+
+/* ***** Text Utilities
+** ***** ----------------------------------------------- ***** */
 
 .u-font_primary {
 	@include font-family-primary;
@@ -56,22 +112,6 @@
 
 .u-font_size_0 {
 	font-size: 0;
-}
-
-.u-light {
-	font-weight: $font-weight-light;
-}
-
-.u-normal {
-	font-weight: $font-weight-normal;
-}
-
-.u-bold {
-	font-weight: $font-weight-bold;
-}
-
-.u-black {
-	font-weight: $font-weight-black;
 }
 
 .u-italic {

@@ -3,6 +3,19 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+// Background color class
+@mixin background-color-item($class, $value) {
+
+	.u-bg_#{$class} { background-color: #{$value}; }
+
+}
+
+// Print each z-index property; refer to 2-settings/_colors.scss for the classes generated
+@each $key, $value in $colors {
+	@include background-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+}
+
+// Background related classes
 @mixin background-items($breakpoint-suffix: "") {
 
 	.u-bg_scroll#{$breakpoint-suffix} { background-attachment: scroll; }
@@ -34,9 +47,9 @@
 // Print initial background item classes
 @include background-items;
 
-// Print background item classes for each breakpoint
+// Print background item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include background-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include background-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }

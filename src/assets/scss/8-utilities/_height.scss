@@ -3,6 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+// Height classes
 @mixin height-items($breakpoint-suffix: "") {
 
 	.u-height_auto#{$breakpoint-suffix} { height: auto; }
@@ -15,9 +16,9 @@
 // Print initial height item classes
 @include height-items;
 
-// Print height item classes for each breakpoint
+// Print height item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map_get(map_get($breakpoints, $key), size)) {
-		@include height-items("-" + map_get(map_get($breakpoints, $key), abbr));
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include height-items("-" + map-deep-get($breakpoints, $key, abbr));
 	}
 }

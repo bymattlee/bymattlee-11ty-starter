@@ -5,7 +5,7 @@
 
 ul,
 ol {
-	line-height: $line-height-loose;
+	line-height: map-deep-get($line-height, loose, value);
 	margin: to-vw(20, $mobile-ratio-width) 0 to-vw(20, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
 	padding: 0;
 

@@ -1,52 +1,16 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Utilities/Text
+** ***** Utilities/Z-Index
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-z_below {
-	z-index: $z-index-below;
+// Z-index class
+@mixin z-index-item($class, $value) {
+
+	.u-#{$class} { z-index: #{$value}; }
+
 }
 
-.u-z_0 {
-	z-index: $z-index-0;
-}
-
-.u-z_1 {
-	z-index: $z-index-1;
-}
-
-.u-z_2 {
-	z-index: $z-index-2;
-}
-
-.u-z_3 {
-	z-index: $z-index-3;
-}
-
-.u-z_4 {
-	z-index: $z-index-4;
-}
-
-.u-z_5 {
-	z-index: $z-index-5;
-}
-
-.u-z_6 {
-	z-index: $z-index-6;
-}
-
-.u-z_7 {
-	z-index: $z-index-7;
-}
-
-.u-z_8 {
-	z-index: $z-index-8;
-}
-
-.u-z_9 {
-	z-index: $z-index-9;
-}
-
-.u-z_10 {
-	z-index: $z-index-10;
+// Print each z-index property; refer to 2-settings/_z-index.scss for the classes generated
+@each $key, $value in $z-index {
+	@include z-index-item(map-deep-get($z-index, $key, class), map-deep-get($z-index, $key, value));
 }

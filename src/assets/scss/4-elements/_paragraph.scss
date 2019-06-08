@@ -4,7 +4,7 @@
 
 
 p {
-	line-height: $line-height-loose;
+	line-height: map-deep-get($line-height, loose, value);
 	margin: to-vw(20, $mobile-ratio-width) 0;
 
 	@include mq("medium") {
