@@ -26,3 +26,8 @@
 
 	@return $map;
 }
+
+// Get color value in color map
+@function get-color($color) {
+	@return map-deep-get($colors, $color, value);
+}

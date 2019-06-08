@@ -50,15 +50,15 @@ $colors: (
 ** ***** ----------------------------------------------- ***** */
 
 // Selection
-$selection-background-color: map-deep-get($colors, grey-light--a, value);
-$selection-text-color: map-deep-get($colors, white, value);
+$selection-background-color: get-color(grey-light--a);
+$selection-text-color: get-color(white);
 
 // Background
-$root-background-color: map-deep-get($colors, grey-dark--2, value);
+$root-background-color: get-color(grey-dark--2);
 
 // Text
-$body-text-color: map-deep-get($colors, grey-light--c, value);
+$body-text-color: get-color(grey-light--c);
 
-$link-text-color: map-deep-get($colors, grey-light--a, value);
-$link-hover-text-color: map-deep-get($colors, grey-dark--6, value);
-$link-active-text-color: map-deep-get($colors, grey-light--a, value);
+$link-text-color: get-color(grey-light--a);
+$link-hover-text-color: get-color(grey-dark--6);
+$link-active-text-color: get-color(grey-light--a);

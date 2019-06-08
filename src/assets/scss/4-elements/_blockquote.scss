@@ -4,7 +4,7 @@
 
 
 blockquote {
-	border-left: to-vw(4, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
+	border-left: to-vw(4, $mobile-ratio-width) solid get-color(grey-light--c);
 	margin: to-vw(30, $mobile-ratio-width) to-vw(20, $mobile-ratio-width);
 	padding-left: to-vw(20, $mobile-ratio-width);
 

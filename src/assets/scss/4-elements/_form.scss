@@ -14,7 +14,7 @@ input {
 	@include autofill(none, $body-text-color, transparent);
 
 	background-color: transparent;
-	border: to-vw(1, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
+	border: to-vw(1, $mobile-ratio-width) solid get-color(grey-light--c);
 	border-radius: 0;
 	color: $body-text-color;
 	font-family: $font-family-body;
@@ -29,7 +29,7 @@ input {
 
 textarea {
 	background-color: transparent;
-	border: to-vw(1, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
+	border: to-vw(1, $mobile-ratio-width) solid get-color(grey-light--c);
 	border-radius: 0;
 	color: $body-text-color;
 	font-family: $font-family-body;
@@ -46,7 +46,7 @@ textarea {
 select {
 	-webkit-appearance: none;
 	background-color: transparent;
-	border: to-vw(1, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
+	border: to-vw(1, $mobile-ratio-width) solid get-color(grey-light--c);
 	border-radius: 0;
 	color: $body-text-color;
 	font-family: $font-family-body;

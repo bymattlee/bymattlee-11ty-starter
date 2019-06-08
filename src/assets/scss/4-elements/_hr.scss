@@ -5,7 +5,7 @@
 
 hr {
 	border: 0;
-	border-top: to-vw(1, $mobile-ratio-width) solid map-deep-get($colors, grey-light--c, value);
+	border-top: to-vw(1, $mobile-ratio-width) solid get-color(grey-light--c);
 	margin: to-vw(30, $mobile-ratio-width) 0;
 
 	@include mq("medium") {

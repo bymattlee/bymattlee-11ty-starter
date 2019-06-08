@@ -27,7 +27,7 @@
 		display: inline-block;
 
 		&.s-is_current {
-			color: map-deep-get($colors, white, value);
+			color: get-color(white);
 		}
 	}
 }

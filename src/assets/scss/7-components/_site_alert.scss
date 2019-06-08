@@ -4,8 +4,8 @@
 
 
 .c-site_alert {
-	background: map-deep-get($colors, black, value);
-	background: rgba(map-deep-get($colors, black, value), 0.75);
+	background: get-color(black);
+	background: rgba(get-color(black), 0.75);
 	bottom: 0;
 	left: 0;
 	position: fixed;
@@ -15,7 +15,7 @@
 
 	&-link,
 	&-message {
-		color: map-deep-get($colors, white, value);
+		color: get-color(white);
 		display: block;
 		padding: to-vw(15, $mobile-ratio-width);
 
@@ -27,7 +27,7 @@
 	&-link {
 		&:hover {
 			@media (hover: hover) {
-				color: map-deep-get($colors, grey-light--c, value);
+				color: get-color(grey-light--c);
 			}
 		}
 	}

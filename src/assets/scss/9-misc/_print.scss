@@ -11,7 +11,7 @@
 	*::first-line {
 		background: transparent !important;
 		box-shadow: none !important;
-		color: map-deep-get($colors, black, value) !important;
+		color: get-color(black) !important;
 		text-shadow: none !important;
 	}
 
@@ -35,7 +35,7 @@
 
 	pre,
 	blockquote {
-		border: 1px solid map-deep-get($colors, grey-dark--6, value);
+		border: 1px solid get-color(grey-dark--6);
 		page-break-inside: avoid;
 	}
 
