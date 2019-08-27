@@ -2,7 +2,7 @@
 ** ***** Global JS
 ** ***** ----------------------------------------------- ***** */
 
-/* global Main, Modernizr */
+/* global Main, Modernizr, objectFitImages */
 (function($){
 	'use strict';
 
@@ -40,11 +40,16 @@
 
 				$body.append(markup);
 
+			},
+
+			enableObjectFitPolyfill = function() {
+				objectFitImages();
 			};
 
 		return {
 			init: function() {
 				modernizrCheck();
+				enableObjectFitPolyfill();
 			},
 			displaySiteAlert: displaySiteAlert
 		};
