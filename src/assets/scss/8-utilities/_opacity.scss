@@ -1,0 +1,25 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Opacity
+** ***** ----------------------------------------------- ***** */
+
+
+// Opacity classes
+@mixin opacity-items($breakpoint-suffix: "") {
+
+	.u-opacity_100#{$breakpoint-suffix} { opacity: 1; }
+	.u-opacity_75#{$breakpoint-suffix} { opacity: 0.75; }
+	.u-opacity_50#{$breakpoint-suffix} { opacity: 0.5; }
+	.u-opacity_25#{$breakpoint-suffix} { opacity: 0.25; }
+	.u-opacity_0#{$breakpoint-suffix} { opacity: 0; }
+
+}
+
+// Print initial opacity item classes
+@include opacity-items;
+
+// Print opacity item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
+@each $key, $value in $breakpoints {
+	@include mq(map-deep-get($breakpoints, $key, size)) {
+		@include opacity-items("-" + map-deep-get($breakpoints, $key, abbr));
+	}
+}

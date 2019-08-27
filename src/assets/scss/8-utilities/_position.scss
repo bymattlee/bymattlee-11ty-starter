@@ -10,6 +10,7 @@
 	.u-absolute#{$breakpoint-suffix} { position: absolute; }
 	.u-relative#{$breakpoint-suffix} { position: relative; }
 	.u-fixed#{$breakpoint-suffix} { position: fixed; }
+	.u-sticky#{$breakpoint-suffix} { position: sticky; }
 	.u-top_0#{$breakpoint-suffix} { top: 0; }
 	.u-right_0#{$breakpoint-suffix} { right: 0; }
 	.u-bottom_0#{$breakpoint-suffix} { bottom: 0; }

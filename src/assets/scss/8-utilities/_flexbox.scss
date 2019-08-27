@@ -6,8 +6,6 @@
 // Flexbox related classes
 @mixin flexbox-items($breakpoint-suffix: "") {
 
-	.u-flex#{$breakpoint-suffix} { display: flex; }
-	.u-inline_flex#{$breakpoint-suffix} { display: inline-flex; }
 	.u-flex_column#{$breakpoint-suffix} { flex-direction: column; }
 	.u-flex_row#{$breakpoint-suffix} { flex-direction: row; }
 	.u-flex_wrap#{$breakpoint-suffix} { flex-wrap: wrap; }
@@ -42,12 +40,10 @@
 	.u-order_3#{$breakpoint-suffix} { order: 3; }
 	.u-order_4#{$breakpoint-suffix} { order: 4; }
 	.u-order_5#{$breakpoint-suffix} { order: 5; }
-
-	.u-flex_auto#{$breakpoint-suffix} {
-		flex: 1 1 auto;
-		min-height: 0;
-		min-width: 0;
-	}
+	.u-flex_initial#{$breakpoint-suffix} { flex: 0 1 auto; }
+	.u-flex_1#{$breakpoint-suffix} { flex: 1 1 0%; }
+	.u-flex_auto#{$breakpoint-suffix} { flex: 1 1 auto; }
+	.u-flex_none#{$breakpoint-suffix} { flex: none; }
 
 }
 

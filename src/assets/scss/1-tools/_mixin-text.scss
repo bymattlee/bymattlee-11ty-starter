@@ -16,14 +16,14 @@
 	}
 }
 
-// Font family primary - add styles related to this font as well
-@mixin font-family-primary {
-	font-family: $font-family-primary;
+// Font family body - add styles related to this font as well
+@mixin font-family-body {
+	font-family: $font-family-body;
 }
 
-// Font family secondary - add styles related to this font as well
-@mixin font-family-secondary {
-	font-family: $font-family-secondary;
+// Font family heading - add styles related to this font as well
+@mixin font-family-heading {
+	font-family: $font-family-heading;
 }
 
 // Truncate text

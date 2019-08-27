@@ -19,10 +19,11 @@ html {
 }
 
 body {
+	@include font-family-body;
+
 	color: $body-text-color;
 	display: flex;
 	flex-direction: column;
-	font-family: $font-family-body;
 	font-size: $font-size-normal;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;

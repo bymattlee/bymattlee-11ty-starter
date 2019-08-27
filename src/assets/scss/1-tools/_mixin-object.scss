@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Tools/Object
+** ***** ----------------------------------------------- ***** */
+
+
+// Add polyfill property for object
+@mixin object($fit: fill, $position: null) {
+	object-fit: $fit;
+
+	@if $position {
+		font-family: "object-fit: #{$fit}; object-position: #{$position}";
+		object-position: $position;
+	} @else {
+		font-family: "object-fit: #{$fit}";
+	}
+}

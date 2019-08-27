@@ -9,7 +9,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $font-family-heading;
+	@include font-family-heading;
+
 	margin: 0;
 	padding: 0;
 	text-rendering: optimizeLegibility;

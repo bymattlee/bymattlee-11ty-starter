@@ -41,6 +41,7 @@
 @import "1-tools/functions";
 @import "1-tools/mixin-background";
 @import "1-tools/mixin-layout";
+@import "1-tools/mixin-object";
 @import "1-tools/mixin-text";
 
 
@@ -107,12 +108,13 @@
 @import "8-utilities/animate";
 @import "8-utilities/background";
 @import "8-utilities/border";
-@import "8-utilities/clearfix";
 @import "8-utilities/display";
 @import "8-utilities/flexbox";
 @import "8-utilities/float";
 @import "8-utilities/height";
 @import "8-utilities/margin";
+@import "8-utilities/object";
+@import "8-utilities/opacity";
 @import "8-utilities/overflow";
 @import "8-utilities/padding";
 @import "8-utilities/position";

@@ -8,7 +8,15 @@
 
 	.u-height_auto#{$breakpoint-suffix} { height: auto; }
 	.u-height_0#{$breakpoint-suffix} { height: 0; }
+	.u-height_10#{$breakpoint-suffix} { height: 10%; }
+	.u-height_20#{$breakpoint-suffix} { height: 20%; }
+	.u-height_30#{$breakpoint-suffix} { height: 30%; }
+	.u-height_40#{$breakpoint-suffix} { height: 40%; }
 	.u-height_50#{$breakpoint-suffix} { height: 50%; }
+	.u-height_60#{$breakpoint-suffix} { height: 60%; }
+	.u-height_70#{$breakpoint-suffix} { height: 70%; }
+	.u-height_80#{$breakpoint-suffix} { height: 80%; }
+	.u-height_90#{$breakpoint-suffix} { height: 90%; }
 	.u-height_100#{$breakpoint-suffix} { height: 100%; }
 
 }

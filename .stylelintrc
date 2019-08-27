@@ -16,6 +16,11 @@
             }
         ],
         "block-closing-brace-empty-line-before": ,
+        "block-closing-brace-newline-after": [
+            "always",
+            ignoreAtRules: ["if", "else"]
+        ],
+        "at-rule-empty-line-before": ,
         "font-family-name-quotes": "always-where-recommended",
         "function-url-quotes": "always",
         "selector-attribute-quotes": "always",

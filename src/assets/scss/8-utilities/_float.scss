@@ -9,6 +9,7 @@
 	.u-float_right#{$breakpoint-suffix} { float: right; }
 	.u-float_left#{$breakpoint-suffix} { float: left; }
 	.u-float_none#{$breakpoint-suffix} { float: none; }
+	.u-clearfix#{$breakpoint-suffix} { @include clearfix; }
 
 }
 

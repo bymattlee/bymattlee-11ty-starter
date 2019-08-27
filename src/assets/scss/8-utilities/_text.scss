@@ -13,9 +13,41 @@
 
 }
 
-// Print each z-index property; refer to 2-settings/_colors.scss for the classes generated
+// Print each text color; refer to 2-settings/_colors.scss for the classes generated
 @each $key, $value in $colors {
 	@include text-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+}
+
+// Text hover color class
+@mixin text-hover-color-item($class, $value) {
+	.u-#{$class}-hover {
+		&:hover {
+			@media (hover: hover) {
+				color: #{$value};
+			}
+		}
+	}
+}
+
+// Print each text color; refer to 2-settings/_colors.scss for the classes generated
+@each $key, $value in $colors {
+	@include text-hover-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+}
+
+// Text active color class
+@mixin text-active-color-item($class, $value) {
+	.u-#{$class}-active {
+		&:active {
+			@media (hover: hover) {
+				color: #{$value};
+			}
+		}
+	}
+}
+
+// Print each text color; refer to 2-settings/_colors.scss for the classes generated
+@each $key, $value in $colors {
+	@include text-active-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
 }
 
 // Text alignment classes
@@ -78,12 +110,20 @@
 /* ***** Text Utilities
 ** ***** ----------------------------------------------- ***** */
 
+.u-font_body {
+	@include font-family-body;
+}
+
+.u-font_heading {
+	@include font-family-heading;
+}
+
 .u-font_primary {
-	@include font-family-primary;
+	font-family: $font-family-primary;
 }
 
 .u-font_secondary {
-	@include font-family-secondary;
+	font-family: $font-family-secondary;
 }
 
 .u-h1 {

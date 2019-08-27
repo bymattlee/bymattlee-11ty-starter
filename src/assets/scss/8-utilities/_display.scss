@@ -9,6 +9,8 @@
 	.u-inline#{$breakpoint-suffix} { display: inline; }
 	.u-block#{$breakpoint-suffix} { display: block; }
 	.u-inline_block#{$breakpoint-suffix} { display: inline-block; }
+	.u-flex#{$breakpoint-suffix} { display: flex; }
+	.u-inline_flex#{$breakpoint-suffix} { display: inline-flex; }
 	.u-hide#{$breakpoint-suffix} { display: none; }
 	.u-table#{$breakpoint-suffix} { display: table; }
 	.u-table_cell#{$breakpoint-suffix} { display: table-cell; }
