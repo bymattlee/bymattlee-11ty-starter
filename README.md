@@ -83,6 +83,7 @@ $ gulp gzip
 * `.stylelintrc` contains the settings for Stylelint
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
 * Default unit of measurement is **vw**
+* Utilizes a utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
 
 ##### Scripts
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
