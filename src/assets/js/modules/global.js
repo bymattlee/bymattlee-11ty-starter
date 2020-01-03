@@ -28,12 +28,12 @@
 
         var markup = '';
 
-        markup += '<div class="c-site_alert">';
+        markup += '<div class="c-siteAlert">';
 
         if (link) {
-          markup += '<a href="' + link + '" class="c-site_alert-link" target="_blank">' + message + '</a>';
+          markup += '<a href="' + link + '" class="c-siteAlert-link" target="_blank">' + message + '</a>';
         } else {
-          markup += '<span class="c-site_alert-message">' + message + '</span>';
+          markup += '<span class="c-siteAlert-message">' + message + '</span>';
         }
 
         markup += '</div>';

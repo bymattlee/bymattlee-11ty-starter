@@ -58,11 +58,11 @@ module.exports = {
   markup: {
     src: src + '/html/pages/**/*.njk',
     dest: dest,
-    data: '../../' + src + '/html/site_data.json',
+    data: '../../' + src + '/html/siteData.json',
     path: src + '/html',
     watchSrc: [
       src + '/html/**/*.njk',
-      src + '/html/site_data.json'
+      src + '/html/siteData.json'
     ]
   },
   styles: {
