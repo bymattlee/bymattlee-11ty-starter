@@ -132,7 +132,7 @@ module.exports = {
   },
   favicons: {
     faviconSrc: srcAssets + '/favicons/favicon.png',
-    touchIconSrc: srcAssets + '/favicons/touch-icon.png',
+    touchIconSrc: srcAssets + '/favicons/touchIcon.png',
     dest: destAssets + '/favicons',
     appName: 'ByMattLee',
     appDescription: 'ByMattLee Web Starter Files',
