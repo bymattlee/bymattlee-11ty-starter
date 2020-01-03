@@ -58,8 +58,7 @@ gulp.task('deploy', function() {
 			root: config.deploy.root,
 			archive: true,
 			recursive: true,
-			clean: isClean ? true : false,
-			exclude: config.deploy.exclude
+			clean: isClean ? true : false
 		})));
 
 });
