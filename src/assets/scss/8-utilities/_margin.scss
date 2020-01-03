@@ -11,106 +11,106 @@
 // Margin classes
 @mixin margin-items-with-size($size, $breakpoint-suffix: "") {
 
-	$size-value: "";
+  $size-value: "";
 
-	@if $breakpoint-suffix == "" or $breakpoint-suffix == "-xs" or $breakpoint-suffix == "-sm" {
+  @if $breakpoint-suffix == "" or $breakpoint-suffix == "-xs" or $breakpoint-suffix == "-sm" {
 
-		$size-value: to-vw($size, $mobile-ratio-width);
-		$size-value-medium-up: to-vw($size, $desktop-ratio-width);
+    $size-value: to-vw($size, $mobile-ratio-width);
+    $size-value-medium-up: to-vw($size, $desktop-ratio-width);
 
-		.u-ma_#{$size}#{$breakpoint-suffix} {
-			margin: $size-value;
+    .u-ma_#{$size}#{$breakpoint-suffix} {
+      margin: $size-value;
 
-			@include mq("medium") {
-				margin: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin: $size-value-medium-up;
+      }
+    }
 
-		.u-mt_#{$size}#{$breakpoint-suffix} {
-			margin-top: $size-value;
+    .u-mt_#{$size}#{$breakpoint-suffix} {
+      margin-top: $size-value;
 
-			@include mq("medium") {
-				margin-top: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-top: $size-value-medium-up;
+      }
+    }
 
-		.u-mr_#{$size}#{$breakpoint-suffix} {
-			margin-right: $size-value;
+    .u-mr_#{$size}#{$breakpoint-suffix} {
+      margin-right: $size-value;
 
-			@include mq("medium") {
-				margin-right: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-right: $size-value-medium-up;
+      }
+    }
 
-		.u-mb_#{$size}#{$breakpoint-suffix} {
-			margin-bottom: $size-value;
+    .u-mb_#{$size}#{$breakpoint-suffix} {
+      margin-bottom: $size-value;
 
-			@include mq("medium") {
-				margin-bottom: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-bottom: $size-value-medium-up;
+      }
+    }
 
-		.u-ml_#{$size}#{$breakpoint-suffix} {
-			margin-left: $size-value;
+    .u-ml_#{$size}#{$breakpoint-suffix} {
+      margin-left: $size-value;
 
-			@include mq("medium") {
-				margin-left: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-left: $size-value-medium-up;
+      }
+    }
 
-		.u-mx_#{$size}#{$breakpoint-suffix} {
-			margin-left: $size-value;
-			margin-right: $size-value;
+    .u-mx_#{$size}#{$breakpoint-suffix} {
+      margin-left: $size-value;
+      margin-right: $size-value;
 
-			@include mq("medium") {
-				margin-left: $size-value-medium-up;
-				margin-right: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-left: $size-value-medium-up;
+        margin-right: $size-value-medium-up;
+      }
+    }
 
-		.u-my_#{$size}#{$breakpoint-suffix} {
-			margin-bottom: $size-value;
-			margin-top: $size-value;
+    .u-my_#{$size}#{$breakpoint-suffix} {
+      margin-bottom: $size-value;
+      margin-top: $size-value;
 
-			@include mq("medium") {
-				margin-bottom: $size-value-medium-up;
-				margin-top: $size-value-medium-up;
-			}
-		}
+      @include mq("medium") {
+        margin-bottom: $size-value-medium-up;
+        margin-top: $size-value-medium-up;
+      }
+    }
 
-	} @else { /* stylelint-disable-line */
+  } @else { /* stylelint-disable-line */
 
-		$size-value: to-vw($size, $desktop-ratio-width);
+    $size-value: to-vw($size, $desktop-ratio-width);
 
-		.u-ma_#{$size}#{$breakpoint-suffix} { margin: $size-value; }
-		.u-mt_#{$size}#{$breakpoint-suffix} { margin-top: $size-value; }
-		.u-mr_#{$size}#{$breakpoint-suffix} { margin-right: $size-value; }
-		.u-mb_#{$size}#{$breakpoint-suffix} { margin-bottom: $size-value; }
-		.u-ml_#{$size}#{$breakpoint-suffix} { margin-left: $size-value; }
+    .u-ma_#{$size}#{$breakpoint-suffix} { margin: $size-value; }
+    .u-mt_#{$size}#{$breakpoint-suffix} { margin-top: $size-value; }
+    .u-mr_#{$size}#{$breakpoint-suffix} { margin-right: $size-value; }
+    .u-mb_#{$size}#{$breakpoint-suffix} { margin-bottom: $size-value; }
+    .u-ml_#{$size}#{$breakpoint-suffix} { margin-left: $size-value; }
 
-		.u-mx_#{$size}#{$breakpoint-suffix} {
-			margin-left: $size-value;
-			margin-right: $size-value;
-		}
+    .u-mx_#{$size}#{$breakpoint-suffix} {
+      margin-left: $size-value;
+      margin-right: $size-value;
+    }
 
-		.u-my_#{$size}#{$breakpoint-suffix} {
-			margin-bottom: $size-value;
-			margin-top: $size-value;
-		}
+    .u-my_#{$size}#{$breakpoint-suffix} {
+      margin-bottom: $size-value;
+      margin-top: $size-value;
+    }
 
-	}
+  }
 
 }
 
 @mixin margin-items($breakpoint-suffix: "") {
 
-	.u-ml_auto#{$breakpoint-suffix} { margin-left: auto; }
-	.u-mr_auto#{$breakpoint-suffix} { margin-right: auto; }
+  .u-ml_auto#{$breakpoint-suffix} { margin-left: auto; }
+  .u-mr_auto#{$breakpoint-suffix} { margin-right: auto; }
 
-	.u-mx_auto#{$breakpoint-suffix} {
-		margin-left: auto;
-		margin-right: auto;
-	}
+  .u-mx_auto#{$breakpoint-suffix} {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
 
@@ -122,32 +122,32 @@ $size-increment-large: 10;
 
 // Print initial margin item with size classes from 0-45 in increments of 5
 @for $margin-step from 0 through $margin-steps-small {
-	$size: $margin-step * $size-increment-small;
-	@include margin-items-with-size($size);
+  $size: $margin-step * $size-increment-small;
+  @include margin-items-with-size($size);
 }
 
 // Print initial margin item with size classes from 50-100 in increments of 10
 @for $margin-step from 0 through $margin-steps-large {
-	$size: 50 + ($margin-step * $size-increment-large);
-	@include margin-items-with-size($size);
+  $size: 50 + ($margin-step * $size-increment-large);
+  @include margin-items-with-size($size);
 }
 
 // Print margin item with size classes; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
+  @include mq(map-deep-get($breakpoints, $key, size)) {
 
-		// Print margin item with size classes from 0-45 in increments of 5 for each breakpoint
-		@for $margin-step from 0 through $margin-steps-small {
-			$size: $margin-step * $size-increment-small;
-			@include margin-items-with-size($size, "-" + map-deep-get($breakpoints, $key, abbr));
-		}
+    // Print margin item with size classes from 0-45 in increments of 5 for each breakpoint
+    @for $margin-step from 0 through $margin-steps-small {
+      $size: $margin-step * $size-increment-small;
+      @include margin-items-with-size($size, "-" + map-deep-get($breakpoints, $key, abbr));
+    }
 
-		// Print margin item with size classes from 50-100 in increments of 10 for each breakpoint
-		@for $margin-step from 0 through $margin-steps-large {
-			$size: 50 + ($margin-step * $size-increment-large);
-			@include margin-items-with-size($size, "-" + map-deep-get($breakpoints, $key, abbr));
-		}
-	}
+    // Print margin item with size classes from 50-100 in increments of 10 for each breakpoint
+    @for $margin-step from 0 through $margin-steps-large {
+      $size: 50 + ($margin-step * $size-increment-large);
+      @include margin-items-with-size($size, "-" + map-deep-get($breakpoints, $key, abbr));
+    }
+  }
 }
 
 // Print initial margin item classes
@@ -155,7 +155,7 @@ $size-increment-large: 10;
 
 // Print margin item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include margin-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include margin-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }

@@ -5,88 +5,88 @@
 
 // Media query
 @mixin mq($size, $type: min, $orientation: width) {
-	@if map_has_key($breakpoints, $size) {
-		$size: map_get(map_get($breakpoints, $size), size);
-	}
+  @if map_has_key($breakpoints, $size) {
+    $size: map_get(map_get($breakpoints, $size), size);
+  }
 
-	@if $type == max {
-		$size: $size - 0.1rem;
-	}
+  @if $type == max {
+    $size: $size - 0.1rem;
+  }
 
-	@if $orientation == width {
-		@media only screen and (#{$type}-width: rem-to-em($size)) {
-			@content;
-		}
-	}
+  @if $orientation == width {
+    @media only screen and (#{$type}-width: rem-to-em($size)) {
+      @content;
+    }
+  }
 
-	@if $orientation == height {
-		@media only screen and (#{$type}-height: rem-to-em($size)) {
-			@content;
-		}
-	}
+  @if $orientation == height {
+    @media only screen and (#{$type}-height: rem-to-em($size)) {
+      @content;
+    }
+  }
 }
 
 // Clearfix
 @mixin clearfix {
-	&::before,
-	&::after {
-		content: "";
-		display: table;
-	}
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
 
-	&::after {
-		clear: both;
-	}
+  &::after {
+    clear: both;
+  }
 }
 
 // Center horizontally
 @mixin horizontal-center {
-	left: 50%;
-	position: absolute;
-	transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 }
 
 // Center vertically
 @mixin vertical-center {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 // Center horizontally and vertically
 @mixin absolute-center {
-	left: 50%;
-	position: absolute;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 // Cover the entire element
 @mixin full-cover {
-	bottom: 0;
-	display: block;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 100%;
+  bottom: 0;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 // Create proportional element
 @mixin proportional-element($ratio) {
-	&::after {
-		clear: both;
-		content: "";
-		display: table;
-	}
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 
-	&::before {
-		content: "";
-		float: left;
-		height: 0;
-		margin-left: -0.1rem;
-		padding-top: ($ratio) * 100%;
-		width: -0.1rem;
-	}
+  &::before {
+    content: "";
+    float: left;
+    height: 0;
+    margin-left: -0.1rem;
+    padding-top: ($ratio) * 100%;
+    width: -0.1rem;
+  }
 }

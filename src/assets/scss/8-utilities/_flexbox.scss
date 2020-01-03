@@ -6,44 +6,44 @@
 // Flexbox related classes
 @mixin flexbox-items($breakpoint-suffix: "") {
 
-	.u-flex_column#{$breakpoint-suffix} { flex-direction: column; }
-	.u-flex_row#{$breakpoint-suffix} { flex-direction: row; }
-	.u-flex_wrap#{$breakpoint-suffix} { flex-wrap: wrap; }
-	.u-flex_nowrap#{$breakpoint-suffix} { flex-wrap: nowrap; }
-	.u-items_start#{$breakpoint-suffix} { align-items: flex-start; }
-	.u-items_end#{$breakpoint-suffix} { align-items: flex-end; }
-	.u-items_center#{$breakpoint-suffix} { align-items: center; }
-	.u-items_baseline#{$breakpoint-suffix} { align-items: baseline; }
-	.u-items_stretch#{$breakpoint-suffix} { align-items: stretch; }
-	.u-self_start#{$breakpoint-suffix} { align-self: flex-start; }
-	.u-self_end#{$breakpoint-suffix} { align-self: flex-end; }
-	.u-self_center#{$breakpoint-suffix} { align-self: center; }
-	.u-self_baseline#{$breakpoint-suffix} { align-self: baseline; }
-	.u-self_stretch#{$breakpoint-suffix} { align-self: stretch; }
-	.u-justify_start#{$breakpoint-suffix} { justify-content: flex-start; }
-	.u-justify_end#{$breakpoint-suffix} { justify-content: flex-end; }
-	.u-justify_center#{$breakpoint-suffix} { justify-content: center; }
-	.u-justify_between#{$breakpoint-suffix} { justify-content: space-between; }
-	.u-justify_around#{$breakpoint-suffix} { justify-content: space-around; }
-	.u-justify_evenly#{$breakpoint-suffix} { justify-content: space-evenly; }
-	.u-content_start#{$breakpoint-suffix} { align-content: flex-start; }
-	.u-content_end#{$breakpoint-suffix} { align-content: flex-end; }
-	.u-content_center#{$breakpoint-suffix} { align-content: center; }
-	.u-content_between#{$breakpoint-suffix} { align-content: space-between; }
-	.u-content_around#{$breakpoint-suffix} { align-content: space-around; }
-	.u-content_stretch#{$breakpoint-suffix} { align-content: stretch; }
-	.u-shrink_0#{$breakpoint-suffix} { flex-shrink: 0; }
-	.u-shrink_1#{$breakpoint-suffix} { flex-shrink: 1; }
-	.u-order_unset#{$breakpoint-suffix} { order: unset; }
-	.u-order_1#{$breakpoint-suffix} { order: 1; }
-	.u-order_2#{$breakpoint-suffix} { order: 2; }
-	.u-order_3#{$breakpoint-suffix} { order: 3; }
-	.u-order_4#{$breakpoint-suffix} { order: 4; }
-	.u-order_5#{$breakpoint-suffix} { order: 5; }
-	.u-flex_initial#{$breakpoint-suffix} { flex: 0 1 auto; }
-	.u-flex_1#{$breakpoint-suffix} { flex: 1 1 0%; }
-	.u-flex_auto#{$breakpoint-suffix} { flex: 1 1 auto; }
-	.u-flex_none#{$breakpoint-suffix} { flex: none; }
+  .u-flex_column#{$breakpoint-suffix} { flex-direction: column; }
+  .u-flex_row#{$breakpoint-suffix} { flex-direction: row; }
+  .u-flex_wrap#{$breakpoint-suffix} { flex-wrap: wrap; }
+  .u-flex_nowrap#{$breakpoint-suffix} { flex-wrap: nowrap; }
+  .u-items_start#{$breakpoint-suffix} { align-items: flex-start; }
+  .u-items_end#{$breakpoint-suffix} { align-items: flex-end; }
+  .u-items_center#{$breakpoint-suffix} { align-items: center; }
+  .u-items_baseline#{$breakpoint-suffix} { align-items: baseline; }
+  .u-items_stretch#{$breakpoint-suffix} { align-items: stretch; }
+  .u-self_start#{$breakpoint-suffix} { align-self: flex-start; }
+  .u-self_end#{$breakpoint-suffix} { align-self: flex-end; }
+  .u-self_center#{$breakpoint-suffix} { align-self: center; }
+  .u-self_baseline#{$breakpoint-suffix} { align-self: baseline; }
+  .u-self_stretch#{$breakpoint-suffix} { align-self: stretch; }
+  .u-justify_start#{$breakpoint-suffix} { justify-content: flex-start; }
+  .u-justify_end#{$breakpoint-suffix} { justify-content: flex-end; }
+  .u-justify_center#{$breakpoint-suffix} { justify-content: center; }
+  .u-justify_between#{$breakpoint-suffix} { justify-content: space-between; }
+  .u-justify_around#{$breakpoint-suffix} { justify-content: space-around; }
+  .u-justify_evenly#{$breakpoint-suffix} { justify-content: space-evenly; }
+  .u-content_start#{$breakpoint-suffix} { align-content: flex-start; }
+  .u-content_end#{$breakpoint-suffix} { align-content: flex-end; }
+  .u-content_center#{$breakpoint-suffix} { align-content: center; }
+  .u-content_between#{$breakpoint-suffix} { align-content: space-between; }
+  .u-content_around#{$breakpoint-suffix} { align-content: space-around; }
+  .u-content_stretch#{$breakpoint-suffix} { align-content: stretch; }
+  .u-shrink_0#{$breakpoint-suffix} { flex-shrink: 0; }
+  .u-shrink_1#{$breakpoint-suffix} { flex-shrink: 1; }
+  .u-order_unset#{$breakpoint-suffix} { order: unset; }
+  .u-order_1#{$breakpoint-suffix} { order: 1; }
+  .u-order_2#{$breakpoint-suffix} { order: 2; }
+  .u-order_3#{$breakpoint-suffix} { order: 3; }
+  .u-order_4#{$breakpoint-suffix} { order: 4; }
+  .u-order_5#{$breakpoint-suffix} { order: 5; }
+  .u-flex_initial#{$breakpoint-suffix} { flex: 0 1 auto; }
+  .u-flex_1#{$breakpoint-suffix} { flex: 1 1 0%; }
+  .u-flex_auto#{$breakpoint-suffix} { flex: 1 1 auto; }
+  .u-flex_none#{$breakpoint-suffix} { flex: none; }
 
 }
 
@@ -52,7 +52,7 @@
 
 // Print flexbox item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include flexbox-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include flexbox-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }

@@ -5,36 +5,36 @@
 
 ul,
 ol {
-	line-height: map-deep-get($line-height, loose, value);
-	margin: to-vw(20, $mobile-ratio-width) 0 to-vw(20, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
-	padding: 0;
+  line-height: map-deep-get($line-height, loose, value);
+  margin: to-vw(20, $mobile-ratio-width) 0 to-vw(20, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
+  padding: 0;
 
-	@include mq("medium") {
-		margin: to-vw(5, $desktop-ratio-width) 0 to-vw(25, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    margin: to-vw(5, $desktop-ratio-width) 0 to-vw(25, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
+  }
 
-	&.u-unstyled {
-		list-style: none;
-		margin-left: 0;
-	}
+  &.u-unstyled {
+    list-style: none;
+    margin-left: 0;
+  }
 
-	li {
-		margin: to-vw(20, $mobile-ratio-width) 0;
+  li {
+    margin: to-vw(20, $mobile-ratio-width) 0;
 
-		@include mq("medium") {
-			margin: to-vw(30, $desktop-ratio-width) 0;
-		}
-	}
+    @include mq("medium") {
+      margin: to-vw(30, $desktop-ratio-width) 0;
+    }
+  }
 
-	ul {
-		margin-bottom: 0;
-		margin-top: 0;
-	}
+  ul {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
 
 nav {
-	ul,
-	ol {
-		margin-left: 0;
-	}
+  ul,
+  ol {
+    margin-left: 0;
+  }
 }

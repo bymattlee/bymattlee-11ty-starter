@@ -4,8 +4,8 @@
 
 // Require all development dependencies
 var browserSync = require('browser-sync'),
-	config = require('../config'),
-	gulp = require('gulp');
+  config = require('../config'),
+  gulp = require('gulp');
 
 /*
 ** -- Initialize BrowserSync
@@ -13,8 +13,8 @@ var browserSync = require('browser-sync'),
 */
 gulp.task('browserSync', function() {
 
-	browserSync.init({
-		server: config.browserSync.server
-	});
+  browserSync.init({
+    server: config.browserSync.server
+  });
 
 });

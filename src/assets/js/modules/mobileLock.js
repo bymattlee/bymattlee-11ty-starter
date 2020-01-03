@@ -4,27 +4,27 @@
 
 /* global Main, iNoBounce */
 (function(){
-	'use strict';
+  'use strict';
 
-	Main.modules.mobileLock = function() {
+  Main.modules.mobileLock = function() {
 
-		var preventSwipe = function($element) {
+    var preventSwipe = function($element) {
 
-				// Prevent swipe on this element
-	
-				$element.bind('touchmove', function(e) {
-					e.preventDefault();
-				});
+        // Prevent swipe on this element
+  
+        $element.bind('touchmove', function(e) {
+          e.preventDefault();
+        });
 
-			};
+      };
 
-		return {
-			init: function() {
-				iNoBounce.disable();
-			},
-			preventSwipe: preventSwipe
-		};
-		
-	};
+    return {
+      init: function() {
+        iNoBounce.disable();
+      },
+      preventSwipe: preventSwipe
+    };
+    
+  };
 
 })(jQuery);

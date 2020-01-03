@@ -5,14 +5,14 @@
 
 .lazyload,
 .lazyloading {
-	opacity: 0;
+  opacity: 0;
 }
 
 html.lazyloading {
-	opacity: 1;
+  opacity: 1;
 }
 
 .lazyloaded {
-	opacity: 1;
-	transition: opacity $transition-slow;
+  opacity: 1;
+  transition: opacity $transition-slow;
 }

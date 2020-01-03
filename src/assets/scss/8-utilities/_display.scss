@@ -6,16 +6,16 @@
 // Display related classes
 @mixin display-items($breakpoint-suffix: "") {
 
-	.u-inline#{$breakpoint-suffix} { display: inline; }
-	.u-block#{$breakpoint-suffix} { display: block; }
-	.u-inline_block#{$breakpoint-suffix} { display: inline-block; }
-	.u-flex#{$breakpoint-suffix} { display: flex; }
-	.u-inline_flex#{$breakpoint-suffix} { display: inline-flex; }
-	.u-hide#{$breakpoint-suffix} { display: none; }
-	.u-table#{$breakpoint-suffix} { display: table; }
-	.u-table_cell#{$breakpoint-suffix} { display: table-cell; }
-	.u-visible#{$breakpoint-suffix} { visibility: visible; }
-	.u-invisible#{$breakpoint-suffix} { visibility: hidden; }
+  .u-inline#{$breakpoint-suffix} { display: inline; }
+  .u-block#{$breakpoint-suffix} { display: block; }
+  .u-inline_block#{$breakpoint-suffix} { display: inline-block; }
+  .u-flex#{$breakpoint-suffix} { display: flex; }
+  .u-inline_flex#{$breakpoint-suffix} { display: inline-flex; }
+  .u-hide#{$breakpoint-suffix} { display: none; }
+  .u-table#{$breakpoint-suffix} { display: table; }
+  .u-table_cell#{$breakpoint-suffix} { display: table-cell; }
+  .u-visible#{$breakpoint-suffix} { visibility: visible; }
+  .u-invisible#{$breakpoint-suffix} { visibility: hidden; }
 
 }
 
@@ -24,17 +24,17 @@
 
 // Print display item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include display-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include display-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }
 
 .u-hidden {
-	border: 0;
-	clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
-	height: 0.1rem;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 0.1rem;
+  border: 0;
+  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+  height: 0.1rem;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0.1rem;
 }

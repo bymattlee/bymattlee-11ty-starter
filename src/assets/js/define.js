@@ -5,5 +5,5 @@
 var Main = Main || {};
 
 Main = {
-	modules: {}
+  modules: {}
 };

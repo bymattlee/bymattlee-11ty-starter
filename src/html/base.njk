@@ -20,34 +20,34 @@
 <meta property="og:locale" content="en_US">
 
 {% if global.twitterHandle %}
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{{ pageShareTitle }}">
-	<meta name="twitter:site" content="{{ global.twitterHandle }}">
-	<meta name="twitter:url" content="{{ homeUrl }}/{{ pageSlug }}">
-	<meta name="twitter:description" content="{{ pageDescription }}">
-	<meta name="twitter:image" content="{{ homeUrl }}/assets/images/share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageShareTitle }}">
+  <meta name="twitter:site" content="{{ global.twitterHandle }}">
+  <meta name="twitter:url" content="{{ homeUrl }}/{{ pageSlug }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ homeUrl }}/assets/images/share.jpg">
 {% endif %}
 
 {% if 'p-home' in pageBodyClasses %}
-	<script type="application/ld+json">
-		{
-			"@context": "http://schema.org",
-			"@type": "Person",
-			"email": "hello@bymattlee.com",
-			"image": "{{ home_url }}/assets/images/headshot.jpg",
-			"jobTitle": "Freelance Creative Developer",
-			"name": "Matt Lee",
-			"gender": "male",
-			"url": "http://bymattlee.com",
-			"sameAs": [ 
-				"https://www.facebook.com/bymattlee",
-				"https://twitter.com/bymattlee",
-				"https://www.instagram.com/bymattlee",
-				"https://www.linkedin.com/in/bymattlee",
-				"https://github.com/bymattlee"
-			]
-		}
-	</script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "email": "hello@bymattlee.com",
+      "image": "{{ home_url }}/assets/images/headshot.jpg",
+      "jobTitle": "Freelance Creative Developer",
+      "name": "Matt Lee",
+      "gender": "male",
+      "url": "http://bymattlee.com",
+      "sameAs": [ 
+        "https://www.facebook.com/bymattlee",
+        "https://twitter.com/bymattlee",
+        "https://www.instagram.com/bymattlee",
+        "https://www.linkedin.com/in/bymattlee",
+        "https://github.com/bymattlee"
+      ]
+    }
+  </script>
 {% endif %}
 
 <link rel="canonical" href="{{ homeUrl }}/{{ pageSlug }}">
@@ -55,13 +55,13 @@
 <link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
 
 {% if global.googleAnalyticsId and isProduction %}
-	<script async src="//www.googletagmanager.com/gtag/js?id={{ global.googleAnalyticsId }}"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', '{{ global.googleAnalyticsId }}');
-	</script>
+  <script async src="//www.googletagmanager.com/gtag/js?id={{ global.googleAnalyticsId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ global.googleAnalyticsId }}');
+  </script>
 {% endif %}
 
 </head>

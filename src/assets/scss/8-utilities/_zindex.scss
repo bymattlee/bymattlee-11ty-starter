@@ -6,11 +6,11 @@
 // Z-index class
 @mixin z-index-item($class, $value) {
 
-	.u-#{$class} { z-index: #{$value}; }
+  .u-#{$class} { z-index: #{$value}; }
 
 }
 
 // Print each z-index property; refer to 2-settings/_z-index.scss for the classes generated
 @each $key, $value in $z-index {
-	@include z-index-item(map-deep-get($z-index, $key, class), map-deep-get($z-index, $key, value));
+  @include z-index-item(map-deep-get($z-index, $key, class), map-deep-get($z-index, $key, value));
 }

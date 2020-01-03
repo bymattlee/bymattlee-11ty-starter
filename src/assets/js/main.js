@@ -4,11 +4,11 @@
 
 /* global Main */
 (function($){
-	'use strict';
+  'use strict';
 
-	/* Init */
-	$(function(){
-		Main.modules.init();
-	});
+  /* Init */
+  $(function(){
+    Main.modules.init();
+  });
 
 })(jQuery);

@@ -1,37 +1,37 @@
 {
-    "extends": "stylelint-config-standard",
-    "plugins": [
-        "stylelint-order"
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "block-no-empty": ,
+    "selector-type-no-unknown": ,
+    "selector-pseudo-element-no-unknown": ,
+    "rule-empty-line-before": [
+      "always-multi-line", {
+        "except": ["first-nested"],
+        "ignore": ["after-comment"]
+      }
     ],
-    "rules": {
-        "indentation": "tab",
-        "max-empty-lines": 2,
-        "block-no-empty": ,
-        "selector-type-no-unknown": ,
-        "selector-pseudo-element-no-unknown": ,
-        "rule-empty-line-before": [
-            "always-multi-line", {
-                "except": ["first-nested"],
-                "ignore": ["after-comment"]
-            }
-        ],
-        "block-closing-brace-empty-line-before": ,
-        "block-closing-brace-newline-after": [
-            "always",
-            ignoreAtRules: ["if", "else"]
-        ],
-        "at-rule-empty-line-before": ,
-        "font-family-name-quotes": "always-where-recommended",
-        "function-url-quotes": "always",
-        "selector-attribute-quotes": "always",
-        "string-quotes": "double",
-        "color-named": [
-            "never",
-            ignore: ["inside-function"]
-        ],
-        "font-weight-notation": "numeric",
-        "order/properties-alphabetical-order": true,
-        "at-rule-no-unknown": ,
-        "no-descending-specificity":
-    }
+    "block-closing-brace-empty-line-before": ,
+    "block-closing-brace-newline-after": [
+      "always",
+      ignoreAtRules: ["if", "else"]
+    ],
+    "at-rule-empty-line-before": ,
+    "font-family-name-quotes": "always-where-recommended",
+    "function-url-quotes": "always",
+    "selector-attribute-quotes": "always",
+    "string-quotes": "double",
+    "color-named": [
+      "never",
+      ignore: ["inside-function"]
+    ],
+    "font-weight-notation": "numeric",
+    "order/properties-alphabetical-order": true,
+    "at-rule-no-unknown": ,
+    "no-descending-specificity":
+  }
 }

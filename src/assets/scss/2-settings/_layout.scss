@@ -24,28 +24,28 @@ $grid-gutter--medium-up: to-vw(40, $desktop-ratio-width);
 ** ***** ----------------------------------------------- ***** */
 
 $breakpoints: (
-	xsmall: (
-		abbr: "xs",
-		size: 48rem
-	),
-	small: (
-		abbr: "sm",
-		size: 76.8rem
-	),
-	medium: (
-		abbr: "md",
-		size: 90rem
-	),
-	large: (
-		abbr: "lg",
-		size: 110rem
-	),
-	xlarge: (
-		abbr: "xl",
-		size: 130rem
-	),
-	xxlarge: (
-		abbr: "xxl",
-		size: 180rem
-	)
+  xsmall: (
+    abbr: "xs",
+    size: 48rem
+  ),
+  small: (
+    abbr: "sm",
+    size: 76.8rem
+  ),
+  medium: (
+    abbr: "md",
+    size: 90rem
+  ),
+  large: (
+    abbr: "lg",
+    size: 110rem
+  ),
+  xlarge: (
+    abbr: "xl",
+    size: 130rem
+  ),
+  xxlarge: (
+    abbr: "xxl",
+    size: 180rem
+  )
 );

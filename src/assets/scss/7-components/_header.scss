@@ -4,17 +4,17 @@
 
 
 .c-header {
-	margin-bottom: to-vw(30, $mobile-ratio-width);
+  margin-bottom: to-vw(30, $mobile-ratio-width);
 
-	@include mq("medium") {
-		margin-bottom: to-vw(35, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    margin-bottom: to-vw(35, $desktop-ratio-width);
+  }
 
-	&-logo_svg {
-		width: to-vw(75, $mobile-ratio-width);
+  &-logo_svg {
+    width: to-vw(75, $mobile-ratio-width);
 
-		@include mq("medium") {
-			width: to-vw(80, $desktop-ratio-width);
-		}
-	}
+    @include mq("medium") {
+      width: to-vw(80, $desktop-ratio-width);
+    }
+  }
 }

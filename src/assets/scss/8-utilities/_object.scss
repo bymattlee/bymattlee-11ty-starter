@@ -6,20 +6,20 @@
 // Object classes
 @mixin object-items($breakpoint-suffix: "") {
 
-	.u-object_contain#{$breakpoint-suffix} { @include object(contain); }
-	.u-object_cover#{$breakpoint-suffix} { @include object( cover); }
-	.u-object_fill#{$breakpoint-suffix} { @include object(fill); }
-	.u-object_none#{$breakpoint-suffix} { @include object(none); }
-	.u-object_scale_down#{$breakpoint-suffix} { @include object(scale-down); }
-	.u-object_bottom#{$breakpoint-suffix} { object-position: bottom; }
-	.u-object_center#{$breakpoint-suffix} { object-position: center; }
-	.u-object_left#{$breakpoint-suffix} { object-position: left; }
-	.u-object_left_bottom#{$breakpoint-suffix} { object-position: left bottom; }
-	.u-object_left_top#{$breakpoint-suffix} { object-position: left top; }
-	.u-object_right#{$breakpoint-suffix} { object-position: right; }
-	.u-object_right_bottom#{$breakpoint-suffix} { object-position: right bottom; }
-	.u-object_right_top#{$breakpoint-suffix} { object-position: right top; }
-	.u-object_top#{$breakpoint-suffix} { object-position: top; }
+  .u-object_contain#{$breakpoint-suffix} { @include object(contain); }
+  .u-object_cover#{$breakpoint-suffix} { @include object( cover); }
+  .u-object_fill#{$breakpoint-suffix} { @include object(fill); }
+  .u-object_none#{$breakpoint-suffix} { @include object(none); }
+  .u-object_scale_down#{$breakpoint-suffix} { @include object(scale-down); }
+  .u-object_bottom#{$breakpoint-suffix} { object-position: bottom; }
+  .u-object_center#{$breakpoint-suffix} { object-position: center; }
+  .u-object_left#{$breakpoint-suffix} { object-position: left; }
+  .u-object_left_bottom#{$breakpoint-suffix} { object-position: left bottom; }
+  .u-object_left_top#{$breakpoint-suffix} { object-position: left top; }
+  .u-object_right#{$breakpoint-suffix} { object-position: right; }
+  .u-object_right_bottom#{$breakpoint-suffix} { object-position: right bottom; }
+  .u-object_right_top#{$breakpoint-suffix} { object-position: right top; }
+  .u-object_top#{$breakpoint-suffix} { object-position: top; }
 
 }
 
@@ -28,7 +28,7 @@
 
 // Print object item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include object-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include object-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }

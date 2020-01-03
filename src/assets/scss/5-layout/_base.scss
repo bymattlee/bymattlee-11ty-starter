@@ -4,20 +4,20 @@
 
 
 .l-container {
-	margin: 0 auto;
-	padding: 0 $content-gutter;
-	position: relative;
-	width: 100%;
+  margin: 0 auto;
+  padding: 0 $content-gutter;
+  position: relative;
+  width: 100%;
 
-	@include mq("medium") {
-		padding: 0 $content-gutter--medium-up;
-	}
+  @include mq("medium") {
+    padding: 0 $content-gutter--medium-up;
+  }
 }
 
 .l-row {
-	width: 100%;
+  width: 100%;
 }
 
 .l-main {
-	flex: 1;
+  flex: 1;
 }

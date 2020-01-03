@@ -4,14 +4,14 @@
 
 
 button {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	background-color: transparent;
-	border: 0;
-	color: inherit;
-	cursor: pointer;
-	font-family: $font-family-body;
-	line-height: map-deep-get($line-height, normal, value);
-	outline: 0;
-	padding: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: $font-family-body;
+  line-height: map-deep-get($line-height, normal, value);
+  outline: 0;
+  padding: 0;
 }

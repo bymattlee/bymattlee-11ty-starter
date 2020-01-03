@@ -4,33 +4,33 @@
 
 
 :root {
-	background-color: $root-background-color;
-	font-size: $font-size-base;
+  background-color: $root-background-color;
+  font-size: $font-size-base;
 }
 
 *::selection {
-	background-color: $selection-background-color;
-	color: $selection-text-color;
+  background-color: $selection-background-color;
+  color: $selection-text-color;
 }
 
 html {
-	min-height: 100vh;
-	-webkit-overflow-scrolling: touch;
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
-	@include font-family-body;
+  @include font-family-body;
 
-	color: $body-text-color;
-	display: flex;
-	flex-direction: column;
-	font-size: $font-size-normal;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	line-height: map-deep-get($line-height, normal, value);
-	min-height: 100vh;
+  color: $body-text-color;
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-normal;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  line-height: map-deep-get($line-height, normal, value);
+  min-height: 100vh;
 
-	@include mq("medium") {
-		font-size: $font-size-normal--medium-up;
-	}
+  @include mq("medium") {
+    font-size: $font-size-normal--medium-up;
+  }
 }

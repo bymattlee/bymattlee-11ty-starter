@@ -4,31 +4,31 @@
 
 
 .c-site_alert {
-	background: get-color(black);
-	background: rgba(get-color(black), 0.75);
-	bottom: 0;
-	left: 0;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-	z-index: map-deep-get($z-index, 9, value);
+  background: get-color(black);
+  background: rgba(get-color(black), 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: map-deep-get($z-index, 9, value);
 
-	&-link,
-	&-message {
-		color: get-color(white);
-		display: block;
-		padding: to-vw(15, $mobile-ratio-width);
+  &-link,
+  &-message {
+    color: get-color(white);
+    display: block;
+    padding: to-vw(15, $mobile-ratio-width);
 
-		@include mq("medium") {
-			padding: to-vw(20, $desktop-ratio-width);
-		}
-	}
+    @include mq("medium") {
+      padding: to-vw(20, $desktop-ratio-width);
+    }
+  }
 
-	&-link {
-		&:hover {
-			@media (hover: hover) {
-				color: get-color(grey-light--c);
-			}
-		}
-	}
+  &-link {
+    &:hover {
+      @media (hover: hover) {
+        color: get-color(grey-light--c);
+      }
+    }
+  }
 }

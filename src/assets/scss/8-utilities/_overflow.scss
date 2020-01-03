@@ -6,10 +6,10 @@
 // Overflow classes
 @mixin overflow-items($breakpoint-suffix: "") {
 
-	.u-overflow_hidden#{$breakpoint-suffix} { overflow: hidden; }
-	.u-overflow_auto#{$breakpoint-suffix} { overflow: auto; }
-	.u-overflow_visible#{$breakpoint-suffix} { overflow: visible; }
-	.u-overflow_scroll#{$breakpoint-suffix} { overflow: scroll; }
+  .u-overflow_hidden#{$breakpoint-suffix} { overflow: hidden; }
+  .u-overflow_auto#{$breakpoint-suffix} { overflow: auto; }
+  .u-overflow_visible#{$breakpoint-suffix} { overflow: visible; }
+  .u-overflow_scroll#{$breakpoint-suffix} { overflow: scroll; }
 
 }
 
@@ -18,7 +18,7 @@
 
 // Print overflow item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include overflow-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include overflow-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }

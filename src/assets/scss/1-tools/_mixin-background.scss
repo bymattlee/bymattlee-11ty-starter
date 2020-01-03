@@ -5,27 +5,27 @@
 
 // Ensure background image covers the entire container
 @mixin background-cover {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // Ensure the background image fits in container
 @mixin background-contain {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 // Ensure video covers the entire container
 // https://codepen.io/shshaw/pen/OVGWLG
 @mixin video-background-cover {
-	height: auto;
-	left: 50%;
-	min-height: 100%;
-	min-width: 100%;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	width: auto;
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
 }

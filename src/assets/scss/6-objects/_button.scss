@@ -4,27 +4,27 @@
 
 
 .o-button {
-	background-color: get-color(grey-light--c);
-	color: get-color(black);
-	display: inline-block;
-	padding: to-vw(7.5, $mobile-ratio-width) to-vw(20, $mobile-ratio-width);
-	transition: background-color $transition-slow, color $transition-slow;
+  background-color: get-color(grey-light--c);
+  color: get-color(black);
+  display: inline-block;
+  padding: to-vw(7.5, $mobile-ratio-width) to-vw(20, $mobile-ratio-width);
+  transition: background-color $transition-slow, color $transition-slow;
 
-	@include mq("medium") {
-		padding: to-vw(10, $desktop-ratio-width) to-vw(25, $desktop-ratio-width);
-	}
+  @include mq("medium") {
+    padding: to-vw(10, $desktop-ratio-width) to-vw(25, $desktop-ratio-width);
+  }
 
-	&:hover {
-		@media (hover: hover) {
-			background-color: get-color(grey-dark--6);
-			color: get-color(grey-light--c);
-		}
-	}
+  &:hover {
+    @media (hover: hover) {
+      background-color: get-color(grey-dark--6);
+      color: get-color(grey-light--c);
+    }
+  }
 
-	&:active {
-		@media (hover: hover) {
-			background-color: get-color(grey-light--a);
-			color: get-color(black);
-		}
-	}
+  &:active {
+    @media (hover: hover) {
+      background-color: get-color(grey-light--a);
+      color: get-color(black);
+    }
+  }
 }

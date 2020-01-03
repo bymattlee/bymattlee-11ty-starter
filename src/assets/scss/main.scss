@@ -6,32 +6,32 @@
 ** All CSS classes use namespaces to further improve organization.
 **
 ** -- (u-) Utility classes have a very specific role and usually contain one declaration.
-**	  - Example: A class that hides the element on mobile, a class that bolds the text, etc.
+**    - Example: A class that hides the element on mobile, a class that bolds the text, etc.
 **
 ** -- (l-) Layout classes provides structure that hold the site elements together.
-**	  - Example: Containers, grids, etc.
+**    - Example: Containers, grids, etc.
 **
 ** -- (o-) Objects are the smallest of all elements. Should be reused as much as possible.
-**	  They are either used multiple times on a page and/or in multiple contexts on a site.
+**    They are either used multiple times on a page and/or in multiple contexts on a site.
 **    - Example: social icons, news posts, buttons, section titles, etc.
 **
 ** -- (c-) Components are also known as modules that are made up of smaller, related elements.
-**	  They are used at most once per page in one type of context.
+**    They are used at most once per page in one type of context.
 **    - Example: A header is a component and is made up of smaller elements such as the
-**				 site's logo, navigation, social icons, etc.
+**         site's logo, navigation, social icons, etc.
 **
 ** -- (js-) JavaScript classes do not have any styling attached to them. They are used to
-**	  signify that there is some behavior attached to it.
-**	  - Example: A button that toggles the menu, a social icon that opens a popup window, etc.
+**    signify that there is some behavior attached to it.
+**    - Example: A button that toggles the menu, a social icon that opens a popup window, etc.
 **
 ** -- (t-) Theme classes modify the color palette of the site. Usually used on the body element.
-**	  - Example: A dark theme that utilizes a lighter type color on a dark background.
+**    - Example: A dark theme that utilizes a lighter type color on a dark background.
 **
 ** -- (s-) State classes signify the current state of an element.
-**	  - Example: A mobile menu that is open when the menu button is clicked.
+**    - Example: A mobile menu that is open when the menu button is clicked.
 **
 ** -- (p-) Page classes identifies the current page.
-**	  - Example: The home page will use the class '.p-home'.
+**    - Example: The home page will use the class '.p-home'.
 */
 
 

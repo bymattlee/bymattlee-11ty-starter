@@ -9,54 +9,54 @@
 // Text color class
 @mixin text-color-item($class, $value) {
 
-	.u-#{$class} { color: #{$value}; }
+  .u-#{$class} { color: #{$value}; }
 
 }
 
 // Print each text color; refer to 2-settings/_colors.scss for the classes generated
 @each $key, $value in $colors {
-	@include text-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+  @include text-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
 }
 
 // Text hover color class
 @mixin text-hover-color-item($class, $value) {
-	.u-#{$class}-hover {
-		&:hover {
-			@media (hover: hover) {
-				color: #{$value};
-			}
-		}
-	}
+  .u-#{$class}-hover {
+    &:hover {
+      @media (hover: hover) {
+        color: #{$value};
+      }
+    }
+  }
 }
 
 // Print each text color; refer to 2-settings/_colors.scss for the classes generated
 @each $key, $value in $colors {
-	@include text-hover-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+  @include text-hover-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
 }
 
 // Text active color class
 @mixin text-active-color-item($class, $value) {
-	.u-#{$class}-active {
-		&:active {
-			@media (hover: hover) {
-				color: #{$value};
-			}
-		}
-	}
+  .u-#{$class}-active {
+    &:active {
+      @media (hover: hover) {
+        color: #{$value};
+      }
+    }
+  }
 }
 
 // Print each text color; refer to 2-settings/_colors.scss for the classes generated
 @each $key, $value in $colors {
-	@include text-active-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
+  @include text-active-color-item(map-deep-get($colors, $key, class), map-deep-get($colors, $key, value));
 }
 
 // Text alignment classes
 @mixin text-align-items($breakpoint-suffix: "") {
 
-	.u-right#{$breakpoint-suffix} { text-align: right; }
-	.u-left#{$breakpoint-suffix} { text-align: left; }
-	.u-center#{$breakpoint-suffix} { text-align: center; }
-	.u-justify#{$breakpoint-suffix} { text-align: justify; }
+  .u-right#{$breakpoint-suffix} { text-align: right; }
+  .u-left#{$breakpoint-suffix} { text-align: left; }
+  .u-center#{$breakpoint-suffix} { text-align: center; }
+  .u-justify#{$breakpoint-suffix} { text-align: justify; }
 
 }
 
@@ -65,45 +65,45 @@
 
 // Print text align item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
 @each $key, $value in $breakpoints {
-	@include mq(map-deep-get($breakpoints, $key, size)) {
-		@include text-align-items("-" + map-deep-get($breakpoints, $key, abbr));
-	}
+  @include mq(map-deep-get($breakpoints, $key, size)) {
+    @include text-align-items("-" + map-deep-get($breakpoints, $key, abbr));
+  }
 }
 
 // Font weight classes
 @mixin font-weight-item($class, $value) {
 
-	.u-#{$class} { font-weight: #{$value}; }
+  .u-#{$class} { font-weight: #{$value}; }
 
 }
 
 // Print each font-weight property; refer to 2-settings/_typography.scss for the classes generated
 @each $key, $value in $font-weight {
-	@include font-weight-item(map-deep-get($font-weight, $key, class), map-deep-get($font-weight, $key, value));
+  @include font-weight-item(map-deep-get($font-weight, $key, class), map-deep-get($font-weight, $key, value));
 }
 
 // Letter spacing classes
 @mixin letter-spacing-item($class, $value) {
 
-	.u-#{$class} { letter-spacing: #{$value}; }
+  .u-#{$class} { letter-spacing: #{$value}; }
 
 }
 
 // Print each letter-spacing property; refer to 2-settings/_typography.scss for the classes generated
 @each $key, $value in $letter-spacing {
-	@include letter-spacing-item(map-deep-get($letter-spacing, $key, class), map-deep-get($letter-spacing, $key, value));
+  @include letter-spacing-item(map-deep-get($letter-spacing, $key, class), map-deep-get($letter-spacing, $key, value));
 }
 
 // Line height classes
 @mixin line-height-item($class, $value) {
 
-	.u-#{$class} { line-height: #{$value}; }
+  .u-#{$class} { line-height: #{$value}; }
 
 }
 
 // Print each line-height property; refer to 2-settings/_typography.scss for the classes generated
 @each $key, $value in $line-height {
-	@include line-height-item(map-deep-get($line-height, $key, class), map-deep-get($line-height, $key, value));
+  @include line-height-item(map-deep-get($line-height, $key, class), map-deep-get($line-height, $key, value));
 }
 
 
@@ -111,81 +111,81 @@
 ** ***** ----------------------------------------------- ***** */
 
 .u-font_body {
-	@include font-family-body;
+  @include font-family-body;
 }
 
 .u-font_heading {
-	@include font-family-heading;
+  @include font-family-heading;
 }
 
 .u-font_primary {
-	font-family: $font-family-primary;
+  font-family: $font-family-primary;
 }
 
 .u-font_secondary {
-	font-family: $font-family-secondary;
+  font-family: $font-family-secondary;
 }
 
 .u-h1 {
-	@extend h1;
+  @extend h1;
 }
 
 .u-h2 {
-	@extend h2;
+  @extend h2;
 }
 
 .u-h3 {
-	@extend h3;
+  @extend h3;
 }
 
 .u-h4 {
-	@extend h4;
+  @extend h4;
 }
 
 .u-h5 {
-	@extend h5;
+  @extend h5;
 }
 
 .u-h6 {
-	@extend h6;
+  @extend h6;
 }
 
 .u-font_size_0 {
-	font-size: 0;
+  font-size: 0;
 }
 
 .u-italic {
-	font-style: italic;
+  font-style: italic;
 }
 
 .u-nowrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 .u-lowercase {
-	text-transform: lowercase;
+  text-transform: lowercase;
 }
 
 .u-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .u-capitalize {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .u-underline {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .u-overline {
-	text-decoration: overline;
+  text-decoration: overline;
 }
 
 .u-line_through {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .u-truncate {
-	@include truncate-text;
+  @include truncate-text;
 }
