@@ -67,7 +67,11 @@ module.exports = {
   },
   styles: {
     src: srcAssets + '/scss/**/*.scss',
-    dest: destAssets + '/css'
+    dest: destAssets + '/css',
+    purgeContent: [
+      dest + '/**/*.html',
+      srcAssets + '/js/modules/**/*.js'
+    ]
   },
   scripts: {
     src: [
