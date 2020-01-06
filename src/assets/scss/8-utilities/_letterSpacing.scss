@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Letter Spacing
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_text.scss for the classes generated
+$letterSpacingUtilities: ();
+
+@each $key, $value in $letterSpacing {
+  $key: capitalize($key);
+  $letterSpacingUtilities: map-merge(
+    $letterSpacingUtilities, (
+      'tracking#{$key}' : ( letter-spacing: $value )
+    )
+  );
+}

@@ -1,0 +1,9 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Pointer Events
+** ***** ----------------------------------------------- ***** */
+
+
+$pointerEventsUtilities: (
+  'pointerNone': ( pointer-events: none ),
+  'pointerAuto': ( pointer-events: auto )
+);

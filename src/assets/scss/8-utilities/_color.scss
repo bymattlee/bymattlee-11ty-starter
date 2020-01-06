@@ -1,0 +1,15 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Color
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_colors.scss for the classes generated
+$colorUtilities: ();
+
+@each $key, $value in $colors {
+  $colorUtilities: map-merge(
+    $colorUtilities, (
+      '#{$key}' : ( color: $value )
+    )
+  );
+}

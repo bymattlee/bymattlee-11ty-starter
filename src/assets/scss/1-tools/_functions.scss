@@ -3,31 +3,84 @@
 ** ***** ----------------------------------------------- ***** */
 
 
+/* ***** Conversion
+** ***** ----------------------------------------------- ***** */
+
+// Convert from px to base 16 em
+@function px-to-em($px) {
+  @return ($px / 16px) * 1em;
+}
+
 // Convert from rem to base 16 em
 @function rem-to-em($rem) {
   @return ($rem / 1.6rem) * 1em;
 }
 
 // Convert to vw
-@function to-vw($current-value, $page-width) {
-  @return $current-value / $page-width * 100vw;
+@function to-vw($currentValue, $pageWidth) {
+  @return $currentValue / $pageWidth * 100vw;
 }
 
 // Responsive value
-@function responsive-value($low-size, $high-size, $low-breakpoint, $high-breakpoint) {
-  @return calc(#{$low-size}rem + (#{$high-size} - #{$low-size}) * (100vw - #{$low-breakpoint}rem) / (#{$high-breakpoint} - #{$low-breakpoint}));
+@function responsive-value($lowSize, $highSize, $lowBreakpoint, $highBreakpoint) {
+  @return calc(#{$lowSize}rem + (#{$highSize} - #{$lowSize}) * (100vw - #{$lowBreakpoint}rem) / (#{$highBreakpoint} - #{$lowBreakpoint}));
 }
 
-// Get value in a nested map
-@function map-deep-get($map, $keys...) {
-  @each $key in $keys {
-    $map: map-get($map, $key);
-  }
-
-  @return $map;
+// Capitalize string
+@function capitalize($string) {
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
 }
 
-// Get color value in color map
+
+/* ***** Map
+** ***** ----------------------------------------------- ***** */
+
+// Get color value in map
 @function get-color($color) {
-  @return map-deep-get($colors, $color, value);
+  @return map-get($colors, $color);
+}
+
+// Get font family value in map
+@function get-font-family($fontFamilyStyle) {
+  @return unquote(map-get($fontFamily, $fontFamilyStyle));
+}
+
+// Get size value based on size type (relative or rem)
+// If relative, use specific ratio width based on breakpoint
+@function get-size($size, $isDesktop: false) {
+  @if type-of($size) == 'number' {
+    $isRelative: true;
+    $sizeValue: 0;
+    @if $isRelative {
+      $mobileRatioWidth: 414;
+      $desktopRatioWidth: 1600;
+      $ratioWidth: 0;
+      @if $isDesktop {
+        $ratioWidth: $desktopRatioWidth;
+      } @else {
+        $ratioWidth: $mobileRatioWidth;
+      }
+      $sizeValue: to-vw($size, $ratioWidth);
+    } @else {
+      $sizeValue: $size / 10 + rem;
+    }
+    @return $sizeValue;
+  } @else {
+    @return $size;
+  }
+}
+
+// Get font size value in map
+@function get-font-size($size, $isDesktop: false) {
+  $fontSizeValue: map-get($fontSize, $size);
+  @return get-size($fontSizeValue, $isDesktop);
+}
+
+// Add multiple maps to a map collection
+@function map-collect($maps...) {
+  $collection: ();
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+  @return $collection;
 }

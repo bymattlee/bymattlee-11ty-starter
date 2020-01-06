@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Font Weight
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_text.scss for the classes generated
+$fontWeightUtilities: ();
+
+@each $key, $value in $fontWeight {
+  $key: capitalize($key);
+  $fontWeightUtilities: map-merge(
+    $fontWeightUtilities, (
+      'font#{$key}' : ( font-weight: $value )
+    )
+  );
+}

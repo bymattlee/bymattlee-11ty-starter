@@ -1,0 +1,143 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Utilities
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Define
+** ***** ----------------------------------------------- ***** */
+
+// Static utilities
+$staticUtilities: map-collect(
+  $a11yUtilities,
+  $animateUtilities,
+  $backgroundAttachmentUtilities,
+  $backgroundColorUtilities,
+  $backgroundPositionUtilities,
+  $backgroundRepeatUtilities,
+  $backgroundSizeUtilities,
+  $borderColorUtilities,
+  $borderRadiusUtilities,
+  $borderStyleUtilities,
+  $colorUtilities,
+  $fontFamilyUtilities,
+  $fontStyleUtilities,
+  $fontWeightUtilities,
+  $objectUtilities,
+  $pointerEventsUtilities,
+  $textDecorationUtilities,
+  $textTransformUtilities,
+  $wordBreakUtilities,
+  $zIndexUtilities
+);
+
+// Responsive utilities
+$responsiveUtilities: map-collect(
+  $alignContentUtilities,
+  $alignItemsUtilities,
+  $alignSelfUtilities,
+  $displayUtilities,
+  $flexUtilities,
+  $flexDirectionUtilities,
+  $flexWrapUtilities,
+  $flexShrinkUtilities,
+  $floatUtilities,
+  $heightUtilities,
+  $justifyContentUtilities,
+  $lineHeightUtilities,
+  $opacityUtilities,
+  $orderUtilities,
+  $overflowUtilities,
+  $positionUtilities,
+  $ratioUtilities,
+  $textAlignUtilities,
+  $visibilityUtilities,
+  $widthUtilities
+);
+
+// Size utilities (create separate collection to use get-size() for size flexibility)
+$sizeUtilities: map-collect(
+  $borderWidthUtilities,
+  $fontSizeUtilities,
+  $letterSpacingUtilities,
+  $marginUtilities,
+  $paddingUtilities
+);
+
+// Interaction utilities (hover and active states)
+$interactionUtilities: map-collect(
+  $backgroundColorUtilities,
+  $colorUtilities
+);
+
+
+/* ***** Generate
+** ***** ----------------------------------------------- ***** */
+
+// Static utilities
+$allUtilities: map-merge($staticUtilities, $responsiveUtilities);
+
+@each $selector, $styles in $allUtilities {
+  .u-#{$selector} {
+    @each $property, $value in $styles {
+      #{$property}: $value;
+    }
+  }
+}
+
+// Responsive utilities
+@each $breakpoint, $value in $breakpoints {
+  @include mq($breakpoint) {
+    @each $selector, $styles in $responsiveUtilities {
+      .u-#{$selector}-#{$breakpoint} {
+        @each $property, $value in $styles {
+          #{$property}: $value;
+        }
+      }
+    }
+  }
+}
+
+// Size utilities (use get-size() for size flexibility)
+@each $selector, $styles in $sizeUtilities {
+  .u-#{$selector} {
+    @each $property, $value in $styles {
+      #{$property}: get-size($value);
+    }
+  }
+}
+
+// Responsive size utilities
+@each $breakpoint, $value in $breakpoints {
+  $isDesktop: false;
+  @if $breakpoint != 'xs' and $breakpoint != 'sm' {
+    $isDesktop: true;
+  }
+  @include mq($breakpoint) {
+    @each $selector, $styles in $sizeUtilities {
+      .u-#{$selector}-#{$breakpoint} {
+        @each $property, $value in $styles {
+          #{$property}: get-size($value, $isDesktop);
+        }
+      }
+    }
+  }
+}
+
+// Interaction utilities (hover and active states)
+@each $selector, $styles in $interactionUtilities {
+  .u-#{$selector}-hover:hover {
+    @media (hover: hover) {
+      @each $property, $value in $styles {
+        #{$property}: $value;
+      }
+    }
+  }
+  .u-#{$selector}-active:active {
+    @media (hover: hover) {
+      @each $property, $value in $styles {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+

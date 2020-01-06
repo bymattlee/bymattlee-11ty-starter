@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Font Family
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_text.scss for the classes generated
+$fontFamilyUtilities: ();
+
+@each $key, $value in $fontFamily {
+  $key: capitalize($key);
+  $fontFamilyUtilities: map-merge(
+    $fontFamilyUtilities, (
+      'font#{$key}' : ( font-family: $value )
+    )
+  );
+}

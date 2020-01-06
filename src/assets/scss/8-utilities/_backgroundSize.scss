@@ -1,0 +1,10 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Background Size
+** ***** ----------------------------------------------- ***** */
+
+
+$backgroundSizeUtilities: (
+  'bgAuto': ( background-size: auto ),
+  'bgCover': ( background-size: cover ),
+  'bgContain': ( background-size: contain )
+);

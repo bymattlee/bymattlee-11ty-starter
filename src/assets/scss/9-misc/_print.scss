@@ -11,7 +11,7 @@
   *::first-line {
     background: transparent !important;
     box-shadow: none !important;
-    color: get-color(black) !important;
+    color: get-color('black') !important;
     text-shadow: none !important;
   }
 
@@ -21,21 +21,21 @@
   }
 
   a[href]::after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
 
   abbr[title]::after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
 
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
+  a[href^='#']::after,
+  a[href^='javascript:']::after {
+    content: '';
   }
 
   pre,
   blockquote {
-    border: 1px solid get-color(grey-dark--6);
+    border: 1px solid get-color('greyDark6');
     page-break-inside: avoid;
   }
 
@@ -63,5 +63,4 @@
   h3 {
     page-break-after: avoid;
   }
-
 }

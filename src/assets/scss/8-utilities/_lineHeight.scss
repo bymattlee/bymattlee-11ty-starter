@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Line Height
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_text.scss for the classes generated
+$lineHeightUtilities: ();
+
+@each $key, $value in $lineHeight {
+  $key: capitalize($key);
+  $lineHeightUtilities: map-merge(
+    $lineHeightUtilities, (
+      'leading#{$key}' : ( line-height: $value )
+    )
+  );
+}

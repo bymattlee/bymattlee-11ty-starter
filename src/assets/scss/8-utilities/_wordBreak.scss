@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Word Break
+** ***** ----------------------------------------------- ***** */
+
+
+$wordBreakUtilities: (
+  'breakNormal': ( word-break: normal, overflow-wrap: normal ),
+  'breakWords': ( overflow-wrap: break-word ),
+  'breakAll': ( word-break: break-all ),
+  'truncate': ( overflow: hidden, text-overflow: ellipsis, white-space: nowrap )
+);

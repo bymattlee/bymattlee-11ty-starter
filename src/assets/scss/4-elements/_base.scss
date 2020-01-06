@@ -4,13 +4,13 @@
 
 
 :root {
-  background-color: $root-background-color;
-  font-size: $font-size-base;
+  background-color: $rootBackgroundColor;
+  font-size: $fontSizeBase;
 }
 
 *::selection {
-  background-color: $selection-background-color;
-  color: $selection-text-color;
+  background-color: $selectionBackgroundColor;
+  color: $selectionTextColor;
 }
 
 html {
@@ -19,18 +19,16 @@ html {
 }
 
 body {
-  @include font-family-body;
-
-  color: $body-text-color;
+  color: $bodyTextColor;
   display: flex;
   flex-direction: column;
-  font-size: $font-size-normal;
+  font-family: get-font-family('body');
+  font-size: $fontSizeDefault;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  line-height: map-deep-get($line-height, normal, value);
+  line-height: map-get($lineHeight, 'normal');
   min-height: 100vh;
-
-  @include mq("medium") {
-    font-size: $font-size-normal--medium-up;
+  @include mq('md') {
+    font-size: $fontSizeDefaultDesktop;
   }
 }

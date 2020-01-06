@@ -12,7 +12,7 @@
     "rule-empty-line-before": [
       "always-multi-line", {
         "except": ["first-nested"],
-        "ignore": ["after-comment"]
+        "ignore": ["after-comment", "inside-block"]
       }
     ],
     "block-closing-brace-empty-line-before": ,
@@ -24,14 +24,16 @@
     "font-family-name-quotes": "always-where-recommended",
     "function-url-quotes": "always",
     "selector-attribute-quotes": "always",
-    "string-quotes": "double",
+    "string-quotes": "single",
     "color-named": [
       "never",
       ignore: ["inside-function"]
     ],
     "font-weight-notation": "numeric",
     "order/properties-alphabetical-order": true,
+    "declaration-empty-line-before": "never",
     "at-rule-no-unknown": ,
-    "no-descending-specificity":
+    "no-descending-specificity": ,
+    "function-comma-newline-after": 
   }
 }

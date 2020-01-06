@@ -3,49 +3,21 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-/* ***** Content
-** ***** ----------------------------------------------- ***** */
-
-$mobile-ratio-width: 414;
-$desktop-ratio-width: 1600;
-
-$content-gutter: to-vw(30, $mobile-ratio-width);
-$content-gutter--medium-up: to-vw(100, $desktop-ratio-width);
-
-
-/* ***** Grid
-** ***** ----------------------------------------------- ***** */
-
-$grid-gutter: to-vw(20, $mobile-ratio-width);
-$grid-gutter--medium-up: to-vw(40, $desktop-ratio-width);
-
-
 /* ***** Breakpoints
 ** ***** ----------------------------------------------- ***** */
 
 $breakpoints: (
-  xsmall: (
-    abbr: "xs",
-    size: 48rem
-  ),
-  small: (
-    abbr: "sm",
-    size: 76.8rem
-  ),
-  medium: (
-    abbr: "md",
-    size: 90rem
-  ),
-  large: (
-    abbr: "lg",
-    size: 110rem
-  ),
-  xlarge: (
-    abbr: "xl",
-    size: 130rem
-  ),
-  xxlarge: (
-    abbr: "xxl",
-    size: 180rem
-  )
+  xs: 480px,
+  sm: 768px,
+  md: 900px,
+  lg: 1100px,
+  xl: 1300px,
+  xxl: 1800px
 );
+
+
+/* ***** Content
+** ***** ----------------------------------------------- ***** */
+
+$contentGutter: get-size(30);
+$contentGutterDesktop: get-size(100, true);

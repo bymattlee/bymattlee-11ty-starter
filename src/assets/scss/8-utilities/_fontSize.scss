@@ -1,0 +1,15 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Font Size
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_text.scss for the classes generated
+$fontSizeUtilities: ();
+
+@each $key, $value in $fontSize {
+  $fontSizeUtilities: map-merge(
+    $fontSizeUtilities, (
+      'font#{$key}' : ( font-size: $value )
+    )
+  );
+}

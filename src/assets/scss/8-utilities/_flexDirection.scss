@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Flex Direction
+** ***** ----------------------------------------------- ***** */
+
+
+$flexDirectionUtilities: (
+  'flexColumn': ( flex-direction: column ),
+  'flexColumnReverse': ( flex-direction: column-reverse ),
+  'flexRow': ( flex-direction: row ),
+  'flexRowReverse': ( flex-direction: row-reverse )
+);

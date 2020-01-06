@@ -10,8 +10,8 @@ button {
   border: 0;
   color: inherit;
   cursor: pointer;
-  font-family: $font-family-body;
-  line-height: map-deep-get($line-height, normal, value);
+  font-family: get-font-family('body');
+  line-height: map-get($lineHeight, 'normal');
   outline: 0;
   padding: 0;
 }

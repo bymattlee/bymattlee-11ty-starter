@@ -2,138 +2,20 @@
 ** ***** Utilities/Padding
 ** ***** ----------------------------------------------- ***** */
 
-/*
-** Available sizes:
-** -- 0-45 in increments of 5
-** -- 60-100 in increments of 10
-*/
 
-// Padding classes
-@mixin padding-items($size, $breakpoint-suffix: "") {
+// Refer to 2-settings/_spacing.scss for the classes generated
+$paddingUtilities: ();
 
-  $size-value: "";
-
-  @if $breakpoint-suffix == "" or $breakpoint-suffix == "-xs" or $breakpoint-suffix == "-sm" {
-
-    $size-value: to-vw($size, $mobile-ratio-width);
-    $size-value-medium-up: to-vw($size, $desktop-ratio-width);
-
-    .u-pa_#{$size}#{$breakpoint-suffix} {
-      padding: $size-value;
-
-      @include mq("medium") {
-        padding: $size-value-medium-up;
-      }
-    }
-
-    .u-pt_#{$size}#{$breakpoint-suffix} {
-      padding-top: $size-value;
-
-      @include mq("medium") {
-        padding-top: $size-value-medium-up;
-      }
-    }
-
-    .u-pr_#{$size}#{$breakpoint-suffix} {
-      padding-right: $size-value;
-
-      @include mq("medium") {
-        padding-right: $size-value-medium-up;
-      }
-    }
-
-    .u-pb_#{$size}#{$breakpoint-suffix} {
-      padding-bottom: $size-value;
-
-      @include mq("medium") {
-        padding-bottom: $size-value-medium-up;
-      }
-    }
-
-    .u-pl_#{$size}#{$breakpoint-suffix} {
-      padding-left: $size-value;
-
-      @include mq("medium") {
-        padding-left: $size-value-medium-up;
-      }
-    }
-
-    .u-px_#{$size}#{$breakpoint-suffix} {
-      padding-left: $size-value;
-      padding-right: $size-value;
-
-      @include mq("medium") {
-        padding-left: $size-value-medium-up;
-        padding-right: $size-value-medium-up;
-      }
-    }
-
-    .u-py_#{$size}#{$breakpoint-suffix} {
-      padding-bottom: $size-value;
-      padding-top: $size-value;
-
-      @include mq("medium") {
-        padding-bottom: $size-value-medium-up;
-        padding-top: $size-value-medium-up;
-      }
-    }
-
-  } @else { /* stylelint-disable-line */
-
-    $size-value: to-vw($size, $desktop-ratio-width);
-
-    .u-pa_#{$size}#{$breakpoint-suffix} { padding: $size-value; }
-    .u-pt_#{$size}#{$breakpoint-suffix} { padding-top: $size-value; }
-    .u-pr_#{$size}#{$breakpoint-suffix} { padding-right: $size-value; }
-    .u-pb_#{$size}#{$breakpoint-suffix} { padding-bottom: $size-value; }
-    .u-pl_#{$size}#{$breakpoint-suffix} { padding-left: $size-value; }
-
-    .u-px_#{$size}#{$breakpoint-suffix} {
-      padding-left: $size-value;
-      padding-right: $size-value;
-    }
-
-    .u-py_#{$size}#{$breakpoint-suffix} {
-      padding-bottom: $size-value;
-      padding-top: $size-value;
-    }
-
-  }
-
-}
-
-// Var set up
-$padding-steps-small: 9;
-$padding-steps-large: 5;
-$size-increment-small: 5;
-$size-increment-large: 10;
-
-// Print initial padding item classes from 0-45 in increments of 5
-@for $padding-step from 0 through $padding-steps-small {
-  $size: $padding-step * $size-increment-small;
-  @include padding-items($size);
-}
-
-// Print initial padding item classes from 50-100 in increments of 10
-@for $padding-step from 0 through $padding-steps-large {
-  $size: 50 + ($padding-step * $size-increment-large);
-  @include padding-items($size);
-}
-
-// Print padding item classes; refer to 2-settings/_layout.scss for the breakpoint suffixes
-@each $key, $value in $breakpoints {
-  @include mq(map-deep-get($breakpoints, $key, size)) {
-
-    // Print padding item classes from 0-45 in increments of 5 for each breakpoint
-    @for $padding-step from 0 through $padding-steps-small {
-      $size: $padding-step * $size-increment-small;
-      @include padding-items($size, "-" + map-deep-get($breakpoints, $key, abbr));
-    }
-
-    // Print padding item classes from 50-100 in increments of 10 for each breakpoint
-    @for $padding-step from 0 through $padding-steps-large {
-      $size: 50 + ($padding-step * $size-increment-large);
-      @include padding-items($size, "-" + map-deep-get($breakpoints, $key, abbr));
-    }
-  }
+@each $key, $value in $spacing {
+  $paddingUtilities: map-merge(
+    $paddingUtilities, (
+      'p#{$key}' : ( padding: $value ),
+      'pt#{$key}' : ( padding-top: $value ),
+      'pr#{$key}' : ( padding-right: $value ),
+      'pb#{$key}' : ( padding-bottom: $value ),
+      'pl#{$key}' : ( padding-left: $value ),
+      'px#{$key}' : ( padding-left: $value, padding-right: $value ),
+      'py#{$key}' : ( padding-top: $value, padding-bottom: $value ),
+    )
+  );
 }

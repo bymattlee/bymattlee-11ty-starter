@@ -3,30 +3,14 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-// Width classes
-@mixin width-items($breakpoint-suffix: "") {
+// Refer to 2-settings/_spacing.scss for the classes generated
+$widthUtilities: ();
 
-  .u-width_auto#{$breakpoint-suffix} { width: auto; }
-  .u-width_0#{$breakpoint-suffix} { width: 0; }
-  .u-width_10#{$breakpoint-suffix} { width: 10%; }
-  .u-width_20#{$breakpoint-suffix} { width: 20%; }
-  .u-width_30#{$breakpoint-suffix} { width: 30%; }
-  .u-width_40#{$breakpoint-suffix} { width: 40%; }
-  .u-width_50#{$breakpoint-suffix} { width: 50%; }
-  .u-width_60#{$breakpoint-suffix} { width: 60%; }
-  .u-width_70#{$breakpoint-suffix} { width: 70%; }
-  .u-width_80#{$breakpoint-suffix} { width: 80%; }
-  .u-width_90#{$breakpoint-suffix} { width: 90%; }
-  .u-width_100#{$breakpoint-suffix} { width: 100%; }
-
-}
-
-// Print initial width item classes
-@include width-items;
-
-// Print width item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
-@each $key, $value in $breakpoints {
-  @include mq(map-deep-get($breakpoints, $key, size)) {
-    @include width-items("-" + map-deep-get($breakpoints, $key, abbr));
-  }
+@each $key, $value in $width {
+  $key: capitalize($key);
+  $widthUtilities: map-merge(
+    $widthUtilities, (
+      'w#{$key}' : ( width: $value )
+    )
+  );
 }

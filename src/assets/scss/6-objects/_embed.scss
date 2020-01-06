@@ -4,8 +4,7 @@
 
 
 .o-embed {
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 */
+  @include proportionalElement(9/16);
   position: relative;
 
   iframe,
@@ -13,8 +12,7 @@
   embed,
   video,
   img {
-    @include full-cover;
-
+    @include fullCover;
     border: none;
   }
 }

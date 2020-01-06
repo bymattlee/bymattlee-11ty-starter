@@ -3,22 +3,10 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-// Float classes
-@mixin float-items($breakpoint-suffix: "") {
-
-  .u-float_right#{$breakpoint-suffix} { float: right; }
-  .u-float_left#{$breakpoint-suffix} { float: left; }
-  .u-float_none#{$breakpoint-suffix} { float: none; }
-  .u-clearfix#{$breakpoint-suffix} { @include clearfix; }
-
-}
-
-// Print initial float item classes
-@include float-items;
-
-// Print float item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
-@each $key, $value in $breakpoints {
-  @include mq(map-deep-get($breakpoints, $key, size)) {
-    @include float-items("-" + map-deep-get($breakpoints, $key, abbr));
-  }
-}
+$floatUtilities: (
+  'floatLeft': ( float: left ),
+  'floatRight': ( float: right ),
+  'floatNone': ( float: none ),
+  'clearfix::before': ( content: '', display: table ),
+  'clearfix::after': ( content: '', display: table, clear: both )
+);

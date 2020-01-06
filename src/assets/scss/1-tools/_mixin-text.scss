@@ -4,30 +4,20 @@
 
 
 // Font face
-@mixin font-face($name, $file, $weight: 400, $style: normal) {
+@mixin fontFace($name, $file, $weight: 400, $style: normal) {
   @font-face {
     font-display: swap;
     font-family: $name;
     font-style: $style;
     font-weight: $weight;
     src:
-      url("../fonts/#{$file}.woff2") format("woff2"),
-      url("../fonts/#{$file}.woff") format("woff");
+      url('../fonts/#{$file}.woff2') format('woff2'),
+      url('../fonts/#{$file}.woff') format('woff');
   }
 }
 
-// Font family body - add styles related to this font as well
-@mixin font-family-body {
-  font-family: $font-family-body;
-}
-
-// Font family heading - add styles related to this font as well
-@mixin font-family-heading {
-  font-family: $font-family-heading;
-}
-
 // Truncate text
-@mixin truncate-text {
+@mixin truncateText {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -38,25 +28,25 @@
   &::-webkit-input-placeholder {
     color: $color;
     opacity: 1;
-    transition: opacity $transition-slow;
+    transition: opacity $transitionSlow;
   }
 
   &::-moz-placeholder {
     color: $color;
     opacity: 1;
-    transition: opacity $transition-slow;
+    transition: opacity $transitionSlow;
   }
 
   &:-ms-input-placeholder {
     color: $color;
     opacity: 1;
-    transition: opacity $transition-slow;
+    transition: opacity $transitionSlow;
   }
 
   &:-moz-placeholder {
     color: $color;
     opacity: 1;
-    transition: opacity $transition-slow;
+    transition: opacity $transitionSlow;
   }
 
   &:focus {
@@ -91,7 +81,7 @@
 }
 
 // Text Underline
-@mixin text-underline($color) {
+@mixin textUnderline($color) {
   background: linear-gradient($color, $color);
   background-position: 0 100%;
   background-repeat: repeat-x;

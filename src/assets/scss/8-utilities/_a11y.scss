@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/a11y
+** ***** ----------------------------------------------- ***** */
+
+
+$a11yUtilities: (
+  'visuallyHidden': (
+    border: 0,
+    clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem),
+    height: 0.1rem,
+    overflow: hidden,
+    padding: 0,
+    position: absolute,
+    width: 0.1rem
+  )
+);

@@ -3,62 +3,29 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-/* ***** Colors
-** ***** ----------------------------------------------- ***** */
-
 $colors: (
-  white: (
-    class: "white",
-    value: #fff
-  ),
-  black: (
-    class: "black",
-    value: #000
-  ),
-  grey-dark--2: (
-    class: "grey_dark--2",
-    value: #222
-  ),
-  grey-dark--3: (
-    class: "grey_dark--3",
-    value: #333
-  ),
-  grey-dark--4: (
-    class: "grey_dark--4",
-    value: #444
-  ),
-  grey-dark--5: (
-    class: "grey_dark--5",
-    value: #555
-  ),
-  grey-dark--6: (
-    class: "grey_dark--6",
-    value: #666
-  ),
-  grey-light--a: (
-    class: "grey_light--a",
-    value: #aaa
-  ),
-  grey-light--c: (
-    class: "grey_light--c",
-    value: #ccc
-  )
+  'transparent': transparent,
+  'white': #fff,
+  'black': #000,
+  'greyDark2': #222,
+  'greyDark3': #333,
+  'greyDark4': #444,
+  'greyDark5': #555,
+  'greyDark6': #666,
+  'greyLightA': #aaa,
+  'greyLightC': #ccc
 );
 
-
-/* ***** Settings
-** ***** ----------------------------------------------- ***** */
-
 // Selection
-$selection-background-color: get-color(grey-light--a);
-$selection-text-color: get-color(white);
+$selectionBackgroundColor: get-color('greyLightA');
+$selectionTextColor: get-color('white');
 
 // Background
-$root-background-color: get-color(grey-dark--2);
+$rootBackgroundColor: get-color('greyDark2');
 
 // Text
-$body-text-color: get-color(grey-light--c);
+$bodyTextColor: get-color('greyLightC');
 
-$link-text-color: get-color(grey-light--a);
-$link-hover-text-color: get-color(grey-dark--6);
-$link-active-text-color: get-color(grey-light--a);
+$linkColor: get-color('greyLightA');
+$linkHoverColor: get-color('greyDark6');
+$linkActiveColor: get-color('greyLightA');

@@ -5,56 +5,40 @@
 
 // Media query
 @mixin mq($size, $type: min, $orientation: width) {
-  @if map_has_key($breakpoints, $size) {
-    $size: map_get(map_get($breakpoints, $size), size);
+  @if map-has-key($breakpoints, $size) {
+    $size: map-get($breakpoints, $size);
   }
-
-  @if $type == max {
-    $size: $size - 0.1rem;
+  @if $type == 'max' {
+    $size: $size - 1px;
   }
-
-  @if $orientation == width {
-    @media only screen and (#{$type}-width: rem-to-em($size)) {
+  @if $orientation == 'width' {
+    @media only screen and (#{$type}-width: px-to-em($size)) {
       @content;
     }
   }
-
-  @if $orientation == height {
-    @media only screen and (#{$type}-height: rem-to-em($size)) {
+  @if $orientation == 'height' {
+    @media only screen and (#{$type}-height: px-to-em($size)) {
       @content;
     }
-  }
-}
-
-// Clearfix
-@mixin clearfix {
-  &::before,
-  &::after {
-    content: "";
-    display: table;
-  }
-
-  &::after {
-    clear: both;
   }
 }
 
 // Center horizontally
-@mixin horizontal-center {
+@mixin horizontalCenter {
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
 }
 
 // Center vertically
-@mixin vertical-center {
+@mixin verticalCenter {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 // Center horizontally and vertically
-@mixin absolute-center {
+@mixin absoluteCenter {
   left: 50%;
   position: absolute;
   top: 50%;
@@ -62,7 +46,7 @@
 }
 
 // Cover the entire element
-@mixin full-cover {
+@mixin fullCover {
   bottom: 0;
   display: block;
   height: 100%;
@@ -74,15 +58,15 @@
 }
 
 // Create proportional element
-@mixin proportional-element($ratio) {
+@mixin proportionalElement($ratio) {
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 
   &::before {
-    content: "";
+    content: '';
     float: left;
     height: 0;
     margin-left: -0.1rem;

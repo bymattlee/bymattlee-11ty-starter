@@ -1,0 +1,12 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Align Items
+** ***** ----------------------------------------------- ***** */
+
+
+$alignItemsUtilities: (
+  'itemsStretch': ( align-items: stretch ),
+  'itemsStart': ( align-items: flex-start ),
+  'itemsCenter': ( align-items: center ),
+  'itemsEnd': ( align-items: flex-end ),
+  'itemsBaseline': ( align-items: baselinse )
+);

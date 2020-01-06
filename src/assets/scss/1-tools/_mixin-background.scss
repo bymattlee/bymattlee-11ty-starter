@@ -4,14 +4,14 @@
 
 
 // Ensure background image covers the entire container
-@mixin background-cover {
+@mixin backgroundCover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 // Ensure the background image fits in container
-@mixin background-contain {
+@mixin backgroundContain {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -19,7 +19,7 @@
 
 // Ensure video covers the entire container
 // https://codepen.io/shshaw/pen/OVGWLG
-@mixin video-background-cover {
+@mixin videoBackgroundCover {
   height: auto;
   left: 50%;
   min-height: 100%;

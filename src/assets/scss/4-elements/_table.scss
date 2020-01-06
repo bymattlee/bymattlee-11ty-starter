@@ -4,21 +4,19 @@
 
 
 table {
-  border-width: to-vw(1, $mobile-ratio-width);
-
-  @include mq("medium") {
-    border-width: to-vw(2, $desktop-ratio-width);
+  border-width: get-size(1);
+  @include mq('md') {
+    border-width: get-size(2, true);
   }
 
   th,
   td {
-    border: to-vw(1, $mobile-ratio-width) solid get-color(grey-light--c);
-    padding: to-vw(5, $mobile-ratio-width) to-vw(10, $mobile-ratio-width);
+    border: get-size(1) solid get-color('greyLightC');
+    padding: get-size(5) get-size(10);
     text-align: left;
-
-    @include mq("medium") {
-      border-width: to-vw(2, $desktop-ratio-width);
-      padding: to-vw(10, $desktop-ratio-width) to-vw(15, $desktop-ratio-width);
+    @include mq('md') {
+      border-width: get-size(2, true);
+      padding: get-size(10, true) get-size(15, true);
     }
   }
 }

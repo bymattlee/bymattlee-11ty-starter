@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Background Repeat
+** ***** ----------------------------------------------- ***** */
+
+
+$backgroundRepeatUtilities: (
+  'bgRepeat': ( background-repeat: repeat ),
+  'bgNoRepeat': ( background-repeat: no-repeat ),
+  'bgRepeatX': ( background-repeat: repeat-x ),
+  'bgRepeatY': ( background-repeat: repeat-y )
+);

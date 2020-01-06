@@ -3,50 +3,20 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-// Position related classes
-@mixin position-items($breakpoint-suffix: "") {
-
-  .u-static#{$breakpoint-suffix} { position: static; }
-  .u-absolute#{$breakpoint-suffix} { position: absolute; }
-  .u-relative#{$breakpoint-suffix} { position: relative; }
-  .u-fixed#{$breakpoint-suffix} { position: fixed; }
-  .u-sticky#{$breakpoint-suffix} { position: sticky; }
-  .u-top_0#{$breakpoint-suffix} { top: 0; }
-  .u-right_0#{$breakpoint-suffix} { right: 0; }
-  .u-bottom_0#{$breakpoint-suffix} { bottom: 0; }
-  .u-left_0#{$breakpoint-suffix} { left: 0; }
-
-  .u-full_cover#{$breakpoint-suffix} {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-
-  .u-absolute_center#{$breakpoint-suffix} {
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  .u-horizontal_center#{$breakpoint-suffix} {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .u-vertical_center#{$breakpoint-suffix} {
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-}
-
-// Print initial position item classes
-@include position-items;
-
-// Print position item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
-@each $key, $value in $breakpoints {
-  @include mq(map-deep-get($breakpoints, $key, size)) {
-    @include position-items("-" + map-deep-get($breakpoints, $key, abbr));
-  }
-}
+$positionUtilities: (
+  'static': ( position: static ),
+  'absolute': ( position: absolute ),
+  'relative': ( position: relative ),
+  'fixed': ( position: fixed ),
+  'sticky': ( position: sticky ),
+  'top': ( top: 0 ),
+  'right': ( right: 0 ),
+  'bottom': ( bottom: 0 ),
+  'left': ( left: 0 ),
+  'fullCover': ( top: 0, right: 0, bottom: 0, left: 0 ),
+  'coverX': ( right: 0, left: 0 ),
+  'coverY': ( top: 0, bottom: 0 ),
+  'absoluteCenter': ( left: 50%, top: 50%, transform: translate(-50%, -50%) ),
+  'centerX': ( left: 50%, transform: translateX(-50%) ),
+  'centerY': ( top: 50%, transform: translateY(-50%) )
+);

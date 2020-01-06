@@ -5,12 +5,11 @@
 
 ul,
 ol {
-  line-height: map-deep-get($line-height, loose, value);
-  margin: to-vw(20, $mobile-ratio-width) 0 to-vw(20, $mobile-ratio-width) to-vw(30, $mobile-ratio-width);
+  line-height: map-get($lineHeight, loose);
+  margin: get-size(20) 0 get-size(20) get-size(30);
   padding: 0;
-
-  @include mq("medium") {
-    margin: to-vw(5, $desktop-ratio-width) 0 to-vw(25, $desktop-ratio-width) to-vw(35, $desktop-ratio-width);
+  @include mq('md') {
+    margin: get-size(5, true) 0 get-size(25, true) get-size(35, true);
   }
 
   &.u-unstyled {
@@ -19,10 +18,9 @@ ol {
   }
 
   li {
-    margin: to-vw(20, $mobile-ratio-width) 0;
-
-    @include mq("medium") {
-      margin: to-vw(30, $desktop-ratio-width) 0;
+    margin: get-size(20) 0;
+    @include mq('md') {
+      margin: get-size(30, true) 0;
     }
   }
 

@@ -1,0 +1,69 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Settings/Text
+** ***** ----------------------------------------------- ***** */
+
+
+/* ***** Imports
+** ***** ----------------------------------------------- ***** */
+
+// Montserrat
+@include fontFace('Montserrat', 'montserrat-light-webfont', 200);
+@include fontFace('Montserrat', 'montserrat-regular-webfont');
+@include fontFace('Montserrat', 'montserrat-bold-webfont', 700);
+@include fontFace('Montserrat', 'montserrat-black-webfont', 800);
+
+// Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+
+/* ***** Settings
+** ***** ----------------------------------------------- ***** */
+
+// Font Families
+$fontFamilyFallback: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$fontFamily: (
+  'body': 'Open Sans, #{$fontFamilyFallback}',
+  'heading': 'Montserrat, #{$fontFamilyFallback}'
+);
+
+// Font Sizes
+$fontSizeBase: 62.5%;
+$fontSize: (
+  0: 0,
+  12: 12,
+  14: 14,
+  16: 16,
+  18: 18,
+  22: 22,
+  24: 24,
+  28: 28,
+  30: 30,
+  36: 36,
+  48: 48
+);
+$fontSizeDefault: get-font-size(12);
+$fontSizeDefaultDesktop: get-font-size(16, true);
+
+// Font Weight
+$fontWeight: (
+  'light': 200,
+  'normal': 400,
+  'semiBold': 600,
+  'bold': 700,
+  'black': 800
+);
+
+// Letter Spacing
+$letterSpacing: (
+  'tight': -1,
+  'normal': 0,
+  'loose': 1,
+);
+
+// Line Height
+$lineHeight: (
+  'none': 1,
+  'tight': 1.2,
+  'normal': 1.4,
+  'loose': 1.8
+);

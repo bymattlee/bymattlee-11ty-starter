@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Border Color
+** ***** ----------------------------------------------- ***** */
+
+
+// Refer to 2-settings/_colors.scss for the classes generated
+$borderColorUtilities: ();
+
+@each $key, $value in $colors {
+  $key: capitalize($key);
+  $borderColorUtilities: map-merge(
+    $borderColorUtilities, (
+      'border#{$key}' : ( border-color: $value )
+    )
+  );
+}

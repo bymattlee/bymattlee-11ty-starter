@@ -1,23 +1,14 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Layout/Base Styles
+** ***** Layout/Container Styles
 ** ***** ----------------------------------------------- ***** */
 
 
 .l-container {
   margin: 0 auto;
-  padding: 0 $content-gutter;
+  padding: 0 $contentGutter;
   position: relative;
   width: 100%;
-
-  @include mq("medium") {
-    padding: 0 $content-gutter--medium-up;
+  @include mq('md') {
+    padding: 0 $contentGutterDesktop;
   }
-}
-
-.l-row {
-  width: 100%;
-}
-
-.l-main {
-  flex: 1;
 }

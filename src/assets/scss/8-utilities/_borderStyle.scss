@@ -1,8 +1,8 @@
 /* ***** ----------------------------------------------- ***** **
-** ***** Utilities/Clearfix
+** ***** Utilities/Border Style
 ** ***** ----------------------------------------------- ***** */
 
 
-.u-clearfix {
-  @include clearfix;
-}
+$borderStyleUtilities: (
+  'borderSolid': ( border-style: solid )
+);

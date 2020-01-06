@@ -4,19 +4,19 @@
 
 
 a {
-  color: $link-text-color;
+  color: $linkColor;
   text-decoration: none;
-  transition: color $transition-slow;
+  transition: color $transitionSlow;
 
   &:hover {
     @media (hover: hover) {
-      color: $link-hover-text-color;
+      color: $linkHoverColor;
     }
   }
 
   &:active {
     @media (hover: hover) {
-      color: $link-active-text-color;
+      color: $linkActiveColor;
     }
   }
 }

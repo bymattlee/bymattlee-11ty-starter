@@ -1,0 +1,12 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Align Content
+** ***** ----------------------------------------------- ***** */
+
+
+$alignContentUtilities: (
+  'contentStart': ( align-content: flex-start ),
+  'contentCenter': ( align-content: center ),
+  'contentEnd': ( align-content: flex-end ),
+  'contentBetween': ( align-content: space-between ),
+  'contentAround': ( align-content: space-around )
+);

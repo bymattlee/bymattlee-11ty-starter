@@ -3,22 +3,11 @@
 ** ***** ----------------------------------------------- ***** */
 
 
-// Overflow classes
-@mixin overflow-items($breakpoint-suffix: "") {
-
-  .u-overflow_hidden#{$breakpoint-suffix} { overflow: hidden; }
-  .u-overflow_auto#{$breakpoint-suffix} { overflow: auto; }
-  .u-overflow_visible#{$breakpoint-suffix} { overflow: visible; }
-  .u-overflow_scroll#{$breakpoint-suffix} { overflow: scroll; }
-
-}
-
-// Print initial overflow item classes
-@include overflow-items;
-
-// Print overflow item classes for each breakpoint; refer to 2-settings/_layout.scss for the breakpoint suffixes
-@each $key, $value in $breakpoints {
-  @include mq(map-deep-get($breakpoints, $key, size)) {
-    @include overflow-items("-" + map-deep-get($breakpoints, $key, abbr));
-  }
-}
+$overflowUtilities: (
+  'overflowAuto': ( overflow: auto ),
+  'overflowHidden': ( overflow: hidden ),
+  'overflowVisible': ( overflow: visible ),
+  'overflowScroll': ( overflow: scroll ),
+  'overflowXAuto': ( overflow-x: auto, -webkit-overflow-scrolling: touch ),
+  'overflowYAuto': ( overflow-y: auto, -webkit-overflow-scrolling: touch )
+);
