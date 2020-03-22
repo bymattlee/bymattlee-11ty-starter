@@ -34,6 +34,7 @@
     "declaration-empty-line-before": "never",
     "at-rule-no-unknown": ,
     "no-descending-specificity": ,
-    "function-comma-newline-after": 
+    "function-comma-newline-after": ,
+    "value-keyword-case":
   }
 }
