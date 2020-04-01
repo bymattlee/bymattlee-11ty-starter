@@ -18,7 +18,7 @@
     "jquery": "^3.4.1",
     "svgxuse": "^1.2.6",
     "sanitize-css": "^8.0.0",
-    "gsap": "^3.2.5",
+    "gsap": "^3.2.6",
     "lazysizes": "^5.2.0",
     "jquery-throttle-debounce": "*",
     "inobounce": "^0.1.6",
