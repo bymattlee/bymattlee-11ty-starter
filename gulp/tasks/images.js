@@ -48,7 +48,7 @@ var getFileWidth = function(file, _, callback) {
     file.width = meta.width;
     callback(null, file);
   });
-}
+};
 
 var imageVariants = function(file, callback) {
 
@@ -109,12 +109,12 @@ var imageVariants = function(file, callback) {
   }
 
   callback(null, imageSizes);
-}
+};
 
 var newFileName = function(output, scale, callback) {
   var fileName = path.basename(output.path, output.extname) + '-' + scale.maxWidth + 'w' + output.extname;
   callback(null, fileName);
-}
+};
 
 gulp.task('images:generate-responsive', function() {
 
@@ -123,6 +123,16 @@ gulp.task('images:generate-responsive', function() {
     .pipe(through.obj(getFileWidth))
     .pipe(flatMap(imageVariants))
     .pipe(scaleImages(newFileName))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imageminJpegRecompress(),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo()
+    ]))
+    .pipe(size({
+      title: 'Optimized File Size:',
+      showFiles: true
+    }))
     .pipe(gulp.dest(config.images.dest));
 
 });
