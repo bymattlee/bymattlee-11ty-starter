@@ -10,8 +10,8 @@ var changed = require('gulp-changed'),
   imagemin = require('gulp-imagemin'),
   imageminJpegRecompress = require('imagemin-jpeg-recompress'),
   path = require('path'),
-  readMetadata = require('gulp-scale-images/read-metadata'),
-  scaleImages = require('gulp-scale-images'),
+  // readMetadata = require('gulp-scale-images/read-metadata'),
+  // scaleImages = require('gulp-scale-images'),
   size = require('gulp-size'),
   through = require('through2');
 
@@ -116,26 +116,26 @@ var newFileName = function(output, scale, callback) {
   callback(null, fileName);
 };
 
-gulp.task('images:generate-responsive', function() {
+// gulp.task('images:generate-responsive', function() {
 
-  return gulp.src(config.images.responsiveSrc)
-    .pipe(changed(config.images.dest))
-    .pipe(through.obj(getFileWidth))
-    .pipe(flatMap(imageVariants))
-    .pipe(scaleImages(newFileName))
-    .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imageminJpegRecompress(),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo()
-    ]))
-    .pipe(size({
-      title: 'Optimized File Size:',
-      showFiles: true
-    }))
-    .pipe(gulp.dest(config.images.dest));
+//   return gulp.src(config.images.responsiveSrc)
+//     .pipe(changed(config.images.dest))
+//     .pipe(through.obj(getFileWidth))
+//     .pipe(flatMap(imageVariants))
+//     .pipe(scaleImages(newFileName))
+//     .pipe(imagemin([
+//       imagemin.gifsicle({ interlaced: true }),
+//       imageminJpegRecompress(),
+//       imagemin.optipng({ optimizationLevel: 5 }),
+//       imagemin.svgo()
+//     ]))
+//     .pipe(size({
+//       title: 'Optimized File Size:',
+//       showFiles: true
+//     }))
+//     .pipe(gulp.dest(config.images.dest));
 
-});
+// });
 
 // Images task
-gulp.task('images', gulp.parallel('images:optimize', 'images:generate-responsive'));
+gulp.task('images', gulp.parallel('images:optimize'));
