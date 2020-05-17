@@ -15,9 +15,9 @@
   "homepage": "https://github.com/bymattlee/bymattlee-web-starter-files",
   "private": true,
   "devDependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.1",
     "svgxuse": "^1.2.6",
-    "sanitize-css": "^8.0.0",
+    "sanitize-css": "^11.0.0",
     "gsap": "^3.2.6",
     "lazysizes": "^5.2.0",
     "jquery-throttle-debounce": "*",
