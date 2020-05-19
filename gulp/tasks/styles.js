@@ -3,8 +3,7 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var addSrc = require('gulp-add-src'),
-  autoprefixer = require('gulp-autoprefixer'),
+var autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
   cleanCSS = require('gulp-clean-css'),
   concat = require('gulp-concat'),

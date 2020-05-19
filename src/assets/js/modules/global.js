@@ -3,6 +3,8 @@
 // ** ***** ----------------------------------------------- ***** */
 
 /* global Modernizr */
+import 'lazysizes';
+import 'lazysizes/plugins/bgset/ls.bgset';
 import objectFitImages from 'object-fit-images';
 import 'svgxuse';
 
