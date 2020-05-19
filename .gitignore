@@ -2,4 +2,4 @@
 hostSettings.json
 node_modules
 /dist
-/src/assets/vendors
+/src/assets/js/vendors/modernizr.js

@@ -1,60 +1,39 @@
-/* ***** ----------------------------------------------- ***** **
-** ***** Global JS
-** ***** ----------------------------------------------- ***** */
+// /* ***** ----------------------------------------------- ***** **
+// ** ***** Global JS
+// ** ***** ----------------------------------------------- ***** */
 
-/* global Main, Modernizr, objectFitImages */
-(function($){
-  'use strict';
+/* global Modernizr */
+import objectFitImages from 'object-fit-images';
+import 'svgxuse';
 
-  Main.modules.global = function() {
+// Display message for user to upgrade if browser does not support flexbox
+const modernizrCheck = () => {
+  if (!Modernizr.flexbox || !Modernizr.svg ) {
+    const upgradeMessage = 'For an improved browsing experience, please upgrade your browser to the latest version. Click here to upgrade.';
+    displaySiteAlert(upgradeMessage, 'http://outdatedbrowser.com/');
+  }
+}
 
-    var $body = $('.js-body'),
-      
-      modernizrCheck = function() {
+const displaySiteAlert = (message, link) => {
+  const body = document.querySelector('body');
+  let markup = '';
 
-        // Display message for user to upgrade if browser does not support flexbox
-        if (Modernizr.flexbox === false ||
-          Modernizr.svg === false) {
+  markup += '<div class="u-fixed u-bottom u-left u-wFull u-textCenter u-z10">';
 
-          var upgradeMessage = 'For an improved browsing experience, please upgrade your browser to the latest version. Click here to upgrade.';
+  if (link) {
+    markup += `<a href="${link}" class="u-block u-white u-greyLightC-hover u-white-active u-p15 u-p20-md" target="_blank">${message}</a>`;
+  } else {
+    markup += `<span class="u-block u-white u-p15 u-p15-md">${message}</span>`;
+  }
 
-          displaySiteAlert(upgradeMessage, 'http://outdatedbrowser.com/');
+  markup += '<span class="u-block u-absolute u-fullCover u-zBelow u-bgBlack u-opacity75"></span></div>';
 
-        }
+  body.insertAdjacentHTML('beforeend', markup);
+}
 
-      },
+const init = () => {
+  modernizrCheck();
+  objectFitImages();
+}
 
-      displaySiteAlert = function(message, link) {
-
-        var markup = '';
-
-        markup += '<div class="u-fixed u-bottom u-left u-wFull u-textCenter u-z10">';
-
-        if (link) {
-          markup += '<a href="' + link + '" class="u-block u-white u-greyLightC-hover u-white-active u-p15 u-p20-md" target="_blank">' + message + '</a>';
-        } else {
-          markup += '<span class="u-block u-white u-p15 u-p15-md">' + message + '</span>';
-        }
-
-        markup += '<span class="u-block u-absolute u-fullCover u-zBelow u-bgBlack u-opacity75"></span>';
-        markup += '</div>';
-
-        $body.append(markup);
-
-      },
-
-      enableObjectFitPolyfill = function() {
-        objectFitImages();
-      };
-
-    return {
-      init: function() {
-        modernizrCheck();
-        enableObjectFitPolyfill();
-      },
-      displaySiteAlert: displaySiteAlert
-    };
-    
-  };
-
-})(jQuery);
+export { init, displaySiteAlert };

@@ -1,30 +1,18 @@
-/* ***** ----------------------------------------------- ***** **
-** ***** Mobile Lock JS
-** ***** ----------------------------------------------- ***** */
+// /* ***** ----------------------------------------------- ***** **
+// ** ***** Mobile Lock JS
+// ** ***** ----------------------------------------------- ***** */
 
-/* global Main, iNoBounce */
-(function(){
-  'use strict';
+// /* global iNoBounce */
+import iNoBounce from 'iNoBounce';
 
-  Main.modules.mobileLock = function() {
+const preventSwipe = (element) => {
+	element.addEventListener('touchmove', e => {
+    e.preventDefault();
+  });
+}
 
-    var preventSwipe = function($element) {
+const init = () => {
+  iNoBounce.disable();
+}
 
-        // Prevent swipe on this element
-  
-        $element.bind('touchmove', function(e) {
-          e.preventDefault();
-        });
-
-      };
-
-    return {
-      init: function() {
-        iNoBounce.disable();
-      },
-      preventSwipe: preventSwipe
-    };
-    
-  };
-
-})(jQuery);
+export { init, preventSwipe };
