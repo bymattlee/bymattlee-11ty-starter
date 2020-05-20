@@ -2,7 +2,7 @@
 
 # ByMattLee Web Starter Files
 * Serves as a base starting point for static websites
-* Uses Gulp 4 as the build tool and Bower to manage front-end packages
+* Uses Gulp 4 as the build tool
 
 ## Installation
 ##### 1. Install Node: <https://nodejs.org/en/>
@@ -11,9 +11,9 @@
 $ npm install
 ```
 ##### 3. Update Gulp Config
-All Gulp settings can be found in `gulp/config.js`. Enter in development, staging and production URLs to allow pretty URLs to function properly. See `line 52`, `line 55` and `line 58`
+All Gulp settings can be found in `gulpfile.babel.js/config.js`. Enter in development, staging and production URLs to allow pretty URLs to function properly. See `developmentUrl`, `stagingUrl` and `productionUrl`.
 ##### 4. Enable Deployment
-To enable deployment, create `hostSettings.json` and store in the `gulp` directory. This file should not be checked in as it contains sensitive information. Sample `hostSettings.json`:
+To enable deployment, create `hostSettings.json` and store in the `gulpfile.babel.js` directory. This file should not be checked in as it contains sensitive information. Sample `hostSettings.json`:
 ```
 {
 	"staging": {
@@ -34,7 +34,7 @@ To enable deployment, create `hostSettings.json` and store in the `gulp` directo
 ```
 $ gulp watch
 ```
-##### Development Build - Build Project With Local URL ANd Sourcemaps
+##### Development Build - Build Project With Local URL And Sourcemaps
 ```
 $ gulp
 ```
@@ -64,12 +64,12 @@ $ gulp gzip
 * Spins up a local development environment through Browsersync
 * Browser reload when HTML, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
-* Uses Modernizr to detect flexbox compatibility. If flexbox is not supported, a message will display asking the user to upgrade to latest version of the browser
+* Uses Modernizr to detect flexbox and SVG compatibility. If flexbox and/or SVG are not supported, a message will display asking the user to upgrade to latest version of the browser
 
 ##### Markup
 * Creates pretty URLs out of static templates (absolute URLs are used in the markup)
-* Markup is minified
-* General site data can be set in `src/html/site_data.json`
+* Markup is minified in staging and production environments
+* General site data can be set in `src/html/siteData.json`
 * Pages under `src/html/pages` will be compiled to `dist`
 * `src/html/base.njk` serves as the base template for the site
 * `src/html/partials` contains site partials and components that are reused across the site (modular HTML)
@@ -83,17 +83,16 @@ $ gulp gzip
 * `.stylelintrc` contains the settings for Stylelint
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
 * Default unit of measurement is **vw**
-* Utilizes a utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
+* Utilizes a custom utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
 * Production builds will remove unused CSS (PurgeCSS)
 
 ##### Scripts
+* Utilizes ES2015+ syntax and modules with Babel transpiling
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
 * JS files located in the `src/assets/js` directory will be bundled into `dist/assets/js/main.min.js`
-* `main.js` in `src/assets/js` serves as the main JS file that runs all modules
-* All modules should be placed in `src/assets/js/modules` so they can be bundled in `main.min.js`
-* All vendor JS are managed by Bower in `src/assets/vendors` and are bundled in `vendors.min.js`
-* All vendor JS that couldn't be found on Bower can be manually added to `src/assets/js/vendors` and are bundled in `vendors.min.js`
-* When adding new devDependencies to Bower, rebuild scripts to ensure they are compiled into `vendors.min.js`
+* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules
+* All local modules should be placed in `src/assets/js/modules`
+* All vendor JS can be manually added to `src/assets/js/vendors` if not found on NPM
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
@@ -122,7 +121,7 @@ $ gulp gzip
 
 ##### Robots.txt
 * Generates robots.txt file
-* Configuration can be found in `gulp/config.js` in `lines 123-129`
+* Configuration can be found in `gulpfile.babel.js/config.js`
 
 ##### Deploy
 * Deploys the `dist` directory via SSH
@@ -131,15 +130,3 @@ $ gulp gzip
 ##### Gzip
 * Creates a tarball of the `dist` directory and then runs through gzip
 * Ideal for packaging up the files to be sent off
-
-## References
-* [Google Web Starter Kit](https://github.com/google/web-starter-kit)
-* [Viget Labs Gulp Starter](https://github.com/vigetlabs/gulp-starter)
-* [Foundation](http://foundation.zurb.com/)
-* [Bootstrap](http://getbootstrap.com/)
-* [Kickoff](http://trykickoff.com/)
-* [Basscss](http://www.basscss.com/)
-* [Solid](http://solid.buzzfeed.com/)
-* [BigCommerce SASS Style Guide](https://github.com/bigcommerce/sass-style-guide)
-* [Gulp For Beginners](https://css-tricks.com/gulp-for-beginners/)
-* [Html-Sass-Gulp Starter](https://github.com/MadeInHaus/html-sass-gulp-starter)
