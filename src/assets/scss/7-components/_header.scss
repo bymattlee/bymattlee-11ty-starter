@@ -2,9 +2,8 @@
 ** ***** Components/Header Styles
 ** ***** ----------------------------------------------- ***** */
 
-
 .c-header {
-  &-logo_svg {
+  &-logoSvg {
     width: get-size(75);
     @include mq('md') {
       width: get-size(80, true);

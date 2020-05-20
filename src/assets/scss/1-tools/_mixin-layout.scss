@@ -2,7 +2,6 @@
 ** ***** Tools/Layout
 ** ***** ----------------------------------------------- ***** */
 
-
 // Media query
 @mixin mq($size, $type: min, $orientation: width) {
   @if map-has-key($breakpoints, $size) {

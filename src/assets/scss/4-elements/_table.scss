@@ -2,7 +2,6 @@
 ** ***** Elements/Table Styles
 ** ***** ----------------------------------------------- ***** */
 
-
 table {
   border-width: get-size(1);
   @include mq('md') {

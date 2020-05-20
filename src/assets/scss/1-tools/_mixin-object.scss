@@ -2,7 +2,6 @@
 ** ***** Tools/Object
 ** ***** ----------------------------------------------- ***** */
 
-
 // Add polyfill property for object
 @mixin object($fit: fill, $position: null) {
   object-fit: $fit;
