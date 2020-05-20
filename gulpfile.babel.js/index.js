@@ -3,8 +3,6 @@
 /* ***** ----------------------------------------------- ***** */
 
 import gulp from 'gulp';
-import config from './config';
-
 import build from './tasks/build.js';
 import watch from './tasks/watch.js';
 import deploy from './tasks/deploy.js';

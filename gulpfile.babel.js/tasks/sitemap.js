@@ -2,7 +2,6 @@
 /* ***** Gulp - Sitemap
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
 import config from '../config';
 import gulp from 'gulp';
 import gutil from 'gulp-util';

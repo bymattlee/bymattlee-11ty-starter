@@ -2,7 +2,6 @@
 /* ***** Gulp - Images
 /* ***** ----------------------------------------------- ***** */
 
-
 import changed from 'gulp-changed';
 import config from '../config';
 import flatMap from 'flat-map';

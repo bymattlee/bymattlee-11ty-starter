@@ -4,7 +4,6 @@
 
 import browserSync from 'browser-sync';
 import config from '../config';
-import gulp from 'gulp';
 
 /*
 ** -- Initialize BrowserSync

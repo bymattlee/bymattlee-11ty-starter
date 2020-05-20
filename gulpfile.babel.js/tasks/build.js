@@ -2,9 +2,7 @@
 /* ***** Gulp - Build
 /* ***** ----------------------------------------------- ***** */
 
-import browserSyncTask from './browserSync.js';
 import clean from './clean.js';
-import config from '../config';
 import { copy } from './copy.js';
 import gulp from 'gulp';
 import favicons from './favicons.js';

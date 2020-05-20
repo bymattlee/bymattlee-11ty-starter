@@ -2,14 +2,12 @@
 /* ***** Gulp - Favicons
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
 import concat from 'gulp-concat';
 import config from '../config';
 import del from 'del';
 import favicons from 'gulp-favicons';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
-import rename from 'gulp-rename';
 
 // Environment variables
 const isProduction = !!gutil.env.production;
