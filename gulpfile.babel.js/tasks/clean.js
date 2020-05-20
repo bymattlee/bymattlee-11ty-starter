@@ -2,14 +2,13 @@
 /* ***** Gulp - Clean
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var config = require('../config'),
-  del = require('del'),
-  gulp = require('gulp');
+import config from '../config';
+import del from 'del';
+import gulp from 'gulp';
 
 // Delete dist directory for a clean project rebuild
-gulp.task('clean', function() {
-
+function clean() {
   return del(config.clean.dest);
+}
 
-});
+export default clean;

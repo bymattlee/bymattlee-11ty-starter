@@ -2,50 +2,47 @@
 /* ***** Gulp - Scripts
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var addSrc = require('gulp-add-src'),
-  babel = require('rollup-plugin-babel'),
-  browserSync = require('browser-sync'),
-  concat = require('gulp-concat'),
-  commonjs = require('rollup-plugin-commonjs'),
-  config = require('../config'),
-  eslint = require('gulp-eslint'),
-  gif = require('gulp-if'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  header = require('gulp-header'),
-  json = require('rollup-plugin-json'),
-  modernizr = require('gulp-modernizr'),
-  nodeResolve = require('rollup-plugin-node-resolve'),
-  plumber = require('gulp-plumber'),
-  rename = require('gulp-rename'),
-  rollup = require('gulp-better-rollup'),
-  size = require('gulp-size'),
-  sourcemaps = require('gulp-sourcemaps'),
-  uglify = require('gulp-uglify'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  isDevelopment = !isProduction && !isStaging;
+import addSrc from 'gulp-add-src';
+import babel from 'rollup-plugin-babel';
+import browserSync from 'browser-sync';
+import concat from 'gulp-concat';
+import commonjs from 'rollup-plugin-commonjs';
+import config from '../config';
+import eslint from 'gulp-eslint';
+import gif from 'gulp-if';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import header from 'gulp-header';
+import json from 'rollup-plugin-json';
+import modernizr from 'gulp-modernizr';
+import nodeResolve from 'rollup-plugin-node-resolve';
+import plumber from 'gulp-plumber';
+import rename from 'gulp-rename';
+import rollup from 'gulp-better-rollup';
+import size from 'gulp-size';
+import sourcemaps from 'gulp-sourcemaps';
+import uglify from 'gulp-uglify';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+const isDevelopment = !isProduction && !isStaging;
 
 // Create a custom Modernizr build by crawling the .scss and .js files
-gulp.task('scripts:modernizr', function() {
-
+function scriptsModernizr() {
   return gulp.src(config.scripts.modernizr.src)
     .pipe(plumber())
     .pipe(modernizr(config.scripts.modernizr.options))
     .pipe(concat('modernizr.js'))
     .pipe(gulp.dest(config.scripts.modernizrDest));
-
-});
+}
 
 // Lint files with ESLint
-gulp.task('scripts:lint', function() {
-
+function scriptsLint() {
   return gulp.src(config.scripts.watchSrc)
     .pipe(eslint())
     .pipe(eslint.format());
-
-});
+}
 
 /*
 ** -- Create sourcemaps if in development mode (use gulp --production or gulp --staging to disable soucemaps)
@@ -55,8 +52,7 @@ gulp.task('scripts:lint', function() {
 ** -- Print bundled file size
 ** -- Reload browser
 */
-gulp.task('scripts:main', function() {
-
+function scriptsMain() {
   return gulp.src(config.scripts.src)
     .pipe(plumber())
     .pipe(addSrc.prepend(config.scripts.modernizrFileSrc))
@@ -84,9 +80,9 @@ gulp.task('scripts:main', function() {
     .pipe(gif(isDevelopment, sourcemaps.write('./')))
     .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.stream());
+}
 
-});
+const scriptsBuild = gulp.series(scriptsModernizr, scriptsLint, scriptsMain);
+const scriptsWatch = gulp.series(scriptsLint, scriptsMain);
 
-// Scripts task
-gulp.task('scripts', gulp.series('scripts:modernizr', 'scripts:lint', 'scripts:main'));
-gulp.task('scripts:watch', gulp.series('scripts:lint', 'scripts:main'));
+export { scriptsBuild, scriptsWatch };

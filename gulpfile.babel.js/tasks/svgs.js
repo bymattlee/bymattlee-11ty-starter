@@ -2,19 +2,17 @@
 /* ***** Gulp - SVGs
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var config = require('../config'),
-  gulp = require('gulp'),
-  imagemin = require('gulp-imagemin'),
-  size = require('gulp-size'),
-  svgSprite = require('gulp-svg-sprite');
+import config from '../config';
+import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
+import size from 'gulp-size';
+import svgSprite from 'gulp-svg-sprite';
 
 /*
 ** -- Optimize SVG files
 ** -- Create SVG sprite
 */
-gulp.task('svgs', function() {
-
+function svgs() {
   return gulp.src(config.svgs.src)
     .pipe(imagemin())
     .pipe(svgSprite({
@@ -30,5 +28,6 @@ gulp.task('svgs', function() {
       showFiles: true
     }))
     .pipe(gulp.dest(config.svgs.dest));
+}
 
-});
+export default svgs;

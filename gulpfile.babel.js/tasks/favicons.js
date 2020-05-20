@@ -3,16 +3,19 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var concat = require('gulp-concat'),
-  config = require('../config'),
-  del = require('del'),
-  favicons = require('gulp-favicons'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  rename = require('gulp-rename'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  siteUrl;
+import concat from 'gulp-concat';
+import config from '../config';
+import del from 'del';
+import favicons from 'gulp-favicons';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import rename from 'gulp-rename';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+
+let siteUrl = '';
 
 // Set site URL based on environment
 if (isProduction) {
@@ -24,8 +27,7 @@ if (isProduction) {
 }
 
 // Create favicons
-gulp.task('favicons:create-favicon', function() {
-
+function faviconsCreateFavicon() {
   return gulp.src(config.favicons.faviconSrc)
     .pipe(favicons({
       appName: config.favicons.appName,
@@ -57,12 +59,10 @@ gulp.task('favicons:create-favicon', function() {
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest(config.favicons.dest));
-
-});
+}
 
 // Create touch icons and associated files
-gulp.task('favicons:create-touch-icon', function() {
-
+function faviconsCreateTouchIcon() {
   return gulp.src(config.favicons.touchIconSrc)
     .pipe(favicons({
       appName: config.favicons.appName,
@@ -88,24 +88,20 @@ gulp.task('favicons:create-touch-icon', function() {
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest(config.favicons.dest));
-
-});
+}
 
 // Concat favicons.html with touch-icons.html
-gulp.task('favicons:concat-html', function() {
-
+function faviconsConcatHtml() {
   return gulp.src(config.favicons.concatHtmlSrc)
     .pipe(concat(config.favicons.concatHtmlFilename))
     .pipe(gulp.dest(config.favicons.concatHtmlDest));
-
-});
+}
 
 // Remove favicons.html
-gulp.task('favicons:remove-html', function() {
-
+function faviconsRemoveHtml() {
   return del(config.favicons.concatHtmlSrc);
+}
 
-});
+const faviconsSeries = gulp.series(faviconsCreateFavicon, faviconsCreateTouchIcon, faviconsConcatHtml, faviconsRemoveHtml);
 
-// Favicons sequence of tasks
-gulp.task('favicons', gulp.series('favicons:create-favicon', 'favicons:create-touch-icon', 'favicons:concat-html', 'favicons:remove-html'));
+export default faviconsSeries;

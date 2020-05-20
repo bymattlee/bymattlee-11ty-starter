@@ -2,18 +2,18 @@
 /* ***** Gulp - Robots
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var config = require('../config'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  robots = require('gulp-robots'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  siteUrl;
+import config from '../config';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import robots from 'gulp-robots';
+
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+
+let siteUrl = '';
 
 // Create robots.txt file and place in dist
-gulp.task('robots', function() {
-
+function robotsTask() {
   if (isProduction) {
     siteUrl = config.productionUrl.homeUrl;
   } else if (isStaging) {
@@ -30,5 +30,6 @@ gulp.task('robots', function() {
       sitemap: siteUrl + '/sitemap.xml'
     }))
     .pipe(gulp.dest(config.robots.dest));
+}
 
-});
+export default robotsTask;

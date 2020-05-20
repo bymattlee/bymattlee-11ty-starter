@@ -2,23 +2,25 @@
 /* ***** Gulp - Markup
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var browserSync = require('browser-sync'),
-  config = require('../config'),
-  data = require('gulp-data'),
-  gif = require('gulp-if'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  header = require('gulp-header'),
-  htmlmin = require('gulp-htmlmin'),
-  nunjucksRender = require('gulp-nunjucks-render'),
-  plumber = require('gulp-plumber'),
-  prettyUrl = require('gulp-pretty-url'),
-  size = require('gulp-size'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  isDevelopment = !isProduction && !isStaging,
-  siteUrl;
+import browserSync from 'browser-sync';
+import config from '../config';
+import data from 'gulp-data';
+import gif from 'gulp-if';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import header from 'gulp-header';
+import htmlmin from 'gulp-htmlmin';
+import nunjucksRender from 'gulp-nunjucks-render';
+import plumber from 'gulp-plumber';
+import prettyUrl from 'gulp-pretty-url';
+import size from 'gulp-size';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+const isDevelopment = !isProduction && !isStaging;
+
+let siteUrl = '';
 
 /*
 ** -- Render site files based on nunjucks templates and site data
@@ -30,8 +32,7 @@ var browserSync = require('browser-sync'),
 ** -- Create pretty URLs from all html files
 ** -- Reload browser
 */
-gulp.task('markup', function() {
-
+function markup() {
   var timestamp = Math.floor(Date.now() / 1000);
 
   if (isProduction) {
@@ -84,5 +85,6 @@ gulp.task('markup', function() {
     .pipe(prettyUrl())
     .pipe(gulp.dest(config.markup.dest))
     .pipe(browserSync.stream());
+}
 
-});
+export default markup;

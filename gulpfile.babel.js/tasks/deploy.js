@@ -2,22 +2,25 @@
 /* ***** Gulp - Deploy
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var config = require('../config'),
-  gif = require('gulp-if'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  notify = require('gulp-notify'),
-  rsync = require('gulp-rsync'),
-  isClean = !!gutil.env.clean,
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  isDevelopment = !isProduction && !isStaging,
-  hostSettings,
-  hostSettingsNotFound,
-  notifyTitle = 'ERROR',
-  notFoundMessage = 'hostSettings.json was not found. Unable to deploy files to host server.',
-  deployErrorMessage = 'Please use a flag (--staging or --production) to target a host server.';
+import config from '../config';
+import gif from 'gulp-if';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import notify from 'gulp-notify';
+import rsync from 'gulp-rsync';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+const isDevelopment = !isProduction && !isStaging;
+
+const isClean = !!gutil.env.clean;
+
+let hostSettings = null;
+let hostSettingsNotFound = false;
+const notifyTitle = 'ERROR';
+const notFoundMessage = 'hostSettings.json was not found. Unable to deploy files to host server.';
+const deployErrorMessage = 'Please use a flag (--staging or --production) to target a host server.';
 
 // Check if hostSettings.json is present
 try {
@@ -38,8 +41,7 @@ try {
 ** -- If hostSettings.json is not present, display error message
 ** -- If a flag (--production or --staging) is not used, display error message
 */
-gulp.task('deploy', function() {
-
+function deploy() {
   return gulp.src(config.deploy.src)
     .pipe(gif(hostSettingsNotFound, notify({
       title: notifyTitle,
@@ -60,5 +62,6 @@ gulp.task('deploy', function() {
       recursive: true,
       clean: isClean ? true : false
     })));
+}
 
-});
+export default deploy;

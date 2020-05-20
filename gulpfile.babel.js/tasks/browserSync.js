@@ -2,19 +2,18 @@
 /* ***** Gulp - BrowserSync
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var browserSync = require('browser-sync'),
-  config = require('../config'),
-  gulp = require('gulp');
+import browserSync from 'browser-sync';
+import config from '../config';
+import gulp from 'gulp';
 
 /*
 ** -- Initialize BrowserSync
 ** -- Use directory specified in config as the root for the server
 */
-gulp.task('browserSync', function() {
-
-  browserSync.init({
+function browserSyncTask() {
+	browserSync.init({
     server: config.browserSync.server
   });
+}
 
-});
+export default browserSyncTask;

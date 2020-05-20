@@ -2,16 +2,14 @@
 /* ***** Gulp - Gzip
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var config = require('../config'),
-  gulp = require('gulp'),
-  gzip = require('gulp-gzip'),
-  size = require('gulp-size'),
-  tar = require('gulp-tar');
+import config from '../config';
+import gulp from 'gulp';
+import gzip from 'gulp-gzip';
+import size from 'gulp-size';
+import tar from 'gulp-tar';
 
 // Create a tarball of the dist directory and compress with gzip
-gulp.task('gzip', function() {
-
+function gzipTask() {
   return gulp.src(config.gzip.src)
     .pipe(tar(config.gzip.filename))
     .pipe(gzip())
@@ -20,5 +18,6 @@ gulp.task('gzip', function() {
       title: 'Project Archive File Size:',
       showFiles: true
     }));
+}
 
-});
+export default gzipTask;

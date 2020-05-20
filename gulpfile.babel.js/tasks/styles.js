@@ -2,29 +2,30 @@
 /* ***** Gulp - Styles
 /* ***** ----------------------------------------------- ***** */
 
-// Require all development dependencies
-var autoprefixer = require('gulp-autoprefixer'),
-  browserSync = require('browser-sync'),
-  cleanCSS = require('gulp-clean-css'),
-  concat = require('gulp-concat'),
-  config = require('../config'),
-  gif = require('gulp-if'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  header = require('gulp-header'),
-  plumber = require('gulp-plumber'),
-  postcss = require('gulp-postcss'),
-  purgecss = require('gulp-purgecss'),
-  rename = require('gulp-rename'),
-  reporter = require('postcss-reporter'),
-  sass = require('gulp-sass'),
-  scss = require('postcss-scss'),
-  size = require('gulp-size'),
-  sourcemaps = require('gulp-sourcemaps'),
-  stylelint = require('stylelint'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  isDevelopment = !isProduction && !isStaging;
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
+import cleanCSS from 'gulp-clean-css';
+import concat from 'gulp-concat';
+import config from '../config';
+import gif from 'gulp-if';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import header from 'gulp-header';
+import plumber from 'gulp-plumber';
+import postcss from 'gulp-postcss';
+import purgecss from 'gulp-purgecss';
+import rename from 'gulp-rename';
+import reporter from 'postcss-reporter';
+import sass from 'gulp-sass';
+import scss from 'postcss-scss';
+import size from 'gulp-size';
+import sourcemaps from 'gulp-sourcemaps';
+import stylelint from 'stylelint';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+const isDevelopment = !isProduction && !isStaging;
 
 /*
 ** -- Lint scss files with Stylelint
@@ -37,8 +38,7 @@ var autoprefixer = require('gulp-autoprefixer'),
 ** -- Print bundled file size
 ** -- Inject styles into page
 */
-gulp.task('styles', function () {
-
+function styles() {
   return gulp.src(config.styles.src)
     .pipe(plumber())
     .pipe(
@@ -75,5 +75,6 @@ gulp.task('styles', function () {
     .pipe(browserSync.stream({
       match: '**/*.css'
     }));
+}
 
-});
+export default styles;

@@ -3,17 +3,19 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Require all development dependencies
-var config = require('../config'),
-  gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  sitemap = require('gulp-sitemap'),
-  isProduction = !!gutil.env.production,
-  isStaging = !!gutil.env.staging,
-  siteUrl;
+import config from '../config';
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import sitemap from 'gulp-sitemap';
+
+// Environment variables
+const isProduction = !!gutil.env.production;
+const isStaging = !!gutil.env.staging;
+
+let siteUrl = '';
 
 // Create site map based on environment (development/production) and place in dist
-gulp.task('sitemap', function() {
-
+function sitemapTask() {
   if (isProduction) {
     siteUrl = config.productionUrl.homeUrl;
   } else if (isStaging) {
@@ -29,5 +31,6 @@ gulp.task('sitemap', function() {
       siteUrl: siteUrl
     }))
     .pipe(gulp.dest(config.sitemap.dest));
+}
 
-});
+export default sitemapTask;
