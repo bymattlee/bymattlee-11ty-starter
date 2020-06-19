@@ -2,7 +2,7 @@
 ** ***** Utilities JS
 ** ***** ----------------------------------------------- ***** */
 
-function getUrlParameter(name) {
+const getUrlParameter = (name) => {
   name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]'); // eslint-disable-line no-useless-escape
   const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
   const results = regex.exec(location.search);

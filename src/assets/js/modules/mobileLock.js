@@ -4,13 +4,13 @@
 
 import iNoBounce from 'iNoBounce';
 
-function preventSwipe(element) {
+const preventSwipe = (element) => {
 	element.addEventListener('touchmove', e => {
     e.preventDefault();
   });
 }
 
-function init() {
+const init = () => {
   iNoBounce.disable();
 }
 
