@@ -5,7 +5,7 @@ A starter boilerplate that includes Eleventy as the static site generator and Gu
 
 ## Installation
 ##### 1. Install Node: <https://nodejs.org/en/>
-##### 2. Install all dependencies and build project
+##### 2. Install all dependencies
 ```
 $ npm install
 ```
