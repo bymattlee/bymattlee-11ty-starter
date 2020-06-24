@@ -26,7 +26,7 @@ import uglify from 'gulp-uglify';
 const isDevelopment = process.env.NODE_ENV === 'development';
 
 // Create a custom Modernizr build by crawling the .scss and .js files
-function scriptsModernizr() {
+const scriptsModernizr = () => {
   return gulp.src(config.scripts.modernizr.src)
     .pipe(plumber())
     .pipe(modernizr(config.scripts.modernizr.options))
@@ -35,7 +35,7 @@ function scriptsModernizr() {
 }
 
 // Lint files with ESLint
-function scriptsLint() {
+const scriptsLint = () => {
   return gulp.src(config.scripts.watchSrc)
     .pipe(eslint())
     .pipe(eslint.format());
@@ -49,7 +49,7 @@ function scriptsLint() {
 ** -- Print bundled file size
 ** -- Reload browser
 */
-function scriptsMain() {
+const scriptsMain = () => {
   return gulp.src(config.scripts.src)
     .pipe(plumber())
     .pipe(addSrc.prepend(config.scripts.modernizrFileSrc))

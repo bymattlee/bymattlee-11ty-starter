@@ -12,7 +12,7 @@ import svgSprite from 'gulp-svg-sprite';
 ** -- Optimize SVG files
 ** -- Create SVG sprite
 */
-function svgs() {
+const svgs = () => {
   return gulp.src(config.svgs.src)
     .pipe(imagemin())
     .pipe(svgSprite({

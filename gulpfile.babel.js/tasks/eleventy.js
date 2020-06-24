@@ -6,7 +6,7 @@ import browserSync from 'browser-sync';
 import elev from '../../eleventyCmd.js';
 
 // Build with 11ty and reload browser if Browsersync is running
-function eleventy(done) {
+const eleventy = done => {
 	elev.restart();
   elev.write().then(function() {
   	browserSync.reload();

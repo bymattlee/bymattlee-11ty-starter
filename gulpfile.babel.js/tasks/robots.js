@@ -10,7 +10,7 @@ import robots from 'gulp-robots';
 const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create robots.txt file and place in dist
-function robotsTask() {
+const robotsTask = () => {
   return gulp.src(config.robots.src)
     .pipe(robots({
       useragent: config.robots.useragent,

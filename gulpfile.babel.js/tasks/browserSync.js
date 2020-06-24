@@ -9,7 +9,7 @@ import config from '../config';
 ** -- Initialize BrowserSync
 ** -- Use directory specified in config as the root for the server
 */
-function browserSyncTask() {
+const browserSyncTask = () => {
 	browserSync.init({
     server: config.browserSync.server
   });

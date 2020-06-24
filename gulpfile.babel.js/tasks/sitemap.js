@@ -10,7 +10,7 @@ import sitemap from 'gulp-sitemap';
 const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create site map based on environment (development/production) and place in dist
-function sitemapTask() {
+const sitemapTask = () => {
   return gulp.src(config.sitemap.src, {
       read: false
     })

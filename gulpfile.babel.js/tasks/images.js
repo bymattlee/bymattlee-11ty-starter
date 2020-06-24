@@ -18,7 +18,7 @@ import through from 'through2';
 ** -- Check if image is already in dist directory and has changed
 ** -- Optimize image for production
 */
-function imagesOptimize() {
+const imagesOptimize = () => {
   return gulp.src(config.images.optimizeSrc)
     .pipe(changed(config.images.dest))
     .pipe(imagemin([

@@ -13,7 +13,7 @@ import fancyLog from 'fancy-log';
 const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create favicons
-function faviconsCreateFavicon() {
+const faviconsCreateFavicon = () => {
   return gulp.src(config.favicons.faviconSrc)
     .pipe(favicons({
       appName: config.favicons.appName,
@@ -48,7 +48,7 @@ function faviconsCreateFavicon() {
 }
 
 // Create touch icons and associated files
-function faviconsCreateTouchIcon() {
+const faviconsCreateTouchIcon = () => {
   return gulp.src(config.favicons.touchIconSrc)
     .pipe(favicons({
       appName: config.favicons.appName,
@@ -77,14 +77,14 @@ function faviconsCreateTouchIcon() {
 }
 
 // Concat favicons.html with touch-icons.html
-function faviconsConcatHtml() {
+const faviconsConcatHtml = () => {
   return gulp.src(config.favicons.concatHtmlSrc)
     .pipe(concat(config.favicons.concatHtmlFilename))
     .pipe(gulp.dest(config.favicons.concatHtmlDest));
 }
 
 // Remove favicons.html
-function faviconsRemoveHtml() {
+const faviconsRemoveHtml = () => {
   return del(config.favicons.concatHtmlSrc);
 }
 
