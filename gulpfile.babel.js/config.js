@@ -112,13 +112,13 @@ module.exports = {
     display: 'browser',
     orientation: 'portrait',
     version: '1.0',
-    faviconHtmlPath: '../../../src/html/partials/global/favicons.html',
-    touchIconHtmlPath: '../../../src/html/partials/global/touch-icons.html',
+    faviconHtmlPath: '../../../src/site/_includes/partials/global/favicons.html',
+    touchIconHtmlPath: '../../../src/site/_includes/partials/global/touch-icons.html',
     concatHtmlSrc: [
-      src + '/html/partials/global/favicons.html',
-      src + '/html/partials/global/touch-icons.html'
+      src + '/site/_includes/partials/global/favicons.html',
+      src + '/site/_includes/partials/global/touch-icons.html'
     ],
     concatHtmlFilename: 'favicons.njk',
-    concatHtmlDest: src + '/html/partials/global'
+    concatHtmlDest: src + '/site/_includes/partials/global'
   }
 };
