@@ -3,11 +3,10 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-var src = 'src',
-  dest = 'dist', 
-  srcAssets = src + '/assets',
-  destAssets = dest + '/assets',
-  timestamp = Math.floor(Date.now() / 1000);
+const src = 'src';
+const dest = 'dist';
+const srcAssets = src + '/assets';
+const destAssets = dest + '/assets';
 
 // Contains all main configurations for Gulp
 module.exports = {
@@ -27,43 +26,8 @@ module.exports = {
     '**',
     '*/\n'
   ],
-  markupHeader: [
-    '<!DOCTYPE html>',
-    '<!--',
-    '**',
-    '**',
-    '**',
-    '**',
-    '**',
-    '**',
-    '**              {{ @bymattlee }}',
-    '**              {{ bymattlee.com }}',
-    '**',
-    '**',
-    '**',
-    '**',
-    '**',
-    '**',
-    '-->\n'
-  ],
-  developmentUrl: {
-    homeUrl: 'http://localhost:3000'
-  },
-  stagingUrl: {
-    homeUrl: 'http://mynameismattlee.com'
-  },
-  productionUrl: {
-    homeUrl: 'http://bymattlee.com'
-  },
-  markup: {
-    src: src + '/html/pages/**/*.njk',
-    dest: dest,
-    data: '../../' + src + '/html/siteData.json',
-    path: src + '/html',
-    watchSrc: [
-      src + '/html/**/*.njk',
-      src + '/html/siteData.json'
-    ]
+  eleventy: {
+    src: src + '/site/**/*',
   },
   styles: {
     src: srcAssets + '/scss/**/*.scss',
@@ -156,14 +120,5 @@ module.exports = {
     ],
     concatHtmlFilename: 'favicons.njk',
     concatHtmlDest: src + '/html/partials/global'
-  },
-  deploy: {
-    src: dest + '/',
-    root: dest
-  },
-  gzip: {
-    src: dest + '/**/*',
-    dest: './',
-    filename: 'Project.Archive.' + timestamp + '.tar'
   }
 };

@@ -11,7 +11,6 @@ import config from '../config';
 import eslint from 'gulp-eslint';
 import gif from 'gulp-if';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import header from 'gulp-header';
 import json from 'rollup-plugin-json';
 import modernizr from 'gulp-modernizr';
@@ -24,9 +23,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
 
 // Environment variables
-const isProduction = !!gutil.env.production;
-const isStaging = !!gutil.env.staging;
-const isDevelopment = !isProduction && !isStaging;
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 // Create a custom Modernizr build by crawling the .scss and .js files
 function scriptsModernizr() {

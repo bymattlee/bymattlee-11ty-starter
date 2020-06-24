@@ -3,26 +3,14 @@
 /* ***** ----------------------------------------------- ***** */
 
 import config from '../config';
+import envUrls from '../../envUrls.js';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import sitemap from 'gulp-sitemap';
 
-// Environment variables
-const isProduction = !!gutil.env.production;
-const isStaging = !!gutil.env.staging;
-
-let siteUrl = '';
+const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create site map based on environment (development/production) and place in dist
 function sitemapTask() {
-  if (isProduction) {
-    siteUrl = config.productionUrl.homeUrl;
-  } else if (isStaging) {
-    siteUrl = config.stagingUrl.homeUrl;
-  } else {
-    siteUrl = config.developmentUrl.homeUrl;
-  }
-
   return gulp.src(config.sitemap.src, {
       read: false
     })

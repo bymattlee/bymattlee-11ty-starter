@@ -9,7 +9,6 @@ import concat from 'gulp-concat';
 import config from '../config';
 import gif from 'gulp-if';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import header from 'gulp-header';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
@@ -23,9 +22,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import stylelint from 'stylelint';
 
 // Environment variables
-const isProduction = !!gutil.env.production;
-const isStaging = !!gutil.env.staging;
-const isDevelopment = !isProduction && !isStaging;
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 /*
 ** -- Lint scss files with Stylelint
@@ -63,7 +60,7 @@ function styles() {
         suffix: '.min'
       }))
       .pipe(header(config.fileHeader.join('\n')))
-      .pipe(gif(isProduction, purgecss({
+      .pipe(gif(!isDevelopment, purgecss({
         content: config.styles.purgeContent
       })))
       .pipe(size({

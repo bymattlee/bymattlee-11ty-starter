@@ -5,24 +5,12 @@
 import concat from 'gulp-concat';
 import config from '../config';
 import del from 'del';
+import envUrls from '../../envUrls.js';
 import favicons from 'gulp-favicons';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
+import fancyLog from 'fancy-log';
 
-// Environment variables
-const isProduction = !!gutil.env.production;
-const isStaging = !!gutil.env.staging;
-
-let siteUrl = '';
-
-// Set site URL based on environment
-if (isProduction) {
-  siteUrl = config.productionUrl.homeUrl;
-} else if (isStaging) {
-  siteUrl = config.stagingUrl.homeUrl;
-} else {
-  siteUrl = config.developmentUrl.homeUrl;
-}
+const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create favicons
 function faviconsCreateFavicon() {
@@ -55,7 +43,7 @@ function faviconsCreateFavicon() {
         yandex: false
       }
     }))
-    .on('error', gutil.log)
+    .on('error', fancyLog)
     .pipe(gulp.dest(config.favicons.dest));
 }
 
@@ -84,7 +72,7 @@ function faviconsCreateTouchIcon() {
         yandex: false
       }
     }))
-    .on('error', gutil.log)
+    .on('error', fancyLog)
     .pipe(gulp.dest(config.favicons.dest));
 }
 

@@ -3,25 +3,14 @@
 /* ***** ----------------------------------------------- ***** */
 
 import config from '../config';
+import envUrls from '../../envUrls.js';
 import gulp from 'gulp';
-import gutil from 'gulp-util';
 import robots from 'gulp-robots';
 
-const isProduction = !!gutil.env.production;
-const isStaging = !!gutil.env.staging;
-
-let siteUrl = '';
+const siteUrl = envUrls[process.env.NODE_ENV];
 
 // Create robots.txt file and place in dist
 function robotsTask() {
-  if (isProduction) {
-    siteUrl = config.productionUrl.homeUrl;
-  } else if (isStaging) {
-    siteUrl = config.stagingUrl.homeUrl;
-  } else {
-    siteUrl = config.developmentUrl.homeUrl;
-  }
-
   return gulp.src(config.robots.src)
     .pipe(robots({
       useragent: config.robots.useragent,

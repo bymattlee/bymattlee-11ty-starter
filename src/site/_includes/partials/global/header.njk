@@ -3,22 +3,19 @@
 <header class="c-header u-mb30 u-mb30-md" role="banner">
   <div class="l-container">
     <h1>
-      <a href="{{ homeUrl }}">
-        {{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block', homeUrl) | trim }}
+      <a href="{{ '/' | absoluteUrl }}">
+        {{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block') | trim }}
         ByMattLee Web Starter Files
       </a>
     </h1>
-
-    {% if header.nav %}
+    {% if navigation %}
       <nav>
         <ul class="u-unstyled u-m0">
-
-          {% for navItem in header.nav %}
+          {% for navItem in navigation %}
             <li class="u-inlineBlock{% if loop.index > 1 %} u-ml20 u-ml20-md{% endif %}">
-              <a href="{{ homeUrl }}/{{ navItem.slug }}/" class="u-inlineBlock{% if pageSlug == navItem.slug %} u-white{% endif %}">{{ navItem.name }}</a>
+              <a href="{{ navItem.url | absoluteUrl }}" class="u-inlineBlock{% if navItem.url == page.url %} u-white{% endif %}"{% if navItem.external %} target="_blank"{% endif %}>{{ navItem.title }}</a>
             </li>
           {% endfor %}
-
         </ul>
       </nav>
     {% endif %}

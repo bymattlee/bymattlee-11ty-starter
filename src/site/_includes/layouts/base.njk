@@ -9,13 +9,13 @@
 
 <title>{{ pageTitle }}</title>
 
-{% include "partials/global/favicons.njk" %}
+{% include 'partials/global/favicons.njk' %}
 
 <meta property="og:title" content="{{ pageShareTitle }}">
 <meta property="og:site_name" content="{{ global.siteName }}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ homeUrl }}/{{ pageSlug }}">
-<meta property="og:image" content="{{ homeUrl }}/assets/images/share.jpg">
+<meta property="og:url" content="{{ page.url | absoluteUrl }}">
+<meta property="og:image" content="{{ '/assets/images/share.jpg' | absoluteUrl }}">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:locale" content="en_US">
 
@@ -23,9 +23,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ pageShareTitle }}">
   <meta name="twitter:site" content="{{ global.twitterHandle }}">
-  <meta name="twitter:url" content="{{ homeUrl }}/{{ pageSlug }}">
+  <meta name="twitter:url" content="{{ page.url | absoluteUrl }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
-  <meta name="twitter:image" content="{{ homeUrl }}/assets/images/share.jpg">
+  <meta name="twitter:image" content="{{ '/assets/images/share.jpg' | absoluteUrl }}">
 {% endif %}
 
 {% if 'p-home' in pageBodyClasses %}
@@ -34,7 +34,7 @@
       "@context": "http://schema.org",
       "@type": "Person",
       "email": "hello@bymattlee.com",
-      "image": "{{ home_url }}/assets/images/headshot.jpg",
+      "image": "{{ '/assets/images/headshot.jpg' | absoluteUrl }}",
       "jobTitle": "Freelance Creative Developer",
       "name": "Matt Lee",
       "gender": "male",
@@ -50,9 +50,9 @@
   </script>
 {% endif %}
 
-<link rel="canonical" href="{{ homeUrl }}/{{ pageSlug }}">
+<link rel="canonical" href="{{ page.url | absoluteUrl }}">
 
-<link rel="stylesheet" href="{{ homeUrl }}/assets/css/main.min.css?{{ timestamp }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.min.css' | absoluteUrl | cacheBust }}">
 
 {% if global.googleAnalyticsId and isProduction %}
   <script async src="//www.googletagmanager.com/gtag/js?id={{ global.googleAnalyticsId }}"></script>
@@ -68,13 +68,15 @@
 
 <body class="js-body {{ pageBodyClasses }}">
 
-{% include "partials/global/header.njk" %}
+{% include 'partials/global/header.njk' %}
 
-{% block main %}{% endblock %}
+<main class="u-flex1" role="main">
+  {{ content | safe }}
+</main>
 
-{% include "partials/global/footer.njk" %}
+{% include 'partials/global/footer.njk' %}
 
-<script src="{{ homeUrl }}/assets/js/main.min.js?{{ timestamp }}"></script>
+<script src="{{ '/assets/js/main.min.js' | absoluteUrl | cacheBust }}"></script>
 
 </body>
 </html>
