@@ -1,16 +1,21 @@
+import minifyHtml from './eleventy/utilities/minifyHtml.js';
+import addHeaderCredit from './eleventy/utilities/addHeaderCredit.js';
+import absoluteUrl from './eleventy/filters/absoluteUrl.js';
+import cacheBust from './eleventy/filters/cacheBust.js';
+
 module.exports = function(config) {
 
   // If prod or stage, minify the html
   if (process.env.NODE_ENV !== 'development') {
-    config.addTransform('minifyHtml', require('./eleventy/utilities/minifyHtml.js'));
+    config.addTransform('minifyHtml', minifyHtml);
   }
 
   // Add header credit to html
-  config.addTransform('addHeaderCredit', require('./eleventy/utilities/addHeaderCredit.js'));
+  config.addTransform('addHeaderCredit', addHeaderCredit);
 
   // Filters
-  config.addFilter('absoluteUrl', require('./eleventy/filters/absoluteUrl.js'));
-  config.addFilter('cacheBust', require('./eleventy/filters/cacheBust.js'));
+  config.addFilter('absoluteUrl', absoluteUrl);
+  config.addFilter('cacheBust', cacheBust);
 
   return {
     dir: {
