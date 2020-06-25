@@ -10,8 +10,13 @@ module.exports = [
     external: false
   },
   {
+    title: 'Splash',
+    url: '/splash/',
+    external: false
+  },
+  {
     title: '404',
     url: '/404/',
-    external: true
+    external: false
   }
 ];

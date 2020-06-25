@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+{% include 'partials/global/header.njk' %}
+
+<main class="u-flex1" role="main">
+	<div class="l-container">
+	  <h3>{{ pageTitle }}</h3>
+	  {{ content | safe }}
+	</div>
+</main>
+
+{% include 'partials/global/footer.njk' %}

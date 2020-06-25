@@ -7,11 +7,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="description" content="{{ pageDescription }}">
 
-<title>{{ pageTitle }}</title>
+<title>{% if overwriteFullPageTitle %}{{ pageTitle }}{% else %}{{ pageTitle }} | {{ global.siteName}}{% endif %}</title>
 
 {% include 'partials/global/favicons.njk' %}
 
-<meta property="og:title" content="{{ pageShareTitle }}">
+<meta property="og:title" content="{{ pageTitle }}">
 <meta property="og:site_name" content="{{ global.siteName }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.url | absoluteUrl }}">
@@ -21,7 +21,7 @@
 
 {% if global.twitterHandle %}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ pageShareTitle }}">
+  <meta name="twitter:title" content="{{ pageTitle }}">
   <meta name="twitter:site" content="{{ global.twitterHandle }}">
   <meta name="twitter:url" content="{{ page.url | absoluteUrl }}">
   <meta name="twitter:description" content="{{ pageDescription }}">
@@ -68,13 +68,7 @@
 
 <body class="js-body {{ pageBodyClasses }}">
 
-{% include 'partials/global/header.njk' %}
-
-<main class="u-flex1" role="main">
-  {{ content | safe }}
-</main>
-
-{% include 'partials/global/footer.njk' %}
+{{ content | safe }}
 
 <script src="{{ '/assets/js/main.min.js' | absoluteUrl | cacheBust }}"></script>
 

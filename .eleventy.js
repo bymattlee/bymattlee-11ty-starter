@@ -17,6 +17,11 @@ module.exports = function(config) {
   config.addFilter('absoluteUrl', absoluteUrl);
   config.addFilter('cacheBust', cacheBust);
 
+  // Layout aliases
+  config.addLayoutAlias('base', 'layouts/base.njk')
+  config.addLayoutAlias('default', 'layouts/default.njk')
+  config.addLayoutAlias('page', 'layouts/page.njk')
+
   return {
     dir: {
       input: 'src/site',
