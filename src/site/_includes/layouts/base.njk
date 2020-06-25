@@ -2,59 +2,13 @@
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="description" content="{{ pageDescription }}">
-
-<title>{% if overwriteFullPageTitle %}{{ pageTitle }}{% else %}{{ pageTitle }} | {{ global.siteName}}{% endif %}</title>
-
-{% include 'partials/global/favicons.njk' %}
-
-<meta property="og:title" content="{{ pageTitle }}">
-<meta property="og:site_name" content="{{ global.siteName }}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ page.url | absoluteUrl }}">
-<meta property="og:image" content="{{ '/assets/images/share.jpg' | absoluteUrl }}">
-<meta property="og:description" content="{{ pageDescription }}">
-<meta property="og:locale" content="en_US">
-
-{% if global.twitterHandle %}
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ pageTitle }}">
-  <meta name="twitter:site" content="{{ global.twitterHandle }}">
-  <meta name="twitter:url" content="{{ page.url | absoluteUrl }}">
-  <meta name="twitter:description" content="{{ pageDescription }}">
-  <meta name="twitter:image" content="{{ '/assets/images/share.jpg' | absoluteUrl }}">
-{% endif %}
-
-{% if 'p-home' in pageBodyClasses %}
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "email": "hello@bymattlee.com",
-      "image": "{{ '/assets/images/headshot.jpg' | absoluteUrl }}",
-      "jobTitle": "Freelance Creative Developer",
-      "name": "Matt Lee",
-      "gender": "male",
-      "url": "http://bymattlee.com",
-      "sameAs": [ 
-        "https://www.facebook.com/bymattlee",
-        "https://twitter.com/bymattlee",
-        "https://www.instagram.com/bymattlee",
-        "https://www.linkedin.com/in/bymattlee",
-        "https://github.com/bymattlee"
-      ]
-    }
-  </script>
-{% endif %}
+{% include 'partials/global/meta.njk' %}
 
 <link rel="canonical" href="{{ page.url | absoluteUrl }}">
 
 <link rel="stylesheet" href="{{ '/assets/css/main.min.css' | absoluteUrl | cacheBust }}">
 
-{% if global.googleAnalyticsId and isProduction %}
+{% if global.googleAnalyticsId and global.env == 'production' %}
   <script async src="//www.googletagmanager.com/gtag/js?id={{ global.googleAnalyticsId }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -66,7 +20,7 @@
 
 </head>
 
-<body class="js-body {{ pageBodyClasses }}">
+<body class="js-body {{ bodyClasses }}">
 
 {{ content | safe }}
 
