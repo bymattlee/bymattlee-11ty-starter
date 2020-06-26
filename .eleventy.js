@@ -17,9 +17,7 @@ const articles = require('./eleventy/collections/articles.js');
 module.exports = function(config) {
 
   // If prod or stage, minify the html
-  if (process.env.NODE_ENV !== 'development') {
-    config.addTransform('minifyHtml', minifyHtml);
-  }
+  if (process.env.NODE_ENV !== 'development') config.addTransform('minifyHtml', minifyHtml);
 
   // Add header credit to html
   config.addTransform('addHeaderCredit', addHeaderCredit);
