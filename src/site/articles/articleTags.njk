@@ -7,11 +7,11 @@ pagination:
   alias: tag
 permalink: /articles/tags/{{ tag }}/
 eleventyComputed:
-	title: Articles tagged with "{{ tag }}"
+  title: Articles tagged with "{{ tag }}"
 ---
 
 <div>
-  {% for article in collections[tag] %}
+  {% for article in collections[tag] | reverse %}
     {% include 'partials/articles/preview.njk' %}
   {% endfor %}
 </div>

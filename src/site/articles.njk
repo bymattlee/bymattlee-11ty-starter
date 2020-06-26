@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Articles
 bodyClasses: p-articles
 pagination:
   data: collections.articles
   size: 3
 permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
+eleventyComputed:
+  title: Articles {% if pagination.pageNumber > 0 %}(Page {{ pagination.pageNumber + 1 }} of {{ pagination.hrefs | length }}){% endif %}
 ---
 
 <div>
@@ -14,11 +15,14 @@ permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
   {% endfor %}
 </div>
 
-<div class="u-mt40 u-mt40-md">
-	{% if pagination.href.previous %}
-		<a href="{{ pagination.href.previous | absoluteUrl }}">&laquo; Previous Page</a>
-	{% endif %}
-	{% if pagination.href.next %}
-		<a href="{{ pagination.href.next | absoluteUrl }}">Next Page &raquo;</a>
-	{% endif %}
-</div>
+{% if pagination.href.previous or pagination.href.next %}
+  <div class="u-mt40 u-mt40-md">
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous | absoluteUrl }}">&laquo; Previous Page</a>
+    {% endif %}
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next | absoluteUrl }}">Next Page &raquo;</a>
+    {% endif %}
+  </div>
+{% endif %}
+  
