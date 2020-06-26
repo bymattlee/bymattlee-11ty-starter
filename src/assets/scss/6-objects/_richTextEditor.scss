@@ -1,0 +1,54 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Objects/Rich Text Editor Styles
+** ***** ----------------------------------------------- ***** */
+
+.o-richTextEditor {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: get-size(10);
+    @include mq('md') {
+      margin-bottom: get-size(10, tue);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  * + h1,
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h5,
+  * + h6 {
+    margin-top: get-size(30);
+    @include mq('md') {
+      margin-top: get-size(30, true);
+    }
+  }
+
+  p {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .o-embed {
+    margin: get-size(30) 0;
+    @include mq('sm') {
+      margin: get-size(30, true) 0;
+    }
+  }
+}
