@@ -3,10 +3,13 @@ layout: default
 title: Home
 bodyClasses: p-home
 metaTitle: ByMattLee | Freelance Creative Developer
+pagination:
+  data: collections.articles
+  size: 3
+  alias: latestArticles
 ---
 
 <div class="l-container">
-  <h2>Welcome</h2>
-  <p>Penatibus ultricies massa massa, ultricies auctor, nunc nisi elit! Lectus elementum vel augue elit adipiscing platea. Nunc adipiscing scelerisque a. Pellentesque nunc? Porta quis porta turpis, elit porta natoque velit?</p>
-  <p><a href="{{ '/about/' | absoluteUrl }}" class="o-button">&raquo; Go To About</a></p>
+  {% include 'partials/home/welcome.njk' %}
+  {% include 'partials/home/latest-articles.njk' %}
 </div>

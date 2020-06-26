@@ -19,7 +19,7 @@ ol {
   li {
     margin: get-size(20) 0;
     @include mq('md') {
-      margin: get-size(30, true) 0;
+      margin: get-size(20, true) 0;
     }
   }
 

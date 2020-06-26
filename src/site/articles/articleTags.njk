@@ -1,0 +1,17 @@
+---
+layout: page
+bodyClasses: p-articleTags
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /articles/tags/{{ tag }}/
+eleventyComputed:
+	title: Articles tagged with "{{ tag }}"
+---
+
+<div>
+  {% for article in collections[tag] %}
+    {% include 'partials/articles/preview.njk' %}
+  {% endfor %}
+</div>

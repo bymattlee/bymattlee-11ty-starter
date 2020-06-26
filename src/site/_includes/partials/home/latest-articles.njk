@@ -1,0 +1,13 @@
+<div class="u-mt60 u-mt60-md">
+  <h2>Latest Articles</h2>
+  <div class="u-mt-20 u-mt-20-md">
+    {% if collections.articles %}
+      {% for article in latestArticles %}
+        {% include 'partials/articles/preview.njk' %}
+      {% endfor %}
+    {% else %}
+      <p>No articles have been written.</p>
+    {% endif %}
+  </div>
+  <p class="u-mt40 u-mt40-md"><a href="{{ '/articles/' | absoluteUrl }}">&raquo; View All Articles</a></p>
+</div>

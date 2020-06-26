@@ -5,6 +5,11 @@ module.exports = [
     external: false
   },
   {
+    title: 'Articles',
+    url: '/articles/',
+    external: false
+  },
+  {
     title: 'About',
     url: '/about/',
     external: false

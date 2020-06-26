@@ -36,9 +36,9 @@ h3 {
 }
 
 h4 {
-  font-size: get-font-size(36);
+  font-size: get-font-size(18);
   @include mq('md') {
-    font-size: get-font-size(48, true);
+    font-size: get-font-size(24, true);
   }
 }
 

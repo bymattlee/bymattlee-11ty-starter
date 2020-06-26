@@ -1,0 +1,24 @@
+<article class="u-mt40 u-mt40-md">
+
+  {% if article.data.title %}
+    <h4><a href="{{ article.url | absoluteUrl }}">{{ article.data.title }}</a></h4>
+  {% endif %}
+
+  <p class="u-my0"><time datetime="{{ article.date | htmlDate }}">{{ article.date | readableDate }}</time></p>
+
+  {% if article.data.tags %}
+    <p class="u-my0">
+      Tags:
+      {% for tag in article.data.tags %}
+        {% set tagUrl %}/articles/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | absoluteUrl }}">{{ tag }}</a>
+        {%- if loop.last == false -%}, {%- endif -%}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {% if article.data.excerpt %}
+    <p class="u-mt20 u-mt20-md">{{ article.data.excerpt }}</p>
+  {% endif %}
+
+</article>

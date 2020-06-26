@@ -1,14 +1,8 @@
 ---
-layout: base
+layout: default
 ---
 
-{% include 'partials/global/header.njk' %}
-
-<main class="u-flex1" role="main">
-	<div class="l-container">
-	  <h3>{{ title }}</h3>
-	  {{ content | safe }}
-	</div>
-</main>
-
-{% include 'partials/global/footer.njk' %}
+<div class="l-container">
+  <h3>{{ title }}</h3>
+  {{ content | safe }}
+</div>

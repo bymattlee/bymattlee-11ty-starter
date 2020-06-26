@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="l-container">
+	<article>
+
+	  {% if title %}
+	    <h3>{{ title }}</h3>
+	  {% endif %}
+
+	  <p class="u-my0"><time datetime="{{ page.date | htmlDate }}">{{ page.date | readableDate }}</time></p>
+
+	  {% if tags %}
+	    <p class="u-my0">
+	      Tags:
+	      {% for tag in tags %}
+	        {% set tagUrl %}/articles/tags/{{ tag }}/{% endset %}
+	        <a href="{{ tagUrl | absoluteUrl }}">{{ tag }}</a>
+	        {%- if loop.last == false -%}, {%- endif -%}
+	      {% endfor %}
+	    </p>
+	  {% endif %}
+
+	  {% if content %}
+	  	<div>
+	    	{{ content | safe }}
+	    </div>
+	  {% endif %}
+
+	</article>
+  <div class="u-mt40 u-mt40-md">
+  	<a href="{{ '/articles/' | absoluteUrl }}">&raquo; Go Back To Articles</a>
+  </div>
+</div>
+
+{{ page }}
