@@ -1,10 +1,18 @@
-import minifyHtml from './eleventy/utilities/minifyHtml.js';
-import addHeaderCredit from './eleventy/utilities/addHeaderCredit.js';
-import absoluteUrl from './eleventy/filters/absoluteUrl.js';
-import cacheBust from './eleventy/filters/cacheBust.js';
-import htmlDate from './eleventy/filters/htmlDate.js';
-import readableDate from './eleventy/filters/readableDate.js';
-import articles from './eleventy/collections/articles.js';
+// Import transforms
+const minifyHtml = require('./eleventy/transforms/minifyHtml.js');
+const addHeaderCredit = require('./eleventy/transforms/addHeaderCredit.js');
+
+//Import filters
+const absoluteUrl = require('./eleventy/filters/absoluteUrl.js');
+const cacheBust = require('./eleventy/filters/cacheBust.js');
+const htmlDate = require('./eleventy/filters/htmlDate.js');
+const readableDate = require('./eleventy/filters/readableDate.js');
+
+// Import Shortcodes
+const isSamePageOrSection = require('./eleventy/shortcodes/isSamePageOrSection.js');
+
+// Import collections
+const articles = require('./eleventy/collections/articles.js');
 
 module.exports = function(config) {
 
@@ -21,6 +29,9 @@ module.exports = function(config) {
   config.addFilter('cacheBust', cacheBust);
   config.addFilter('htmlDate', htmlDate);
   config.addFilter('readableDate', readableDate);
+
+  // Shortcodes
+  config.addShortcode('isSamePageOrSection', isSamePageOrSection);
 
   // Collections
   config.addCollection('articles', articles);

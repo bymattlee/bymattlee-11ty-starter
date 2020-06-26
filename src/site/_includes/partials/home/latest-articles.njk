@@ -2,8 +2,10 @@
   <h2>Latest Articles</h2>
   <div class="u-mt-20 u-mt-20-md">
     {% if collections.articles %}
-      {% for article in latestArticles %}
-        {% include 'partials/articles/preview.njk' %}
+      {% for article in collections.articles %}
+        {% if loop.index < 4 %}
+          {% include 'partials/articles/preview.njk' %}
+        {% endif %}
       {% endfor %}
     {% else %}
       <p>No articles have been written.</p>

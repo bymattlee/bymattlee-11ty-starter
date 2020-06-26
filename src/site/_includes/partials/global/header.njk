@@ -13,7 +13,7 @@
         <ul class="u-unstyled u-m0">
           {% for navItem in navigation %}
             <li class="u-inlineBlock{% if loop.index > 1 %} u-ml20 u-ml20-md{% endif %}">
-              <a href="{{ navItem.url | absoluteUrl }}" class="u-inlineBlock{% if navItem.url == page.url %} u-white{% endif %}"{% if navItem.external %} target="_blank"{% endif %}>{{ navItem.title }}</a>
+              <a href="{{ navItem.url | absoluteUrl }}" class="u-inlineBlock{% isSamePageOrSection navItem.url, page.url, ' u-white' %}"{% if navItem.external %} target="_blank"{% endif %}>{{ navItem.title }}</a>
             </li>
           {% endfor %}
         </ul>
