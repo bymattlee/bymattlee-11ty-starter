@@ -21,7 +21,7 @@ layout: default
         {% for tag in tags %}
           {% set tagUrl %}/articles/tags/{{ tag }}/{% endset %}
           <a href="{{ tagUrl | absoluteUrl }}">{{ tag }}</a>
-          {%- if loop.last == false -%}, {%- endif -%}
+          {%- if not loop.last -%}, {%- endif -%}
         {% endfor %}
       </p>
     {% endif %}

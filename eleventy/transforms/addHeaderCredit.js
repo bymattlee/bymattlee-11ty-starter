@@ -23,5 +23,8 @@ const markupHeader = [
 ];
 
 module.exports = function(content, outputPath) {
-  return markupHeader.join('\n') + content;
+  if (outputPath.endsWith('.html')) {
+    return markupHeader.join('\n') + content;
+  }
+  return content;
 }

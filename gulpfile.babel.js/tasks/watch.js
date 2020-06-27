@@ -5,7 +5,7 @@
 import browserSync from 'browser-sync';
 import browserSyncTask from './browserSync.js';
 import config from '../config';
-import { copyAssets } from './copy.js';
+import copy from './copy.js';
 import gulp from 'gulp';
 import eleventy from './eleventy.js';
 import images from './images.js';
@@ -24,7 +24,7 @@ const watchChanges = () => {
   gulp.watch(config.scripts.watchSrc, scriptsWatch);
   gulp.watch(config.images.optimizeSrc, gulp.series(images)).on('change', browserSync.reload);
   gulp.watch(config.svgs.src, gulp.series(svgs)).on('change', browserSync.reload);
-  gulp.watch(config.copy.assetsSrc, gulp.series(copyAssets)).on('change', browserSync.reload);
+  gulp.watch(config.copy.assetsSrc, gulp.series(copy)).on('change', browserSync.reload);
 }
 
 const watchInit = gulp.parallel(browserSyncTask, watchChanges);

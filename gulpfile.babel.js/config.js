@@ -78,26 +78,13 @@ module.exports = {
       '!' + srcAssets + '/svgs/*.svg',
       '!' + srcAssets + '/vendors/**/*'
     ],
-    assetsDest: destAssets,
-    htaccessSrc: src + '/.htaccess',
-    htaccessDest: dest
+    assetsDest: destAssets
   },
   clean: {
     dest:  dest
   },
   browserSync: {
     server: './' + dest
-  },
-  sitemap: {
-    src: dest + '/**/*.html',
-    dest: dest
-  },
-  robots: {
-    src: dest + '/index.html',
-    dest: dest,
-    useragent: '*',
-    allow: '/',
-    disallow: ''
   },
   favicons: {
     faviconSrc: srcAssets + '/favicons/favicon.png',
