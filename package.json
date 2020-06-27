@@ -61,6 +61,7 @@
     "gulp-uglify": "^3.0.2",
     "html-minifier": "^4.0.0",
     "imagemin-jpeg-recompress": "^7.0.0",
+    "jsdom": "^16.2.2",
     "luxon": "^1.24.1",
     "path": "^0.12.7",
     "postcss-reporter": "^6.0.1",

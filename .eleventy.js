@@ -1,4 +1,5 @@
 // Import transforms
+const parseContent = require('./eleventy/transforms/parseContent.js');
 const minifyHtml = require('./eleventy/transforms/minifyHtml.js');
 const addHeaderCredit = require('./eleventy/transforms/addHeaderCredit.js');
 
@@ -16,11 +17,11 @@ const articles = require('./eleventy/collections/articles.js');
 
 module.exports = function(config) {
 
-  // If prod or stage, minify the html
+  // Transforms
+  config.addTransform('parseContent', parseContent);
   if (process.env.NODE_ENV !== 'development') config.addTransform('minifyHtml', minifyHtml);
-
-  // Add header credit to html
   config.addTransform('addHeaderCredit', addHeaderCredit);
+
 
   // Filters
   config.addFilter('absoluteUrl', absoluteUrl);
