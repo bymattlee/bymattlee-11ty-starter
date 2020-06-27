@@ -5,6 +5,10 @@ layout: default
 <div class="l-container">
   <article>
 
+    {% if featuredImage %}
+      <p><img data-src="{{ featuredImage | absoluteUrl }}" class="lazyload"></p>
+    {% endif %}
+
     {% if title %}
       <h3>{{ title }}</h3>
     {% endif %}

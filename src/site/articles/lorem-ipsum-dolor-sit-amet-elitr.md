@@ -1,6 +1,7 @@
 ---
-title: Lorem ipsum dolor sit amet
+title: Lorem ipsum dolor sit amet elitr
 excerpt: Stet clita kasd gubergren, no sea takimata sanctus est.
+featuredImage: /assets/images/featuredImage.jpg
 tags:
  - funk
  - pop
