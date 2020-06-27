@@ -1,3 +1,7 @@
+/* ***** ----------------------------------------------- ***** **
+/* ***** Eleventy Config
+/* ***** ----------------------------------------------- ***** */
+
 // Import transforms
 const parseContent = require('./eleventy/transforms/parseContent.js');
 const minifyHtml = require('./eleventy/transforms/minifyHtml.js');

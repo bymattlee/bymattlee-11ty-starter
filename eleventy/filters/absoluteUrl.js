@@ -1,3 +1,7 @@
+/* ***** ----------------------------------------------- ***** **
+/* ***** Absolute URL Filter
+/* ***** ----------------------------------------------- ***** */
+
 const envUrls = require('../../envUrls.js');
 const homeUrl = envUrls[process.env.NODE_ENV];
 

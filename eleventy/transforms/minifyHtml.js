@@ -1,3 +1,7 @@
+/* ***** ----------------------------------------------- ***** **
+/* ***** Minify HTML Transform
+/* ***** ----------------------------------------------- ***** */
+
 const htmlmin = require('html-minifier');
 
 module.exports = function(content, outputPath) {
