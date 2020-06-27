@@ -26,7 +26,6 @@ module.exports = function(config) {
   if (process.env.NODE_ENV !== 'development') config.addTransform('minifyHtml', minifyHtml);
   config.addTransform('addHeaderCredit', addHeaderCredit);
 
-
   // Filters
   config.addFilter('absoluteUrl', absoluteUrl);
   config.addFilter('cacheBust', cacheBust);
