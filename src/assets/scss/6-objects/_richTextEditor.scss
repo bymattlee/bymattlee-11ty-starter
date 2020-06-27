@@ -11,7 +11,7 @@
   h6 {
     margin-bottom: get-size(10);
     @include mq('md') {
-      margin-bottom: get-size(10, tue);
+      margin-bottom: get-size(10, true);
     }
 
     &:first-child {
