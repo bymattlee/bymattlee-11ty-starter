@@ -1,5 +1,5 @@
 module.exports = collection => {
-	const articles = collection.getFilteredByGlob('./src/site/articles/*.md').reverse();
+  const articles = collection.getFilteredByGlob('./src/site/articles/*.md').reverse();
 
   // Include previous and next article objects for detail pagination
   for (let i = 0; i < articles.length; i++) {

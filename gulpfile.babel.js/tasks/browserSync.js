@@ -10,7 +10,7 @@ import config from '../config';
 ** -- Use directory specified in config as the root for the server
 */
 const browserSyncTask = () => {
-	browserSync.init({
+  browserSync.init({
     server: config.browserSync.server
   });
 }

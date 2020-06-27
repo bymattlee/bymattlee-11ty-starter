@@ -3,7 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 const preventSwipe = (element) => {
-	element.addEventListener('touchmove', e => {
+  element.addEventListener('touchmove', e => {
     e.preventDefault();
   });
 }
