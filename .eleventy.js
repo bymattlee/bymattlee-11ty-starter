@@ -3,7 +3,7 @@ const parseContent = require('./eleventy/transforms/parseContent.js');
 const minifyHtml = require('./eleventy/transforms/minifyHtml.js');
 const addHeaderCredit = require('./eleventy/transforms/addHeaderCredit.js');
 
-//Import filters
+// Import filters
 const absoluteUrl = require('./eleventy/filters/absoluteUrl.js');
 const cacheBust = require('./eleventy/filters/cacheBust.js');
 const htmlDate = require('./eleventy/filters/htmlDate.js');
