@@ -12,8 +12,10 @@ const absoluteUrl = require('./eleventy/filters/absoluteUrl.js');
 const cacheBust = require('./eleventy/filters/cacheBust.js');
 const htmlDate = require('./eleventy/filters/htmlDate.js');
 const readableDate = require('./eleventy/filters/readableDate.js');
+const rssLastUpdatedDate = require('./eleventy/filters/rssLastUpdatedDate.js');
+const rssDate = require('./eleventy/filters/rssDate.js');
 
-// Import Shortcodes
+// Import shortcodes
 const isSamePageOrSection = require('./eleventy/shortcodes/isSamePageOrSection.js');
 
 // Import collections
@@ -31,6 +33,8 @@ module.exports = function(config) {
   config.addFilter('cacheBust', cacheBust);
   config.addFilter('htmlDate', htmlDate);
   config.addFilter('readableDate', readableDate);
+  config.addFilter('rssLastUpdatedDate', rssLastUpdatedDate);
+  config.addFilter('rssDate', rssDate);
 
   // Shortcodes
   config.addShortcode('isSamePageOrSection', isSamePageOrSection);
