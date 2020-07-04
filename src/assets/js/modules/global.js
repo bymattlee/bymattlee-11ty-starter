@@ -7,7 +7,7 @@ import 'lazysizes';
 import 'lazysizes/plugins/bgset/ls.bgset';
 import objectFitImages from 'object-fit-images';
 import 'svgxuse';
-import iNoBounce from 'iNoBounce';
+import iNoBounce from 'inobounce';
 import { displaySiteAlert } from '../utilities/display.js';
 
 // Display message for user to upgrade if browser does not support flexbox
