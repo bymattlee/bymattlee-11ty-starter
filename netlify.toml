@@ -1,3 +1,8 @@
 [build]
   command = "npm run prod"
   publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404
