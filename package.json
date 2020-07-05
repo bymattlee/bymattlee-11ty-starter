@@ -9,7 +9,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
-    "start": "npm run dev",
+    "start": "yarn dev",
     "dev": "NODE_ENV=development gulp",
     "stage": "NODE_ENV=staging gulp build",
     "prod": "NODE_ENV=production gulp build"

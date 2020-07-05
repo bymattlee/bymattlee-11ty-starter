@@ -4,26 +4,29 @@
 A starter boilerplate that includes Eleventy as the static site generator and Gulp as the build tool for asset optimization.
 
 ## Installation
-##### 1. Install Node: <https://nodejs.org/en/>
-##### 2. Install all dependencies
+##### 1. Install Node >=12.0.0: <https://nodejs.org/>
+##### 2. Install Yarn: <https://yarnpkg.com/>
+##### 3. Install all dependencies
 ```
-$ npm install
+$ yarn
 ```
-##### 3. Update Environment URLs
+
+## Configuration
+##### Update Environment URLs
 In `envUrls.js`, enter in the development, staging and production URLs for project compilation.
 
 ## Use
 ##### Build Files For Development And Initialize Watch
 ```
-$ npm run dev
+$ yarn dev
 ```
 ##### Build Files For Staging
 ```
-$ npm run stage
+$ yarn stage
 ```
 ##### Build Files For Production
 ```
-$ npm run prod
+$ yarn prod
 ```
 
 ## General Features
@@ -56,7 +59,7 @@ $ npm run prod
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
 * `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules and will be compiled to `dist/assets/js/main.min.js`
 * All local modules should be placed in `src/assets/js/modules`
-* All vendor JS can be manually added to `src/assets/js/vendors` if not found on NPM
+* All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn
 * `.eslintrc` contains the settings for ESLint
 
 ##### Images
