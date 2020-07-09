@@ -1,21 +1,4 @@
 {#
-  SVG Sprite Usage
-  --
-  Filename: icon-bymattlee
-  Viewbox: 0 0 50 50
-  Classes: c-header-logo_svg
-
-  Markup: {{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logo_svg') | trim }}
-#}
-
-{% macro svg(filename, viewbox, classes) %}
-  <svg viewBox="{{ viewbox }}" aria-hidden="true"{% if classes %} class="{{ classes }}"{% endif %}>
-    <use xlink:href="{{ '' | absoluteUrl }}/assets/svgs/sprite.svg#{{ filename }}"></use>
-  </svg>
-{% endmacro %}
-
-
-{#
   Responsive Background Image Usage
   --
   Image filename: image.jpg
@@ -32,15 +15,4 @@
   {% for size in sizes %}
     {{ '' | absoluteUrl }}/assets/images/{{ baseFileName }}-{{ size }}.{{ extension }} {{ size }}{% if not loop.last %}, {% endif %}
   {% endfor %}
-{% endmacro %}
-
-
-{#
-  Image Usage
-  --
-  Image filename: image.jpg
-  Markup: <img class="lazyload" data-src="{{ macro.imgSrc('image', 'jpg') | trim | striptags(false) }}">
-#}
-{% macro imgSrc(fileName, extension) %}
-  {{ '' | absoluteUrl }}/assets/images/{{ fileName }}.{{ extension }}
 {% endmacro %}

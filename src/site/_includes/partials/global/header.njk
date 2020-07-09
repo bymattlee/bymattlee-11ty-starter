@@ -1,10 +1,8 @@
-{% import "macros/macros.njk" as macro %}
-
 <header class="c-header u-mb30 u-mb30-md" role="banner">
   <div class="l-container">
     <h1>
       <a href="{{ '/' | absoluteUrl }}">
-        {{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block') | trim }}
+        {% svg 'icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block' %}
         {{ settings.seo.siteName }}
       </a>
     </h1>
