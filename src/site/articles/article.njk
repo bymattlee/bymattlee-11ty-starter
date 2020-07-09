@@ -1,0 +1,61 @@
+---
+layout: default
+bodyClasses: p-article
+pagination:
+  data: articles.all
+  size: 1
+  alias: article
+permalink: /articles/{{ article.slug }}/
+eleventyComputed:
+  title: "{{ article.title }}"
+  metaTitle: "{{ article.articleMetaData.pageTitle }}"
+  metaDescription: "{{ article.articleMetaData.pageDescription }}"
+  metaShareImage: "{% imageUrl article.articleMetaData.pageShareImage %}"
+---
+
+<div class="l-container">
+  <article>
+
+    {% if article.featuredImage %}
+      <p><img data-src="{% imageUrl article.featuredImage %}" class="lazyload"></p>
+    {% endif %}
+
+    {% if article.title %}
+      <h3>{{ article.title }}</h3>
+    {% endif %}
+
+    <p class="u-my0"><time datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time></p>
+
+    {% if article.categories %}
+      <p class="u-my0">
+        Categories:
+        {% for category in article.categories %}
+          <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
+          {%- if not loop.last -%}, {%- endif -%}
+        {% endfor %}
+      </p>
+    {% endif %}
+
+    {% if article.mainContent %}
+      <div class="o-richTextEditor u-mt30 u-mt30-md">
+        {{ article.mainContent | blocksToHtml | safe }}
+      </div>
+    {% endif %}
+
+  </article>
+
+  {% if article.previousArticle or article.nextArticle %}
+    <div class="u-mt40 u-mt40-md">
+      {% if article.previousArticle %}
+        <a href="{{ article.previousArticle.slug | articleUrl }}">&laquo; Previous Article</a>
+      {% endif %}
+      {% if article.nextArticle %}
+        <a href="{{ article.nextArticle.slug | articleUrl }}">Next Article &raquo;</a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="u-mt40 u-mt40-md">
+    <a href="{{ '/articles/' | absoluteUrl }}">&raquo; Go Back To Articles</a>
+  </div>
+</div>

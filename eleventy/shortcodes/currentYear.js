@@ -1,9 +1,9 @@
 /* ***** ----------------------------------------------- ***** **
-/* ***** HTML Date Filter
+/* ***** Current Year Shortcode
 /* ***** ----------------------------------------------- ***** */
 
 const { DateTime } = require('luxon');
 
-module.exports = isoDate => {
-  return DateTime.fromISO(isoDate).toFormat('yyyy-LL-dd');
+module.exports = () => {
+  return DateTime.local().toFormat('yyyy');
 }

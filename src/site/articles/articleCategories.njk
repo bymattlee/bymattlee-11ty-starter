@@ -1,0 +1,19 @@
+---
+layout: page
+bodyClasses: p-articleCategory
+pagination:
+  data: articles.categories
+  size: 1
+  alias: category
+permalink: /articles/category/{{ category.slug }}/
+eleventyComputed:
+  title: "'{{ category.title }}' Articles"
+  pageDescription: "{{ category.description }}"
+excludeFromSitemap: true
+---
+
+<div>
+  {% for article in category.articles | reverse %}
+    {% include 'partials/articles/preview.njk' %}
+  {% endfor %}
+</div>

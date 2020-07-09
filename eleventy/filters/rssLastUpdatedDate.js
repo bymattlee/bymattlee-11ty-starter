@@ -10,5 +10,5 @@ module.exports = collection => {
   }
 
   // Newest date in the collection
-  return DateTime.fromJSDate(new Date(Math.max(...collection.map(item => {return item.date})))).toISO();
+  return collection[0].publishedAt;
 }

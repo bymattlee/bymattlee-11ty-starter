@@ -12,8 +12,7 @@ $ yarn
 ```
 
 ## Configuration
-##### Update Environment URLs
-In `envUrls.js`, enter in the development, staging and production URLs for project compilation.
+In `config.js`, update Sanity options and environment URLs for project compilation.
 
 ## Use
 ##### Build Files For Development And Initialize Watch
@@ -68,13 +67,6 @@ $ yarn prod
 * Responsive images will be generated at the following widths: 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
 * See `src/site/_includes/marcos/marco.njk` for usage information
 * Site preview image (`share.jpg`) is included
-
-##### Favicons
-* Creates favicons, touch icons, associated files and generates relevant markup that is included in the head
-* Place source favicon in `src/assets/favicons` as `favicon.png`
-* Place source touch icon in `src/assets/favicons` as `touch-icon.png`
-* Favicons, touch icons and associated files are generated to the `dist/assets/favicons` directory
-* Markup is generated to `src/site/_includes/partials/global/favicons.njk`
 
 ##### SVGS
 * Place all SVG files in the `src/assets/svg` directory

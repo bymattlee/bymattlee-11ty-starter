@@ -5,7 +5,11 @@ layout: base
 {% include 'partials/global/header.njk' %}
 
 <main class="u-flex1" role="main">
-  {{ content | safe }}
+  {% if thisPage.pageSections %}
+    {% include 'partials/pages/pageSections.njk' %}
+  {% else %}
+    {{ content | safe }}
+  {% endif %}
 </main>
 
 {% include 'partials/global/footer.njk' %}

@@ -14,12 +14,14 @@ const htmlDate = require('./eleventy/filters/htmlDate.js');
 const readableDate = require('./eleventy/filters/readableDate.js');
 const rssLastUpdatedDate = require('./eleventy/filters/rssLastUpdatedDate.js');
 const rssDate = require('./eleventy/filters/rssDate.js');
+const articleUrl = require('./eleventy/filters/articleUrl.js');
+const articleCategoryUrl = require('./eleventy/filters/articleCategoryUrl.js');
+const blocksToHtml = require('./eleventy/filters/blocksToHtml.js');
 
 // Import shortcodes
+const imageUrl = require('./eleventy/shortcodes/imageUrl.js');
 const isSamePageOrSection = require('./eleventy/shortcodes/isSamePageOrSection.js');
-
-// Import collections
-const articles = require('./eleventy/collections/articles.js');
+const currentYear = require('./eleventy/shortcodes/currentYear.js');
 
 module.exports = function(config) {
 
@@ -35,12 +37,14 @@ module.exports = function(config) {
   config.addFilter('readableDate', readableDate);
   config.addFilter('rssLastUpdatedDate', rssLastUpdatedDate);
   config.addFilter('rssDate', rssDate);
+  config.addFilter('articleUrl', articleUrl);
+  config.addFilter('articleCategoryUrl', articleCategoryUrl);
+  config.addFilter('blocksToHtml', blocksToHtml);
 
   // Shortcodes
+  config.addShortcode('imageUrl', imageUrl);
   config.addShortcode('isSamePageOrSection', isSamePageOrSection);
-
-  // Collections
-  config.addCollection('articles', articles);
+  config.addShortcode('currentYear', currentYear);
 
   // Layout aliases
   config.addLayoutAlias('base', 'layouts/base.njk')

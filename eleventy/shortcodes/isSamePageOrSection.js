@@ -2,7 +2,7 @@
 /* ***** Same Page Or Section Check Shortcode
 /* ***** ----------------------------------------------- ***** */
 
-module.exports = function(currentItem, currentUrl, className) {
+module.exports = (currentItem, currentUrl, className) => {
 
   /*
   ** Check if user is on the same page as current nav item

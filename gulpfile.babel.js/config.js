@@ -85,27 +85,5 @@ module.exports = {
   },
   browserSync: {
     server: './' + dest
-  },
-  favicons: {
-    faviconSrc: srcAssets + '/favicons/favicon.png',
-    touchIconSrc: srcAssets + '/favicons/touchIcon.png',
-    dest: destAssets + '/favicons',
-    appName: 'ByMattLee',
-    appDescription: 'ByMattLee Web Starter Files',
-    developerName: 'Matt Lee',
-    developerURL: 'http://bymattlee.com',
-    background: '#212121',
-    path: '/assets/favicons',
-    display: 'browser',
-    orientation: 'portrait',
-    version: '1.0',
-    faviconHtmlPath: '../../../src/site/_includes/partials/global/favicons.html',
-    touchIconHtmlPath: '../../../src/site/_includes/partials/global/touch-icons.html',
-    concatHtmlSrc: [
-      src + '/site/_includes/partials/global/favicons.html',
-      src + '/site/_includes/partials/global/touch-icons.html'
-    ],
-    concatHtmlFilename: 'favicons.njk',
-    concatHtmlDest: src + '/site/_includes/partials/global'
   }
 };

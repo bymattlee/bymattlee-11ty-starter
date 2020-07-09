@@ -5,8 +5,7 @@
 import clean from './clean.js';
 import copy from './copy.js';
 import gulp from 'gulp';
-import eleventy from './eleventy.js';
-import favicons from './favicons.js';
+import { eleventyBuild } from './eleventy.js';
 import images from './images.js';
 import { scriptsBuild } from './scripts.js';
 import styles from './styles.js';
@@ -18,8 +17,7 @@ import svgs from './svgs.js';
 */
 const build = gulp.series(
   clean,
-  favicons,
-  gulp.parallel(eleventy, scriptsBuild, images, svgs, copy),
+  gulp.parallel(eleventyBuild, scriptsBuild, images, svgs, copy),
   styles
 );
 

@@ -5,15 +5,15 @@
     <h1>
       <a href="{{ '/' | absoluteUrl }}">
         {{ macro.svg('icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block') | trim }}
-        ByMattLee Web Starter Files
+        {{ settings.seo.siteName }}
       </a>
     </h1>
-    {% if navigation %}
+    {% if sections.header.menu %}
       <nav>
         <ul class="u-unstyled u-m0">
-          {% for navItem in navigation %}
+          {% for menuItem in sections.header.menu %}
             <li class="u-inlineBlock{% if loop.index > 1 %} u-ml20 u-ml20-md{% endif %}">
-              <a href="{{ navItem.url | absoluteUrl }}" class="u-inlineBlock{% isSamePageOrSection navItem.url, page.url, ' u-white' %}"{% if navItem.external %} target="_blank"{% endif %}>{{ navItem.title }}</a>
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineBlock{% isSamePageOrSection menuItem.url, page.url, ' u-white' %}"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>

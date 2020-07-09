@@ -1,0 +1,9 @@
+{% for pageSection in thisPage.pageSections %}
+  {% if not pageSection.disabled %}
+    {% if pageSection._type == 'richTextSection' %}
+      {% include 'partials/pages/richTextSection.njk' %}
+    {% elseif pageSection._type == 'latestArticlesSection' %}
+      {% include 'partials/pages/latestArticles.njk' %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

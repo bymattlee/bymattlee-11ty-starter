@@ -1,15 +1,27 @@
 ---
 permalink: sitemap.xml
-excludeFromSitemap: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for page in collections.all %}
-  {%- if not page.data.excludeFromSitemap %}
+  {%- if pages %}
+    {%- for page in pages %}
       <url>
-          <loc>{{ page.url | absoluteUrl }}</loc>
-          <lastmod>{{ page.date | htmlDate }}</lastmod>
+          {% set pageSlug %}{% if page.slug == 'index' %}/{% else %}/{{ page.slug }}/{% endif %}{% endset %}
+          <loc>{{ pageSlug | absoluteUrl }}</loc>
+          <lastmod>{{ page.updatedAt | htmlDate }}</lastmod>
       </url>
+    {%- endfor %}
   {%- endif %}
-{%- endfor %}
+  {%- if articles.all %}
+    <url>
+        <loc>{{ '/articles/' | absoluteUrl }}</loc>
+        <lastmod>{{ articles.all | rssLastUpdatedDate | htmlDate }}</lastmod>
+    </url>
+    {%- for article in articles.all %}
+      <url>
+          <loc>{{ article.slug | articleUrl }}</loc>
+          <lastmod>{{ article.publishedAt | htmlDate }}</lastmod>
+      </url>
+    {%- endfor %}
+  {%- endif %}
 </urlset>

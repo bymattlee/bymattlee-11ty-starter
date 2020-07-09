@@ -2,7 +2,7 @@
 layout: page
 bodyClasses: p-articles
 pagination:
-  data: collections.articles
+  data: articles.all
   size: 3
 permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
 eleventyComputed:

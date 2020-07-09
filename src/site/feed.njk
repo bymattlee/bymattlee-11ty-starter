@@ -1,28 +1,27 @@
 ---
 permalink: feed.xml
-excludeFromSitemap: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ global.siteName }}</title>
-  <subtitle>{{ globalsiteDescription }}</subtitle>
+  <title>{{ settings.seo.siteName }}</title>
+  <subtitle>{{ settings.seo.siteDescription }}</subtitle>
   <link href="{{ '/feed.xml' | absoluteUrl }}" rel="self"/>
   <link href="{{ '/' | absoluteUrl }}"/>
-  {% if collections.articles|length %}
-    <updated>{{ collections.articles | rssLastUpdatedDate }}</updated>
+  {% if articles.all %}
+    <updated>{{ articles.all | rssLastUpdatedDate }}</updated>
   {% endif %}
   <id>{{ '/' | absoluteUrl }}</id>
   <author>
-    <name>{{ global.siteName }}</name>
+    <name>{{ settings.seo.siteName }}</name>
   </author>
-  {%- for article in collections.articles %}
+  {%- for article in articles.all %}
     <entry>
-      <title>{{ article.data.title }}</title>
-      <link href="{{ article.url | absoluteUrl }}"/>
-      <updated>{{ article.date | rssDate }}</updated>
-      <id>{{ article.url | absoluteUrl }}</id>
+      <title>{{ article.title }}</title>
+      <link href="{{ article.slug | articleUrl }}"/>
+      <updated>{{ article.publishedAt | rssDate }}</updated>
+      <id>{{ article.slug | articleUrl }}</id>
       <content type="html"><![CDATA[
-        {{ article.templateContent | safe }}
+        {{ article.mainContent | blocksToHtml | safe }}
       ]]></content>
     </entry>
   {%- endfor %}

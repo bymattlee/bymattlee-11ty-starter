@@ -5,7 +5,7 @@
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
-module.exports = function(content, outputPath) {
+module.exports = (content, outputPath) => {
   if (outputPath.endsWith('.html')) {
     const DOM = new JSDOM(content);
     const document = DOM.window.document;

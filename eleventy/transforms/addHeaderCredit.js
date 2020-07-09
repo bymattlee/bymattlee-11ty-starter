@@ -22,7 +22,7 @@ const markupHeader = [
   '-->\n'
 ];
 
-module.exports = function(content, outputPath) {
+module.exports = (content, outputPath) => {
   if (outputPath.endsWith('.html')) {
     return markupHeader.join('\n') + content;
   }

@@ -7,7 +7,7 @@ import browserSyncTask from './browserSync.js';
 import config from '../config';
 import copy from './copy.js';
 import gulp from 'gulp';
-import eleventy from './eleventy.js';
+import { eleventyWatch } from './eleventy.js';
 import images from './images.js';
 import styles from './styles.js';
 import svgs from './svgs.js';
@@ -19,7 +19,7 @@ import { scriptsWatch } from './scripts.js';
 ** -- Force browser reload when changes are made to images, svgs and asset files
 */
 const watchChanges = () => {
-  gulp.watch(config.eleventy.src, eleventy);
+  gulp.watch(config.eleventy.src, eleventyWatch);
   gulp.watch(config.styles.src, styles);
   gulp.watch(config.scripts.watchSrc, scriptsWatch);
   gulp.watch(config.images.optimizeSrc, gulp.series(images)).on('change', browserSync.reload);

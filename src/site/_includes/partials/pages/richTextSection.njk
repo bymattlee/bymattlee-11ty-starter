@@ -1,0 +1,10 @@
+<div class="l-container">
+  <div>
+    {% if pageSection.heading %}
+      <h2>{{ pageSection.heading }}</h2>
+    {% endif %}
+    {% if pageSection.mainContent %}
+      {{ pageSection.mainContent | blocksToHtml | safe }}
+    {% endif %}
+  </div>
+</div>
