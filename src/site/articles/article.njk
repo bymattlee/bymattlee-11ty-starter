@@ -28,7 +28,7 @@ eleventyComputed:
       <h3>{{ article.title }}</h3>
     {% endif %}
 
-    <div>
+    <div class="u-mt5">
       <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
       {% if article.categories.length %}
         <span>/</span>

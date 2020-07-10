@@ -4,7 +4,7 @@
     <h4><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h4>
   {% endif %}
 
-  <div>
+  <div class="u-mt5">
     <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
     {% if article.categories.length %}
       <span>/</span>
