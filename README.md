@@ -1,9 +1,7 @@
-[![ByMattLee](http://hosted.bymattlee.com/github/bymattlee-logo.png)](http://bymattlee.com)
+![ByMattLee Web Starter Files Screenshot](http://hosted.bymattlee.com/github/bymattlee-web-starter-files-screenshot.jpg)
 
 # ByMattLee Web Starter Files
 A starter boilerplate that includes Eleventy as the static site generator and Gulp as the build tool for asset optimization.
-
-![ByMattLee Web Starter Files Screenshot](http://hosted.bymattlee.com/github/bymattlee-web-starter-files-screenshot.jpg)
 
 [VIEW DEMO](https://bymattlee-web-starter.netlify.app/)
 
