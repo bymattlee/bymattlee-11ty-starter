@@ -64,14 +64,12 @@ $ yarn prod
 ##### Images
 * Place all unoptimized images in the `src/assets/images` directory
 * They will then be optimized and placed in `dist/assets/images`
-* Responsive images will be generated at the following widths: 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
+* TODO: Responsive images will be generated at the following widths: 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
 * See `src/site/_includes/marcos/marco.njk` for usage information
-* Site preview image (`share.jpg`) is included
 
 ##### SVGS
 * Place all SVG files in the `src/assets/svg` directory
 * They will then be optimized and added to a sprite at `dist/assets/svg/sprite.svg`
-* SVGs can be displayed with the SVG macro at `src/site/_includes/marcos/marco.njk`
 
 ##### Other Assets
 * All assets (fonts, videos, swfs, etc) under `src/assets` will be copied to `dist/assets` on build
@@ -80,5 +78,5 @@ $ yarn prod
 * Generates a sitemap based on the HTML files in `dist`
 
 ##### Robots.txt
-* Generates robots.txt file
-* Configuration can be found in `gulpfile.babel.js/config.js`
+* Generates a robots.txt file
+* Configuration can be found in `src/site/robots.njk`
