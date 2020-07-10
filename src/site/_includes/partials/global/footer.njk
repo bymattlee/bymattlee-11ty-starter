@@ -1,10 +1,8 @@
 <footer class="c-footer u-bgGreyDark1 u-py40 u-py60 u-textCenter" role="contentinfo">
   <div class="l-container">
-    <h2>
-      <a href="{{ '/' | absoluteUrl }}">
-        {% svg 'icon-bymattlee', '0 0 50 50', 'c-footer-logoSvg' %}
-      </a>
-    </h2>
+    <a href="{{ '/' | absoluteUrl }}">
+      {% svg 'icon-bymattlee', '0 0 50 50', 'c-footer-logoSvg' %}
+    </a>
     {% if sections.footer.menu %}
       <nav>
         <ul class="u-unstyled u-mt40 u-mb0">
@@ -22,19 +20,19 @@
           {% for socialSite in settings.social.socialSites %}
             <li class="u-inlineBlock u-my0 u-mx5 u-mx10-md">
               {% if socialSite.facebookUrl %}
-                <a href="{{ socialSite.facebookUrl }}" class="u-inlineBlock" target="_blank">
+                <a href="{{ socialSite.facebookUrl }}" class="u-inlineBlock" target="_blank" rel="noopener">
                   {% svg 'icon-facebook', '0 0 50 50', 'c-footer-socialSvg' %}
                 </a>
               {% elseif socialSite.twitterUrl %}
-                <a href="{{ socialSite.twitterUrl }}" class="u-inlineBlock" target="_blank">
+                <a href="{{ socialSite.twitterUrl }}" class="u-inlineBlock" target="_blank" rel="noopener">
                   {% svg 'icon-twitter', '0 0 50 50', 'c-footer-socialSvg' %}
                 </a>
               {% elseif socialSite.instagramUrl %}
-                <a href="{{ socialSite.instagramUrl }}" class="u-inlineBlock" target="_blank">
+                <a href="{{ socialSite.instagramUrl }}" class="u-inlineBlock" target="_blank" rel="noopener">
                   {% svg 'icon-instagram', '0 0 50 50', 'c-footer-socialSvg' %}
                 </a>
               {% elseif socialSite.youtubeUrl %}
-                <a href="{{ socialSite.youtubeUrl }}" class="u-inlineBlock" target="_blank">
+                <a href="{{ socialSite.youtubeUrl }}" class="u-inlineBlock" target="_blank" rel="noopener">
                   {% svg 'icon-youtube', '0 0 50 50', 'c-footer-socialSvg' %}
                 </a>
               {% endif %}

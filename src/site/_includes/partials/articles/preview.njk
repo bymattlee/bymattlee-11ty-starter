@@ -1,7 +1,7 @@
 <article{% if loop.index > 1 %} class="u-mt30 u-mt50-md"{% endif %}>
 
   {% if article.title %}
-    <h4><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h4>
+    <h2 class="u-h4"><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h2>
   {% endif %}
 
   <div class="u-mt5">

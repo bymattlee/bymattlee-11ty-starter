@@ -7,49 +7,61 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4,
+.u-h5,
+.u-h6 {
   font-family: get-font-family('heading');
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
 }
 
-h1 {
+h1,
+.u-h1 {
   font-size: get-font-size(36);
   @include mq('md') {
     font-size: get-font-size(48, true);
   }
 }
 
-h2 {
+h2,
+.u-h2 {
   font-size: get-font-size(30);
   @include mq('md') {
     font-size: get-font-size(36, true);
   }
 }
 
-h3 {
+h3,
+.u-h3 {
   font-size: get-font-size(24);
   @include mq('md') {
     font-size: get-font-size(28, true);
   }
 }
 
-h4 {
+h4,
+.u-h4 {
   font-size: get-font-size(18);
   @include mq('md') {
     font-size: get-font-size(24, true);
   }
 }
 
-h5 {
+h5,
+.u-h5 {
   font-size: get-font-size(14);
   @include mq('md') {
     font-size: get-font-size(18, true);
   }
 }
 
-h6 {
+h6,
+.u-h6 {
   font-size: get-font-size(12);
   @include mq('md') {
     font-size: get-font-size(14, true);
