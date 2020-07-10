@@ -3,6 +3,8 @@
 # ByMattLee Web Starter Files
 A starter boilerplate that includes Eleventy as the static site generator and Gulp as the build tool for asset optimization.
 
+[VIEW DEMO](https://bymattlee-web-starter.netlify.app/)
+
 ## Installation
 ##### 1. Install Node >=12.0.0: <https://nodejs.org/>
 ##### 2. Install Yarn: <https://yarnpkg.com/>
@@ -29,6 +31,7 @@ $ yarn prod
 ```
 
 ## General Features
+* Data is coming from the Sanity Cloud API. This pairs perfectly with the [ByMattLee Sanity Starter CMS](https://github.com/bymattlee/bymattlee-sanity-starter-cms)
 * Spins up a local development environment through Browsersync
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
