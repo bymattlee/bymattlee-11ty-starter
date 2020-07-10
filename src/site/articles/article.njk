@@ -8,10 +8,11 @@ pagination:
 permalink: /articles/{{ article.slug }}/
 eleventyComputed:
   title: "{{ article.title | safe }}"
+  featuredImage: "{% if article.featuredImage %}{% imageUrl article.featuredImage, 1200 %}{% else %}{% endif %}"
   pageDescription: "{{ article.excerpt | safe }}"
   metaTitle: "{{ article.articleMetaData.pageTitle | safe }}"
   metaDescription: "{{ article.articleMetaData.pageDescription | safe }}"
-  metaShareImage: "{% imageUrl article.articleMetaData.pageShareImage %}"
+  metaShareImage: "{% if article.articleMetaData.pageShareImage %}{% imageUrl article.articleMetaData.pageShareImage, 1200 %}{% else %}{% endif %}"
 ---
 
 <div class="l-container l-container--small">

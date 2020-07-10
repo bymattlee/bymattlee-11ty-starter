@@ -10,5 +10,5 @@ eleventyComputed:
   title: "{{ thisPage.title | safe }}"
   metaTitle: "{{ thisPage.pageMetaData.pageTitle | safe }}"
   metaDescription: "{{ thisPage.pageMetaData.pageDescription | safe }}"
-  metaShareImage: "{% imageUrl thisPage.pageMetaData.pageShareImage %}"
+  metaShareImage: "{% if thisPage.pageMetaData.pageShareImage %}{% imageUrl thisPage.pageMetaData.pageShareImage, 1200 %}{% else %}{% endif %}"
 ---
