@@ -7,37 +7,42 @@ pagination:
   alias: article
 permalink: /articles/{{ article.slug }}/
 eleventyComputed:
-  title: "{{ article.title }}"
-  metaTitle: "{{ article.articleMetaData.pageTitle }}"
-  metaDescription: "{{ article.articleMetaData.pageDescription }}"
+  title: "{{ article.title | safe }}"
+  pageDescription: "{{ article.excerpt | safe }}"
+  metaTitle: "{{ article.articleMetaData.pageTitle | safe }}"
+  metaDescription: "{{ article.articleMetaData.pageDescription | safe }}"
   metaShareImage: "{% imageUrl article.articleMetaData.pageShareImage %}"
 ---
 
-<div class="l-container">
+<div class="l-container l-container--small">
   <article>
 
     {% if article.featuredImage %}
-      <p><img data-src="{% imageUrl article.featuredImage %}" class="lazyload"></p>
+      <div class="u-mb20 u-mb40-md">
+        <img data-src="{% imageUrl article.featuredImage %}" class="lazyload">
+      </div>
     {% endif %}
 
     {% if article.title %}
       <h3>{{ article.title }}</h3>
     {% endif %}
 
-    <p class="u-my0"><time datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time></p>
-
-    {% if article.categories %}
-      <p class="u-my0">
-        Categories:
-        {% for category in article.categories %}
-          <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
-          {%- if not loop.last -%}, {%- endif -%}
-        {% endfor %}
-      </p>
-    {% endif %}
+    <div>
+      <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
+      {% if article.categories.length %}
+        <span>/</span>
+        <span class="u-uppercase u-font14">
+          Categories:
+          {% for category in article.categories %}
+            <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
+            {%- if not loop.last -%}, {%- endif -%}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
 
     {% if article.mainContent %}
-      <div class="o-richTextEditor u-mt30 u-mt30-md">
+      <div class="o-richTextEditor u-mt30">
         {{ article.mainContent | blocksToHtml | safe }}
       </div>
     {% endif %}
@@ -45,17 +50,16 @@ eleventyComputed:
   </article>
 
   {% if article.previousArticle or article.nextArticle %}
-    <div class="u-mt40 u-mt40-md">
+    <div class="u-uppercase u-font14 u-mt40 u-mt60-md">
       {% if article.previousArticle %}
         <a href="{{ article.previousArticle.slug | articleUrl }}">&laquo; Previous Article</a>
+      {% endif %}
+      {% if article.previousArticle and article.nextArticle %}
+        <span class="u-px5">/</span>
       {% endif %}
       {% if article.nextArticle %}
         <a href="{{ article.nextArticle.slug | articleUrl }}">Next Article &raquo;</a>
       {% endif %}
     </div>
   {% endif %}
-
-  <div class="u-mt40 u-mt40-md">
-    <a href="{{ '/articles/' | absoluteUrl }}">&raquo; Go Back To Articles</a>
-  </div>
 </div>

@@ -1,9 +1,11 @@
 {% for pageSection in thisPage.pageSections %}
   {% if not pageSection.disabled %}
-    {% if pageSection._type == 'richTextSection' %}
-      {% include 'partials/pages/richTextSection.njk' %}
-    {% elseif pageSection._type == 'latestArticlesSection' %}
-      {% include 'partials/pages/latestArticles.njk' %}
-    {% endif %}
+    <div{% if loop.index > 1 %} class="u-mt40 u-mt60-md"{% endif %}>
+      {% if pageSection._type == 'richTextSection' %}
+        {% include 'partials/pages/richTextSection.njk' %}
+      {% elseif pageSection._type == 'latestArticlesSection' %}
+        {% include 'partials/pages/latestArticles.njk' %}
+      {% endif %}
+    </div>
   {% endif %}
 {% endfor %}

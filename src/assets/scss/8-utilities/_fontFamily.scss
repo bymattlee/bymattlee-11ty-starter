@@ -9,7 +9,7 @@ $fontFamilyUtilities: ();
   $key: capitalize($key);
   $fontFamilyUtilities: map-merge(
     $fontFamilyUtilities, (
-      'font#{$key}' : ( font-family: $value )
+      'font#{$key}' : ( font-family: unquote($value) )
     )
   );
 }

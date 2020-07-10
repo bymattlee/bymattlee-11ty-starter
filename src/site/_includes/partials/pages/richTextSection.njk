@@ -1,10 +1,10 @@
-<div class="l-container">
-  <div>
-    {% if pageSection.heading %}
-      <h2>{{ pageSection.heading }}</h2>
-    {% endif %}
-    {% if pageSection.mainContent %}
+<div class="l-container l-container--small">
+  {% if pageSection.heading %}
+    <h2 class="u-greyLightC">{{ pageSection.heading }}</h2>
+  {% endif %}
+  {% if pageSection.mainContent %}
+    <div class="o-richTextEditor u-mt10 u-mt20-md">
       {{ pageSection.mainContent | blocksToHtml | safe }}
-    {% endif %}
-  </div>
+    </div>
+  {% endif %}
 </div>

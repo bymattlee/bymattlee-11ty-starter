@@ -4,10 +4,15 @@
 
 .l-container {
   margin: 0 auto;
+  max-width: 128rem;
   padding: 0 $contentGutter;
   position: relative;
   width: 100%;
   @include mq('md') {
     padding: 0 $contentGutterDesktop;
+  }
+
+  &--small {
+    max-width: 78rem;
   }
 }

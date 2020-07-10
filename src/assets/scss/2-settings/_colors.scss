@@ -6,6 +6,7 @@ $colors: (
   'transparent': transparent,
   'white': #fff,
   'black': #000,
+  'greyDark1': #111,
   'greyDark2': #222,
   'greyDark3': #333,
   'greyDark4': #444,
@@ -23,8 +24,8 @@ $selectionTextColor: get-color('white');
 $rootBackgroundColor: get-color('greyDark2');
 
 // Text
-$bodyTextColor: get-color('greyLightC');
+$bodyTextColor: get-color('greyLightA');
 
-$linkColor: get-color('greyLightA');
+$linkColor: get-color('greyLightC');
 $linkHoverColor: get-color('greyDark6');
-$linkActiveColor: get-color('greyLightA');
+$linkActiveColor: get-color('greyLightC');

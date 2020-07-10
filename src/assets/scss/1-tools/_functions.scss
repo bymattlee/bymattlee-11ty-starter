@@ -48,7 +48,7 @@
 // If relative, use specific ratio width based on breakpoint
 @function get-size($size, $isDesktop: false) {
   @if type-of($size) == 'number' {
-    $isRelative: true;
+    $isRelative: false;
     $sizeValue: 0;
     @if $isRelative {
       $mobileRatioWidth: 414;

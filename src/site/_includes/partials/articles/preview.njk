@@ -1,23 +1,25 @@
-<article class="u-mt40 u-mt40-md">
+<article{% if loop.index > 1 %} class="u-mt30 u-mt50-md"{% endif %}>
 
   {% if article.title %}
-    <h4><a href="{{ article.slug | articleUrl }}">{{ article.title }}</a></h4>
+    <h4><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h4>
   {% endif %}
 
-  <p class="u-my0"><time datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time></p>
-
-  {% if article.categories %}
-    <p class="u-my0">
-      Categories:
-      {% for category in article.categories %}
-        <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
-        {%- if not loop.last -%}, {%- endif -%}
-      {% endfor %}
-    </p>
-  {% endif %}
+  <div>
+    <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
+    {% if article.categories.length %}
+      <span>/</span>
+      <span class="u-uppercase u-font14">
+        Categories:
+        {% for category in article.categories %}
+          <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
+          {%- if not loop.last -%}, {%- endif -%}
+        {% endfor %}
+      </span>
+    {% endif %}
+  </div>
 
   {% if article.excerpt %}
-    <p class="u-mt20 u-mt20-md">{{ article.excerpt }}</p>
+    <p class="u-mt20">{{ article.excerpt }}</p>
   {% endif %}
 
 </article>

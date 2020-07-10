@@ -1,17 +1,17 @@
-<header class="c-header u-mb30 u-mb30-md" role="banner">
-  <div class="l-container">
+<header class="c-header u-bgBlack u-py20" role="banner">
+  <div class="l-container u-flex-md u-itemsCenter-md u-justifyBetween-md">
     <h1>
-      <a href="{{ '/' | absoluteUrl }}">
+      <a href="{{ '/' | absoluteUrl }}" class="u-flex-xs u-itemsCenter-xs">
         {% svg 'icon-bymattlee', '0 0 50 50', 'c-header-logoSvg u-block' %}
-        {{ settings.seo.siteName }}
+        <span class="u-hide u-uppercase u-block-xs u-font22-xs u-ml10-xs">{{ settings.seo.siteName }}</span>
       </a>
     </h1>
     {% if sections.header.menu %}
       <nav>
-        <ul class="u-unstyled u-m0">
+        <ul class="u-unstyled u-mt20 u-mb0 u-mt0-md">
           {% for menuItem in sections.header.menu %}
-            <li class="u-inlineBlock{% if loop.index > 1 %} u-ml20 u-ml20-md{% endif %}">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineBlock{% isSamePageOrSection menuItem.url, page.url, ' u-white' %}"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
+            <li class="u-inlineBlock u-my0{% if loop.index > 1 %} u-ml20 u-ml40-md{% endif %}">
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineBlock u-uppercase u-fontHeading u-font14{% isSamePageOrSection menuItem.url, page.url, ' u-white' %}"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>

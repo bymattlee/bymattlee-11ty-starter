@@ -49,7 +49,7 @@ $ yarn prod
 * `main.scss` gets compiled to `dist/assets/css/main.min.css`
 * `.stylelintrc` contains the settings for Stylelint
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
-* Default unit of measurement is **vw**
+* Default unit of measurement is **rem** and can be switched in `get-size()` in `src/assets/scss/1-tools/_functions.scss`
 * Utilizes a custom utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
 * Unused CSS (PurgeCSS) will be removed in staging and production builds
 

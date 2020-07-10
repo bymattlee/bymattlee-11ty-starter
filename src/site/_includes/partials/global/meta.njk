@@ -1,6 +1,6 @@
 {% set pageTitle = title + ' | ' + settings.seo.siteName %}
 {% set shareTitle = title %}
-{% set pageDescription = settings.seo.siteDescription %}
+{% set pageDescription = pageDescription or settings.seo.siteDescription %}
 {% set shareImage %}{% imageUrl settings.seo.siteShareImage, 1200 %}{% endset %}
 
 {% if metaTitle %}

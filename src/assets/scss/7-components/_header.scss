@@ -4,9 +4,6 @@
 
 .c-header {
   &-logoSvg {
-    width: get-size(75);
-    @include mq('md') {
-      width: get-size(80, true);
-    }
+    width: get-size(40);
   }
 }

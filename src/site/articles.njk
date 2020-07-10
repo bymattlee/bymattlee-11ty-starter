@@ -3,22 +3,25 @@ layout: page
 bodyClasses: p-articles
 pagination:
   data: articles.all
-  size: 3
+  size: 4
 permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
 eleventyComputed:
   title: Articles {% if pagination.pageNumber > 0 %}(Page {{ pagination.pageNumber + 1 }} of {{ pagination.hrefs | length }}){% endif %}
 ---
 
-<div>
+<div class="u-mt20 u-mt40-md">
   {% for article in pagination.items %}
     {% include 'partials/articles/preview.njk' %}
   {% endfor %}
 </div>
 
 {% if pagination.href.previous or pagination.href.next %}
-  <div class="u-mt40 u-mt40-md">
+  <div class="u-uppercase u-font14 u-mt40 u-mt60-md">
     {% if pagination.href.previous %}
       <a href="{{ pagination.href.previous | absoluteUrl }}">&laquo; Previous Page</a>
+    {% endif %}
+    {% if pagination.href.previous and pagination.href.next %}
+      <span class="u-px5">/</span>
     {% endif %}
     {% if pagination.href.next %}
       <a href="{{ pagination.href.next | absoluteUrl }}">Next Page &raquo;</a>

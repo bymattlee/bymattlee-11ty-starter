@@ -4,7 +4,6 @@ const groq = require('groq');
 const filter = groq`
   *[_type == "settingsSocial" && !(_id in path('drafts.**'))]{
     socialSites[] {
-      'type': _type,
       facebookUrl,
       twitterUrl,
       instagramUrl,

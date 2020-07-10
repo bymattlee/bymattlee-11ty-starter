@@ -7,12 +7,12 @@ pagination:
   alias: category
 permalink: /articles/category/{{ category.slug }}/
 eleventyComputed:
-  title: "'{{ category.title }}' Articles"
-  pageDescription: "{{ category.description }}"
+  title: "'{{ category.title | safe }}' Articles"
+  pageDescription: "{{ category.description | safe }}"
 excludeFromSitemap: true
 ---
 
-<div>
+<div class="u-mt20 u-mt40-md">
   {% for article in category.articles | reverse %}
     {% include 'partials/articles/preview.njk' %}
   {% endfor %}

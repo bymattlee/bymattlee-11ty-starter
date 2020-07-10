@@ -12,11 +12,14 @@ const h = blocksToHtml.h;
 const serializers = {
   types: {
     imageBlock: props => (
-      h('div', {className: 'u-my30 u-my30-md'},
-        h('img', {
-          src: imageUrl(props.node.asset),
-          alt: props.node.alternativeText
-        })
+      h('figure', {className: 'u-my30 u-my40'},
+        [
+          h('img', {
+            src: imageUrl(props.node.asset),
+            alt: props.node.alternativeText
+          }),
+          h('figcaption', { class: 'u-mt10 u-font12 u-font14-md' }, props.node.caption)
+        ]
       )
     ),
     youtubeBlock: props => (
@@ -27,7 +30,7 @@ const serializers = {
     internalLink: props => (
       h('a', {href: getInternalUrl(props.mark.slug, props.mark.dataType)}, props.children)
     ),
-    externalLink: props => (
+    link: props => (
       h('a', {
         href: props.mark.href,
         target: '_blank',

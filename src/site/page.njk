@@ -7,8 +7,8 @@ pagination:
   alias: thisPage
 permalink: /{% if thisPage.slug == 'index' %}index.html{% else %}{{ thisPage.slug }}/{% endif %}
 eleventyComputed:
-  title: "{{ thisPage.title }}"
-  metaTitle: "{{ thisPage.pageMetaData.pageTitle }}"
-  metaDescription: "{{ thisPage.pageMetaData.pageDescription }}"
+  title: "{{ thisPage.title | safe }}"
+  metaTitle: "{{ thisPage.pageMetaData.pageTitle | safe }}"
+  metaDescription: "{{ thisPage.pageMetaData.pageDescription | safe }}"
   metaShareImage: "{% imageUrl thisPage.pageMetaData.pageShareImage %}"
 ---
