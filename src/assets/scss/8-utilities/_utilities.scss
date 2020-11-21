@@ -40,12 +40,24 @@ $responsiveUtilities: map-collect(
   $flexWrapUtilities,
   $flexShrinkUtilities,
   $floatUtilities,
+  $gridAutoColumnsUtilities,
+  $gridAutoFlowUtilities,
+  $gridAutoRowsUtilities,
+  $gridColumnUtilities,
+  $gridRowUtilities,
+  $gridTemplateColumnsUtilities,
+  $gridTemplateRowsUtilities,
   $heightUtilities,
   $justifyContentUtilities,
+  $justifyItemsUtilities,
+  $justifySelfUtilities,
   $lineHeightUtilities,
   $opacityUtilities,
   $orderUtilities,
   $overflowUtilities,
+  $placeContentUtilities,
+  $placeItemsUtilities,
+  $placeSelfUtilities,
   $positionUtilities,
   $ratioUtilities,
   $textAlignUtilities,
@@ -59,7 +71,8 @@ $sizeUtilities: map-collect(
   $fontSizeUtilities,
   $letterSpacingUtilities,
   $marginUtilities,
-  $paddingUtilities
+  $paddingUtilities,
+  $gridGapUtilities
 );
 
 // Interaction utilities (hover and active states)

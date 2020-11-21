@@ -1,0 +1,16 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Grid Gap
+** ***** ----------------------------------------------- ***** */
+
+// Refer to 2-settings/_spacing.scss for the classes generated
+$gridGapUtilities: ();
+
+@each $key, $value in $gap {
+  $gridGapUtilities: map-merge(
+    $gridGapUtilities, (
+      'gap#{$key}' : ( gap: $value ),
+      'gapX#{$key}' : ( column-gap: $value ),
+      'gapY#{$key}' : ( row-gap: $value )
+    )
+  );
+}

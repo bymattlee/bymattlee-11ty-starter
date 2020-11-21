@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Place Items
+** ***** ----------------------------------------------- ***** */
+
+$placeItemsUtilities: (
+  'placeItemsAuto': ( place-items: auto ),
+  'placeItemsStart': ( place-items: start ),
+  'placeItemsEnd': ( place-items: end ),
+  'placeItemsCenter': ( place-items: center ),
+  'placeItemsStretch': ( place-items: stretch )
+);

@@ -1,0 +1,13 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Grid Template Rows
+** ***** ----------------------------------------------- ***** */
+
+$gridTemplateRowsUtilities: (
+  'gridRows1': ( grid-template-rows: repeat(1, minmax(0, 1fr)) ),
+  'gridRows2': ( grid-template-rows: repeat(2, minmax(0, 1fr)) ),
+  'gridRows3': ( grid-template-rows: repeat(3, minmax(0, 1fr)) ),
+  'gridRows4': ( grid-template-rows: repeat(4, minmax(0, 1fr)) ),
+  'gridRows5': ( grid-template-rows: repeat(5, minmax(0, 1fr)) ),
+  'gridRows6': ( grid-template-rows: repeat(6, minmax(0, 1fr)) ),
+  'gridRowsNone': ( grid-template-rows: none )
+);

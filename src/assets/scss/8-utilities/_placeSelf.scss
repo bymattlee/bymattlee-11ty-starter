@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Place Self
+** ***** ----------------------------------------------- ***** */
+
+$placeSelfUtilities: (
+  'placeSelfAuto': ( place-self: auto ),
+  'placeSelfStart': ( place-self: start ),
+  'placeSelfEnd': ( place-self: end ),
+  'placeSelfCenter': ( place-self: center ),
+  'placeSelfStretch': ( place-self: stretch )
+);

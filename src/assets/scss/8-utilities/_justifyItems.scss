@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Justify Items
+** ***** ----------------------------------------------- ***** */
+
+$justifyItemsUtilities: (
+  'justifyItemsAuto': ( justify-items: auto ),
+  'justifyItemsStart': ( justify-items: start ),
+  'justifyItemsEnd': ( justify-items: end ),
+  'justifyItemsCenter': ( justify-items: center ),
+  'justifyItemsStretch': ( justify-items: stretch )
+);

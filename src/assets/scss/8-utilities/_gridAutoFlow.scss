@@ -1,0 +1,10 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Grid Auto Flow
+** ***** ----------------------------------------------- ***** */
+
+$gridAutoFlowUtilities: (
+  'gridFlowRow': ( grid-auto-flow: row ),
+  'gridFlowCol': ( grid-auto-flow: column ),
+  'gridFlowRowDense': ( grid-auto-flow: row dense ),
+  'gridFlowColDense': ( grid-auto-flow: column dense )
+);

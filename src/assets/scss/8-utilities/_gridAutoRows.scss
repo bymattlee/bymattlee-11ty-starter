@@ -1,0 +1,10 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Grid Auto Rows
+** ***** ----------------------------------------------- ***** */
+
+$gridAutoRowsUtilities: (
+  'autoRowsAuto': ( grid-auto-rows: auto ),
+  'autoRowsMin': ( grid-auto-rows: min-content ),
+  'autoRowsMax': ( grid-auto-rows: max-content ),
+  'autoRowsFr': ( grid-auto-rows: minmax(0, 1fr) )
+);

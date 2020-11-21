@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Justify Self
+** ***** ----------------------------------------------- ***** */
+
+$justifySelfUtilities: (
+  'justifySelfAuto': ( justify-self: auto ),
+  'justifySelfStart': ( justify-self: start ),
+  'justifySelfEnd': ( justify-self: end ),
+  'justifySelfCenter': ( justify-self: center ),
+  'justifySelfStretch': ( justify-self: stretch )
+);

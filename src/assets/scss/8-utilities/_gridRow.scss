@@ -1,0 +1,30 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Grid Row
+** ***** ----------------------------------------------- ***** */
+
+$gridRowUtilities: (
+  'rowAuto': ( grid-row: auto ),
+  'rowSpan1': ( grid-row: span 1 / span 1 ),
+  'rowSpan2': ( grid-row: span 2 / span 2 ),
+  'rowSpan3': ( grid-row: span 3 / span 3 ),
+  'rowSpan4': ( grid-row: span 4 / span 4 ),
+  'rowSpan5': ( grid-row: span 5 / span 5 ),
+  'rowSpan6': ( grid-row: span 6 / span 6 ),
+  'rowSpanFull': ( grid-row: 1 / -1 ),
+  'rowStart1': ( grid-row-start: 1 ),
+  'rowStart2': ( grid-row-start: 2 ),
+  'rowStart3': ( grid-row-start: 3 ),
+  'rowStart4': ( grid-row-start: 4 ),
+  'rowStart5': ( grid-row-start: 5 ),
+  'rowStart6': ( grid-row-start: 6 ),
+  'rowStart7': ( grid-row-start: 7 ),
+  'rowStartAuto': ( grid-row-start: auto ),
+  'rowEnd1': ( grid-row-end: 1 ),
+  'rowEnd2': ( grid-row-end: 2 ),
+  'rowEnd3': ( grid-row-end: 3 ),
+  'rowEnd4': ( grid-row-end: 4 ),
+  'rowEnd5': ( grid-row-end: 5 ),
+  'rowEnd6': ( grid-row-end: 6 ),
+  'rowEnd7': ( grid-row-end: 7 ),
+  'rowEndAuto': ( grid-row-end: auto )
+);

@@ -1,0 +1,13 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Place Content
+** ***** ----------------------------------------------- ***** */
+
+$placeContentUtilities: (
+  'placeContentCenter': ( place-content: center ),
+  'placeContentStart': ( place-content: start ),
+  'placeContentEnd': ( place-content: end ),
+  'placeContentBetween': ( place-content: space-between ),
+  'placeContentAround': ( place-content: space-around ),
+  'placeContentEvenly': ( place-content: space-evenly ),
+  'placeContentStretch': ( place-content: stretch )
+);
