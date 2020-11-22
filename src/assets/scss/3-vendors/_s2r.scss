@@ -1,0 +1,11 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Vendors/Scroll2Reveal
+** ***** ----------------------------------------------- ***** */
+
+[data-s2r-type='block-fade-up'],
+[data-s2r-type='block-fade-in'],
+[data-s2r-el]:not([data-s2r-el='stagger-fade-up']):not([data-s2r-el='stagger-fade-in']),
+[data-s2r-el='stagger-fade-up'] > *,
+[data-s2r-el='stagger-fade-in'] > * {
+  opacity: 0;
+}

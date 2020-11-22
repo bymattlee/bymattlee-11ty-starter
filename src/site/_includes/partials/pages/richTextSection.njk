@@ -1,9 +1,9 @@
-<div class="l-container l-container--small">
+<div class="l-container l-container--small" data-s2r="group">
   {% if pageSection.heading %}
-    <h1 class="u-h2 u-greyLightC">{{ pageSection.heading }}</h1>
+    <h1 class="u-h2 u-greyLightC" data-s2r-el="block-fade-up">{{ pageSection.heading }}</h1>
   {% endif %}
   {% if pageSection.mainContent %}
-    <div class="o-richTextEditor u-mt10 u-mt20-md">
+    <div class="o-richTextEditor u-mt10 u-mt20-md" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
       {{ pageSection.mainContent | blocksToHtml | safe }}
     </div>
   {% endif %}

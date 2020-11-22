@@ -5,6 +5,7 @@
 /* global gtag, gaId */
 import Highway from '@dogstudio/highway';
 import gsap from 'gsap';
+import { reInit as s2rReInit } from './s2r.js';
 
 // Fade in/out transition
 class Fade extends Highway.Transition {
@@ -62,6 +63,7 @@ const init = () => {
   H.on('NAVIGATE_IN', ({to, location}) => {
     setActiveLink(location);
     updateBodyClasses(to);
+    s2rReInit();
   });
 
   // Executed when the page has loaded completely

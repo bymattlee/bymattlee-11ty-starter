@@ -42,8 +42,11 @@ const serializers = {
 };
 
 module.exports = value => {
-  return blocksToHtml({
+  const html = blocksToHtml({
     blocks: value,
     serializers: serializers
   });
+
+  // Remove the div that wraps the html content
+  return html.slice(5).slice(0, -6);
 }

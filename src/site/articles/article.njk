@@ -16,20 +16,20 @@ eleventyComputed:
   metaShareImage: "{% if article.articleMetaData.pageShareImage %}{% imageUrl article.articleMetaData.pageShareImage, 1200 %}{% else %}{% endif %}"
 ---
 
-<div class="l-container l-container--small">
+<div class="l-container l-container--small" data-s2r="single" data-s2r-type="stagger-fade-up">
   <article>
 
     {% if article.featuredImage %}
-      <div class="u-mb20 u-mb40-md">
+      <div class="u-mb20 u-mb40-md" data-s2r-el>
         <img data-src="{% imageUrl article.featuredImage %}" class="lazyload">
       </div>
     {% endif %}
 
     {% if article.title %}
-      <h2 class="u-h3">{{ article.title }}</h2>
+      <h2 class="u-h3" data-s2r-el>{{ article.title }}</h2>
     {% endif %}
 
-    <div class="u-mt5">
+    <div class="u-mt5" data-s2r-el>
       <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
       {% if article.categories.length %}
         <span>/</span>
@@ -44,7 +44,7 @@ eleventyComputed:
     </div>
 
     {% if article.mainContent %}
-      <div class="o-richTextEditor u-mt30">
+      <div class="o-richTextEditor u-mt30" data-s2r-el>
         {{ article.mainContent | blocksToHtml | safe }}
       </div>
     {% endif %}
@@ -52,7 +52,7 @@ eleventyComputed:
   </article>
 
   {% if article.previousArticle or article.nextArticle %}
-    <div class="u-uppercase u-font14 u-mt40 u-mt60-md">
+    <div class="u-uppercase u-font14 u-mt40 u-mt60-md" data-s2r-el>
       {% if article.previousArticle %}
         <a href="{{ article.previousArticle.slug | articleUrl }}">&laquo; Previous Article</a>
       {% endif %}
