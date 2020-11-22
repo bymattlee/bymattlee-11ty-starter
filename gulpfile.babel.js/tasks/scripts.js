@@ -20,7 +20,7 @@ import rename from 'gulp-rename';
 import rollup from 'gulp-better-rollup';
 import size from 'gulp-size';
 import sourcemaps from 'gulp-sourcemaps';
-import uglify from 'gulp-uglify';
+import terser from 'gulp-terser';
 
 // Environment variables
 const isDevelopment = process.env.NODE_ENV === 'development';
@@ -64,7 +64,11 @@ const scriptsMain = () => {
           json()
         ]
       }, 'umd'))
-      .pipe(uglify())
+      .pipe(terser({
+        format: {
+          comments: false
+        }
+      }))
       .pipe(concat('main.js'))
       .pipe(rename({
         suffix: '.min'

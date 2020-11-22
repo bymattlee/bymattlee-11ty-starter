@@ -61,7 +61,6 @@
     "gulp-size": "^3.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
-    "gulp-uglify": "^3.0.2",
     "html-minifier": "^4.0.0",
     "imagemin-jpeg-recompress": "^7.0.0",
     "jsdom": "^16.4.0",
@@ -82,7 +81,9 @@
     "through2": "^4.0.2"
   },
   "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
     "gsap": "^3.5.1",
+    "gulp-terser": "^2.0.0",
     "inobounce": "^0.2.0",
     "lazysizes": "^5.2.2",
     "object-fit-images": "^3.2.4",

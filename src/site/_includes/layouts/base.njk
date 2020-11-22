@@ -11,6 +11,7 @@
 {% if settings.analytics.googleAnalyticsId and env == 'production' %}
   <script async src="//www.googletagmanager.com/gtag/js?id={{ settings.analytics.googleAnalyticsId }}"></script>
   <script>
+    var gaId = '{{ settings.analytics.googleAnalyticsId }}';
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
