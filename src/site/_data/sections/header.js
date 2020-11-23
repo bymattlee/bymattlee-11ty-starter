@@ -1,7 +1,6 @@
 const client = require('../../../../eleventy/utilities/sanityClient.js');
-const groq = require('groq');
 
-const filter = groq`
+const filter = `
   *[_type == "sectionsHeader" && !(_id in path('drafts.**'))]{
     'menu': headerMenu->menuItems[]{
       'name': menuItemName,

@@ -1,7 +1,6 @@
 const client = require('../../../../eleventy/utilities/sanityClient.js');
-const groq = require('groq');
 
-const filter = groq`
+const filter = `
   *[_type == "settingsSeo" && !(_id in path('drafts.**'))]{
     siteDescription,
     siteName,

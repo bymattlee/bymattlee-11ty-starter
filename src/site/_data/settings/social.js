@@ -1,7 +1,6 @@
 const client = require('../../../../eleventy/utilities/sanityClient.js');
-const groq = require('groq');
 
-const filter = groq`
+const filter = `
   *[_type == "settingsSocial" && !(_id in path('drafts.**'))]{
     socialSites[] {
       facebookUrl,

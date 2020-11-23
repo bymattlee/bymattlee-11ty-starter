@@ -40,7 +40,6 @@
     "eslint": "^7.14.0",
     "flat-map": "^1.0.0",
     "get-youtube-id": "^1.0.1",
-    "groq": "^2.0.9",
     "gulp": "^4.0.2",
     "gulp-add-src": "^1.0.0",
     "gulp-autoprefixer": "^7.0.1",
