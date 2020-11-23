@@ -36,6 +36,8 @@ $ yarn prod
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
 * Uses Modernizr to detect flexbox and SVG compatibility. If flexbox and/or SVG are not supported, a message will display asking the user to upgrade to latest version of the browser
+* Powered by [Highway](https://highway.js.org/) for seamless page transitions
+* Uses a custom framework for reuseable content animations
 
 ##### Markup
 * Features Eleventy as the static site generator
@@ -59,8 +61,8 @@ $ yarn prod
 ##### Scripts
 * Utilizes ES2015+ syntax and modules with Babel transpiling
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
-* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all modules and will be compiled to `dist/assets/js/main.min.js`
-* All local modules should be placed in `src/assets/js/modules`
+* `main.js` in `src/assets/js` serves as the main JS file that includes and runs all components and will be compiled to `dist/assets/js/main.min.js`
+* All local components should be placed in `src/assets/js/components`
 * All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn
 * `.eslintrc` contains the settings for ESLint
 
