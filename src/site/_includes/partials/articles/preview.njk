@@ -1,22 +1,24 @@
 <article{% if loop.index > 1 %} class="u-mt30 u-mt50-md"{% endif %}>
 
-  {% if article.title %}
-    <h2 class="u-h4"><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h2>
-  {% endif %}
-
-  <div class="u-mt5">
-    <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
-    {% if article.categories.length %}
-      <span>/</span>
-      <span class="u-uppercase u-font14">
-        Categories:
-        {% for category in article.categories %}
-          <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
-          {%- if not loop.last -%}, {%- endif -%}
-        {% endfor %}
-      </span>
+  <header>
+    {% if article.title %}
+      <h2 class="u-h4"><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h2>
     {% endif %}
-  </div>
+
+    <div class="u-mt5">
+      <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
+      {% if article.categories.length %}
+        <span>/</span>
+        <span class="u-uppercase u-font14">
+          Categories:
+          {% for category in article.categories %}
+            <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
+            {%- if not loop.last -%}, {%- endif -%}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
 
   {% if article.excerpt %}
     <p class="u-mt20">{{ article.excerpt }}</p>
