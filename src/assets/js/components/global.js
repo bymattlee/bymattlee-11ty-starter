@@ -10,7 +10,6 @@ import objectFitImages from 'object-fit-images';
 import 'svgxuse';
 import { displaySiteAlert } from '../utilities/display.js';
 
-
 // Display message for user to upgrade if browser does not support flexbox
 const modernizrCheck = () => {
   if (!Modernizr.flexbox || !Modernizr.svg) {
