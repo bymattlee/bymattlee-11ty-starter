@@ -1,0 +1,13 @@
+<section class="c-menuOverlay u-bgBlack u-fixed u-top u-left u-wFull u-h0 u-opacity0 u-overflowHidden u-zMenuOverlay u-flex u-justifyCenter u-itemsCenter u-hide-sm" x-bind:class="{ 's-isOpen': menuOverlayIsOpen }">
+  {% if sections.header.menu %}
+    <nav>
+      <ul class="u-unstyled">
+        {% for menuItem in sections.header.menu %}
+          <li class="u-my15 u-textCenter">
+            <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineBlock u-uppercase u-fontHeading u-font16{% isSamePageOrSection menuItem.url, page.url, ' u-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %} x-on:click="menuOverlayIsOpen = false">{{ menuItem.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+</section>

@@ -3,6 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 /* global Modernizr */
+import 'alpinejs';
 import iNoBounce from 'inobounce';
 import 'lazysizes';
 import 'lazysizes/plugins/bgset/ls.bgset';

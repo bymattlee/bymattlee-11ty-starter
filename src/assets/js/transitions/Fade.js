@@ -14,11 +14,11 @@ class Fade extends Highway.Transition {
     from.remove();
 
     // Animation
-    gsap.fromTo(to, 0.4, {opacity: 0}, {opacity: 1, onComplete: done});
+    gsap.fromTo(to, 0.3, {opacity: 0}, {opacity: 1, onComplete: done});
   }
 
   out({ from, done }) {
-    gsap.fromTo(from, 0.4, {opacity: 1}, {opacity: 0, onComplete: done});
+    gsap.fromTo(from, 0.3, {opacity: 1}, {opacity: 0, onComplete: done});
   }
 }
 
