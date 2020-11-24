@@ -1,7 +1,7 @@
 ![ByMattLee Web Starter Files Screenshot](http://hosted.bymattlee.com/github/bymattlee-web-starter-files-screenshot.jpg)
 
 # ByMattLee Web Starter Files
-A starter boilerplate that includes Eleventy as the static site generator and Gulp as the build tool for asset optimization.
+A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Alpine.js](https://github.com/alpinejs/alpine) and [Highway](https://highway.js.org/).
 
 [VIEW DEMO](https://bymattlee-web-starter.netlify.app/)
 
@@ -36,8 +36,6 @@ $ yarn prod
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
 * Uses Modernizr to detect flexbox and SVG compatibility. If flexbox and/or SVG are not supported, a message will display asking the user to upgrade to latest version of the browser
-* Powered by [Highway](https://highway.js.org/) for seamless page transitions
-* Uses a custom framework for reuseable content animations
 
 ##### Markup
 * Features Eleventy as the static site generator
@@ -61,6 +59,9 @@ $ yarn prod
 ##### Scripts
 * Utilizes ES2015+ syntax and modules with Babel transpiling
 * Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
+* Includes [Highway](https://highway.js.org/) for seamless page transitions
+* Includes a custom framework for reuseable content animations
+* Includes [Alpine.js](https://github.com/alpinejs/alpine) for declarative DOM manipulation
 * `main.js` in `src/assets/js` serves as the main JS file that includes and runs all components and will be compiled to `dist/assets/js/main.min.js`
 * All local components should be placed in `src/assets/js/components`
 * All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn
