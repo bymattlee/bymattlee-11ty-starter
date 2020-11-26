@@ -9,8 +9,8 @@ import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import imageminJpegRecompress from 'imagemin-jpeg-recompress';
 import path from 'path';
-// import readMetadata from 'gulp-scale-images/read-metadata';
-// import scaleImages from 'gulp-scale-images';
+import readMetadata from 'gulp-scale-images/read-metadata';
+import scaleImages from 'gulp-scale-images';
 import size from 'gulp-size';
 import through from 'through2';
 
@@ -112,25 +112,25 @@ const newFileName = function(output, scale, callback) {
   callback(null, fileName);
 };
 
-// function imagesGenerateResponsive() {
-//   return gulp.src(config.images.responsiveSrc)
-//     .pipe(changed(config.images.dest))
-//     .pipe(through.obj(getFileWidth))
-//     .pipe(flatMap(imageVariants))
-//     .pipe(scaleImages(newFileName))
-//     .pipe(imagemin([
-//       imagemin.gifsicle({ interlaced: true }),
-//       imageminJpegRecompress(),
-//       imagemin.optipng({ optimizationLevel: 5 }),
-//       imagemin.svgo()
-//     ]))
-//     .pipe(size({
-//       title: 'Optimized File Size:',
-//       showFiles: true
-//     }))
-//     .pipe(gulp.dest(config.images.dest));
-// }
+function imagesGenerateResponsive() {
+  return gulp.src(config.images.responsiveSrc)
+    .pipe(changed(config.images.dest))
+    .pipe(through.obj(getFileWidth))
+    .pipe(flatMap(imageVariants))
+    .pipe(scaleImages(newFileName))
+    .pipe(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imageminJpegRecompress(),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo()
+    ]))
+    .pipe(size({
+      title: 'Optimized File Size:',
+      showFiles: true
+    }))
+    .pipe(gulp.dest(config.images.dest));
+}
 
-const images = gulp.parallel(imagesOptimize/*, imagesGenerateResponsive*/);
+const images = gulp.parallel(imagesOptimize, imagesGenerateResponsive);
 
 export default images;

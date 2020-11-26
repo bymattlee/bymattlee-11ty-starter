@@ -5,6 +5,7 @@
 const blocksToHtml = require('@sanity/block-content-to-html');
 const getYouTubeID = require('get-youtube-id');
 const imageUrl = require('../shortcodes/imageUrl.js');
+const imageSrcset = require('../shortcodes/imageSrcset.js');
 const getInternalUrl = require('../utilities/getInternalUrl.js');
 
 const h = blocksToHtml.h;
@@ -15,7 +16,10 @@ const serializers = {
       h('figure', {className: 'u-my30 u-my40'},
         [
           h('img', {
-            src: imageUrl(props.node.asset),
+            dataset: {
+              srcset: imageSrcset(props.node.asset),
+              sizes: 'auto'
+            },
             alt: props.node.alternativeText
           }),
           h('figcaption', { class: 'u-mt10 u-font12 u-font14-md' }, props.node.caption)

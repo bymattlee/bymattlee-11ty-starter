@@ -21,7 +21,7 @@ eleventyComputed:
 
     {% if article.featuredImage %}
       <div class="u-mb20 u-mb40-md" data-s2r-el>
-        <img data-src="{% imageUrl article.featuredImage %}" class="lazyload">
+        <img data-srcset="{% imageSrcset article.featuredImage %}" class="lazyload" data-sizes="auto">
       </div>
     {% endif %}
 

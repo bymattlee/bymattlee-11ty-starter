@@ -8,6 +8,10 @@ figure {
 
 img {
   height: auto;
+  &[data-sizes='auto'] {
+    display: block;
+    width: 100%;
+  }
 }
 
 svg {

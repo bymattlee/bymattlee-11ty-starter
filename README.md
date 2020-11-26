@@ -73,8 +73,8 @@ $ yarn prod
 ##### Images
 * Place all unoptimized images in the `src/assets/images` directory
 * They will then be optimized and placed in `dist/assets/images`
-* TODO: Responsive images will be generated at the following widths: 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
-* See `src/site/_includes/marcos/marco.njk` for usage information
+* Responsive images will be generated at the following widths (if larger): 200w, 400w, 600w, 800w, 1000w, 1200w, 1400w, 1600w, 1800w
+* Use `imageSrc` shortcode to render responsive `srcset` in markup
 
 ##### SVGS
 * Place all SVG files in the `src/assets/svg` directory

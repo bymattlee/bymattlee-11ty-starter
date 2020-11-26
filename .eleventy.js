@@ -20,6 +20,7 @@ const blocksToHtml = require('./eleventy/filters/blocksToHtml.js');
 
 // Import shortcodes
 const imageUrl = require('./eleventy/shortcodes/imageUrl.js');
+const imageSrcset = require('./eleventy/shortcodes/imageSrcset.js');
 const isSamePageOrSection = require('./eleventy/shortcodes/isSamePageOrSection.js');
 const svg = require('./eleventy/shortcodes/svg.js');
 const currentYear = require('./eleventy/shortcodes/currentYear.js');
@@ -44,6 +45,7 @@ module.exports = function(config) {
 
   // Shortcodes
   config.addShortcode('imageUrl', imageUrl);
+  config.addShortcode('imageSrcset', imageSrcset);
   config.addShortcode('isSamePageOrSection', isSamePageOrSection);
   config.addShortcode('svg', svg);
   config.addShortcode('currentYear', currentYear);
