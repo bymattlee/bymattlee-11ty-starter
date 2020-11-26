@@ -1,5 +1,4 @@
 .DS_Store
-hostSettings.json
 node_modules
 /dist
 /src/assets/js/vendors/modernizr.js

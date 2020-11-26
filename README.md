@@ -7,7 +7,10 @@ A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](htt
 
 ## Installation
 ##### 1. Install Node >=12.0.0: <https://nodejs.org/>
-##### 2. Install Yarn: <https://yarnpkg.com/>
+##### 2. Install Yarn
+```
+$ npm i -g yarn
+```
 ##### 3. Install all dependencies
 ```
 $ yarn

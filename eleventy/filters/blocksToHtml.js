@@ -47,6 +47,10 @@ module.exports = value => {
     serializers: serializers
   });
 
-  // Remove the div that wraps the html content
-  return html.slice(5).slice(0, -6);
+  // If html starts with an empty div, remove brcause it interferes with s2r
+  if (html.startsWith('<div>')) {
+    return html.slice(5).slice(0, -6);
+  } else {
+    return html;
+  }
 }
