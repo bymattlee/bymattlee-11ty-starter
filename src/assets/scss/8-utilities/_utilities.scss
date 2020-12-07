@@ -18,6 +18,7 @@ $staticUtilities: map-collect(
   $borderRadiusUtilities,
   $borderStyleUtilities,
   $colorUtilities,
+  $cursorUtilities,
   $fontFamilyUtilities,
   $fontStyleUtilities,
   $fontWeightUtilities,
@@ -25,6 +26,7 @@ $staticUtilities: map-collect(
   $pointerEventsUtilities,
   $textDecorationUtilities,
   $textTransformUtilities,
+  $userSelectUtilities,
   $wordBreakUtilities,
   $zIndexUtilities
 );
@@ -52,6 +54,8 @@ $responsiveUtilities: map-collect(
   $justifyItemsUtilities,
   $justifySelfUtilities,
   $lineHeightUtilities,
+  $minHeightUtilities,
+  $minWidthUtilities,
   $opacityUtilities,
   $orderUtilities,
   $overflowUtilities,
@@ -78,7 +82,8 @@ $sizeUtilities: map-collect(
 // Interaction utilities (hover and active states)
 $interactionUtilities: map-collect(
   $backgroundColorUtilities,
-  $colorUtilities
+  $colorUtilities,
+  $opacityUtilities
 );
 
 

@@ -7,14 +7,14 @@
   color: get-color('black');
   display: inline-block;
   padding: get-size(7.5) get-size(20);
-  transition: background-color $transitionSlow, color $transitionSlow;
+  transition: color $transitionSlow, background-color $transitionSlow;
   @include mq('md') {
     padding: get-size(10, true) get-size(25, true);
   }
 
   &:hover {
     @media (hover: hover) {
-      background-color: get-color('greyDark6');
+      background-color: get-color('greyDark4');
       color: get-color('greyLightC');
     }
   }

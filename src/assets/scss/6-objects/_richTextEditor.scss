@@ -31,7 +31,17 @@
   * + h6 {
     margin-top: get-size(30);
     @include mq('md') {
-      margin-top: get-size(30, true);
+      margin-top: get-size(35, true);
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      @media (hover: hover) {
+        text-decoration: none;
+      }
     }
   }
 
@@ -45,10 +55,33 @@
     }
   }
 
+  ul,
+  ol {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    li {
+      margin: 0;
+    }
+
+    ul,
+    ol {
+      margin: get-size(5) 0 get-size(5) get-size(35);
+    }
+  }
+
   .o-embed {
     margin: get-size(30) 0;
     @include mq('sm') {
-      margin: get-size(30, true) 0;
+      margin: get-size(40, true) 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

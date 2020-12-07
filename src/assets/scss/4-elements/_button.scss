@@ -13,4 +13,5 @@ button {
   line-height: map-get($lineHeight, 'normal');
   outline: 0;
   padding: 0;
+  transition: color $transitionSlow, background-color $transitionSlow;
 }

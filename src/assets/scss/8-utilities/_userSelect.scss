@@ -1,0 +1,10 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/User Select
+** ***** ----------------------------------------------- ***** */
+
+$userSelectUtilities: (
+  'selectNone': ( user-select: none ),
+  'selectText': ( user-select: text ),
+  'selectAll': ( user-select: all ),
+  'selectAuto': ( user-select: auto )
+);

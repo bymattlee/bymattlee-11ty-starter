@@ -6,7 +6,7 @@ $overflowUtilities: (
   'overflowAuto': ( overflow: auto ),
   'overflowHidden': ( overflow: hidden ),
   'overflowVisible': ( overflow: visible ),
-  'overflowScroll': ( overflow: scroll ),
+  'overflowScroll': ( overflow: scroll, -webkit-overflow-scrolling: touch ),
   'overflowXAuto': ( overflow-x: auto, -webkit-overflow-scrolling: touch ),
   'overflowYAuto': ( overflow-y: auto, -webkit-overflow-scrolling: touch )
 );

@@ -1,0 +1,12 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Cursor
+** ***** ----------------------------------------------- ***** */
+
+$cursorUtilities: (
+  'cursorAuto': ( cursor: auto ),
+  'cursorDefault': ( cursor: default ),
+  'cursorPointer': ( cursor: pointer ),
+  'cursorWait': ( cursor: wait ),
+  'cursorText': ( cursor: text ),
+  'cursorNotAllowed': ( cursor: not-allowed )
+);
