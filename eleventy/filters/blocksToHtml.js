@@ -22,7 +22,7 @@ const serializers = {
             },
             alt: props.node.alternativeText
           }),
-          h('figcaption', { class: 'u-mt10 u-font12 u-font14-md' }, props.node.caption)
+          h('figcaption', {class: 'u-mt10 u-font12 u-font14-md'}, props.node.caption)
         ]
       )
     ),
@@ -32,13 +32,17 @@ const serializers = {
   },
   marks: {
     internalLink: props => (
-      h('a', {href: getInternalUrl(props.mark.slug, props.mark.dataType)}, props.children)
+      h('a', {
+        href: getInternalUrl(props.mark.slug, props.mark.dataType),
+        class: props.mark.linkButton ? 'o-button' : ''
+      }, props.children)
     ),
     link: props => (
       h('a', {
         href: props.mark.href,
         target: '_blank',
-        rel: 'noopener'
+        rel: 'noopener',
+        class: props.mark.linkButton ? 'o-button' : ''
       },
       props.children)
     )
