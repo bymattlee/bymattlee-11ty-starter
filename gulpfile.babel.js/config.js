@@ -62,8 +62,7 @@ module.exports = {
     optimizeSrc: srcAssets + '/images/**/*',
     responsiveSrc: [
       srcAssets + '/images/**/*',
-      '!' + srcAssets + '/images/**/*.svg',
-      '!' + srcAssets + '/images/share.jpg'
+      '!' + srcAssets + '/images/**/*.svg'
     ],
     dest:  destAssets + '/images'
   },
