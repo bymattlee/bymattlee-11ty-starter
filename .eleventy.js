@@ -51,10 +51,9 @@ module.exports = function(config) {
   config.addShortcode('currentYear', currentYear);
 
   // Layout aliases
-  config.addLayoutAlias('base', 'layouts/base.njk')
-  config.addLayoutAlias('default', 'layouts/default.njk')
-  config.addLayoutAlias('page', 'layouts/page.njk')
-  config.addLayoutAlias('article', 'layouts/article.njk')
+  config.addLayoutAlias('base', 'layouts/base.njk');
+  config.addLayoutAlias('default', 'layouts/default.njk');
+  config.addLayoutAlias('page', 'layouts/page.njk');
 
   return {
     dir: {
