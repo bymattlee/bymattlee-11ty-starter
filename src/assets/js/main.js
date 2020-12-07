@@ -7,11 +7,11 @@ import { setActiveLink, updateBodyClasses, trackGA } from './components/highway.
 import Fade from './transitions/Fade'
 
 import { init as globalInit } from './components/global.js';
-import { init as s2rInit, reInit as s2rReInit } from './components/s2r.js';
+import Scroll2Reveal from './vendors/Scroll2Reveal.js';
 
 // Init on first load
 globalInit();
-s2rInit();
+const s2r = new Scroll2Reveal();
 
 // Init Highway
 const H = new Highway.Core({
@@ -24,7 +24,7 @@ const H = new Highway.Core({
 H.on('NAVIGATE_IN', ({to, location}) => {
   setActiveLink(location);
   updateBodyClasses(to);
-  s2rReInit();
+  s2r.reInit();
 });
 
 // Executed when the page has loaded completely

@@ -20,8 +20,8 @@ Two implementation approaches:
         - Replace "XXX" with the animation style. Choose from:
           - "block-fade-up" - Animates the element by fading up
           - "block-fade-in" - Animtes the element by fading in
-          - "stagger-fade-up" - Stagger animate child elements by fading up. Add this selector to each child element
-          - "stagger-fade-in" - Stagger animate child elements by fading in. Add this selector to each child element
+          - "stagger-fade-up" - Stagger animate child elements by fading up. Automatically selects child elements
+          - "stagger-fade-in" - Stagger animate child elements by fading in. Automatically selects child elements
         - Use the following selectors for custom options
           - Delay - [data-s2r-delay="0.1"]
           - Duration - [data-s2r-duration="0.6"]
@@ -37,6 +37,8 @@ Two implementation approaches:
           - "block-fade-in" - Animates the element by fading in
           - "stagger-fade-up" - Stagger animate child elements by fading up. Add this selector to each child element - [data-s2r-el]
           - "stagger-fade-in" - Stagger animate child elements by fading in. Add this selector to each child element - [data-s2r-el]
+          - "stagger-fade-up-children" - Stagger animate child elements by fading up. Automatically selects child elements
+          - "stagger-fade-in-children" - Stagger animate child elements by fading in. Automatically selects child elements
         - Use the following selectors for custom options
           - Delay - [data-s2r-delay="0.1"]
           - Duration - [data-s2r-duration="0.6"]
@@ -58,7 +60,9 @@ class Scroll2Reveal {
     this.initDelay = 100;
 
     // Init
-    this.init();
+    window.addEventListener('DOMContentLoaded', () => {
+      this.init();
+    });
   }
 
   init() {
@@ -164,28 +168,35 @@ class Scroll2Reveal {
         {opacity: 0},
         {opacity: 1, stagger: stagger, duration: duration, delay: delay, ease: 'power2.out'}
       );
+    } else if (thisElType === 'stagger-fade-up-children') {
+      const staggerEl = el.children;
+      gsap.fromTo(staggerEl,
+        {opacity: 0, y: '40px'},
+        {opacity: 1, y: '0px', stagger: stagger, duration: duration, delay: delay, ease: 'power2.out'}
+      );
+
+    } else if (thisElType === 'stagger-fade-in-children') {
+      const staggerEl = el.children;
+      gsap.fromTo(staggerEl,
+        {opacity: 0},
+        {opacity: 1, stagger: stagger, duration: duration, delay: delay, ease: 'power2.out'}
+      );
     }
   }
 
   reInit() {
-    this.s2rActive = document.querySelectorAll('[data-s2r]:not(.s2r-in-view)');
-    this.s2rActive.forEach(el => { 
-      // Add init delay to allow page to load before animating
-      setTimeout(() => { this.observer.observe(el); }, this.initDelay);
-    });
+    // If s2r is undefined on reInit, init again
+    // This can happen if s2r was initialized on an empty page and reInit was called on new page load with Highway
+    if (typeof this.observer === 'undefined') {
+      this.init()
+    } else {
+      this.s2rActive = document.querySelectorAll('[data-s2r]:not(.s2r-in-view)');
+      this.s2rActive.forEach(el => { 
+        // Add init delay to allow page to load before animating
+        setTimeout(() => { this.observer.observe(el); }, this.initDelay);
+      });
+    }
   }
 }
 
-let scroll2reveal;
-
-const init = () => {
-  window.addEventListener('DOMContentLoaded', () => {
-    scroll2reveal = new Scroll2Reveal();
-  });
-}
-
-const reInit = () => {
-  scroll2reveal.reInit();
-}
-
-export { init, reInit };
+export default Scroll2Reveal;
