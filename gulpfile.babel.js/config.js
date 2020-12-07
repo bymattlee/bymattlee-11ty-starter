@@ -34,7 +34,7 @@ module.exports = {
     dest: destAssets + '/css',
     purgeContent: [
       dest + '/**/*.html',
-      srcAssets + '/js/modules/**/*.js'
+      srcAssets + '/js/**/*.js'
     ]
   },
   scripts: {
