@@ -20,9 +20,11 @@ permalink: feed.xml
       <link href="{{ article.slug | articleUrl }}"/>
       <updated>{{ article.publishedAt | rssDate }}</updated>
       <id>{{ article.slug | articleUrl }}</id>
-      <content type="html"><![CDATA[
-        {{ article.mainContent | blocksToHtml | safe }}
-      ]]></content>
+      {% if article.mainContent %}
+        <content type="html"><![CDATA[
+          {{ article.mainContent | blocksToHtml | safe }}
+        ]]></content>
+        {% endif %}
     </entry>
   {%- endfor %}
 </feed>
