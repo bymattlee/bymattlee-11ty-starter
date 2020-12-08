@@ -33,12 +33,20 @@ module.exports = (content, outputPath) => {
 
         const videoSrc = video.getAttribute('src');
         if (videoSrc.includes('youtube') || videoSrc.includes('vimeo')) {
-          // Set video src to data-src
-          video.setAttribute('data-src', videoSrc);
-          video.removeAttribute('src');
 
-          // Add lazyload class for lazysizes plugin
-          video.classList.add('lazyload');
+          // If YouTube, add lazyload attributes
+          // Lazyloading with Vimeo will disable fullscreen so we don't include it here
+          if (videoSrc.includes('youtube')) {
+            // Set video src to data-src
+            video.setAttribute('data-src', videoSrc);
+            video.removeAttribute('src');
+
+            // Add lazyload class for lazysizes plugin
+            video.classList.add('lazyload');
+          }
+
+          // Add fullscreen attributes
+          video.setAttribute('allowfullscreen', '');
 
           // Wrap video player with proportional container
           const embedWrapper = document.createElement('div');

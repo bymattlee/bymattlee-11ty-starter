@@ -4,6 +4,7 @@
 
 const blocksToHtml = require('@sanity/block-content-to-html');
 const getYouTubeID = require('get-youtube-id');
+const getVideoId = require('get-video-id');
 const imageUrl = require('../shortcodes/imageUrl.js');
 const imageSrcset = require('../shortcodes/imageSrcset.js');
 const getInternalUrl = require('../utilities/getInternalUrl.js');
@@ -28,6 +29,9 @@ const serializers = {
     ),
     youtubeBlock: props => (
       h('iframe', {src: `https://www.youtube.com/embed/${getYouTubeID(props.node.youtubeUrl)}`})
+    ),
+    vimeoBlock: props => (
+      h('iframe', {src: `https://player.vimeo.com/video/${getVideoId(props.node.vimeoUrl).id}`})
     )
   },
   marks: {
