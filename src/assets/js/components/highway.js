@@ -28,7 +28,7 @@ const updateBodyClasses = to => {
 };
 
 // Track Google Analytics on a new page load
-const trackGA = ((to, location) => {
+const trackGA = (to, location) => {
   if (typeof gtag === 'undefined') return;
 
   gtag('config', gaId, {
@@ -36,6 +36,6 @@ const trackGA = ((to, location) => {
     'page_title': to.page.title,
     'page_location': location.href
   });
-});
+};
 
 export { setActiveLink, updateBodyClasses, trackGA };

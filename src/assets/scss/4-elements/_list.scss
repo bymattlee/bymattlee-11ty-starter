@@ -8,7 +8,7 @@ ol {
   margin: get-size(20) 0 get-size(20) get-size(30);
   padding: 0;
   @include mq('md') {
-    margin: get-size(5, true) 0 get-size(25, true) get-size(35, true);
+    margin: get-size(25, true) 0 get-size(25, true) get-size(35, true);
   }
 
   &.u-unstyled {
