@@ -86,7 +86,7 @@
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
     "alpinejs": "^2.7.3",
-    "gsap": "^3.5.1",
+    "gsap": "^3.6.0",
     "inobounce": "^0.2.0",
     "lazysizes": "^5.2.2",
     "object-fit-images": "^3.2.4",
