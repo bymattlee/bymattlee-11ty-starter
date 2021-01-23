@@ -162,7 +162,6 @@ class Scroll2Reveal {
         {opacity: 0, y: '40px'},
         {opacity: 1, y: '0px', stagger: stagger, duration: duration, delay: delay, ease: 'power2.out'}
       );
-
     } else if (thisElType === 'stagger-fade-in') {
       gsap.fromTo(childEl,
         {opacity: 0},
@@ -174,7 +173,6 @@ class Scroll2Reveal {
         {opacity: 0, y: '40px'},
         {opacity: 1, y: '0px', stagger: stagger, duration: duration, delay: delay, ease: 'power2.out'}
       );
-
     } else if (thisElType === 'stagger-fade-in-children') {
       const staggerEl = el.children;
       gsap.fromTo(staggerEl,
