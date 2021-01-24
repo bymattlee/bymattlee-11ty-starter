@@ -3,7 +3,7 @@
 # ByMattLee 11ty Starter
 A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Alpine.js](https://github.com/alpinejs/alpine) and [Highway](https://highway.js.org/).
 
-[VIEW DEMO](https://bymattlee-web-starter.netlify.app/)
+[VIEW DEMO](https://bymattlee-11ty-starter.netlify.app/)
 
 ## Installation
 ##### 1. Install Node >=12.0.0: <https://nodejs.org/>
