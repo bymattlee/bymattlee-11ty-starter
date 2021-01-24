@@ -1,6 +1,6 @@
-![ByMattLee Web Starter Files Screenshot](http://hosted.bymattlee.com/github/bymattlee-web-starter-files-screenshot.jpg)
+![ByMattLee 11ty Starter Screenshot](http://hosted.bymattlee.com/github/bymattlee-11ty-starter-screenshot.jpg)
 
-# ByMattLee Web Starter Files
+# ByMattLee 11ty Starter
 A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Alpine.js](https://github.com/alpinejs/alpine) and [Highway](https://highway.js.org/).
 
 [VIEW DEMO](https://bymattlee-web-starter.netlify.app/)
@@ -34,7 +34,7 @@ $ yarn prod
 ```
 
 ## General Features
-* Data is coming from the Sanity Cloud API. This pairs perfectly with the [ByMattLee Sanity Starter CMS](https://github.com/bymattlee/bymattlee-sanity-starter-cms)
+* Data is coming from the Sanity Cloud API. This pairs perfectly with the [ByMattLee Sanity Studio Starter](https://github.com/bymattlee/bymattlee-sanity-studio-starter)
 * Spins up a local development environment through Browsersync
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
