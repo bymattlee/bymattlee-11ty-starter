@@ -5,7 +5,7 @@ viewName: articles
 pagination:
   data: articles.all
   size: 4
-permalink: /articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}
+permalink: /articles/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}
 eleventyComputed:
   title: Articles {% if pagination.pageNumber > 0 %}(Page {{ pagination.pageNumber + 1 }} of {{ pagination.hrefs | length }}){% endif %}
 ---
