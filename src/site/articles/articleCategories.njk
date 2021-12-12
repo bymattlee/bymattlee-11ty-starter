@@ -13,7 +13,7 @@ excludeFromSitemap: true
 ---
 
 <div class="u-mt20 u-mt40-md" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
-  {% for article in category.articles | reverse %}
+  {% for article in category.articles %}
     {% include 'partials/articles/preview.njk' %}
   {% endfor %}
 </div>

@@ -6,18 +6,11 @@ const filter = `
     'slug': slug.current,
     title,
     'articles': *[_type == "article" && references(^._id)]{
-      articleMetaData{
-        pageDescription,
-        pageShareImage,
-        pageTitle
-      },
       categories[]->{
         title,
         'slug': slug.current
       },
       excerpt,
-      featuredImage,
-      mainContent,
       publishedAt,
       'slug': slug.current,
       title
