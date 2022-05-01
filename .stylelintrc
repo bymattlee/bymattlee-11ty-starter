@@ -32,9 +32,15 @@
     "font-weight-notation": "numeric",
     "order/properties-alphabetical-order": true,
     "declaration-empty-line-before": "never",
-    "at-rule-no-unknown": ,
-    "no-descending-specificity": ,
-    "function-comma-newline-after": ,
-    "value-keyword-case":
+    "at-rule-no-unknown": null,
+    "no-descending-specificity": null,
+    "function-comma-newline-after": null,
+    "value-keyword-case": null,
+    "function-no-unknown": null,
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "no-invalid-position-at-import-rule": null,
+    "number-max-precision": null,
+    "selector-no-vendor-prefix": null
   }
 }

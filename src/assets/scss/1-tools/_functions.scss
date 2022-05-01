@@ -7,22 +7,23 @@
 
 // Convert from px to base 16 em
 @function px-to-em($px) {
-  @return ($px / 16px) * 1em;
+  @return calc($px / 16px) * 1em;
 }
 
 // Convert from rem to base 16 em
 @function rem-to-em($rem) {
-  @return ($rem / 1.6rem) * 1em;
+  @return calc($rem / 1.6rem) * 1em;
 }
 
 // Convert to vw
 @function to-vw($currentValue, $pageWidth) {
-  @return $currentValue / $pageWidth * 100vw;
+  @return calc($currentValue / $pageWidth) * 100vw;
 }
 
 // Responsive value
 @function responsive-value($lowSize, $highSize, $lowBreakpoint, $highBreakpoint) {
-  @return calc(#{$lowSize}rem + (#{$highSize} - #{$lowSize}) * (100vw - #{$lowBreakpoint}rem) / (#{$highBreakpoint} - #{$lowBreakpoint}));
+  @return calc(#{$lowSize}rem + (#{$highSize} - #{$lowSize}) *
+    (100vw - #{$lowBreakpoint}rem) / (#{$highBreakpoint} - #{$lowBreakpoint})); /* stylelint-disable-line indentation */
 }
 
 // Capitalize string
@@ -61,7 +62,7 @@
       }
       $sizeValue: to-vw($size, $ratioWidth);
     } @else {
-      $sizeValue: $size / 10 + rem;
+      $sizeValue: calc($size / 10) + rem;
     }
     @return $sizeValue;
   } @else {

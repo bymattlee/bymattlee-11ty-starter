@@ -6,7 +6,7 @@ A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](htt
 [VIEW DEMO](https://bymattlee-11ty-starter.netlify.app/)
 
 ## Installation
-##### 1. Install Node >=12.0.0: <https://nodejs.org/>
+##### 1. Install Node >=14.17.0: <https://nodejs.org/>
 ##### 2. Install Yarn
 ```
 $ npm i -g yarn

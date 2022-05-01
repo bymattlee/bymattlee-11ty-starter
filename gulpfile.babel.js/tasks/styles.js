@@ -7,19 +7,23 @@ import browserSync from 'browser-sync';
 import cleanCSS from 'gulp-clean-css';
 import concat from 'gulp-concat';
 import config from '../config';
+import dartSass from 'sass';
 import gif from 'gulp-if';
 import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
 import header from 'gulp-header';
 import plumber from 'gulp-plumber';
 import postcss from 'gulp-postcss';
 import purgecss from 'gulp-purgecss';
 import rename from 'gulp-rename';
 import reporter from 'postcss-reporter';
-import sass from 'gulp-sass';
 import scss from 'postcss-scss';
 import size from 'gulp-size';
 import sourcemaps from 'gulp-sourcemaps';
 import stylelint from 'stylelint';
+
+// Set default sass compiler
+const sass = gulpSass(dartSass);
 
 // Environment variables
 const isDevelopment = process.env.NODE_ENV === 'development';

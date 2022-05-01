@@ -10,7 +10,7 @@ $gridRowUtilities: (
   'rowSpan4': ( grid-row: span 4 / span 4 ),
   'rowSpan5': ( grid-row: span 5 / span 5 ),
   'rowSpan6': ( grid-row: span 6 / span 6 ),
-  'rowSpanFull': ( grid-row: 1 / -1 ),
+  'rowSpanFull': ( grid-row: calc(1 / -1) ),
   'rowStart1': ( grid-row-start: 1 ),
   'rowStart2': ( grid-row-start: 2 ),
   'rowStart3': ( grid-row-start: 3 ),

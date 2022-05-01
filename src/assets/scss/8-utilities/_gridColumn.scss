@@ -16,7 +16,7 @@ $gridColumnUtilities: (
   'colSpan10': ( grid-column: span 10 / span 10 ),
   'colSpan11': ( grid-column: span 11 / span 11 ),
   'colSpan12': ( grid-column: span 12 / span 12 ),
-  'colSpanFull': ( grid-column: 1 / -1 ),
+  'colSpanFull': ( grid-column: calc(1 / -1) ),
   'colStart1': ( grid-column-start: 1 ),
   'colStart2': ( grid-column-start: 2 ),
   'colStart3': ( grid-column-start: 3 ),

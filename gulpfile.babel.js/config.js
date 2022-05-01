@@ -28,6 +28,7 @@ module.exports = {
   ],
   eleventy: {
     src: src + '/site/**/*',
+    dest: dest + '/**/index.html',
   },
   styles: {
     src: srcAssets + '/scss/**/*.scss',

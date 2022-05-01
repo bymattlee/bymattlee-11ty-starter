@@ -3,7 +3,7 @@
 ** ***** ----------------------------------------------- ***** */
 
 .o-embed {
-  @include proportionalElement(9/16);
+  @include proportionalElement(calc(9/16));
   position: relative;
 
   iframe,

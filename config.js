@@ -2,6 +2,7 @@ module.exports = {
   sanity: {
     projectId: 'afxi85wm',
     dataset: 'production',
+    apiVersion: '2022-05-01',
     useCdn: true
   },
   envUrls: {
