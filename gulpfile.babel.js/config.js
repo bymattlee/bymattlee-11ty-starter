@@ -3,8 +3,8 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-const src = 'src';
-const dest = 'dist';
+const src = './src';
+const dest = './dist';
 const srcAssets = src + '/assets';
 const destAssets = dest + '/assets';
 
@@ -33,6 +33,7 @@ module.exports = {
   styles: {
     src: srcAssets + '/scss/**/*.scss',
     dest: destAssets + '/css',
+    tailwindConfig: './tailwind.config.js',
     purgeContent: [
       dest + '/**/*.html',
       srcAssets + '/js/**/*.js'

@@ -5,15 +5,17 @@
 const windowWidth = window.outerWidth;
 const xSmallWidth = 480;
 const smallWidth = 768;
-const mediumWidth = 900;
-const largeWidth = 1100;
-const xLargeWidth = 1300;
+const mediumWidth = 1024;
+const largeWidth = 1280;
+const xLargeWidth = 1440;
+const xxLargeWidth = 1800;
 
 const isXSmallWidth = windowWidth <= xSmallWidth;
 const isSmallWidth = windowWidth <= smallWidth;
 const isMediumWidth = windowWidth <= mediumWidth;
 const isLargeWidth = windowWidth <= largeWidth;
 const isXLargeWidth = windowWidth >= xLargeWidth;
+const isXxLargeWidth = windowWidth >= xxLargeWidth;
 
 const isChrome = navigator.userAgent.match(/Chrome/i) || navigator.userAgent.match(/CriOS/i);
 const isSafari = navigator.userAgent.match(/Safari/i) && !isChrome;
@@ -32,6 +34,7 @@ export {
   isMediumWidth,
   isLargeWidth,
   isXLargeWidth,
+  isXxLargeWidth,
   isChrome,
   isSafari,
   isFirefox,
