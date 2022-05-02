@@ -13,7 +13,6 @@ import gif from 'gulp-if';
 import gulp from 'gulp';
 import header from 'gulp-header';
 import json from 'rollup-plugin-json';
-import modernizr from 'gulp-modernizr';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import plumber from 'gulp-plumber';
 import rename from 'gulp-rename';
@@ -24,15 +23,6 @@ import terser from 'gulp-terser';
 
 // Environment variables
 const isDevelopment = process.env.NODE_ENV === 'development';
-
-// Create a custom Modernizr build by crawling the .scss and .js files
-const scriptsModernizr = () => {
-  return gulp.src(config.scripts.modernizr.src)
-    .pipe(plumber())
-    .pipe(modernizr(config.scripts.modernizr.options))
-    .pipe(concat('modernizr.js'))
-    .pipe(gulp.dest(config.scripts.modernizrDest));
-}
 
 // Lint files with ESLint
 const scriptsLint = () => {
@@ -52,7 +42,6 @@ const scriptsLint = () => {
 const scriptsMain = () => {
   return gulp.src(config.scripts.src)
     .pipe(plumber())
-    .pipe(addSrc.prepend(config.scripts.modernizrFileSrc))
     .pipe(gif(isDevelopment, sourcemaps.init()))
       .pipe(rollup({
         plugins: [
@@ -83,7 +72,6 @@ const scriptsMain = () => {
     .pipe(browserSync.stream());
 }
 
-const scriptsBuild = gulp.series(scriptsModernizr, scriptsLint, scriptsMain);
-const scriptsWatch = gulp.series(scriptsLint, scriptsMain);
+const scripts = gulp.series(scriptsLint, scriptsMain);
 
-export { scriptsBuild, scriptsWatch };
+export default scripts;

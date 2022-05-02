@@ -11,7 +11,7 @@ import { eleventyInitWatch } from './eleventy.js';
 import images from './images.js';
 import styles from './styles.js';
 import svgs from './svgs.js';
-import { scriptsWatch } from './scripts.js';
+import scripts from './scripts.js';
 
 /*
 ** -- Initialize BrowserSync
@@ -21,7 +21,7 @@ import { scriptsWatch } from './scripts.js';
 const watchChanges = () => {
   gulp.watch(config.eleventy.dest).on('change', browserSync.reload);
   gulp.watch(config.styles.src, styles);
-  gulp.watch(config.scripts.watchSrc, scriptsWatch);
+  gulp.watch(config.scripts.watchSrc, scripts);
   gulp.watch(config.images.optimizeSrc, images).on('change', browserSync.reload);
   gulp.watch(config.svgs.src, svgs).on('change', browserSync.reload);
   gulp.watch(config.copy.assetsSrc, copy).on('change', browserSync.reload);

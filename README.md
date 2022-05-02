@@ -38,7 +38,6 @@ $ yarn prod
 * Spins up a local development environment through Browsersync
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
-* Uses Modernizr to detect flexbox and SVG compatibility. If flexbox and/or SVG are not supported, a message will display asking the user to upgrade to latest version of the browser
 
 ##### Markup
 * Features Eleventy as the static site generator
@@ -61,7 +60,7 @@ $ yarn prod
 
 ##### Scripts
 * Utilizes ES2015+ syntax and modules with Babel transpiling
-* Includes a custom Modernizr build (based on references in the .scss and .js files), linting (ESLint), concatenation, minification and sourcemap creation
+* Includes linting (ESLint), concatenation, minification and sourcemap creation
 * Includes [Highway](https://highway.js.org/) for seamless page transitions
 * Includes a custom framework for reuseable content animations
 * Includes [Alpine.js](https://github.com/alpinejs/alpine) for declarative DOM manipulation
