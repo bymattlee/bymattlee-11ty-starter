@@ -4,14 +4,13 @@
 
 .lazyload,
 .lazyloading {
-  opacity: 0;
+  @apply u-opacity-0;
 }
 
 html.lazyloading {
-  opacity: 1;
+  @apply u-opacity-100;
 }
 
 .lazyloaded {
-  opacity: 1;
-  transition: opacity $transitionSlow;
+  @apply u-opacity-100 u-transition-opacity u-duration-slow;
 }

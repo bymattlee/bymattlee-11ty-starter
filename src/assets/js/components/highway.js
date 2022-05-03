@@ -11,13 +11,13 @@ const setActiveLink = location => {
   const menuItem = document.querySelectorAll('.js-menuItem');
 
   menuItem.forEach(item => {
-    item.classList.remove('u-white');
+    item.classList.remove('u-text-white');
     if (item.href === location.href) {
-      item.classList.add('u-white');
+      item.classList.add('u-text-white');
     } else {
       const currentItemSlug = item.href.split('/')[3];
       const currentLocationSlug = location.href.split('/')[3];
-      if (currentItemSlug === currentLocationSlug) item.classList.add('u-white');
+      if (currentItemSlug === currentLocationSlug) item.classList.add('u-text-white');
     }
   });
 };

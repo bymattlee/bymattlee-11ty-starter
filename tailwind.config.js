@@ -2,6 +2,8 @@ const config = require('./gulpfile.babel.js/config.js');
 const { pxToEm, fontFallbacks } = require('./tailwindUtilities.js')
 
 module.exports = {
+  mode: 'jit',
+  prefix: 'u-',
   theme: {
     screens: {
       xs: pxToEm(480),
@@ -67,6 +69,7 @@ module.exports = {
     spacing: {
       0: '0',
       5: '0.5rem',
+      8: '0.8rem',
       10: '1rem',
       15: '1.5rem',
       20: '2rem',
@@ -138,6 +141,5 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
   ],
-  content: config.styles.purgeContent,
-  safelist: process.env.NODE_ENV === 'development' ? [{ pattern: /.*/ }] : [],
+  content: config.styles.purgeContent
 }

@@ -1,0 +1,31 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Setup/Base
+** ***** ----------------------------------------------- ***** */
+
+:root {
+  @apply u-bg-grey-dark-2;
+  font-size: 62.5%;
+}
+
+*::selection {
+  @apply u-bg-grey-light-a u-text-white;
+}
+
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  @apply u-text-grey-light-c hover:u-text-grey-dark-6 active:u-text-grey-light-c u-no-underline
+    u-transition-colors u-duration-slow;
+}
+
+svg {
+  @apply u-inline-block u-fill-current;
+}

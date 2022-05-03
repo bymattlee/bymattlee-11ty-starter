@@ -10,23 +10,24 @@ eleventyComputed:
   title: Articles {% if pagination.pageNumber > 0 %}(Page {{ pagination.pageNumber + 1 }} of {{ pagination.hrefs | length }}){% endif %}
 ---
 
-<div class="u-mt20 u-mt40-md" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
+<div class="u-mt-20 md:u-mt-40" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
   {% for article in pagination.items %}
     {% include 'partials/articles/preview.njk' %}
   {% endfor %}
 </div>
 
 {% if pagination.href.previous or pagination.href.next %}
-  <div class="u-uppercase u-font14 u-mt40 u-mt60-md" data-s2r-el="block-fade-up" data-s2r-delay="0.7">
-    {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous | absoluteUrl }}">&laquo; Previous Page</a>
-    {% endif %}
-    {% if pagination.href.previous and pagination.href.next %}
-      <span class="u-px5">/</span>
-    {% endif %}
-    {% if pagination.href.next %}
-      <a href="{{ pagination.href.next | absoluteUrl }}">Next Page &raquo;</a>
-    {% endif %}
+  <div class="u-flex u-justify-between u-text-14 u-uppercase u-mt-40 md:u-mt-60" data-s2r-el="block-fade-up" data-s2r-delay="0.7">
+    <div>
+      {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous | absoluteUrl }}">&laquo; Previous Page</a>
+      {% endif %}
+    </div>
+    <div>
+      {% if pagination.href.next %}
+        <a href="{{ pagination.href.next | absoluteUrl }}">Next Page &raquo;</a>
+      {% endif %}
+    </div>
   </div>
 {% endif %}
   

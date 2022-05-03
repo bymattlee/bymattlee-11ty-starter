@@ -11,7 +11,7 @@ module.exports = (content, outputPath) => {
     const document = DOM.window.document;
 
     // Add lazyload to all article images
-    const articleImages = [...document.querySelectorAll('.o-richTextEditor img')];
+    const articleImages = [...document.querySelectorAll('.u-rich-text img')];
     if (articleImages.length) {
 
       articleImages.forEach(image => {
@@ -27,7 +27,7 @@ module.exports = (content, outputPath) => {
     }
 
     // Wrap video player with container to make size responsive and add lazyload
-    const articleVideos = [...document.querySelectorAll('.o-richTextEditor iframe')];
+    const articleVideos = [...document.querySelectorAll('.u-rich-text iframe')];
     if (articleVideos.length) {
       articleVideos.forEach(video => {
 
@@ -50,7 +50,7 @@ module.exports = (content, outputPath) => {
 
           // Wrap video player with proportional container
           const embedWrapper = document.createElement('div');
-          embedWrapper.classList.add('o-embed');
+          embedWrapper.classList = 'u-aspect-w-16 u-aspect-h-9 u-my-30 u-mx-0 sm:u-my-40';
           video.parentNode.insertBefore(embedWrapper, video);
           embedWrapper.appendChild(video);
         }

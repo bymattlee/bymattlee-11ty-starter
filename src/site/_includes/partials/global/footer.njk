@@ -1,14 +1,14 @@
-<footer class="c-footer u-bgGreyDark1 u-py40 u-py60 u-textCenter" role="contentinfo">
+<footer class="u-bg-grey-dark-1 u-py-40 u-text-center sm:u-py-60" role="contentinfo">
   <div class="l-container">
     <a href="{{ '/' | absoluteUrl }}" aria-label="{{ settings.seo.siteName }}">
-      {% svg 'icon-bymattlee', '0 0 50 50', 'c-footer-logoSvg' %}
+      {% svg 'icon-bymattlee', '0 0 50 50', 'u-w-40' %}
     </a>
     {% if sections.footer.menu %}
       <nav>
-        <ul class="u-unstyled u-mt40 u-mb0">
+        <ul class="u-mt-40">
           {% for menuItem in sections.footer.menu %}
-            <li class="u-inlineBlock u-my0 u-mx10 u-mx20-md">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineBlock u-uppercase u-font14{% isSamePageOrSection menuItem.url, page.url, ' u-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
+            <li class="u-inline-block u-mx-10 md:u-mx-20">
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineiblock u-font-heading u-text-14 u-uppercase{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -16,24 +16,24 @@
     {% endif %}
     {% if settings.social.socialSites %}
       <nav>
-        <ul class="u-unstyled u-mt40 u-mb0">
+        <ul class="u-mt-40">
           {% for socialSite in settings.social.socialSites %}
-            <li class="u-inlineBlock u-my0 u-mx5 u-mx10-md">
+            <li class="u-inline-block u-mx-5 md:u-mx-10">
               {% if socialSite.facebookUrl %}
-                <a href="{{ socialSite.facebookUrl }}" class="u-inlineBlock" target="_blank" rel="noopener" aria-label="Like On Facebook">
-                  {% svg 'icon-facebook', '0 0 50 50', 'c-footer-socialSvg' %}
+                <a href="{{ socialSite.facebookUrl }}" class="u-inline-block" target="_blank" rel="noopener" aria-label="Like On Facebook">
+                  {% svg 'icon-facebook', '0 0 50 50', 'u-w-30' %}
                 </a>
               {% elseif socialSite.twitterUrl %}
-                <a href="{{ socialSite.twitterUrl }}" class="u-inlineBlock" target="_blank" rel="noopener" aria-label="Follow On Twitter">
-                  {% svg 'icon-twitter', '0 0 50 50', 'c-footer-socialSvg' %}
+                <a href="{{ socialSite.twitterUrl }}" class="u-inline-block" target="_blank" rel="noopener" aria-label="Follow On Twitter">
+                  {% svg 'icon-twitter', '0 0 50 50', 'u-w-30' %}
                 </a>
               {% elseif socialSite.instagramUrl %}
-                <a href="{{ socialSite.instagramUrl }}" class="u-inlineBlock" target="_blank" rel="noopener" aria-label="Follow On Instagram">
-                  {% svg 'icon-instagram', '0 0 50 50', 'c-footer-socialSvg' %}
+                <a href="{{ socialSite.instagramUrl }}" class="u-inline-block" target="_blank" rel="noopener" aria-label="Follow On Instagram">
+                  {% svg 'icon-instagram', '0 0 50 50', 'u-w-30' %}
                 </a>
               {% elseif socialSite.youtubeUrl %}
-                <a href="{{ socialSite.youtubeUrl }}" class="u-inlineBlock" target="_blank" rel="noopener" aria-label="Subscribe On YouTube">
-                  {% svg 'icon-youtube', '0 0 50 50', 'c-footer-socialSvg' %}
+                <a href="{{ socialSite.youtubeUrl }}" class="u-inline-block" target="_blank" rel="noopener" aria-label="Subscribe On YouTube">
+                  {% svg 'icon-youtube', '0 0 50 50', 'u-w-30' %}
                 </a>
               {% endif %}
             </li>
@@ -41,6 +41,6 @@
         </ul>
       </nav>
     {% endif %}
-    <p class="u-mt40 u-uppercase u-font12">&copy; {% currentYear %} ByMattLee. All Rights Reserved.</p>
+    <p class="u-mt-40 u-text-12 u-uppercase">&copy; {% currentYear %} ByMattLee. All Rights Reserved.</p>
   </div>
 </footer>

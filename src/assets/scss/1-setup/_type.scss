@@ -1,0 +1,96 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Setup/Type
+** ***** ----------------------------------------------- ***** */
+
+/* ***** Mixins
+** ***** ----------------------------------------------- ***** */
+
+// Font face
+@mixin font-face($name, $file, $weight: 400, $style: normal) {
+  @font-face {
+    font-display: swap;
+    font-family: $name;
+    font-style: $style;
+    font-weight: $weight;
+    src:
+      url('../fonts/#{$file}.woff2') format('woff2'),
+      url('../fonts/#{$file}.woff') format('woff');
+  }
+}
+
+// Placeholder text
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    @apply opacity-100 u-transition-opacity u-duration-slow;
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    @apply opacity-100 u-transition-opacity u-duration-slow;
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    @apply opacity-100 u-transition-opacity u-duration-slow;
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    @apply opacity-100 u-transition-opacity u-duration-slow;
+    color: $color;
+    transition: opacity $duration-slow;
+  }
+
+  &:focus {
+    &::-webkit-input-placeholder {
+      @apply opacity-50;
+    }
+
+    &::-moz-placeholder {
+      @apply opacity-50;
+    }
+
+    &:-ms-input-placeholder {
+      @apply opacity-50;
+    }
+
+    &:-moz-placeholder {
+      @apply opacity-50;
+    }
+  }
+}
+
+// Input autofill
+@mixin autofill($border-color, $font-color, $background-color) {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border: 1px solid $border-color;
+    -webkit-box-shadow: 0 0 0 1000px $background-color inset;
+    -webkit-text-fill-color: $font-color;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+// Text Underline
+@mixin text-underline($color) {
+  background: linear-gradient($color, $color);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 0.1rem 0.1rem;
+}
+
+
+/* ***** Includes
+** ***** ----------------------------------------------- ***** */
+
+@layer base {
+  // Montserrat
+  @include font-face('Montserrat', 'montserrat-light-webfont', 200);
+  @include font-face('Montserrat', 'montserrat-regular-webfont');
+  @include font-face('Montserrat', 'montserrat-bold-webfont', 700);
+  @include font-face('Montserrat', 'montserrat-black-webfont', 800);
+
+  // Open Sans
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+}

@@ -1,8 +1,8 @@
 <div class="l-container l-container--small" data-s2r="group">
   <header>
-    <h1 class="u-h2 u-greyLightC" data-s2r-el="block-fade-up">Latest Articles</h1>
+    <h1 class="u-h2 u-text-grey-light-c" data-s2r-el="block-fade-up">Latest Articles</h1>
   </header>
-  <div class="u-mt20 u-mt40-md" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
+  <div class="u-mt-20 md:u-mt-40" data-s2r-el="stagger-fade-up" data-s2r-delay="0.2">
     {% if articles.all %}
       {% for article in articles.all %}
         {% if loop.index <= 3 %}
@@ -13,7 +13,7 @@
       <p>No articles have been written.</p>
     {% endif %}
   </div>
-  <p class="u-mt40" data-s2r-el="block-fade-up" data-s2r-delay="0.5">
+  <p class="u-mt-40" data-s2r-el="block-fade-up" data-s2r-delay="0.5">
     <a href="{{ '/articles/' | absoluteUrl }}" class="o-button">&raquo; View All Articles</a>
   </p>
 </div>

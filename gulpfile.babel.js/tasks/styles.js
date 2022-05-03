@@ -58,6 +58,9 @@ const styles = () => {
     .pipe(
       postcss([
         tailwindcss(config.styles.tailwindConfig),
+        reporter({
+          clearMessages: true
+        }),
       ], {
         syntax: scss 
       })

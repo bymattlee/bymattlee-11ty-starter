@@ -1,15 +1,15 @@
-<article{% if loop.index > 1 %} class="u-mt30 u-mt50-md"{% endif %}>
+<article{% if loop.index > 1 %} class="u-mt-30 md:u-mt-50"{% endif %}>
 
   <header>
     {% if article.title %}
-      <h2 class="u-h4"><a href="{{ article.slug | articleUrl }}" class="u-greyLightA">{{ article.title }}</a></h2>
+      <h2 class="u-h4"><a href="{{ article.slug | articleUrl }}" class="u-text-grey-light-a">{{ article.title }}</a></h2>
     {% endif %}
 
-    <div class="u-mt5">
-      <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
+    <div class="u-mt-5">
+      <time class="u-text-14 u-uppercase" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
       {% if article.categories.length %}
         <span>/</span>
-        <span class="u-uppercase u-font14">
+        <span class="u-uppercase u-text-14">
           Categories:
           {% for category in article.categories %}
             <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
@@ -21,7 +21,7 @@
   </header>
 
   {% if article.excerpt %}
-    <p class="u-mt20">{{ article.excerpt }}</p>
+    <p class="u-mt-20">{{ article.excerpt }}</p>
   {% endif %}
 
 </article>

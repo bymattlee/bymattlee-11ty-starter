@@ -20,7 +20,7 @@ eleventyComputed:
   <article>
 
     {% if article.featuredImage %}
-      <figure class="u-mb20 u-mb40-md" data-s2r-el>
+      <figure class="u-mb-20 md:u-mb-40" data-s2r-el>
         <img data-srcset="{% imageSrcset article.featuredImage %}" class="lazyload" data-sizes="auto">
       </figure>
     {% endif %}
@@ -30,11 +30,11 @@ eleventyComputed:
         <h2 class="u-h3" data-s2r-el>{{ article.title }}</h2>
       {% endif %}
 
-      <div class="u-mt5" data-s2r-el>
-        <time class="u-uppercase u-font14" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
+      <div class="u-mt-5" data-s2r-el>
+        <time class="u-text-14 u-uppercase" datetime="{{ article.publishedAt | htmlDate }}">{{ article.publishedAt | readableDate }}</time>
         {% if article.categories.length %}
           <span>/</span>
-          <span class="u-uppercase u-font14">
+          <span class="u-text-14 u-uppercase">
             Categories:
             {% for category in article.categories %}
               <a href="{{ category.slug | articleCategoryUrl }}">{{ category.title }}</a>
@@ -46,7 +46,7 @@ eleventyComputed:
     </header>
 
     {% if article.mainContent %}
-      <div class="o-richTextEditor u-mt30" data-s2r-el>
+      <div class="u-rich-text u-mt-30" data-s2r-el>
         {{ article.mainContent | blocksToHtml | safe }}
       </div>
     {% endif %}
@@ -54,16 +54,17 @@ eleventyComputed:
   </article>
 
   {% if article.previousArticle or article.nextArticle %}
-    <div class="u-uppercase u-font14 u-mt40 u-mt60-md" data-s2r-el>
-      {% if article.previousArticle %}
-        <a href="{{ article.previousArticle.slug | articleUrl }}">&laquo; Previous Article</a>
-      {% endif %}
-      {% if article.previousArticle and article.nextArticle %}
-        <span class="u-px5">/</span>
-      {% endif %}
-      {% if article.nextArticle %}
-        <a href="{{ article.nextArticle.slug | articleUrl }}">Next Article &raquo;</a>
-      {% endif %}
+    <div class="u-flex u-justify-between u-text-14 u-uppercase u-mt-40 md:u-mt-60" data-s2r-el>
+      <div>
+        {% if article.previousArticle %}
+          <a href="{{ article.previousArticle.slug | articleUrl }}">&laquo; Previous Article</a>
+        {% endif %}
+      </div>
+      <div>
+        {% if article.nextArticle %}
+          <a href="{{ article.nextArticle.slug | articleUrl }}">Next Article &raquo;</a>
+        {% endif %}
+      </div>
     </div>
   {% endif %}
 </div>

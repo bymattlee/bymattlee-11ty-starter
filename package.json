@@ -92,7 +92,6 @@
     "alpinejs": "^3.10.2",
     "gsap": "^3.10.4",
     "lazysizes": "^5.3.2",
-    "sanitize.css": "^13.0.0",
     "throttle-debounce": "^4.0.1"
   }
 }

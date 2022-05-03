@@ -1,0 +1,127 @@
+/* ***** ----------------------------------------------- ***** **
+** ***** Utilities/Type
+** ***** ----------------------------------------------- ***** */
+
+@layer utilities {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .u-h1,
+  .u-h2,
+  .u-h3,
+  .u-h4,
+  .u-h5,
+  .u-h6 {
+    @apply u-font-heading u-font-bold;
+    text-rendering: optimizeLegibility;
+  }
+
+  .u-h1 {
+    @apply u-text-36 sm:u-text-48;
+  }
+
+  .u-h2 {
+    @apply u-text-30 sm:u-text-36;
+  }
+
+  .u-h3 {
+    @apply u-text-24 sm:u-text-28;
+  }
+
+  .u-h4 {
+    @apply u-text-18 sm:u-text-24;
+  }
+
+  .u-h5 {
+    @apply u-text-14 sm:u-text-18;
+  }
+
+  .u-h6 {
+    @apply u-text-12 sm:u-text-14;
+  }
+
+  .u-rich-text {
+    * {
+      &:first-child {
+        @apply u-mt-0;
+      }
+
+      &:last-child {
+        @apply u-mb-0;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply u-mb-10;
+    }
+
+    h1 {
+      @apply u-text-36 sm:u-text-48;
+    }
+
+    h2 {
+      @apply u-text-30 sm:u-text-36;
+    }
+
+    h3 {
+      @apply u-text-24 sm:u-text-28;
+    }
+
+    h4 {
+      @apply u-text-18 sm:u-text-24;
+    }
+
+    * + h1,
+    * + h2,
+    * + h3,
+    * + h4,
+    * + h5,
+    * + h6 {
+      @apply u-mt-30 sm:u-mt-35;
+    }
+
+    a {
+      @apply u-underline;
+
+      &:hover {
+        @media (hover: hover) {
+          @apply u-no-underline;
+        }
+      }
+    }
+
+    p {
+      @apply u-leading-loose u-my-20 sm:u-my-25;
+    }
+
+    ul,
+    ol {
+      @apply u-leading-loose u-mt-20 u-mr-0 u-mb-20 u-ml-30 sm:u-mt-25 sm:u-mb-25 sm:u-ml-35;
+
+      ul,
+      ol {
+        @apply u-mt-5 u-mr-0 u-mb-5 u-ml-35;
+      }
+    }
+
+    ul {
+      @apply u-list-disc;
+    }
+
+    ol {
+      @apply u-list-decimal;
+    }
+
+    .o-button {
+      @apply u-no-underline;
+    }
+  }
+}
