@@ -35,7 +35,7 @@ module.exports = {
     dest: destAssets + '/css',
     tailwindConfig: './tailwind.config.js',
     purgeContent: [
-      dest + '/**/*.html',
+      src + '/site/**/*.njk',
       srcAssets + '/js/**/*.js'
     ]
   },
