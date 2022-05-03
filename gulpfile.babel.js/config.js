@@ -36,7 +36,8 @@ module.exports = {
     tailwindConfig: './tailwind.config.js',
     purgeContent: [
       src + '/site/**/*.njk',
-      srcAssets + '/js/**/*.js'
+      srcAssets + '/js/**/*.js',
+      './eleventy/**/*.js'
     ]
   },
   scripts: {
