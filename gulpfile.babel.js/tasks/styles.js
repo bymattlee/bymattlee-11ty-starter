@@ -76,7 +76,8 @@ const styles = () => {
     }))
     .pipe(header(config.fileHeader.join('\n')))
     .pipe(gif(!isDevelopment, purgecss({
-      content: config.styles.purgeContent
+      content: config.styles.purgeContent,
+      defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
     })))
     .pipe(size({
       title: 'Compressed File Size:',
