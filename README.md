@@ -1,7 +1,7 @@
 ![ByMattLee 11ty Starter Screenshot](http://hosted.bymattlee.com/github/bymattlee-11ty-starter-screenshot.jpg)
 
 # ByMattLee 11ty Starter
-A starter boilerplate powered by [Eleventy](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Alpine.js](https://github.com/alpinejs/alpine) and [Highway](https://highway.js.org/).
+A starter boilerplate powered by [11ty](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Highway](https://highway.js.org/).
 
 [VIEW DEMO](https://bymattlee-11ty-starter.netlify.app/)
 
@@ -34,13 +34,14 @@ $ yarn prod
 ```
 
 ## General Features
+* Features [Gulp](https://gulpjs.com/) as the build pipeline that renders HTML, compiles styles and scripts, and optimizes assets.
 * Data is coming from the Sanity Cloud API. This pairs perfectly with the [ByMattLee Sanity Studio Starter](https://github.com/bymattlee/bymattlee-sanity-studio-starter)
 * Spins up a local development environment through Browsersync
 * Browser reload when NJK, JS, image, SVG or asset files are updated
 * Styles are injected when SCSS files are updated
 
 ##### Markup
-* Features Eleventy as the static site generator
+* Features [11ty](https://www.11ty.dev/) as the static site generator
 * Markup is minified in staging and production environments
 * Site data can be set in `src/site/_data`
 * Pages in `src/site` will be compiled to `dist`
@@ -48,22 +49,21 @@ $ yarn prod
 * `src/site/_includes/partials` contains site partials and components that are reused across the site (modular HTML)
 
 ##### Styles
+* Features [Tailwind CSS](https://tailwindcss.com/), a utility-first framework
 * Includes linter (Stylelint), autoprefixer, minification and sourcemap creation
 * SCSS files are located in `src/assets/scss`
 * `main.scss` in `src/assets/scss` serves as the base that includes the other dependent SASS files
 * `main.scss` gets compiled to `dist/assets/css/main.min.css`
 * `.stylelintrc` contains the settings for Stylelint
 * Info about class namespacing can be found in `src/assets/scss/main.scss`
-* Default unit of measurement is **rem** and can be switched in `get-size()` in `src/assets/scss/1-tools/_functions.scss`
-* Utilizes a custom utility-first CSS approach; available classes can be found in `assets/src/scss/8-utilities`
 * Unused CSS (PurgeCSS) will be removed in staging and production builds
 
 ##### Scripts
-* Utilizes ES2015+ syntax and modules with Babel transpiling
+* Features [rollup.js](https://rollupjs.org/guide/en/) as the module bundler
 * Includes linting (ESLint), concatenation, minification and sourcemap creation
 * Includes [Highway](https://highway.js.org/) for seamless page transitions
 * Includes a custom framework for reuseable content animations
-* Includes [Alpine.js](https://github.com/alpinejs/alpine) for declarative DOM manipulation
+* Includes [Alpine.js](https://alpinejs.dev/) for declarative DOM manipulation
 * `main.js` in `src/assets/js` serves as the main JS file that includes and runs all components and will be compiled to `dist/assets/js/main.min.js`
 * All local components should be placed in `src/assets/js/components`
 * All vendor JS can be manually added to `src/assets/js/vendors` if not found on Yarn
