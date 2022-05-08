@@ -38,7 +38,6 @@
   &:-moz-placeholder {
     @apply opacity-100 u-transition-opacity u-duration-slow;
     color: $color;
-    transition: opacity $duration-slow;
   }
 
   &:focus {
@@ -73,11 +72,11 @@
 }
 
 // Text Underline
-@mixin text-underline($color) {
-  background: linear-gradient($color, $color);
+@mixin text-underline() {
+  background: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 0.1rem 0.1rem;
+  background-repeat: no-repeat;
+  background-size: 100% 0.1rem;
 }
 
 

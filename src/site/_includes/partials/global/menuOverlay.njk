@@ -1,11 +1,11 @@
-<section class="u-bg-black u-fixed u-inset-0 u-w-full u-h-full u-overflow-hidden u-z-menu-overlay u-flex u-flex-col u-pt-80 u-pb-40 sm:u-hidden" x-show="menuOverlayIsOpen" x-transition.opacity.duration.500ms>
+<section class="u-bg-black u-fixed u-inset-0 u-w-full u-h-full u-overflow-hidden u-z-menu-overlay u-flex u-flex-col u-pt-80 u-pb-40 sm:u-hidden" x-data x-show="$store.menuOverlay.isOpen" x-transition.opacity.duration.500ms>
   <div class="u-flex-1 u-flex u-justify-center u-items-center">
     {% if sections.header.menu %}
       <nav>
         <ul >
           {% for menuItem in sections.header.menu %}
             <li class="u-my-15 u-text-center">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-uppercase u-text-16{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %} @click="menuOverlayIsOpen = false">{{ menuItem.name }}</a>
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-uppercase u-text-16{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %} x-data @click="$store.menuOverlay.toggle()">{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>

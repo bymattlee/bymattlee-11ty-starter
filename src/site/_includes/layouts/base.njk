@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="u-flex u-flex-col u-h-full u-font-body u-leading-normal u-text-14 u-text-grey-light-a u-flex u-flex-col sm:u-text-16 js-body {{ bodyClasses }}" x-data="{ menuOverlayIsOpen: false }">
+<body class="u-flex u-flex-col u-h-full u-text-body u-text-grey-light-a u-flex u-flex-col js-body {{ bodyClasses }}" x-data :class="$store.menuOverlay.isOpen && 'u-overflow-hidden'">
 
 {{ content | safe }}
 

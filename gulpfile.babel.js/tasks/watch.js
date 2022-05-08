@@ -19,7 +19,7 @@ import scripts from './scripts.js';
 ** -- Force browser reload when changes are made to images, svgs and asset files
 */
 const watchChanges = () => {
-  gulp.watch(config.eleventy.dest, styles).on('change', browserSync.reload);
+  gulp.watch(config.eleventy.watch, styles).on('change', browserSync.reload);
   gulp.watch(config.styles.src, styles);
   gulp.watch(config.scripts.watchSrc, scripts);
   gulp.watch(config.images.optimizeSrc, images).on('change', browserSync.reload);

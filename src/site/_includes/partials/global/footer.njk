@@ -4,19 +4,19 @@
       {% svg 'icon-bymattlee', '0 0 50 50', 'u-w-40' %}
     </a>
     {% if sections.footer.menu %}
-      <nav>
-        <ul class="u-mt-40">
+      <nav class="u-mt-40">
+        <ul>
           {% for menuItem in sections.footer.menu %}
             <li class="u-inline-block u-mx-10 md:u-mx-20">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inlineiblock u-font-heading u-text-14 u-uppercase{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-text-14 u-uppercase{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>
       </nav>
     {% endif %}
     {% if settings.social.socialSites %}
-      <nav>
-        <ul class="u-mt-40">
+      <nav class="u-mt-40">
+        <ul>
           {% for socialSite in settings.social.socialSites %}
             <li class="u-inline-block u-mx-5 md:u-mx-10">
               {% if socialSite.facebookUrl %}

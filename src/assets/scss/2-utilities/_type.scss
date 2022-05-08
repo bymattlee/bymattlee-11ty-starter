@@ -43,8 +43,12 @@
     @apply u-text-12 sm:u-text-14;
   }
 
+  .u-text-body {
+    @apply u-font-body u-leading-normal u-text-14 sm:u-text-16;
+  }
+
   .u-rich-text {
-    * {
+    > * {
       &:first-child {
         @apply u-mt-0;
       }
@@ -90,16 +94,10 @@
 
     a {
       @apply u-underline;
-
-      &:hover {
-        @media (hover: hover) {
-          @apply u-no-underline;
-        }
-      }
     }
 
     p {
-      @apply u-leading-loose u-my-20 sm:u-my-25;
+      @apply u-leading-loose u-my-20 sm:u-my-30;
     }
 
     ul,
@@ -118,6 +116,10 @@
 
     ol {
       @apply u-list-decimal;
+    }
+
+    blockquote {
+      @apply u-border-l-2 u-my-30 u-mx-20 u-pl-30;
     }
 
     .o-button {

@@ -27,8 +27,10 @@ module.exports = {
     '*/\n'
   ],
   eleventy: {
-    src: src + '/site/**/*',
-    dest: dest + '/**/index.html',
+    watch: [
+      dest + '/**/index.html',
+      './tailwind.config.js',
+    ]
   },
   styles: {
     src: srcAssets + '/scss/**/*.scss',
@@ -42,10 +44,8 @@ module.exports = {
   },
   scripts: {
     src: srcAssets + '/js/main.js',
-    watchSrc: [
-      srcAssets + '/js/**/*.js'
-    ],
-    dest:  destAssets + '/js'
+    watchSrc: srcAssets + '/js/**/*.js',
+    dest: destAssets + '/js'
   },
   images: {
     optimizeSrc: srcAssets + '/images/**/*',
@@ -53,7 +53,7 @@ module.exports = {
       srcAssets + '/images/**/*',
       '!' + srcAssets + '/images/**/*.svg'
     ],
-    dest:  destAssets + '/images'
+    dest: destAssets + '/images'
   },
   svgs: {
     src: srcAssets + '/svgs/*.svg',

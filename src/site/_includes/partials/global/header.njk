@@ -1,14 +1,14 @@
 <header class="u-bg-black u-py-20 u-z-header" role="banner">
   <div class="l-container u-flex u-items-center u-justify-between">
     <h1>
-      <a href="{{ '/' | absoluteUrl }}" class="xs:u-flex xs:u-items-center" aria-label="{{ settings.seo.siteName }}" @click="menuOverlayIsOpen = false">
+      <a href="{{ '/' | absoluteUrl }}" class="xs:u-flex xs:u-items-center" aria-label="{{ settings.seo.siteName }}" x-data @click="$store.menuOverlay.close()">
         {% svg 'icon-bymattlee', '0 0 50 50', 'u-block u-w-40' %}
         <span class="u-hidden u-uppercase md:u-block md:u-text-22 md:u-ml-10">{{ settings.seo.siteName }}</span>
       </a>
     </h1>
-    <button class="u-font-heading u-text-16 u-font-bold u-uppercase u-relative sm:u-hidden" type="button" @click="menuOverlayIsOpen = !menuOverlayIsOpen">
-      <span x-show="!menuOverlayIsOpen">Menu</span>
-      <span x-show="menuOverlayIsOpen">Close</span>
+    <button class="u-font-heading u-text-16 u-font-bold u-uppercase u-relative sm:u-hidden" type="button" x-data @click="$store.menuOverlay.toggle()">
+      <span x-data x-show="!$store.menuOverlay.isOpen">Menu</span>
+      <span x-data x-show="$store.menuOverlay.isOpen">Close</span>
     </button>
     {% if sections.header.menu %}
       <nav class="u-hidden sm:u-block">
