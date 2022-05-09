@@ -4,7 +4,7 @@
 A starter boilerplate powered by [11ty](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Highway](https://highway.js.org/).
 
 [VIEW DEMO](https://bymattlee-11ty-starter.netlify.app/)
-
+___
 ## Installation
 ##### 1. Install Node >=14.17.0: <https://nodejs.org/>
 ##### 2. Install Yarn
@@ -15,10 +15,10 @@ $ npm i -g yarn
 ```
 $ yarn
 ```
-
+___
 ## Configuration
 In `config.js`, update Sanity options and environment URLs for project compilation.
-
+___
 ## Use
 ##### Build Files For Development And Initialize Watch
 ```
@@ -32,7 +32,7 @@ $ yarn stage
 ```
 $ yarn prod
 ```
-
+___
 ## General Features
 * Features [Gulp](https://gulpjs.com/) as the build pipeline that renders HTML, compiles styles and scripts, and optimizes assets.
 * Data is coming from the Sanity Cloud API. This pairs perfectly with the [ByMattLee Sanity Studio Starter](https://github.com/bymattlee/bymattlee-sanity-studio-starter)
@@ -88,7 +88,7 @@ $ yarn prod
 ##### Robots.txt
 * Generates a robots.txt file
 * Configuration can be found in `src/site/robots.njk`
-
+___
 ## Tailwind CSS Notes
 * All Tailwind settings can be found in `./tailwind.config.js`
 * Most styles should be written as utility classes in the template markup but custom SCSS can be used for unique properties and/or magic numbers
@@ -113,3 +113,9 @@ svg {
     }
 }
 ```
+___
+## Contact
+* Matt Lee - `@bymattlee` on most platforms
+* Visit my website at [bymattlee.com](https://bymattlee.com)
+
+[![Twitter Follow](https://img.shields.io/twitter/follow/bymattlee?style=social)](https://twitter.com/bymattlee)
