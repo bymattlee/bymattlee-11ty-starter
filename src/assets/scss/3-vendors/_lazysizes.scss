@@ -7,10 +7,6 @@
   @apply u-opacity-0;
 }
 
-html.lazyloading {
-  @apply u-opacity-100;
-}
-
 .lazyloaded {
   @apply u-opacity-100 u-transition-opacity u-duration-slow;
 }

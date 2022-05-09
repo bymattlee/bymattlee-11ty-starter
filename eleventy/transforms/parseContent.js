@@ -50,7 +50,7 @@ module.exports = (content, outputPath) => {
 
           // Wrap video player with proportional container
           const embedWrapper = document.createElement('div');
-          embedWrapper.classList = 'u-aspect-w-16 u-aspect-h-9 u-my-30 u-mx-0 sm:u-my-40';
+          embedWrapper.classList = 'u-aspect-w-16 u-aspect-h-9 u-my-30 sm:u-my-40';
           video.parentNode.insertBefore(embedWrapper, video);
           embedWrapper.appendChild(video);
         }
