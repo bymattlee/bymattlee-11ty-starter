@@ -26,6 +26,15 @@ a {
     u-transition-colors u-duration-slow;
 }
 
+button {
+  @apply u-text-body;
+}
+
 svg {
   @apply u-inline-block u-fill-current;
+}
+
+input,
+textarea {
+  @apply u-bg-transparent u-text-body u-outline-none focus-visible:u-outline-none;
 }

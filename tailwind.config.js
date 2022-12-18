@@ -72,8 +72,15 @@ module.exports = {
     },
     spacing: {
       0: '0',
+      1: '0.1rem',
+      2: '0.2rem',
+      3: '0.3rem',
+      4: '0.4rem',
       5: '0.5rem',
+      6: '0.6rem',
+      7: '0.7rem',
       8: '0.8rem',
+      9: '0.9rem',
       10: '1rem',
       15: '1.5rem',
       20: '2rem',
@@ -159,5 +166,8 @@ module.exports = {
   plugins: [
     require('@tailwindcss/aspect-ratio'),
   ],
-  content: config.styles.purgeContent
+  content: config.styles.purgeContent,
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }
