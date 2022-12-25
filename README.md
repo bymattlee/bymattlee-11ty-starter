@@ -1,7 +1,7 @@
 ![ByMattLee 11ty Starter Screenshot](http://hosted.bymattlee.com/github/bymattlee-11ty-starter-screenshot.jpg)
 
 # ByMattLee 11ty Starter
-A starter boilerplate powered by [11ty](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Highway](https://highway.js.org/).
+A starter boilerplate powered by [11ty](https://www.11ty.dev/), [Sanity](https://www.sanity.io/), [Gulp](https://gulpjs.com/), [Tailwind CSS](https://tailwindcss.com/), [rollup.js](https://rollupjs.org/), [Alpine.js](https://alpinejs.dev/) and [Taxi.js](https://taxi.js.org/).
 
 [VIEW DEMO](https://bymattlee-11ty-starter.netlify.app/)
 ___
@@ -61,7 +61,7 @@ ___
 ##### Scripts
 * Features [rollup.js](https://rollupjs.org/guide/en/) as the module bundler
 * Includes linting (ESLint), concatenation, minification and sourcemap creation
-* Includes [Highway](https://highway.js.org/) for seamless page transitions
+* Includes [Taxi.js](https://taxi.js.org/) for seamless page transitions
 * Includes a custom framework for reuseable content animations
 * Includes [Alpine.js](https://alpinejs.dev/) for declarative DOM manipulation
 * `main.js` in `src/assets/js` serves as the main JS file that includes and runs all components and will be compiled to `dist/assets/js/main.min.js`

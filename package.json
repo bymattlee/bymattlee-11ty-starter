@@ -15,9 +15,8 @@
   },
   "keywords": [
     "ByMattLee",
-    "Web",
-    "Starter",
-    "Files"
+    "11ty",
+    "Starter"
   ],
   "license": "MIT",
   "repository": {
@@ -88,7 +87,7 @@
     "through2": "^4.0.2"
   },
   "dependencies": {
-    "@dogstudio/highway": "^2.2.1",
+    "@unseenco/taxi": "^1.2.2",
     "alpinejs": "^3.10.5",
     "gsap": "^3.11.3",
     "lazysizes": "^5.3.2",

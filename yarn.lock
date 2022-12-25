@@ -1073,13 +1073,6 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@dogstudio/highway@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@dogstudio/highway/-/highway-2.2.1.tgz#bf33cb3a026e9362e18468043574363204c16fa8"
-  integrity sha512-/03I5fib34y22VGjYFy2y1U0LHPlodH/Ua+YHil6CRf1tcD8uCIHvSH2s2B9rc2I9hjEPTC9I3VfYBIYKiXLAg==
-  dependencies:
-    tiny-emitter "^2.1.0"
-
 "@eslint/eslintrc@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.0.tgz#8ec64e0df3e7a1971ee1ff5158da87389f167a63"
@@ -1460,6 +1453,20 @@
   integrity sha512-auApPaJf3NPfe18hSoJkp8EbZzer2ISk7o8mCC3M9he/a04+gbMF97NkpD2S8riMGvm4BMRI59/SZQSaLTKpsQ==
   dependencies:
     "@types/node" "*"
+
+"@unseenco/e@^2.2.1":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@unseenco/e/-/e-2.2.3.tgz#ca31b196398ccdb1001b8c0a66cca3922c31b2bd"
+  integrity sha512-ntxSrExl+KRWjbD3D4U2AnDZAwD0BZyhowQ6y+bbPqvvEkKfFdTlGNUa/xCwezHvZe+YowJ+mHAGjxtvMtK73Q==
+  dependencies:
+    selector-set "^1.1.5"
+
+"@unseenco/taxi@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@unseenco/taxi/-/taxi-1.2.2.tgz#a401ee199d283fa836622b19f502d230ad1bece8"
+  integrity sha512-dnbFai8n8872yxG8rqAOfhqTJ/98a24x9U9t1NAkzWFgyJ/Mr5MYZ8BdsNui7I7V6rp6+yQ8TQ/9xWPbZP6vqQ==
+  dependencies:
+    "@unseenco/e" "^2.2.1"
 
 "@vue/reactivity@~3.1.1":
   version "3.1.5"
@@ -8986,6 +8993,11 @@ seek-bzip@^1.0.5:
   dependencies:
     commander "^2.8.1"
 
+selector-set@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/selector-set/-/selector-set-1.1.5.tgz#60c135aea482b6f46a2d95ad72058927690a8634"
+  integrity sha512-6SQw6yMew5iOZ8/cDHDEnJWRM4ot2mxP6szZyF5ptrBogw4AcS4EXRj/8BUfgAMwVfdL84qpModlBMOl2NVrsQ==
+
 semver-compare@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz#0dee216a1c941ab37e9efb1788f6afc5ff5537fc"
@@ -10081,11 +10093,6 @@ timers-ext@^0.1.7:
   dependencies:
     es5-ext "~0.10.46"
     next-tick "1"
-
-tiny-emitter@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
-  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
 tmp@^0.0.33:
   version "0.0.33"

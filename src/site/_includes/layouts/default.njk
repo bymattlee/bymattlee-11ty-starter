@@ -4,8 +4,8 @@ layout: base
 
 {% include 'partials/global/header.njk' %}
 
-<main class="u-flex-1 u-py-40 sm:u-py-80" role="main" data-router-wrapper>
-  <div data-router-view="{{ viewName }}">
+<main class="u-flex-1 u-py-40 sm:u-py-80" role="main" data-taxi>
+  <div data-taxi-view>
     {% if thisPage.pageSections %}
       {% include 'partials/pages/pageSections.njk' %}
     {% else %}
