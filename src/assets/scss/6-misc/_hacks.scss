@@ -6,15 +6,12 @@
 ** ***** ----------------------------------------------- ***** */
 
 // Edge 12+
-@supports (-webkit-appearance:none) {
-
+@supports (-webkit-appearance: none) {
 }
 
 // IE 10 and 11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-
 }
-
 
 /* ***** Safari Hacks
 ** ***** ----------------------------------------------- ***** */
@@ -25,7 +22,6 @@
 _::-webkit-full-page-media,
 _:future,
 :root .selector {
-
 }
 
 /* ***** Firefox Hacks
@@ -34,7 +30,6 @@ _:future,
 // Example
 _::-moz-range-track,
 body:last-child .selector {
-
 }
 
 /* stylelint-enable */

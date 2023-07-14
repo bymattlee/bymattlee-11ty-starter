@@ -15,7 +15,7 @@
         <ul>
           {% for menuItem in sections.header.menu %}
             <li class="u-inline-block {% if loop.index > 1 %} u-ml-20 md:u-ml-40{% endif %}">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-text-14 u-uppercase{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-text-14 u-uppercase{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menu-item"{% if menuItem.openInNewTab %} target="_blank"{% endif %}>{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>

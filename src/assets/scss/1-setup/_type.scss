@@ -12,8 +12,7 @@
     font-family: $name;
     font-style: $style;
     font-weight: $weight;
-    src:
-      url('../fonts/#{$file}.woff2') format('woff2'),
+    src: url('../fonts/#{$file}.woff2') format('woff2'),
       url('../fonts/#{$file}.woff') format('woff');
   }
 }
@@ -78,7 +77,6 @@
   background-repeat: no-repeat;
   background-size: 100% 0.1rem;
 }
-
 
 /* ***** Includes
 ** ***** ----------------------------------------------- ***** */

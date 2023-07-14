@@ -34,7 +34,6 @@
 **    - Example: The home page will use the class '.p-home'.
 */
 
-
 /* ***** Tailwind
 ** ***** ----------------------------------------------- ***** */
 
@@ -42,13 +41,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ***** Setup
 ** ***** ----------------------------------------------- ***** */
 
 @import '1-setup/type';
 @import '1-setup/base';
-
 
 /* ***** Utilities
 ** ***** ----------------------------------------------- ***** */
@@ -56,25 +53,21 @@
 @import '2-utilities/layout';
 @import '2-utilities/type';
 
-
 /* ***** Vendors
 ** ***** ----------------------------------------------- ***** */
 
 @import '3-vendors/lazysizes';
 @import '3-vendors/s2r';
 
-
 /* ***** Objects
 ** ***** ----------------------------------------------- ***** */
 
 @import '4-objects/button';
 
-
 /* ***** Components
 ** ***** ----------------------------------------------- ***** */
 
 // @import '5-components/component';
-
 
 /* ***** Misc
 ** ***** ----------------------------------------------- ***** */

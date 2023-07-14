@@ -2,15 +2,15 @@
 /* ***** Get Internal URL
 /* ***** ----------------------------------------------- ***** */
 
-const absoluteUrl = require('../filters/absoluteUrl.js');
-const articleUrl = require('../filters/articleUrl.js');
+const absoluteUrl = require('../filters/absoluteUrl.js')
+const articleUrl = require('../filters/articleUrl.js')
 
 module.exports = (slug, type) => {
   if (type === 'page') {
-    return slug === 'index' ? absoluteUrl('/') : absoluteUrl(`/${slug}/`);
+    return slug === 'index' ? absoluteUrl('/') : absoluteUrl(`/${slug}/`)
   } else if (type === 'article') {
-    return articleUrl(slug);
+    return articleUrl(slug)
   } else {
-    return slug;
+    return slug
   }
 }

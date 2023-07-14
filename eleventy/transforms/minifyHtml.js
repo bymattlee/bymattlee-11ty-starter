@@ -2,7 +2,7 @@
 /* ***** Minify HTML Transform
 /* ***** ----------------------------------------------- ***** */
 
-const htmlmin = require('html-minifier');
+const htmlmin = require('html-minifier')
 
 module.exports = (content, outputPath) => {
   if (outputPath.endsWith('.html')) {
@@ -18,9 +18,9 @@ module.exports = (content, outputPath) => {
       removeEmptyAttributes: true,
       removeRedundantAttributes: true,
       removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    });
-    return minified;
+      removeStyleLinkTypeAttributes: true,
+    })
+    return minified
   }
-  return content;
+  return content
 }

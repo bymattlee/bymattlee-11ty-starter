@@ -5,7 +5,7 @@
         <ul >
           {% for menuItem in sections.header.menu %}
             <li class="u-my-15 u-text-center">
-              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-uppercase u-text-16{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menuItem"{% if menuItem.openInNewTab %} target="_blank"{% endif %} x-data @click="$store.menuOverlay.toggle()">{{ menuItem.name }}</a>
+              <a href="{{ menuItem.url | absoluteUrl }}" class="u-inline-block u-font-heading u-uppercase u-text-16{% isSamePageOrSection menuItem.url, page.url, ' u-text-white' %} js-menu-item"{% if menuItem.openInNewTab %} target="_blank"{% endif %} x-data @click="$store.menuOverlay.toggle()">{{ menuItem.name }}</a>
             </li>
           {% endfor %}
         </ul>

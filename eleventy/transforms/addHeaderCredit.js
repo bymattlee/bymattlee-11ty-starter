@@ -19,12 +19,12 @@ const markupHeader = [
   '**',
   '**',
   '**',
-  '-->\n'
-];
+  '-->\n',
+]
 
 module.exports = (content, outputPath) => {
   if (outputPath.endsWith('.html')) {
-    return markupHeader.join('\n') + content;
+    return markupHeader.join('\n') + content
   }
-  return content;
+  return content
 }

@@ -1,4 +1,4 @@
-const client = require('../../../../eleventy/utilities/sanityClient.js');
+const client = require('../../../../eleventy/utilities/sanityClient.js')
 
 const filter = `
   *[_type == "articleCategory" && !(_id in path('drafts.**'))] {
@@ -16,8 +16,8 @@ const filter = `
       title
     } | order(publishedAt desc)
   } | order(title asc)
-`;
+`
 
 module.exports = async () => {
-  return await client.fetch(filter).catch(err => console.error(err));
+  return await client.fetch(filter).catch((err) => console.error(err))
 }
