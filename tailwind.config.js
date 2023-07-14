@@ -1,4 +1,4 @@
-const config = require('./gulpfile.babel.js/config.js');
+const config = require('./gulpfile.babel.js/config.js')
 const { pxToEm, fontFallbacks } = require('./tailwindUtilities.js')
 
 module.exports = {
@@ -19,41 +19,35 @@ module.exports = {
       black: '#000',
       white: '#fff',
       'grey-dark': {
-        '1': '#111',
-        '2': '#222',
-        '3': '#333',
-        '4': '#444',
-        '5': '#555',
-        '6': '#666',
+        1: '#111',
+        2: '#222',
+        3: '#333',
+        4: '#444',
+        5: '#555',
+        6: '#666',
       },
       'grey-light': {
-        'a': '#aaa',
-        'c': '#ccc',
+        a: '#aaa',
+        c: '#ccc',
       },
     },
     fontFamily: {
-      body: [
-        'Open Sans',
-        ...fontFallbacks,
-      ],
-      heading: [
-        'Montserrat',
-        ...fontFallbacks,
-      ],
+      body: ['Open Sans', ...fontFallbacks],
+      heading: ['Montserrat', ...fontFallbacks],
     },
     fontSize: {
-      '0': '0',
-      '10': '1rem',
-      '12': '1.2rem',
-      '14': '1.4rem',
-      '16': '1.6rem',
-      '18': '1.8rem',
-      '22': '2.2rem',
-      '24': '2.4rem',
-      '28': '2.8rem',
-      '30': '3rem',
-      '36': '3.6rem',
-      '48': '4.8rem',
+      0: '0',
+      10: '1rem',
+      12: '1.2rem',
+      14: '1.4rem',
+      16: '1.6rem',
+      18: '1.8rem',
+      22: '2.2rem',
+      24: '2.4rem',
+      28: '2.8rem',
+      30: '3rem',
+      36: '3.6rem',
+      48: '4.8rem',
     },
     lineHeight: {
       none: '1',
@@ -144,7 +138,7 @@ module.exports = {
       8: '80',
       9: '90',
       10: '100',
-      'header': '500',
+      header: '500',
       'menu-overlay': '400',
     },
     transitionDuration: {
@@ -153,19 +147,17 @@ module.exports = {
       slow: '500ms',
     },
     transitionTimingFunction: {
-     'linear': 'linear',
-     'in': 'cubic-bezier(0.55, 0.055, 0.675, 0.19)',
-     'out': 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-     'in-out': 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-    }
+      linear: 'linear',
+      in: 'cubic-bezier(0.55, 0.055, 0.675, 0.19)',
+      out: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
+      'in-out': 'cubic-bezier(0.645, 0.045, 0.355, 1)',
+    },
   },
   corePlugins: {
     container: false,
     aspectRatio: false,
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require('@tailwindcss/aspect-ratio')],
   content: config.styles.purgeContent,
   future: {
     hoverOnlyWhenSupported: true,

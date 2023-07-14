@@ -15,7 +15,7 @@ module.exports = {
     '"Segoe UI Symbol"',
     '"Noto Color Emoji"',
   ],
-  pxToEm: function(px) {
+  pxToEm: function (px) {
     return `${px / 16}em`
-  }
+  },
 }

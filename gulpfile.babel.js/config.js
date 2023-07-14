@@ -3,10 +3,10 @@
 /* ***** ----------------------------------------------- ***** */
 
 // Global variables
-const src = './src';
-const dest = './dist';
-const srcAssets = src + '/assets';
-const destAssets = dest + '/assets';
+const src = './src'
+const dest = './dist'
+const srcAssets = src + '/assets'
+const destAssets = dest + '/assets'
 
 // Contains all main configurations for Gulp
 module.exports = {
@@ -24,13 +24,10 @@ module.exports = {
     '**',
     '**',
     '**',
-    '*/\n'
+    '*/\n',
   ],
   eleventy: {
-    watch: [
-      dest + '/**/index.html',
-      './tailwind.config.js',
-    ]
+    watch: [dest + '/**/index.html', './tailwind.config.js'],
   },
   styles: {
     src: srcAssets + '/scss/**/*.scss',
@@ -39,39 +36,39 @@ module.exports = {
     purgeContent: [
       src + '/site/**/*.njk',
       srcAssets + '/js/**/*.js',
-      './eleventy/**/*.js'
-    ]
+      './eleventy/**/*.js',
+    ],
   },
   scripts: {
     src: srcAssets + '/js/main.js',
     watchSrc: srcAssets + '/js/**/*.js',
-    dest: destAssets + '/js'
+    dest: destAssets + '/js',
   },
   images: {
     optimizeSrc: srcAssets + '/images/**/*',
     responsiveSrc: [
       srcAssets + '/images/**/*',
-      '!' + srcAssets + '/images/**/*.svg'
+      '!' + srcAssets + '/images/**/*.svg',
     ],
-    dest: destAssets + '/images'
+    dest: destAssets + '/images',
   },
   svgs: {
     src: srcAssets + '/svgs/*.svg',
-    dest:  destAssets + '/svgs',
-    sprite: 'sprite.svg'
+    dest: destAssets + '/svgs',
+    sprite: 'sprite.svg',
   },
   copy: {
     assetsSrc: [
       srcAssets + '/**/*.+(eot|svg|ttf|woff|woff2|swf|mp4|mp3)',
       '!' + srcAssets + '/svgs/*.svg',
-      '!' + srcAssets + '/vendors/**/*'
+      '!' + srcAssets + '/vendors/**/*',
     ],
-    assetsDest: destAssets
+    assetsDest: destAssets,
   },
   clean: {
-    dest:  dest
+    dest: dest,
   },
   browserSync: {
-    server: './' + dest
-  }
-};
+    server: './' + dest,
+  },
+}
